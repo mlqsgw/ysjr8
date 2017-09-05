@@ -1,0 +1,88 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="#">字段列表</a></li>
+     <li><a href="{:U('user/Reviewtypeadmin/addfield',array('mid'=>$mid))}">添加字段</a></li>
+  </ul>
+  <form class="J_ajaxForm" action="{:U('User/Reviewtypeadmin/listorders')}" method="post">
+    <div class="table_list">
+      <table width="50%" class="table table-hover">
+        <thead>
+
+	          <tr>
+               <th>排序</th>
+               <th>字段</th>
+               <th>字段名称</th>
+	           <th>字段属性</th>
+	           <th>表单类型</th>
+               <th>说明</th>
+               <th>操作</th>
+	          </tr>
+        </thead>
+          <foreach name="list" item="vo">
+	        	<tr>
+                    <td><input type="text" value="{$vo.listorder}" name="listorders[{$vo.id}]" style="width: 30px;" /></td>
+                    <td>{$vo.field}</td>
+                    <td>{$vo.name}</td>
+                    <td>{$vo.attribute}({$vo.length})</td>
+                    <td>{$vo.type}</td>
+                    <td>{$vo.prompt}</td>
+                    <td><a href="{:U('user/Reviewtypeadmin/editfield',array('fid'=>$vo['id']))}">[编辑]</a>
+                        <a href="{:U('user/Reviewtypeadmin/delfield',array('fid'=>$vo['id']))}" class="J_ajax_del">[删除]</a>
+                    </td>
+	          	</tr>
+          </foreach>
+          </table>
+     
+    </div>
+    <div class="form-actions">
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" >更新排序</button>
+     </div>
+  </form>
+</div>
+<script>
+    if ($('a.J_ajax_del').length) {
+        Wind.use('artDialog', function () {
+            $('.J_ajax_del').on('click', function (e) {
+                e.preventDefault();
+                var $_this = this,
+                        $this = $($_this),
+                        href = $this.prop('href'),
+                        msg = $this.data('msg');
+                art.dialog({
+                    title: false,
+                    icon: 'question',
+                    content: '您确定要删除这个字段吗，删除后原来的所以资料内容都将不复存在？',
+                    follow: $_this,
+                    close: function () {
+                        $_this.focus();; //关闭时让触发弹窗的元素获取焦点
+                        return true;
+                    },
+                    ok: function () {
+
+                        $.getJSON(href).done(function (data) {
+                            if (data.state === 'success') {
+                                if (data.referer) {
+                                    location.href = data.referer;
+                                } else {
+                                    reloadPage(window);
+                                }
+                            } else if (data.state === 'fail') {
+                                //art.dialog.alert(data.info);
+                                alert(data.info);//暂时处理方案
+                            }
+                        });
+                    },
+                    cancelVal: '关闭',
+                    cancel: true
+                });
+            });
+
+        });
+    }
+
+</script>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

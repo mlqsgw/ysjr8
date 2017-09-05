@@ -1,0 +1,133 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('user/Reviewtypeadmin/field',array('mid'=>$res['m_id']))}">字段列表</a></li>
+     <li ><a href="{:U('user/Reviewtypeadmin/addfield',array('mid'=>$res['m_id']))}">添加字段</a></li>
+      <li  class="active"><a href="#">编辑字段</a></li>
+  </ul>
+  <form class="J_ajaxForm" action="{:U('user/Reviewtypeadmin/editfield')}" method="post">
+    <div class="table_list">
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="A">
+                <table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+                    <tbody>
+                    <tr>
+                        <td width="180">字段：</td>
+                        <td>
+                            <input type="text" class="input" name="field" value="{$res.field}"><span class="must_red">*&nbsp;&nbsp; 小写字母(a-z),数字(0-9) 推荐使用字母,不能以数字开头</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>字段名称：</td>
+                        <td><input type="text" class="input" name="name" value="{$res.name}"><span class="must_red">* &nbsp;&nbsp;建议使用使用中文</span></td>
+                    </tr>
+                    <tr>
+                        <td>提示信息：</td>
+                        <td><input type="text" class="input" name="prompt" value="{$res.prompt}"><span class="must_red"><span></td>
+                    </tr>
+                    <tr>
+                        <td>字段属性：</td>
+                        <td>
+                            <select name="attribute" onchange="dtype(this.value)">
+                                <option value="varchar" <eq name="res.attribute" value="varchar" >selected</eq> >字符(varchar)</option>
+                                <option value="int" <eq name="res.attribute" value="int" >selected</eq> >整数(int)</option>
+                                <option value="float" <eq name="res.attribute" value="float" >selected</eq>  >小数(float)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="length">
+                        <td>长度</td>
+                        <td><input type="text" id="lengthval" class="input" name="length" value="{$res.length}"></td>
+                    </tr>
+                    <tr>
+                        <td>字段类型：</td>
+                        <td>
+                            <select name="type" onchange="dhtml(this.value)">
+                                <option value="text" <eq name="res.type" value="text" >selected</eq> >单行文本(text)</option>
+                                <option value="textarea"<eq name="res.type" value="textarea" >selected</eq> >多行文本(textarea)</option>
+                                <option value="select" <eq name="res.type" value="select" >selected</eq> >下拉框(select)</option>
+                                <option value="radio" <eq name="res.type" value="radio" >selected</eq> >单选框(radio)</option>
+                                <option value="checkbox" <eq name="res.type" value="checkbox" >selected</eq> >多选框(checkbox)</option>
+                                <option value="date" <eq name="res.type" value="date" >selected</eq> >日期选择</option>
+                                <option value="thumb" <eq name="res.type" value="thumb" >selected</eq>  >图片上传</option>
+
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>默认值：</td>
+                        <td><textarea name="option_value" rows="2" cols="57">{$site_tongji}</textarea></td>
+                    </tr>
+                    <tr style="display: none" id="optval">
+                        <td>选项值：</td>
+                        <td id="defa"><textarea name="default" rows="5" id="default" cols="57" disabled="true">{$res.default}</textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><span class="must_red">一行一个 选项值|选项名称* 注意*为结尾标志符<span></td>
+                    </tr>
+
+                    <tr>
+                        <td>显示权限设置：</td>
+                        <td>
+                            <select name="level" class="normal_select" >
+                                <option value="0" >不限制</option>
+                                <foreach name="permis" item="pvo">
+                                    <option value="{$pvo.id}" >{$pvo.name}以上可查看</option>
+                                </foreach>
+                            </select>
+                        </td>
+                    </tr>
+                    <input type="hidden" name="m_id" value="{$res.m_id}"/>
+                    <input type="hidden" name="id" value="{$res.id}"/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="form-actions">
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" >提交</button>
+     </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    <php>
+            if($res['type']=="select" ||$res['type']=="radio" || $res['type']=="checkbox" ){
+                echo '$("#default").attr("disabled",false);
+                $("#optval").show();';
+            }
+    </php>
+
+    function dhtml(v){
+        if(v=="select" || v=="radio" || v=="checkbox" ){
+            $("#default").attr("disabled",false);
+            $("#optval").show();
+        }else{
+            $("#default").attr("disabled",true);
+            $("#optval").hide();
+        }
+    }
+
+
+    function dtype(v){
+        if(v=='float'){
+            $("#lengthval").val('9,2');
+           $("#length").hide();
+
+        }else{
+            $("#lengthval").val('');
+            $("#length").show();
+        }
+    }
+</script>
+</body>
+</html>

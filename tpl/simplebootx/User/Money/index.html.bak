@@ -1,0 +1,65 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Money/menu" />
+	</div>
+	<div class="uc_r_bl_box clearfix">
+				<table border="0" cellspacing="1" class="oval_table">
+					<tbody>
+						<tr style="background:#25ae90; color:#fff; height:40px;">
+							<th width="33%">资金余额</th>
+							<th width="33%">可用资金</th>
+							<th width="33%">冻结资金</th>
+						</tr>
+						<tr style="height:35px; background:#fff">
+							<td><?php echo '￥'.$total_money;?></td>
+							<td>￥{$available_funds}</td>
+							<td>￥{$freeze_funds}</td>
+						</tr>
+					</tbody>
+				</table>
+			<div class="sub_nav">
+				<!--<span class="act"><a href="">全部</a></span>
+				<span ><a href="">信用</a></span>-->
+				<span class="act"><a href="{:U('user/money/index',array('act'=>'index'))}">资金</a></span>
+				
+			</div>
+			<div class="blank1"></div>
+			<div class="uc-table">
+			<table border="0" cellspacing="1" class="oval_table">
+				<tbody>
+					<tr style="background:#25ae90; color:#fff; height:40px;">
+						<th style="width:17%">事件</th>
+						<th style="width:17%">金额</th>												
+                        <!--<th style="width:17%">信用</th>
+                       	<th style="width:17%">额度</th>
+                       	<th style="width:17%">冻结/提现</th>-->
+                        <th style="width:15%">发生时间</th>
+					</tr>
+					<foreach name="money_log" item="vo">
+						<tr style="height:40px;">
+							<td>
+			<if condition="$vo.type eq 1">充值<elseif condition="$vo.type eq 2"/>冻结
+			<elseif condition="$vo.type eq 3"/>支付<elseif condition="$vo.type eq 4"/>提现
+			<elseif condition="$vo.type eq 5"/>收款<elseif condition="$vo.type eq 6"/>系统放款
+			<elseif condition="$vo.type eq 7"/>手续费<else/>恢复冻结资金</if>
+							</td>
+							<td>￥{$vo.operation}</td>
+							<td>{:date("Y-m-d H:i:s",$vo['time'])}</td>
+						</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pages">{$page}</div>
+			</div>				
+		</div>		
+	</div>
+	<div class="inc_foot"></div>
+</div>
+</div>
+
+<div class="blank"></div>
+
+</block>
+

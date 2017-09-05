@@ -1,0 +1,57 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Money/menu" />
+	</div>
+	<div class="uc_r_bl_box clearfix pt10">
+			<div  class="uc-table i_deal_list">
+				<table width="100%;" border="0" cellspacing="0" cellpadding="0">
+					<tr border="0" style="background-color:#E47F2B
+; color:#fff; height:34px;">
+						<th style="width:15%">单号</th>
+						<th style="width:10%">充值金额</th>
+						<th style="width:10%">手续费</th>
+						<th style="width:12%">支付方式</th>
+						<th style="width:8%">支付状态</th>
+						<th style="width:17%">创建时间</th>
+						<th style="width:28%">备注</th>
+					</tr>
+					<foreach name="incharge" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>￥{$vo.money}</td>
+						<td>￥{$vo.money_fee}</td>
+						<td><if condition="$vo.type eq 1">线上充值<elseif condition="$vo.type eq 2" />线下充值<else/>手动充值</if></td>
+						<td><if condition="$vo.state eq 1">成功<elseif condition="$vo.state eq 2" />失败<else/>审核中</if></td>
+						<td>{$vo.create_time}</td>
+						<td>{$vo.remarks}</td>
+					</tr>
+					</foreach>
+				</table>
+				<div class="pages">{$page}</div>
+			</div>				
+		</div>
+	</div>
+	<div class="inc_foot"></div>
+</div>
+<script type="text/javascript">
+		$(document).ready(function(){
+		$("#incharge_done").click(function(){
+			if(!($("input[name='money']").val()!=''&&!isNaN($("input[name='money']").val())&&$("input[name='money']").val()>0))			
+			{
+				$.showErr("请输入正确的充值金额");
+				return false;
+			}
+			else if(!$("input[name='payment']:checked").val())
+			{
+				$.showErr("请选择支付方式");
+				return false;
+			}
+		});
+	});
+</script></div>
+
+<div class="blank"></div>
+</block>
+

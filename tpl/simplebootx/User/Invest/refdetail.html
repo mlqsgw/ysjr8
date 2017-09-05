@@ -1,0 +1,124 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div calss="list">
+	<div class="list_title clearfix">
+    <div <eq name='act' value=''>class="cur"</eq> ><a href="{:U('User/Invest/index')}">我的投资</a></div>
+    <div <eq name='act' value='invite'>class="cur"</eq> ><a href="{:U('User/Invest/index',array('act'=>'invite'))}">招标中借款</a></div>
+    <div <eq name='act' value='ing'>class="cur"</eq> ><a href="{:U('User/Invest/index',array('act'=>'ing'))}">回收中借款</a></div>
+    <div <eq name='act' value='over'>class="cur"</eq> ><a href="{:U('User/Invest/index',array('act'=>'over'))}">已回收借款</a></div>
+    <div <eq name='act' value='bad'>class="cur"</eq> ><a href="{:U('User/Invest/index',array('act'=>'bad'))}">我的坏账</a></div>
+	<div class="cur"><a href="###">我的回款</a></div>
+</div>
+<div class="list_cont clearfix">
+	<foreach name="user_load_ids" item="user_load" key="key">
+	<div style="padding:0 10px;<eq name="key" value="1">margin-top:30px;</eq>">
+		<div class="bid_item clearfix">
+	        <div class="bid_title mb10">
+	        	{$deal.name} 第<?php echo $key+1; ?>次投标的回款记录!
+	        </div>
+	        <div class="bid_detail">
+	            <div class="info">
+	            	 借款金额：
+	                <span class="f_red">￥{$user_load.money|number_format="2"}</span>
+	            </div>
+	            <div class="info">
+	            	年利率：
+	                <span class="f_red">{$deal.rate|number_format="2"}%</span>
+	            </div>
+	            <div class="info">
+	            	期限：
+	                <span class="f_red">{$deal.repay_time}个月</span>
+	            </div>
+	            <div class="info">
+	            	已还本息：
+	                <span class="f_red">￥{$user_load.repay_money|number_format="2"}</span>
+	            </div>
+				<div class="info">
+					管理费：
+					<span class="f_red">￥{$user_load.manage_fee|number_format="2"}</span>
+				</div>
+				<if condition="$user_load.impose_money neq 0">
+				<div class="info">
+					逾期/违约：<span class="f_red">￥{$user_load.impose_money|number_format="2"}</span>
+				</div>
+				</if>
+				<div class="info">
+	            	还款方式：
+	                <span class="f_red">{$deal.reapy_name}</span>
+	            </div>
+	            
+	        </div>
+	    </div>
+		<div class="blank20"></div>
+		<div style="padding:10px 0;font-size:16px;font-weight: bold;color: #565656;">
+	                回款记录
+	   	</div>
+		<div class="clearfix">
+			<table class="data_table" id="refundTab" cellspacing="1">
+	            <tr>
+	                <th width="10%">还款日</th>
+	                <th width="12%">实际还款日</th>
+	                <th width="12%">已还金额</th>
+	                <th width="10%">管理费</th>
+	                <th width="12%">逾期/违约费</th>
+	                <th width="12%">状态</th>
+	            </tr>
+				<?php $idx=0;?>
+				<foreach name="user_load.load" item="loan" key="key">
+
+	          	<tr>
+	                <td width="10%">
+	                	{$loan.repay_day|date="Y-m-d",###}
+					</td>
+	                <td width="12%"><notempty name="loan.true_repay_time">{$loan.true_repay_time|date="Y-m-d",###}</notempty></td>
+	                <td width="12%">￥{$loan.month_has_repay_money|number_format="2"}</td>
+	                <td width="10%">￥{$loan.manage_money|number_format="2"}</td>
+	                <td width="12%" style="color:red">￥<if condition="$loan.impose_money neq 0">{$loan.impose_money|number_format="2"}<else/>0.00</if></td>
+	                <td width="12%" class="f_green">
+	                	<eq name="loan.has_repay" value="1" >
+                            <if condition="$loan.status eq 1">
+                            提前还款
+                            <elseif condition="$loan.status eq 2"/>
+                            准时还款
+                            <elseif condition="$loan.status eq 3"/>
+                            逾期还款
+                            <elseif condition="$loan.status eq 4"/>
+                            严重逾期
+                            </if>
+						<else/>
+						待还款
+						</eq>
+					</td>
+	            </tr>
+
+				</foreach>
+	        </table>
+			
+			<table class="refundTab">
+		        <tr>
+		            <td colspan="8">
+		                <div style="font-size: 16px; display: block;line-height: 200%;font-weight: bold;height: 50px;text-align: left;">
+		                    <div class="blank20"></div>
+							<span style="color:#565656;padding:10px 0;display:block;float:left;">
+							<notempty name="inrepay_info">
+							因借款者在<span class="f_red">{inrepay_info.true_repay_time|date="Y-m-d",###}</span>提前还款，故计算方式改变。
+							<div class="blank1"></div>
+							</notempty>
+							管理费：<span class="f_red">￥{$user_load.manage_fee|number_format="2"}</span>
+							<div class="blank1"></div>
+							<if condition="$user_load.impose_money neq 0">
+							逾期/违约：<span class="f_red">￥{$user_load.impose_money|number_format="2"}</span>
+							</if>
+							<div class="blank1"></div>
+							本息还款：<span class="f_red">￥{$user_load.repay_money|number_format="2"}</span>
+							</span>
+		                </div>
+		            </td>
+		        </tr>
+		    </table>
+		</div>
+	</div>
+    </foreach>
+</div>
+</div>
+  </block>

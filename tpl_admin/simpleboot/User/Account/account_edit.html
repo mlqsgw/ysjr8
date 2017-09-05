@@ -1,0 +1,43 @@
+<admintpl file="header"/>
+<head/>
+<body>
+	<div class="wrap J_check_wrap">
+	  <ul class="nav nav-tabs">
+	  	<li><a href="{:U('User/Account/index')}">资金账号管理</a></li>
+	     <li class="active"><a>调整资金</a></li>
+	  </ul>
+	  <div class="table_list" style="padding:0 0 0 200px;">
+	      <form class="form-search" action="{:U('User/Account/account_edit')}"  method="post">
+	          	&nbsp;&nbsp;  用户名：&nbsp;{$user_login}
+			 <div style="margin:10px 0 0 0;"></div>
+	     		    变动金额：<input type="text" class="input-medium search-query" name="money" value="">如果是减少余额，请填负数，如-1000
+			 <div style="margin:10px 0 0 0;"></div>
+				变动原因：<input style="width:350px;" type="text" class="input-medium search-query" name="dec" value="">
+
+			<div style="margin:25px 0 0 0;"></div>
+			<input name="uid" type="hidden" value="{$id}">
+			<input name="user_name" type="hidden" value="{$user_login}">
+			<input class="btn" type="button" value="提交">
+	         
+	      </form>
+	  </div>
+	</div>
+<script type="text/javascript">
+		$(document).ready(function(){
+		$(".btn").click(function(){
+			if(!($("input[name='money']").val()!=''&&!isNaN($("input[name='money']").val())))			
+			{
+				alert("请输入正确的充值金额");
+				return false;
+			}
+			else if(!$("input[name='dec']").val()!="")
+			{
+				alert("变动原因不能为空");
+				return false;
+			}
+			$("form").submit();
+		});
+	});
+</script>
+</body>
+</html>

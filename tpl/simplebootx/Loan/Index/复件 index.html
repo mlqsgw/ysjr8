@@ -1,0 +1,384 @@
+<tc_include file="inc/headerIndex" />
+<style>
+	.f_yj{ behavior:url(iecss3.htc); }
+
+</style>
+<script type="text/javascript" src="__TMPL__Public/js/jscharts_cr.js"></script>
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/index.css" />
+<style>
+    .i_deal_list table td {
+        text-align: left;
+    }
+</style>
+
+<div class="blank"></div>
+<div class="blank10"></div>
+<div class="feature">
+	<a class="fea1">
+		<i></i>
+		<h3>多重保证</h3>
+		<span>1000万本息保障机构全额担保</span>
+	</a>
+	<a class="fea2">
+		<i></i>
+		<h3>低门槛高收益</h3>
+		<span>百元起投14-18%年化收益率</span>
+	</a>
+	<a class="fea3">
+		<i></i>
+		<h3>灵活的投资赎回</h3>
+		<span>1000万本息保障机构全额担保</span>
+	</a>
+	<a class="fea4">
+		<i></i>
+		<h3>随时随地理财</h3>
+		<span>1000万本息保障机构全额担保</span>
+	</a>
+</div>
+<div class="total">
+	<div class="tal1 t">
+		<p>累计投资金额（元）</p>
+		<div class="money">
+			<span>{$loads}</span>万
+		</div>
+	</div>
+	<div class="tal2 t">
+		<p>累计创造收益（元）</p>
+		<div class="money">
+			<span>{$make_interest}</span>万
+		</div>
+	</div>
+	<div class="tal3 t">
+		<p>本息保证金（元）</p>
+		<div class="money">
+			<span>1000.00</span>万
+		</div>
+	</div>
+	<div class="blank1"></div>
+	<div class="note">所有标的均为投标次日计息</div>
+</div>
+<div class="index_left f_l">
+	<div class="list_title clearfix">
+		<div class="list_tt list1 cur">投资列表</div>
+		<div class="list_tt list2">债权转让</div>
+	</div>
+	<div class="list_cont panes">
+		<div class="i_deal_list clearfix" style="display:block;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr  border="0" style="background-color:#00bef0; color:#fff; height:34px;">
+						<th style="width:30%">借款标题</th>
+						<th style="width:15%">借款金额</th>
+						<th style="width:10%">信用等级</th>
+						<th style="width:10%">年利率</th>
+                        <th style="width:10%">借款进度</th>
+						<th style="width:10%">借款期限</th>						
+						<th style="width:15%">借款状态</th>
+					</tr>
+                    <volist name="deal_list" id="deal" key="key" >
+                        <tr class="item <eq name="mod" value="1">item_1</eq>" >
+                        <td class="tl pl10">
+                            &nbsp;&nbsp;<img src="__TMPL__Public/images/<eq name="deal.warrant" value="0">dan0.png<else/>dan1.png</eq>" width="24" height="24"  class="ico" />
+                            <a href="{$deal.url}">{$deal.name}</a>
+                        </td>
+                        <td>
+                            <span>{$deal.borrow_amount_format}</span>
+                        </td>
+                        <td>
+                            <img src="{$deal.level_img}" align="absmiddle" title="{$deal.user.point_level}" alt="{$deal.user.point_level}" height="40" />
+                        </td>
+                        <td>
+                            <span>{$deal.rate} %</span>
+                        </td>
+                        <td>
+                            <div class="graph-box">
+                                <p>
+                                    <if condition="($deal.deal_status eq 9) or ($deal.deal_status eq 5)">
+                                        100%
+                                        <else/>
+                                        {$deal.progress_point|round}%
+                                    </if>
+                                </p>
+                                <div id="graph-{$deal.id}"></div>
+                            </div>
+                            <script type="text/javascript">
+                                <if  condition="$deal.deal_status eq 9">
+                                        <!--//已还清-->
+                                    var colors = ['#00bef0', '#e7e5e5'];
+                                var myData = new Array(['OK', 100], ['NO', 0]);
+                                <elseif condition="$deal.deal_status eq 7"/>
+                                        <!--//还款中-->
+                                var colors = ['#00bef0', '#e7e5e5'];
+                                var myData = new Array([' ', {$deal.progress_point|round="2"}], [' ', <?php echo 100-round($deal['progress_point'],2) ?>]);
+                                <else/>
+                                <!--//筹款中-->
+                                var colors = ['#00bef0', '#e7e5e5'];
+                                var myData = new Array([' ', {$deal.progress_point|round="2"}], [' ', <?php echo 100-round($deal['progress_point'],2) ?>]);
+                                </if>
+                                var myChart = new JSChart('graph-{$deal.id}', 'pie');
+                                myChart.setDataArray(myData);
+                                myChart.colorizePie(colors);
+                                myChart.setTitleColor('#8E8E8E');
+                                myChart.setTitleFontSize(0);
+                                myChart.setTextPaddingTop(280);
+                                myChart.setPieValuesDecimals(1);
+                                myChart.setPieUnitsFontSize(0);
+                                if($.browser.msie)
+                                    myChart.setPieValuesFontSize(0);
+                                else
+                                    myChart.setPieValuesFontSize(100000000);
+                                myChart.setPieValuesColor('#fff');
+                                myChart.setPieUnitsColor('#969696');
+                                myChart.setSize(46, 46);
+                                myChart.setPiePosition(0, 0);
+                                myChart.setPieRadius(23);
+                                myChart.setFlagColor('#1BB8E3');
+                                myChart.setFlagRadius(4);
+                                myChart.setTooltipOpacity(1);
+                                myChart.setTooltipBackground('#ddf');
+                                myChart.setTooltipPosition('ne');
+                                myChart.setTooltipOffset(2);
+                                myChart.draw();
+                            </script>
+                        </td>
+                        <td>
+                            <span>{$deal.repay_time}</span>个月
+                        </td>
+                        <td>
+                            <a href="{$deal.url}">
+
+                                <span
+                                <if condition="$deal.deal_status eq 0">
+                                    class="f_white"
+                                    <elseif condition="$deal.deal_status eq 1"/>
+                                    class="f_white"
+                                    <elseif condition="$deal.deal_status eq 4"/>
+                                    class="f_white f_gray"
+                                    <elseif condition="$deal.deal_status eq 5"/>
+                                    class="f_white f_orange"
+                                    <elseif condition="$deal.deal_status eq 7"/>
+                                    class="f_white f_green"
+                                    <elseif condition="$deal.deal_status eq 9"/>
+                                    class="f_white f_green"
+                                    <else/>
+                                    class="f_white"
+                                </if>
+                                >
+                                {$deal.deal_status|loan_state}
+                                </span>
+                            </a>
+                        </td>
+                        </tr>
+                    </volist>
+				</tbody>
+			</table>
+			<a href="{:UU('loan/index/lists')}" title="查看更多借款列表" class="more">查看更多借款列表</a>
+		</div>
+		<div class="i_deal_list clearfix" style="display:none;">
+				
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;">
+					<tr  border="0" style="background-color:#00bef0; color:#fff; height:34px;">
+				        <th>标题</th>
+						<th style="width:15%">   转让人  / 承接人</th>
+						<th style="width:15%">本/息/转让金</th>
+						<th style="width:10%">利率</th>
+						<th style="width:10%">待还/总期数</th>
+						<th style="width:10%">信用等级</th>
+						<th style="width:20%">剩余时间</th>
+				    </tr>
+
+                    <volist name="transfer_list" id="deal" >
+                        <tr class="item <eq name="mod" value="1">item_1</eq> tc">
+                        <td style="text-align:left">
+                            &nbsp;&nbsp;<img src="__TMPL__Public/images/<eq name="deal.warrant" value="0">dan0.png<else/>dan1.png</eq>" width="24" height="24" class="ico" />
+                            <a href="{$deal.url}" target="_blank">
+                                {$deal.name}
+                            </a>
+                        </td>
+                        <td>
+                            <div class="f_gray">
+                                <a href="{$deal.user.url}" target="_blank">{$deal.user_name}</a>
+                            </div>
+                            <notempty name="deal.tuser">
+                                <div class="f_gray">
+                                    <a href="{$deal.tuser.url}" target="_blank">{$deal.tuser_name}</a>
+                                </div>
+                            </notempty>
+                        </td>
+                        <td>
+                            <div>{$deal.left_benjin_format}</div>
+                            <div>{$deal.left_lixi_format}</div>
+                            <div>
+                                {$deal.transfer_amount|format_price}
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                {$deal.rate|number_format="2"}%
+                            </div>
+
+                        </td>
+                        <td>
+		                    <span class="f_red">{$deal.how_much_month}/{$deal.repay_nper}
+                        </td>
+                        <td>
+                            <a href="{$deal.duser.url}" target="_blank"><img src="{$deal.level_img}" width="40" align="absmiddle" alt="{$deal.duser.point_level}" title="{$deal.duser.point_level}"></a>
+                        </td>
+                        <td>
+                            <gt name="$deal.t_user_id" vaue="0" >
+                                已转让
+                                <else/>
+                                <eq name="$deal.status" value="0" >
+                                    已撤销
+                                    <else/>
+                                    </lt>
+                                    <if condition="$deal.remain_time lt 0">
+                                        逾期还款
+                                        <else/>
+                                        {$deal.remain_time_format}
+                                    </if>
+                                </eq>
+                            </gt>
+                        </td>
+                        </tr>
+                    </volist>
+				</table>
+				<a href="{:UU('loan/index/transfer')}" title="查看更多债权列表" class="more">查看更多债权列表</a>
+			</div>
+	</div>
+</div>
+<div class="index_right f_r">
+	<adv adv_id="首页右侧顶部广告" />
+	<div class="r-block">
+    	<div class="clearfix pr">
+		<img src="__TMPL__Public/images/dosomthing.jpg" />
+		<a class="borrow_out ps" href="{:U('Loan/index/lists')}">我要借出</a>
+		<a class="borrow_in ps" href="{:U('Loan/borrow/inapply')}">我要借款</a>
+	</div>
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+    
+    
+        <div class="gray_title clearfix">
+            <div class="f_l f_dgray b">网站公告</div>
+            <div class="f_r">
+                <div style="vertical-align: middle;_padding: 8px 0;">
+	                <!--
+					<span style="font-weight: normal;">
+	                    <a href=""> 更多</a>
+	                </span>
+                    <span><img src="__TMPL__Public/images/more.gif" align="absmiddle" alt="{$LANG.MORE}" style="" title="{$LANG.MORE}"></span>
+					-->
+                </div>
+            </div>
+        </div>
+		<div class="notice-list clearfix">
+			<ul>
+				 <volist name="notice_list" id="notice">
+                <li style="padding:2px 0;">
+                    <span>
+					<a href="{:U('Portal/Article/index',array('id'=>$notice['tid']))}">{$notice.post_title}</a>
+					</span>
+                </li>
+				</volist>
+	        </ul>
+		</div>
+	</div>
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+	
+	<div id="loadtop" class="r-block">
+		<div class="ti clearfix">
+			<div class="f_l">投资排行榜</div>
+			<div id="rightTitls">
+				<ul>
+					<li class="current"><a rel="1">月</a></li>
+					<li><a rel="2">周</a></li>
+					
+					<li><a rel="3">天</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="J_conbox" class="bdd" style="padding:5px;">
+			<ul class="clearfix" rel="1">
+				<volist name="month_load_top_list" item="load" id="monthload">
+				<li class="clearfix pl10 pt10 pb10" style="border-bottom:1px dashed #eee">
+					<span class="nums tc">{$i}</span>
+					<span class="uname">{$monthload.user_login}</span>
+					<span class="money">{$monthload.sum(money)}元</span>
+				</li>
+				</volist>
+			</ul>
+			<ul class="clearfix hide" rel="2">
+				<volist name="week_load_top_list" item="load" id="monthload">
+				<li class="clearfix pl10 pt10 pb10" style="border-bottom:1px dashed #eee">
+					<span class="nums tc">{$i}</span>
+					<span class="uname">{$monthload.user_login}</span>
+					<span class="money">{$monthload.sum(money)}元</span>
+				</li>
+				</volist>
+			</ul>
+			<ul class="clearfix hide" rel="3">
+				<volist name="day_load_top_list" item="load" id="monthload">
+				<li class="clearfix pl10 pt10 pb10" style="border-bottom:1px dashed #eee">
+					<span class="nums tc">{$i}</span>
+					<span class="uname">{$monthload.user_login}</span>
+					<span class="money">{$monthload.sum(money)}元</span>
+				</li>
+				</volist>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(function(){
+			$("#loadtop #rightTitls a").click(function(){
+				$("#loadtop #rightTitls a").parent().removeClass("current");
+				$(this).parent().addClass("current");
+				var rel=$(this).attr("rel");
+				$("#loadtop #J_conbox ul").addClass("hide");
+				$("#loadtop #J_conbox ul[rel='"+rel+"']").removeClass("hide");
+			});
+		});
+	</script>
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+	<!--{insert name="success_deal_list"}-->
+	<div class="blank10"></div>
+	<div class="blank10"></div>
+	<div class="r-block">
+		<div class="gray_title clearfix">
+			<div class="f_l f_dgray b">使用技巧</div>
+			<div class="f_r">
+	        	<div style="vertical-align: middle;_padding: 8px 0;">
+	                <span style="font-weight: normal;">
+	                    <a href="{url x="index" r="usagetip"}"> {$LANG.MORE}</a>
+	                </span>
+	                <span><img src="__TMPL__Public/images/more.gif" align="absmiddle" alt="{$LANG.MORE}" style="" title="{$LANG.MORE}"></span>
+	            </div>
+	    	</div>
+		</div>
+		<div class="clearfix" style="border:1px solid #e3e3e3; border-top:none; padding:5px 15px; ">
+			<ul>
+			<foreach name="posts" item="post">
+            	<li class="f_l" style="width: 130px; padding: 2px;">
+				 · <a href="{:UU('portal/Article/index',array('id'=>$post['id']))}">{$post.post_title}</a>
+				</li>
+            </foreach>
+       		</ul>
+		</div>
+	</div>
+</div>
+<tc_include file="inc/footer" />
+<script type="text/javascript">
+$(function(){	
+	$("#case").find("li:odd").css("backgroundColor","#f9f9f9");
+
+   	var $div_li = $(".list_title .list_tt");
+   	$div_li.click(function(){
+          $(this).addClass("cur").siblings().removeClass("cur");
+          var div_index = $div_li.index(this);
+          $(".panes").find(".i_deal_list").eq(div_index).show().siblings().hide();
+   	});   	
+})
+</script>

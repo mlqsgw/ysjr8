@@ -1,0 +1,113 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+    <div class="list">
+        <div class="list_title clearfix">
+            <div ><a href="{:U('User/Deal/index')}">还款列表</a></div>
+            <div ><a href="{:U('User/Deal/index',array('act'=>'refund'))}">已还清借款</a></div>
+            <div  class="cur" ><a  href="###">还款详情</a></div>
+        </div>
+    </div>
+<div class="uc_r_bl_box clearfix pl10 pr10 pt5 pb5">
+	<div class="bid_item clearfix">
+        <div class="bid_title">
+        	{$deal.name} 还款记录!
+        </div>
+        <div class="bid_detail">
+            <div class="info">
+            	 借款金额：
+                <span class="f_red">{$deal.borrow_amount_format}</span>
+            </div>
+            <div class="info">
+            	年利率：
+                <span class="f_red">{$deal.rate|number_format="2"}%</span>
+            </div>
+            <div class="info">
+            	期限：
+                <span class="f_red">{$deal.repay_time}个月</span>
+            </div>
+            <div class="info">
+            	已还本息：
+                <span class="f_red">￥{$repay_money|number_format="2"}</span>
+            </div>
+			<div class="info">
+				管理费：
+				<span class="f_red">￥{$manage_fee|number_format="2"}</span>
+			</div>
+			<if condition="$impose_money neq 0">
+			<div class="info">
+				逾期/违约：<span class="f_red">￥{$impose_money|number_format="2"}</span>
+			</div>
+            </if>
+			<div class="info">
+            	还款方式：
+                <span class="f_red">{$deal.reapy_name}</span>
+            </div>
+            
+        </div>
+    </div>
+	
+	<div style="padding: 20px 0 10px 0;font-size: 14px;font-weight: bold;color: #565656;">
+                还款记录
+   	</div>
+	<div class="clearfix">
+		<table class="data_table" id="refundTab" cellspacing="1">
+            <tr>
+                <th width="10%">还款日</th>
+                <th width="12%">实际还款日</th>
+                <th width="12%">已还金额</th>
+                <th width="10%">借款管理费</th>
+                <th width="12%">逾期/违约费</th>
+                <th width="12%">状态</th>
+            </tr>
+			<?php $idx=0;?>
+			<foreach name="loan_list" item="loan" key="key">
+          	<tr>
+                <td width="10%">
+                	{$loan.repay_time|date="Y-m-d",###}
+				</td>
+                <td width="12%">{$loan.true_repay_time|date="Y-m-d",###}</td>
+                <td width="12%">￥{$loan.repay_money|number_format="2"}</td>
+                <td width="10%">￥{$loan.manage_money|number_format="2"}</td>
+                <td width="12%" style="color:red">￥<if condition="$loan.impose_money neq 0">{$loan.impose_money|number_format="2"}<else/>0.00</if></td>
+                <td width="12%" class="f_green">
+                	
+					<if condition="$loan.status eq 0">
+					提前还款
+                    <elseif condition="$loan.status eq 1"/>
+					准时还款
+                    <elseif condition="$loan.status eq 2"/>
+					逾期还款
+                    <elseif condition="$loan.status eq 3"/>
+					严重逾期
+                    </if>
+				</td>
+            </tr>
+            </foreach>
+        </table>
+		
+		<table class="refundTab">
+	        <tr>
+	            <td colspan="8">
+	                <div style="font-size: 16px; display: block;line-height: 200%;font-weight: bold;height: 50px;text-align: left;">
+	                    <div class="blank10"></div>
+						<span style="padding: 0px;display: block;float: left;">
+						<notempty name="inrepay_info">
+						因在<span class="f_red">{$inrepay_info.true_repay_time|date="Y-m-d",###}</span>提前还款<span class="f_red">￥{$inrepay_info.repay_money|number_format="2"}</span>，故计算方式改变。
+						<div class="blank1"></div>
+						</notempty>
+						管理费：<span class="f_red">￥{$manage_fee|number_format="2"}</span>
+						<div class="blank1"></div>
+						<if condition="$impose_money neq 0">
+						逾期/违约：<span class="f_red">￥{$impose_money|number_format="2"}</span>
+						</if>
+						<div class="blank1"></div>
+						本息还款：<span class="f_red">￥{$repay_money|number_format="2"}</span>
+						</span>
+	                </div>
+	            </td>
+	        </tr>
+	    </table>
+		
+	</div>
+</div>
+    </block>

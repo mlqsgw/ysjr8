@@ -1,0 +1,95 @@
+	</div>
+	<div class="blank20"></div>
+	<div id="ftw">
+
+        <div id="ft">
+            <div class="wrap">
+                <ul class="cf">
+                    <li class="col hp1">
+                        <h3>使用帮助</h3>
+                        <ul class="sub-list">
+                             <volist name="help" id="vo">
+                        	<li><a href="{:U('Portal/Article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
+                        </volist>
+                        </ul>
+                    </li>
+                    <li class="col hp2">
+                        <h3>关于我们</h3>
+                        <ul class="sub-list">
+                        <volist name="about" id="vo">
+                        	<li><a href="{:U('Portal/Article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
+                        </volist>
+                           
+                        </ul>
+                    </li>
+                    <li class="col hp3">
+                        <h3>安全保护</h3>
+                        <ul class="sub-list">
+                             <volist name="safe" id="vo">
+                        	<li><a href="{:U('Portal/Article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
+                        </volist>
+                        </ul>
+                    </li>
+                    <li class="col hp4 end">
+                        <h3>了解更多</h3>
+                        <ul class="sub-list">
+                             <volist name="Understanding" id="vo">
+                        	<li><a href="{:U('Portal/Article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></li>
+                        </volist>
+
+                        </ul>
+                    </li>
+                </ul>
+                <div class="blank"></div>
+            </div>
+            <div class="footer_line"></div>
+            <div class="wrap">
+                <div class="copyright">
+                    <div class="tc clearfix">
+                    <volist name="other" id="vo">
+                       <a href="{:U('Portal/Article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
+                        </volist>
+                    </div>
+                    <div class="blank"></div>
+                    电话：66668888 周一至周六 9:00-18:00
+                    &nbsp;&nbsp;
+
+                    &nbsp;&nbsp;
+                    <div class="blank1"></div>
+                  <!--  <div style="text-align:center;">联系我们：www.ysjr8.com &nbsp; 煜商金融</div>-->
+                    <div style="text-align:center;"><a href='http://www.miitbeian.gov.cn' target="_blank">豫ICP备15013555号</a> All rights reserved</div>
+
+                    <div class="blank"></div>
+
+                </div>
+            </div>
+        </div>
+        <div id="gotop" style="display: block;"></div>
+        <script type="text/javascript" defer="defer">
+            resetWindowBox();
+        </script>
+
+        <script type="text/javascript">
+            $(function(){
+                $("#case").find("li:odd").css("backgroundColor","#f9f9f9");
+                var $div_li = $(".list_title .list_tt");
+                $div_li.click(function(){
+                    $(this).addClass("cur").siblings().removeClass("cur");
+                    var div_index = $div_li.index(this);
+                    $(".panes").find(".i_deal_list").eq(div_index).show().siblings().hide();
+                });
+            })
+        </script>
+	</div>
+
+	<div id="gotop">
+
+	</div>
+
+<script type="text/javascript" defer="defer">
+	resetWindowBox();
+</script>
+
+</body>
+</html>

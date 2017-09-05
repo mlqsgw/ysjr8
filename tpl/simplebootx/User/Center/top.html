@@ -1,0 +1,63 @@
+﻿<div class="uc_user_info">
+	<div class="cont homeBg">
+	    <div class="blank5"></div>
+	    <div class="clearfix lh22" style="background-color:#E47F2B;height:30px;vertical-align:middle"></div>
+	    <div class="desc clearfix pt10 mt10 mb15 ml20">
+	        <!--<div class="toux f_l pr30" style="width:132px;">
+	            <div>
+	            <if condition="empty($user['avatar'])">
+	            <img class="img_b" style="margin:25px 0 0 0;"  src="__TMPL__Public/images/noavatar_middle.gif" type="big" width="120px" height="120px" alt="{$user_login}" title="{$user_login}">
+	            <else/>
+	            <img class="img_b" style="margin:25px 0 0 0;"  src="{:sp_get_user_avatar_url($user['avatar'])}" type="big" width="120px" height="120px" alt="{$user.user_login}" title="{$user.user_login}">
+	            </if>
+	            </div>
+	        </div>-->
+			
+            <div class="f_l f_dgray" style="padding-left:0px;">
+                <div class="lh24 u_name" style="height:24px; margin-bottom:16px;">
+                    <div class="f_l">
+                        {$user.user_login}	                </div>
+                    <a href="{:U('User/Myaccount/index')}">（修改个人资料）</a>
+                </div>
+                <div class="user_desc desc_lf">
+                    <ul>
+                        <li>
+                            <span>资金余额：</span>{$money.total_money}元            		</li>
+						<li>
+                            <span>所在地：</span>{$address}
+                        </li>
+                    </ul>
+                </div>
+                <div class="user_desc desc_rt">
+                    <ul>
+                        <li>
+                            <span>可用资金：</span>{$money.available_funds}元	            		</li>
+                        <li>
+                            <span>个人统计：</span> {$loanlog} 条借款记录， {$lendlog}条投标记录
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f_r recharge">
+                <a href="{:U('User/Money/index',array('act'=>'incharge'))}" class="rcg">充值</a>
+                <a href="{:U('User/Money/index',array('act'=>'bank'))}" class="wdl">提现</a>
+            </div>
+            <div class="r" style="display:none;width:260px;">
+                <div class="layout-box">
+                    <div class="top">
+                        <b class="cor-l"></b>
+                        <b class="cor-r"></b>
+                    </div>
+                    <div class="cont" style="height:145px; ">
+                        <h3>个人描述</h3>
+                        <p>
+
+                        </p>
+                    </div>
+                    <div class="bt">
+                    </div>
+                </div>
+            </div>
+	    </div>
+	</div>
+</div>

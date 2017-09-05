@@ -1,0 +1,43 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U("user/Reviewtypeadmin/setting")}"">资料类型列表</a></li>
+     <li class="active"><a href="#">添加新类型</a></li>
+  </ul>
+    <empty name="id">
+        <form class="form-horizontal J_ajaxForm" action="{:U('user/Reviewtypeadmin/add')}" method="post" id="myform">
+        <else/>
+        <form class="form-horizontal J_ajaxForm" action="{:U('user/Reviewtypeadmin/edit',array('id'=>$id))}" method="post" id="myform">
+    </empty>
+
+  <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <th width="180">类型名称</th>
+          <td><input type="text" name="name" value="{$res.name}" class="input" ></input><span class="must_red">*</span></td>
+        </tr>
+          <tr>
+              <th width="180">审核通过提醒ID</th>
+              <td><input type="text" name="through" value="{$res.through}" class="input" ></input><span class="must_red">*</span></td>
+         </tr>
+          <tr>
+              <th width="180">审核未通过提醒ID</th>
+              <td><input type="text" name="notthrough" value="{$res.notthrough}" class="input" ></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th width="180">审核通过后奖励的积分</th>
+              <td><input type="text" name="source" value="{$res.source}" class="input" ></input><span class="must_red">*</span></td>
+          </tr>
+      </table>
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="{:U("user/Reviewtypeadmin/setting")}">返回</a>
+    </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

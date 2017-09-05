@@ -1,0 +1,21 @@
+
+<div <eq name='act' value='index'>class="cur"</eq> ><a href="{:U('User/Transfer/index')}">债权转让</a></div>
+<div <eq name='act' value='buys'>class="cur"</eq> ><a href="{:U('User/Transfer/buys')}">购买记录</a></div>
+	<div class="f_r">
+			<form id="J_transfer_form" action=""  method="POST">
+				状态：
+				<select name="status" onchange="$('#J_transfer_form').submit();">
+                    <eq name="Think.const.ACTION_NAME" value="index">
+                        <option value="0">全部</option>
+                        <option value="1" >可转让</option>
+                        <option value="2" >转让中</option>
+                        <option value="3" >已转让</option>
+                        <option value="4" >已撤销</option>
+                    <else/>
+                        <option value="0">全部</option>
+                        <option value="1" >回收中</option>
+                        <option value="2" >已回收</option>
+                    </eq>
+			</select>
+			</form>
+		</div>

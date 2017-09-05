@@ -1,0 +1,86 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+    <div class="list_title clearfix">
+        <tc_include file="User/Deal/menu" />
+    </div>
+</div>
+<div class="uc_r_bl_box clearfix pl10 pr10 pt5 pb5">
+
+    <notempty name="lists">
+	<div class="silverBg tc pl10" style="height:30px;line-height:30px; font-weight:bold; color:#8E8E8E">
+	    <div class="f_l" style="width:90px">
+	            ID
+	    </div>
+	    <div class="f_l tl" style="width:170px;text-indent:3em">
+	            借款标题
+	    </div>
+	    <div class="f_l" style="width:80px">
+	            金额
+	    </div>
+	    <div class="f_l" style="width:50px">
+	            年利率
+	    </div>
+	    <div class="f_l" style="width:50px">
+	            期限
+	    </div>
+	    <div class="f_l" style="width:90px">
+	            完成度
+	    </div>
+	    <div class="f_l" style="width:100px">
+	            发布日期
+	    </div>
+	    <div class="f_l tc" style="width:80px">
+	            状态
+	    </div>
+	</div>
+	<div class="clearfix pt5 pb5 pl10 pr10">
+		<foreach name="lists" item="deal">
+		<div class="clearfix pb10">
+	        <div class="f_l" style="width:90px;height: 64px;">
+                {$deal.id}
+	        </div>
+	        <div class="f_l tl" style="width:170px">
+	            <a target="_blank" href="{:UU('Loan/index/deal',array('id'=>$deal['id']))}">{$deal.name}</a>
+	        </div>
+	        <div class="f_l f_red" style="width:80px">
+	        	{$deal.borrow_amount_format}
+	        </div>
+	        <div class="f_l f_red" style="width:50px">
+	            {$deal.rate|number_format="2"}%
+	        </div>
+	        <div class="f_l f_red" style="width:50px">
+	            {$deal.repay_time}个月
+	        </div>
+	        <div class="f_l" style="width:90px">
+	            <div class="blueProgressBar progressBar w90">
+	                <div class="p"><div class="c" style="width: 100%;"> </div></div>
+	               
+	            </div>
+	            <div>
+	                <p class="f_l" style="width:100%">100 % 已完成</p>
+	            </div>
+	        </div>
+	        <div class="f_l" style="width:100px">
+
+	            <div class="tc">
+	                 {$deal.start_time|date="Y-m-d",###}
+	            </div>
+	        </div>
+			<div class="f_l tc" style="width:80px">
+				<a href="{:UU('user/deal/refdetail',array('id'=>$deal['id']))}">详情</a>
+			</div>
+	    </div>
+	    <div style="border-bottom:1px dotted #9D9D9D;margin:5px 0 ">
+		</div>
+        </foreach>
+        <div class="pages">{$pages}</div>
+	</div>
+    <else/>
+
+	<div class="tc p10">暂无记录</div>
+    </notempty>
+
+</div>
+</div>
+    </block>

@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if $page_title}{$page_title} - {/if}{if $show_site_titile eq 1}{function name='app_conf' value='SHOP_SEO_TITLE'} - {/if}{$site_info.SHOP_TITLE}</title>
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+<meta name="keywords" content="{if $page_keyword}{$page_keyword}{/if}{$site_info.SHOP_KEYWORD}" />
+<meta name="description" content="{if $page_description}{$page_description}{/if}{$site_info.SHOP_DESCRIPTION}" />
+
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/weebox.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/user_login_reg.css" />
+
+<script type="text/javascript">
+var APP_ROOT = '{$APP_ROOT}';;
+var LOADER_IMG = '{$TMPL}/images/lazy_loading.gif';
+var ERROR_IMG = '{$TMPL}/images/image_err.gif';
+
+</script>
+    <script type="text/javascript" src="http://www.webtiro.com/demo-p2p/public/runtime/app/lang.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.bgiframe.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.weebox.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.pngfix.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/lazyload.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/script.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/op.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/op.js"></script>
+
+
+
+</head>
+<body class="login_body">
+	<div class="head z100" id="j_head">
+		<div class="head_cont" style="background:#fff">
+			<div class="wrap constr clearfix">
+				<div class="logo f_l">
+					<a class="link" href="/">
+                        <img src="http://www.webtiro.com/demo-p2p/public/attachment/201011/4cdd501dc023b.png" alt="">
+					</a>
+				</div>
+
+				<div class="f_yahei no-nav-text">登录</div>
+
+			</div>
+		</div>
+		<p class="head_bg"></p>
+	</div>
+	<div class="wrap" id="J_wrap">
+		<div class="user_login_bar clearfix">
+			<div class="login_bar wrap">
+				<div class="xszlogin1" style="background:url(/tpl/simplebootx/Public/images/zx_login_l.png) no-repeat;"></div>
+                <div class="inc f_r" style="width:380px;">
+                    <div class="clearfix">
+                        <div class="user-lr-box-left">
+                            <div>
+                                <!--登录表单-->
+
+                                <div method="post" action="/demo-p2p/index.php?ctl=user&amp;act=dologin" name="page_login_form" id="page_login_form">
+                                    <div class="field email pr">
+                                        <span class="holder_tip ps" style="display: block;">Email/帐号/手机</span>
+                                        <input type="text" value="" class="f-input ipttxt" id="login-email-address" name="email" size="30" tabindex="1">
+                                    </div>
+                                    <div class="field password pr">
+                                        <span class="holder_tip ps">密码</span>
+                                        <input type="password" value="" class="f-input ipttxt" id="login-password" name="user_pwd" size="30" tabindex="2">
+                                    </div>
+                                    <div class="field autologin clearfix" style="font-size:12px;padding-bottom:20px;">
+                                        <div class="f_l f_yahei f14" style="color:#8c8c8c">
+										<span class="ui-select" style="background-position: 0px -33px;">
+											<input type="checkbox" id="autologin" name="auto_login" value="1" tabindex="3" checked="checked">
+										</span>
+                                            下次自动登录？									</div>
+                                        <div class="lostpassword f_r">
+                                            <a href="/demo-p2p/index.php?ctl=user&amp;act=getpassword" class="f14 lh26 f_blue">忘记密码?</a>
+                                        </div>
+                                    </div>
+                                    <div class="act clearfix" style="margin:0px;padding:0">
+                                        <input type="hidden" name="ajax" value="1">
+                                        <input type="submit" class="login-submit-btn" id="user-login-submit" name="commit" value="登录">
+                                    </div>
+                                    <div class="act cf" style="border-bottom:1px solid #dedede; margin:0px;padding:0;height:40px; text-align:center;">
+									<span class="to_regsiter f_yahei">
+										没有帐号
+										<a href="/demo-p2p/index.php?ctl=user&amp;act=register">免费注册</a>
+									</span>
+                                    </div>
+                                </div>
+                                <!--登录表单-->
+                                <script type="text/javascript">
+                                    var is_lock_user_login = false;
+                                    $(document).ready(function(){
+                                        var remenber_i=0;
+                                        $(".ui-select").click(function(){
+                                            remenber_i++;
+                                            if(remenber_i%2==1){
+                                                $(this).css("backgroundPosition","0 -33px");
+                                                $(this).css("backgroundPosition","0 0");
+                                            }
+                                            else{
+                                                remenber_i = 0;
+                                                $("#autologin").attr("checked","checked");
+                                                $("#autologin").attr("checked","");
+                                            }
+                                        });
+
+                                        $(".user_login_bar .holder_tip").click(function(){
+                                            $(this).hide();
+                                            $(this).parent().find(".f-input").focus();
+                                        });
+
+                                        $(".user_login_bar .f-input").focus(function(){
+                                            $(this).parent().find(".holder_tip").hide();
+                                        });
+                                        $(".user_login_bar .f-input").blur(function(){
+                                            if($(this).val()==""){
+                                                $(this).parent().find(".holder_tip").show();
+                                            }
+                                        });
+
+                                        $(".user_login_bar .f-input").each(function(){
+                                            if($(this).val()==""){
+                                                $(this).parent().find(".holder_tip").show();
+                                            }
+                                            else{
+                                                $(this).parent().find(".holder_tip").hide();
+                                            }
+                                        });
+
+                                        $("#user-login-submit").click(function(){
+                                            checkUserLogin();
+                                        });
+
+                                        $("#page_login_form input,#page_login_form select").keydown(function(e){
+                                            var curKey = e.which;
+                                            if(curKey == 13){
+                                                checkUserLogin();
+                                            }
+                                        });
+
+                                    });
+
+                                    function checkUserLogin(){
+                                        if(is_lock_user_login){
+                                            return false;
+                                        }
+                                        is_lock_user_login = true;
+                                        if($.trim($("#login-email-address").val()).length == 0)
+                                        {
+                                            $.showErr("Email格式错误，请重新输入或者帐号格式错误，请重新输入",function(){
+                                                is_lock_user_login = false;
+                                                $("#login-email-address").focus();
+                                            });
+                                            return false;
+                                        }
+
+                                        if(!$.minLength($("#login-password").val(),4,false))
+                                        {
+                                            $.showErr("密码格式错误，请重新输入",function(){
+                                                is_lock_user_login = false;
+                                                $("#login-password").focus();
+                                            });
+                                            return false;
+                                        }
+
+                                        var ajaxurl = $("div[name='page_login_form']").attr("action");
+                                        var query = new Object();
+                                        query.email = $("div[name='page_login_form'] #login-email-address").val() ;
+                                        query.user_pwd = $("div[name='page_login_form'] #login-password").val() ;
+                                        query.ajax = 1;
+
+                                        if($("#autologin").attr("checked")=="checked" || $("#autologin").attr("checked")==true){
+                                            query.auto_login =  1;
+                                        }
+
+                                        if($("#Jverify").length > 0)
+                                            query.verify =  $("#Jverify").val();
+
+                                        $.ajax({
+                                            url: ajaxurl,
+                                            dataType: "json",
+                                            data:query,
+                                            type: "POST",
+                                            success: function(ajaxobj){
+                                                if(ajaxobj.status==1)
+                                                {
+                                                    var integrate = $("<span id='integrate'>"+ajaxobj.data+"</span>");
+                                                    $("body").append(integrate);
+                                                    update_page_user_tip();
+                                                    $("#integrate").remove();
+
+                                                    $.showSuccess(ajaxobj.info,function(){
+                                                        is_lock_user_login = false;
+                                                        if(ajaxobj.jump!='')
+                                                            location.href = ajaxobj.jump;
+                                                        else
+                                                            location.reload();
+                                                    });
+                                                }
+                                                else
+                                                {
+                                                    $.showErr(ajaxobj.info,function(){
+                                                        is_lock_user_login = false;
+                                                    });
+                                                }
+                                            },
+                                            error:function(ajaxobj)
+                                            {
+                                                is_lock_user_login = false;
+                                            }
+                                        });
+                                    }
+
+                                    function update_page_user_tip()
+                                    {
+                                        var ajaxurl = APP_ROOT+"/index.php?ctl=ajax&act=update_user_tip";
+                                        $.ajax({
+                                            url: ajaxurl,
+                                            type: "POST",
+                                            success: function(ajaxobj){
+                                                $("#user_head_tip").html(ajaxobj);
+                                            },
+                                            error:function(ajaxobj)
+                                            {
+                                                //				if(ajaxobj.responseText!='')
+                                                //				alert(ajaxobj.responseText);
+                                            }
+                                        });
+                                    }
+
+                                </script>
+                            </div>							<div class="blank10"></div>
+                            <div class="app_login_box">
+                                <h3>合作网站账号登录</h3>							</div>
+                        </div>
+                    </div>
+                    <div class="inc_foot"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<tc_include file="inc/footer" />
+	<script type="text/javascript">
+		$(function(){
+			var remenber_i=0;
+			$(".ui-select").click(function(){
+				remenber_i++;
+				if(remenber_i%2==1){
+					$("#autologin").attr("checked","checked");
+					$(this).css("backgroundPosition","0 0");
+				}
+				else{
+					$("#autologin").attr("checked","");
+					$(this).css("backgroundPosition","0 -33px");
+				}
+			})
+	  });	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<table width="100%" cellpadding="2" cellspacing="2">
+
+<?php 
+	foreach($result as $key=>$val)
+    {
+    	switch($val["type"])
+        {
+        	case "text":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td><input type="text" class="f-input" name="<?=$val['field']?>" value="<?=$val['default']?>"  /> </td>
+   					 <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+             case "textarea":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td><textarea style="width:400px; height:200px;" name="<?=$val['field']?>" ><?=$val['default']?> </textarea></td>
+   					 <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+             case "select":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td>
+                    	<select name="<?=$val['field']?>">
+                        		<?php 
+                                	foreach($val["default"] as $k=>$v)
+                                    {
+                                        if($val["option_value"]==$k)
+                                        {
+                                            $str.="<option value='{$k}' selected />".$v."</option>";	   
+                                        }else{
+                                            $str.="<option value='{$k}' />".$v."</option>";  
+                                       }
+                                    }	
+                                ?>
+                        </select>
+                    
+                    </td>
+   					 <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+             case "radio":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td>
+                    <?php
+                    
+                    	$str="";
+                    	foreach($val["default"] as $k=>$v)
+                        {
+                        	if($val["option_value"]==$k)
+                            {
+                        		$str.="<input type='radio' name='$val[field]' value='{$k}' checked  />".$v;	   
+                        	}else{
+                           		 $str.="<input type='radio' name='$val[field]' value='{$k}' />".$v;	   
+                           }
+                        }	
+                 		echo $str;
+                    ?>
+                    </td>
+   					 <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+             case "checkbox":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td>
+                         <?php
+                    	$str="";
+                    	foreach($val["default"] as $k=>$v)
+                        {
+                        	if($val["option_value"]==$k)
+                            {
+                        		$str.="<input type='checkbox' name='$val[field][]' value='{$k}' checked  />".$v;	   
+                        	}else{
+                           		 $str.="<input type='checkbox' name='$val[field][]' value='{$k}' />".$v;	   
+                           }
+                        }	
+                 		echo $str;
+                    ?>
+                        
+                        
+                    </td>
+   					 <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+             case "date":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td><input type="text"  class="input-small J_date f-input"  name="<?=$val['field']?>" value="<?=$val['default']?>"   /> </td>
+   					  <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+               case "thumb":
+          		?>
+                 <tr>
+  					<th class="f14"><?=$val["name"];?></th>
+ 					<td>
+                    	<input type="text" name="<?=$val['field']?>" id="<?=$val['field']?>" value="<?=$val['default']?>" class="f-input"  />
+                    	 <input type="button" style=" height:30px; line-height:30px;"  value="上传图片" onClick="flashupload('thumb_images', '图片上传','<?=$val['field']?>',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','content','12','b6ba209759e147124653ac77362ef2bd');return false;">
+                        
+                     </td>
+   					 <td align="left"><?=$val["prompt"]?></td>
+ 				 </tr>
+           		<?php
+             break;
+         }   
+  	}     
+?>
+<tr><td colspan="3"><input type="hidden" name="mid" value="<?=$mid?>" /> </td></tr>
+</table>

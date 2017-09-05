@@ -1,0 +1,48 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<script type="text/javascript" src="__TMPL__Public/js/jquery.pm.js"></script>
+
+<div class="uc_r_bl">
+    <div class="list_title clearfix">
+        <div class="cur">
+            <a href="{:U('User/Audit/dataauth')}">资料审核</a>
+        </div>
+    </div>
+    <div class="list_cont clearfix">
+        <table width="100%" align="center" border="0" cellspacing="1px" class="credit">
+            <tbody>
+            <tr class="title">
+                <td colspan="4" class="f14 b f_dgray">
+                   资料审核状态表
+                </td>
+            </tr>
+            <tr class="title">
+                <td width="340px">项目</td>
+                <td width="75px">状态</td>
+                <td width="75px">信用分数</td>
+            </tr>
+
+            <foreach name="Review" item="vo"  key="k">
+                <tr>
+                    <td class="white_bg item">{$vo.name}</td>
+                    <td class="white_bg f_gray">
+                    	<if condition="$vo['sys_state'] eq 3 ">
+                       	<a href="{:U('User/Audit/DataAuth',array('mid'=>$vo['id']))}">  立即申请认证 </a>
+                         <elseif condition="$vo['sys_state'] eq 1"  />
+                         	已完成
+                          <elseif condition="$vo['sys_state'] eq 0" />
+                          	正在审核中
+                          <else />
+                         <a href="{:U('User/Audit/DataAuth',array('mid'=>$vo['id']))}">   未通过 </a>
+                         </if>    
+                    </td>
+                    <td  class="white_bg"><span class="f_red">{$vo.source}</span>分</td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+    </div>
+    <div class="inc_foot"></div>
+</div>
+</block>
+

@@ -1,0 +1,92 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+
+     <li <eq name="deal_status" value="0"> class="active"</eq> ><a href="{:U('Loan/Fristadmin/index',array('deal_status'=>0))}">发标待审核</a></li>
+     <li <eq name="deal_status" value="1"> class="active"</eq>><a href="{:U('Loan/Fristadmin/index',array('deal_status'=>1))}"  target="_self">正在借款标</a></li>
+     <li <eq name="deal_status" value="2"> class="active"</eq>><a href="{:U('Loan/Fristadmin/index',array('deal_status'=>2))}"  target="_self">失败借款标</a></li>
+     <li <eq name="deal_status" value="4"> class="active"</eq>><a href="{:U('Loan/Fristadmin/index',array('deal_status'=>4))}"  target="_self">流标</a></li>
+  </ul>
+  <form class="well form-search" method="post" action="">
+    <div class="search_type cc mb10">
+      <div class="mb10"> 
+        <span class="mr20">分类：
+        <select class="select_2" name="cate_id" style="width:150px;">
+          	<option value='0' >全部</option>
+            <foreach name="loan_cate" item="catevo">
+                <option value='{$catevo.id}'  <eq name="cate_id" value="$catevo['id']">selected</eq> >{$catevo.cat_name}</option>
+            </foreach>
+        </select>
+        &nbsp;&nbsp;添加时间：
+        <input type="text" name="start_time" class="input length_2 J_date" value="{$formget.start_time|default=''}" style="width:80px;" autocomplete="off">-<input type="text" class="input length_2 J_date" name="end_time" value="{$formget.end_time}" style="width:80px;" autocomplete="off">
+
+               &nbsp; &nbsp;贷款名称：
+        <input type="text" class="input length_2" name="name" style="width:150px;" value="{$name}" placeholder="请输入关键字...">
+            贷款人帐号：
+        <input type="text" class="input length_2" name="user_login" style="width:150px;" value="{$user_login}" placeholder="请输入关键字...">
+        <input type="submit" class="btn" value="搜索"/>
+        </span>
+      </div>
+    </div>
+  </form>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="50">编号ID</th>
+	            <th width="200">贷款名称</th>
+                  <th width="50">借款人</th>
+	            <th width="70">投标类型</th>
+                <th width="70">借款金额</th>
+                  <th width="60">利率</th>
+                  <th width="70">借款期限</th>
+                  <th width="100">还款方式</th>
+	            <th width="100">添加时间</th>
+	            <th width="200">操作</th>
+	          </tr>
+        </thead>
+
+        	<foreach name="lists" item="vo">
+	        	<tr>
+		            <td><a>{$vo.id}</a></td>
+		            <td>
+		            	<a href="{:U('Loan/index/deal',array('id'=>$vo['id']))}" target="_blank">
+		            		<span>{$vo.name}</span>
+		            	</a>
+		            </td>
+                    <td>{$vo.user_login}</td>
+                    <td>{$vo.cat_name}</td>
+                    <td>{$vo.borrow_amount}</td>
+                    <td>{$vo.rate}</td>
+                    <td>{$vo.repay_time}</td>
+                    <td>{$vo.repay_type_name}</td>
+                    <td>{$vo.create_time|date="y-m-d H:i:s",###}</td>
+                    </td>
+		            <td>
+                        <a href="javascript:open_iframe_dialog('{:U('User/indexadmin/basic_information',array('id'=>$vo['user_id']))}','用户信息')">用户信息</a> |
+		            <eq name="deal_status" value="0">	<a href="{:U('Loan/Loanlistadmin/edit',array('loan_id'=>$vo['id']))}">修改</a>|
+                        <a href="javascript:open_iframe_dialog('{:U('Loan/Fristadmin/fristaudit',array('loan_id'=>$vo['id']))}','贷款初审')">审核</a> |
+                        <a href="{:U('User/indexadmin/delete',array('id'=>$vo['user_id']))}" class="J_ajax_del" >删除</a>|
+                    </eq>
+                        <neq name="deal_status" value="0">  <a href="javascript:open_iframe_dialog('{:U('Loan/Loanlistadmin/loanloadlist',array('loan_id'=>$vo['id']))}','投标列表')">投标列表</a> |</neq>
+                        <a href="javascript:open_iframe_dialog('{:U('Loan/Loanlistadmin/loanlog',array('loan_id'=>$vo['id']))}','{$vo['name']}的日志')">标日志</a>
+
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+
+
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+</script>
+</body>
+</html>

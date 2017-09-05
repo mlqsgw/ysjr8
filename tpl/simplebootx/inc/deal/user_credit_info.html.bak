@@ -1,0 +1,153 @@
+<p class="b" style="margin-bottom:10px">用户信息</p>
+<if condition="!sp_is_user_login()">
+
+    <p align="center">只有<a href="{:UU('user/register/index')}">注册</a>用户才可以查看借入者信用信息！现在<a href="{:UU('user/login/index')}">登录</a></p>
+
+    <else/>
+
+	<div class="clearfix" style="border-bottom:1px solid #e3e3e3; padding:0 0 30px 90px;">
+
+    <div class="clearfix_list">
+        <gt name="$dusers.sex" value="0" >
+        <p class="f_l">
+            性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：<span>
+
+            <eq name="$dusers.sex" value="1" >男<else/>女</eq>
+            </span>
+        </p>
+        </gt>
+        <p class="f_l">
+            年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<span>
+
+                <?php echo date("Y",time())-$dusers['born'];?>
+        </span>
+        </p>
+        <p class="f_l">
+        民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族：<span>
+            {$dusers.national}
+        </span>
+      </p>
+        <p class="f_l">
+            是否结婚：<span>{$dusers.marriage}</span>
+        </p>
+        <p class="f_l">
+		工作城市：<span>{$dusers.work_city}
+            </span>
+        </p>
+    </div>
+    <div class="clearfix_list">
+		<p class="f_l">
+		公司行业：<span>
+            {$dusers.officedomain}
+           </span>
+     	</p>
+
+		<p class="f_l">
+		公司名称：<span>{$dusers.office}</span>
+     	</p>
+
+     	<p class="f_l">
+		公司规模：<span>
+            {$dusers.officecale}人</span>
+      	</p>
+        <p class="f_l">
+            职业状态：<span>
+            {$dusers.jobtype}
+        </span>
+        </p>
+
+        <p class="f_l">
+		 职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：<span>
+            {$dusers.position}
+        </span>
+        </p>
+
+         <p class="f_l">
+        工作年限：<span>{$dusers.workyears}</span>
+        </p>
+        <p class="f_l">
+		工作收入：<span>
+            {$dusers.salary}
+            </span>
+        </p>
+    </div>
+
+    <div class="clearfix_list">
+        <p class="f_l">
+         学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：<span>
+            {$dusers.education}
+        </span>
+        </p>
+         <p class="f_l">
+        毕业院校：<span>{$dusers.university}</span>
+        </p>
+    </div>
+
+    <div class="clearfix_list">
+        <p class="f_l">
+		 有无购房：<span>
+            <eq name="dusers.housing" value="1">有<else/>无</eq></span>
+		</p>
+        <p class="f_l">
+		有无购车：<eq name="dusers.buy_cars" value="1">有<else/>无</eq></span> </p>
+        <!--<p class="f_l">
+            有无房贷：<span>?</span>
+        </p>
+        <p class="f_l">
+            有无车贷：<span>?</span>
+        </p>-->
+    </div>
+
+</div>
+<p class="b" style="margin:30px 0 10px 0;">
+    {$Think.config.SITE_NAME}借款记录
+</p>
+<div class="clearfix" style="border-bottom:1px solid #e3e3e3;">
+    <div style="padding-left:90px;">
+        <div class="clearfix_list">
+            <p class="f_l">
+                借款笔数：<span>{$user_statics.deal_count}</span>
+            </p>
+            <p class="f_l">
+                成功笔数：<span>{$user_statics.success_deal_count}</span>
+            </p>
+            <p class="f_l">
+                还清笔数：<span>{$user_statics.repay_deal_count}</span>
+            </p>
+            <p class="f_l">
+                共计借入：<span>{$user_statics.borrow_amount|format_price}</span>
+            </p>
+        </div>
+        <div class="clearfix_list">
+            <p class="f_l">
+                逾期次数：<span>{$user_statics.yuqi_count}</span>
+            </p>
+            <p class="f_l">
+                严重逾期：<span>{$user_statics.yz_yuqi_count}</span>
+            </p>
+            <p class="f_l">
+                逾期金额：<span>{$user_statics.yuqi_amount|format_price}</span>
+            </p>
+            <p class="f_l">
+                待还本息：<span>{$user_statics.need_repay_amount|format_price}</span>
+            </p>
+        </div>
+        <div class="clearfix_list">
+            <p class="f_l">
+                共计借出：<span>{$user_statics.load_money|format_price}</span>
+            </p>
+            <p class="f_l">
+                待收本息：<span>{$user_statics.load_wait_repay_money|format_price}</span>
+            </p>
+        </div>
+    </div>
+    <div class="prompt" style="padding:30px 0; text-align:center;">
+         <i></i>以下基本信息资料，经用户同意披露。为通过网站审核之项目。
+    </div>
+</div>
+</if>
+<script type="text/javascript">
+$(function(){
+    $(".clearfix_list").find("p:last").css("paddingRight","0");
+})
+</script>

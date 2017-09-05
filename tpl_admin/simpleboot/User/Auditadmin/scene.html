@@ -1,0 +1,56 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li <eq name="wtype" value="2">class="active"</eq>><a href="{:U('User/Auditadmin/scene',array('typeid'=>2))}">{$modelname}_待审核</a></li>
+     <li <eq name="wtype" value="1">class="active"</eq>><a href="{:U('User/Auditadmin/scene',array('typeid'=>1))}">{$modelname}_已审核</a></li>
+     <li <eq name="wtype" value="3">class="active"</eq>><a href="{:U('User/Auditadmin/scene',array('typeid'=>3))}">{$modelname}_未通过</a></li>
+     <!--<li><a href="{:U('User/Auditadmin/add',array('typename'=>$typename))}">{$addname}{$modelname}</a></li>-->
+  </ul>
+    <div class="row">
+        <div class="span12">
+            <form class="form-inline" method="post" action="{:U('User/Auditadmin/scene',array('typeid'=>$wtype))}" >
+                用户注册时间从
+                <input type="text" class="input-small J_date" name="so_start" placeholder="开始时间" value="{$so_start}">
+                到
+                <input type="text" class="input-small J_date" name="so_end" placeholder="结束时间" value="{$so_end}">
+                用户名
+                <input type="text" class="input-small" name="so_name" placeholder="用户登录名" value="{$so_name}">
+                <button type="submit" class="btn" >搜索</button>
+            </form>
+        </div>
+    </div>
+
+  <div class="table_list">
+
+
+    <table width="100%" cellspacing="0" class="table table-hover">
+      <thead>
+        <tr>
+          <th width="100">ID</th>
+          <th align="400" >用户名</th>
+          <th width="200">管理操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <foreach name="lists" item="vo">
+        <tr>
+          <td>{$vo.uid}</td>
+          <td>{$vo.user_login}</td>
+          <td  class="text-c">
+          <!-- <a href="{:U('Rbac/authorize',array('uid'=>$vo['id']))}">查看</a>|
+          <neq name="vo.scene_audit" value="1"><a href="{:U('User/Auditadmin/add',array('uid'=>$vo['uid'],'typename'=>$typename))}">修改</a>|</neq>-->
+          <a href="{:U('User/Auditadmin/Review',array('id'=>$vo['uid'],'typename'=>$typename))}" class="J_dialog" title="{$modelname}_资料审核">审核</a>
+          <!-- |<a class="J_ajax_del" href="{:U('Rbac/roledelete',array('id'=>$vo['id']))}">删除</a>-->
+          </td>
+        </tr>
+        </foreach>
+      </tbody>
+    </table>
+      <div class="pagination">{$page}</div>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

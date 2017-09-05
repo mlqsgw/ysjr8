@@ -1,0 +1,54 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+   <div class="list">
+	<div class="list_title clearfix">
+		<div class="cur"><a href="{:U('User/Myaccount/authsite')}">现场认证</a></div>
+	</div>
+	<div class="uc_r_bl_box clearfix">
+	<div class="blank"></div>
+	<div class="inc wb">
+		<div class="inc_main">
+			<div class="tip-h clearfix">
+				<div class="lh22 f14" style="margin-bottom:20px;padding-left:107px;padding-top:50px;">
+					<eq name="site_audit" value="0">
+						   <p>尚未申请现场认证</p>
+	              			<p>若您希望申请现场认证，请点击申请认证：</p>
+	                </eq>
+	                
+					<eq name="site_audit" value="1">
+						   <p>现场认证已成功</p>
+	                </eq>
+					<eq name="site_audit" value="2">
+						   <p>现场认证正在审核中......</p>
+	                </eq>
+					<eq name="site_audit" value="3">
+						   <p>现场认证审核失败</p>
+	              			<p>若您希望申请现场认证，请点击申请认证：</p>
+	                </eq>
+						            </div>
+			<if condition="($site_audit eq 0) or ($site_audit eq 3)">
+				<form method="post" name="bind_mobile" action="{:U('User/Myaccount/authsite')}">
+					<table width="470" border="0" style="padding:0;margin:0 auto;">
+		                <tbody>
+			                <tr style="margin-top:20px;">
+			                    <td></td>
+			                    <td colspan="2">
+			                        <div style="font-weight:bold; margin-top:20px;padding-left:3px;">
+			                            <input type="submit" name="submit" value="申请认证" class="sub_btn">
+			                        </div>
+			                    </td>
+			                </tr>
+		            	</tbody>
+					</table>
+				</form>
+			</if>
+			</div>
+		</div>
+		<div class="inc_foot"></div>
+	</div>
+	</div>
+</div>
+</div>
+
+<div class="blank"></div>
+</block>

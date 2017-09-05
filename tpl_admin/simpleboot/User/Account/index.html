@@ -1,0 +1,81 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('User/Account/index')}">资金账号管理</a></li>
+     <li style="margin:0 0 0 100px;">
+      <form class="form-search" action="{:U('User/Account/index')}"  method="post">
+         <input type="text" class="input-medium search-query" name="so_name" placeholder="用户名" value="{$so_name}">
+            <!--&nbsp;&nbsp; 操作时间
+               <input type="text" class="input-small J_date" name="so_start" placeholder="开始时间" value="{$so_start}">
+                到
+                <input type="text" class="input-small J_date" name="so_end" placeholder="结束时间" value="{$so_end}">
+                --> 
+         <button type="submit" class="btn">搜索</button>
+     </form>
+     </li>
+  </ul>
+  <div class="table_list">
+
+    <table width="100%" cellspacing="0" class="table table-hover">
+        <thead>
+        <tr>
+            <th align='center'>ID</th>
+            <th>用户名</th>
+            <th>总金额 </th>
+            <th>可用金额 </th>
+            <th>冻结金额</th>
+            <th>待收金额</th>
+            <th width="350">操作</th>
+        </tr>
+        </thead>
+        <style>
+            .audit{
+                background-image: url('__ROOT__/statics/images/icon/opa-icons-color16.png');
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 16px;
+                vertical-align: text-top;
+                width: 16px;
+            }
+            .audit0{
+                background-position: -192px -16px;
+            }
+            .audit1{
+                background-position: -208px -16px;
+            }
+            .view{
+                background-position: -192px -64px;
+            }
+
+        </style>
+        <tbody>
+
+        <foreach name="content" item="vo">
+            <tr>
+                <td align='center'>{$vo.id}</td>
+                
+                <td><a class="J_dialog" href="{:U('indexadmin/basic_information',array('id'=>$vo['id']))}" >{$vo.user_login}</a></td>
+                <td>￥{$vo.total_money}</td>
+                <td>￥{$vo.available_funds}</td>
+                <td> ￥{$vo.freeze_funds} </td>
+				<td> ￥{$vo.due_in} </td>
+                <td align='center'>
+                    <a href="{:U('User/Account/account_recharge',array('uid'=>$vo['uid']))}"> 充值记录  </a>
+                    <a href="{:U('User/Account/account_cash',array('uid'=>$vo['uid']))}"> 提现记录 </a>
+                    <a href="{:U('User/Account/account_log',array('uid'=>$vo['uid']))}"> 资金记录 </a>
+                    <a href="{:U('User/Account/account_log',array('uid'=>$vo['uid']))}"> 投标记录 </a>
+                    <a style="color:red;" href="{:U('User/Account/account_edit',array('uid'=>$vo['uid']))}"> 修改资金</a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+
+      <div class="pagination">{$page}</div>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

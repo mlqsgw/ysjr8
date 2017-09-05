@@ -1,0 +1,87 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li <eq name="deal_status" value="1">class="active"</eq>><a href="{:U('Loan/Transferadmin/index',array('deal_status'=>1))}">正在转让列表</a></li>
+     <li <eq name="deal_status" value="2">class="active"</eq>><a href="{:U('Loan/Transferadmin/index',array('deal_status'=>2))}"  target="_self">转让完成列表</a></li>
+  </ul>
+  <form class="well form-search" method="post" action="">
+    <div class="search_type cc mb10">
+      <div class="mb10"> 
+        <span class="mr20">分类：
+        <select class="select_2" name="cate_id" style="width:150px;">
+          	<option value='0' >全部</option>
+            <foreach name="loan_cate" item="catevo">
+                <option value='{$catevo.id}'  <eq name="cate_id" value="$catevo['id']">selected</eq> >{$catevo.cat_name}</option>
+            </foreach>
+        </select>
+        &nbsp;&nbsp;添加时间：
+        <input type="text" name="start_time" class="input length_2 J_date" value="{$start_time}" style="width:80px;" autocomplete="off">-<input type="text" class="input length_2 J_date" name="end_time" value="{$end_time}" style="width:80px;" autocomplete="off">
+
+               &nbsp; &nbsp;贷款名称：
+        <input type="text" class="input length_2" name="name" style="width:150px;" value="{$name}" placeholder="请输入关键字...">
+            贷款人帐号：
+        <input type="text" class="input length_2" name="user_login" style="width:150px;" value="{$user_login}" placeholder="请输入关键字...">
+        <input type="submit" class="btn" value="搜索"/>
+        </span>
+      </div>
+    </div>
+  </form>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="50">转让ID</th>
+	            <th width="200">贷款名称</th>
+                  <th width="50">转让人</th>
+	            <th width="70">承接人</th>
+                <th width="200">本/息/转让金</th>
+                  <th width="60">利率</th>
+                  <th width="100">待还/总期数</th>
+                  <th width="100">还款方式</th>
+                  <eq name="deal_status" value="2"> <th width="100">转让日期</th><else/><th width="100">剩余时间</th></eq>
+
+	            <th width="200">操作</th>
+	          </tr>
+        </thead>
+
+        	<foreach name="lists" item="vo">
+	        	<tr>
+		            <td><a>{$vo.id}</a></td>
+		            <td>
+		            	<a href="{:U('Loan/index/deal',array('id'=>$vo['loan_id']))}" target="_blank">
+		            		<span>{$vo.name}</span>
+		            	</a>
+		            </td>
+                    <td>{$vo.user_name}</td>
+                    <td>{$vo.tuser}</td>
+                    <td>{$vo.left_benjin_format}/{$vo.left_lixi_format}/{$vo.transfer_amount_format}</td>
+                    <td>{$vo.rate}</td>
+                    <td>{$vo.how_much_month}/{$vo.repay_nper}</td>
+                    <td>{$vo.repay_type_name}</td>
+
+                    <eq name="deal_status" value="2"> <td>{$vo.transfer_time_format}</td><else/><td>{$vo.remain_time_format}</td></eq>
+                    </td>
+		            <td>
+		            	<a target="_blank" href="{:U('Loan/index/t_details',array('id'=>$vo['id']))}">查看</a>
+		            </td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+
+
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+
+
+
+
+</script>
+</body>
+</html>

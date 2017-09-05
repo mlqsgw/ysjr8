@@ -1,0 +1,135 @@
+<!-----
+<p class="b" style="margin:30px 0 10px 0;">留言板</p>
+<div class="clearfix" style="padding:0 90px 0 90px;">
+	<div class="inc_top">{$post_title}</div>
+	<div class="inc_main">		
+	<form method="post" id="consult-add-form" action="{url x="index" r="msg#add"}"  onsubmit="return check_content(this);" name="message">
+		<div>
+            <if condition="sp_is_user_login()">
+				<textarea name="content" rows="5" cols="60" class="f-textarea" style="width:100%"></textarea>
+				<div class="blank"></div>
+				
+				<p class="commit" style="float:right;">
+					<input type="hidden" value="1" name="ajax" />
+					<input type="hidden" value="{$rel_table}" name="rel_table">
+					<input type="hidden" value="{$rel_id}" name="rel_id">
+					<input type="submit" class="sub_btn f_r" name="commit" value="好了,提交">
+
+					<if condition="$Think.config.sys_comments_code eq 1">
+					<div class="commit  f_r">
+						<div class="verify_row">
+						<input type="text" value="" class="f-input f-input60" style="width:45px" name="verify" />
+                         {:sp_verifycode_img('code_len=4&font_size=15&width=120','title="点击获取"')}
+						</div>
+					</div>
+                    </if>
+				</p>
+			<else/>
+                <p align="center">只有<a href="{:UU('user/register/index')}">注册</a>用户才可以留言！现在<a href="{:UU('user/login/index')}">登录</a></p>
+
+            </if>
+		</div>
+						
+	</form>
+	</div>
+	<div class="inc_foot"></div>
+</div>
+
+<div class="blank"></div>
+
+<div class="clearfix" style="padding:0 90px 20px 90px;">
+	<div class="inc_main">		
+		
+		<div  class="message-list">
+            <ul>
+                {foreach from=$message_list item=message_item key=key}
+                <li class="message-row" id="thread_{$message_item.id}" name="thread_{$message_item.id}" style="position:relative;">
+                    <table class="msg_row">
+                        <tr>
+                            <td style="width:75px; text-align:left; margin-right:5px;">
+                                <div class="avatar_middle">
+                                    {function name="show_avatar" uid=$message_item.user_id  type="middle" }
+                                </div>
+                            </td>
+                            <td>
+                                <div class="item" style="border:1px solid #e3e3e3; overflow:hidden; padding:20px; -moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;">
+                                    <div class="clearfix">
+							<span class="f_l" style="color:#00bef0;">
+							{function name="get_user_name" value=$message_item.user_id}
+								<span style="font-size:12px; color:#999;">
+								{$LANG.SUPPLIER_COMMENT_SAY}：
+								</span>
+							</span>
+                                        {if $user_auth['msg']['del']}
+                                        <div class="f_r">
+                                            &nbsp;&nbsp;<a href="javascript:void(0);" onclick="op_msg_del({$message_item.id});">删除</a>
+                                        </div>
+                                        {/if}
+							<span class="f_r f_dgray">
+								<i></i>
+								{function name='to_date' v='$message_item.create_time'}
+							</span>
+                                    </div>
+
+                                    <div class="blank1"></div>
+                                    <p class="text pl20 pt5 pb5">
+                                        {function name="nl2br" value=$message_item.content}
+                                    </p>
+                                    <div class="subcomment">
+                                        {if $message_item.admin_reply neq ''}
+                                        <div class="clearfix comment bt1 pt10 pb10">
+                                            <div class="avatar_middle f_l" style="width:75px">
+                                                <img src="public/avatar/noavatar_middle.gif">
+                                            </div>
+                                            <div class="subc f_l">
+                                                <div class="clearfix">
+                                                    <span class="f_l"><a href="###">管理员</a>{$LANG.SUPPLIER_COMMENT_SAY}：</span>
+											<span class="f_r f_dgray">
+												{function name='to_date' v='$message_item.update_time'}
+											</span>
+                                                </div>
+                                                <div class="pl20 pt5 pb5">
+                                                    {function name="nl2br" value=$message_item.admin_reply}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/if}
+                                        {foreach from=$message_item.sub item="sub_message"}
+                                        <div class="clearfix comment bt1 pt10 pb10">
+                                            <div class="avatar_middle f_l" style="width:75px">
+                                                {function name="show_avatar" uid=$sub_message.user_id  type="middle" }
+                                            </div>
+                                            <div class="subc f_l">
+                                                <div class="clearfix">
+                                                    <span class="f_l">{function name="get_user_name" value=$sub_message.user_id} {$LANG.SUPPLIER_COMMENT_SAY}：</span>
+										<span class="f_r f_dgray">
+											<i></i>
+											{function name='to_date' v='$sub_message.create_time'}
+										</span>
+                                                </div>
+                                                <div class="pl20 pt5 pb5">
+                                                    {function name="nl2br" value=$sub_message.content}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/foreach}
+                                    </div>
+                                    {if $deal.user_id eq $user_info.id}
+                                    <p style="float:right;"><a href="###" dealid="{$deal.id}" dataid="{$message_item.id}" class="J_comment_reply" style="background-color:#51c2e8; color:#fff; display:block; height:40px; line-height:40px; text-align:center; width:85px; -moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;">回复</a></p>
+                                    {/if}
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <i style="background:url({$TMPL}/images/liuyan_icon.gif) no-repeat; display:block; height:18px; left:75px; position:absolute; top:34px; width:8px;"></i>
+                </li>
+                {/foreach}
+            </ul>
+
+            <div class="blank"></div>
+            <div class="pages">{$pages}</div>
+        </div>
+	</div>
+	<div class="inc_foot"></div>
+</div>
+----->

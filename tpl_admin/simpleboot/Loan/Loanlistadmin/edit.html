@@ -1,0 +1,289 @@
+<admintpl file="header" />
+
+<body class="J_scroll_fixed">
+	<div class="wrap J_check_wrap">
+	 	
+		<ul class="nav nav-tabs">
+            <li><a href="{:U('Loan/Loanlistadmin/index')}">所有借款</a></li>
+            <li ><a href="{:U('Loan/Loanlistadmin/add')}"  target="_self">添加借款</a></li>
+            <li class="active"><a href=""  target="_self">编辑借款</a></li>
+	    </ul>
+		
+		<form class="J_ajaxForms" name="myform" id="myform" action="{:u('Loan/Loanlistadmin/edit')}" method="post">
+		 <fieldset>
+		<div class="tabbable">
+        <div class="tab-content">
+          <div class="tab-pane active" id="A">
+            <table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+				<tbody>
+                <tr>
+                    <td>标分类：</td>
+                    <td><input type="hidden" class="input" name="id" value="{$loan.id}">{$loan_cate.cat_name}</td>
+                </tr>
+                <tr>
+                    <td>用户名称：</td>
+                    <td>
+                        {$loan.user_login}
+                    </td>
+                </tr>
+
+					<tr>
+						<td width="180">借款标题：</td>
+						<td><input type="text" class="input" name="name" value="{$loan.name}"><span class="must_red">*</span>
+						</td>
+					</tr>
+
+                <tr>
+                    <td width="180">简短名称：</td>
+                    <td><input type="text" class="input" name="sub_name" value="{$loan.sub_name}"><span class="must_red">*&nbsp;&nbsp;用于短信，邮箱提醒的简短名称</span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td>借款用途：</td>
+                        <td>
+                            <select name="type_id" class="normal_select" >
+                                <foreach name="loan_type" item="type_id">
+                                    <option value="{$type_id.id}"<eq name="type_id.id" value="$loan['type_id']">selected</eq> >{$type_id.t_name}</option>
+                                </foreach>
+                            </select>
+                        </td>
+                    </tr>
+
+					<tr>
+						<td>借款金额：</td>
+						<td><input type="text" class="input" name="borrow_amount" value="{$loan.borrow_amount}"><span class="must_red">*&nbsp;&nbsp;请填写为{$Think.config.sys_tenderMultiplicand}的倍数,最大额度为{$loan_cate.amount}元</span></td>
+					</tr>
+					<tr>
+						<td>借款期限：</td>
+						<td>
+							<select name="repay_time" class="normal_select" >
+
+                                <for start="$loan_cate['borrowing_time_shortest']" end="$loan_cate['borrowing_time_longest']+1" step="1" name="borrowing_time" >
+                                    <option value="{$borrowing_time}" <eq name="borrowing_time" value="$loan.repay_time">selected</eq>> {$borrowing_time}个月</option>
+
+                                </for>
+							</select>
+						</td>
+					</tr>
+                    <tr>
+                        <td>年利率：</td>
+                        <td><input type="text" class="input" name="rate" value="{$loan.rate}"><span class="must_red">*&nbsp;&nbsp;年利率请在{$Think.config.sys_loans_lowest_apr}%到{$Think.config.sys_loans_highest_apr}%之间</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>还款周期：</td>
+                        <td>按月还款</td>
+                    </tr>
+					<tr>
+						<td>还款方式：</td>
+						<td>
+							<select name="loantype" class="normal_select" >
+									<php>
+                                        $payback=unserialize($loan_cate['payback']);
+									</php>
+                                    <option value="0"> 请选择还款方式</option>
+                                    <foreach name="payback" item="paybackvo">
+                                        <option value="{$key}"<eq name="key" value="$loan['loantype']">selected</eq> >{$payback[$key]}</option>
+                                    </foreach>
+
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>筹标期限：</td>
+						<td><input type="text" class="input" name="deadline" value="{$loan.deadline}"><span class="must_red">*&nbsp;&nbsp;请在{$loan_cate.deadline}天内</span></td>
+					</tr>
+                    <tr>
+                        <td>最高投标金额：</td>
+                        <td><input type="text" class="input" name="max_loan_money" value="{$loan.max_loan_money}"><span class="must_red">*&nbsp;&nbsp;0为不限制，请填写{$Think.config.sys_tenderMultiplicand}的倍数</span></td>
+                    </tr>
+                    <tr>
+                        <td>最低投标金额：</td>
+                        <td><input type="text" class="input" name="min_loan_money" value="{$loan.min_loan_money}"></td>
+                    </tr>
+                    <tr>
+                        <td>担保公司：</td>
+                        <td>
+                            <select name="agency_id" class="normal_select" >
+                                <option value="">无</option>
+                                <foreach name="loan_agency" item="agencyvo">
+                                    <option value="{$agencyvo.id}" <eq name="agencyvo.id" value="$loan.agency_id">selected</eq> >{$agencyvo.name}</option>
+                                </foreach>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>担保方式：</td>
+                        <td>
+                            <select name="warrant" class="normal_select" >
+                                    <option value="0" <eq name="loan.warrant" value="0">selected</eq>  >无</option>
+                                    <option value="1" <eq name="loan.warrant" value="1">selected</eq> >本金</option>
+                                    <option value="2"<eq name="loan.warrant" value="2">selected</eq>  >本金及利息</option>
+                            </select>
+                        </td>
+                    </tr>
+                <tr>
+                    <td>风险等级：</td>
+                    <td>
+                        <select name="risk_rank" class="normal_select" >
+                            <option value="0" <eq name="loan.risk_rank" value="0">selected</eq> >低</option>
+                            <option value="1" <eq name="loan.risk_rank" value="1">selected</eq>  >中</option>
+                            <option value="2" <eq name="loan.risk_rank" value="2">selected</eq> >高</option>
+                        </select>
+                    </td>
+                </tr>
+					
+					<tr>
+						<td>借款描述：</td>
+						<td><textarea name="description" rows="7" cols="57">{$loan.description}</textarea></td>
+					</tr>
+                <tr>
+                    <php>
+                        $userdata=unserialize($user['datamark']);
+                        $review=unserialize($loan['userdata']);
+                    </php>
+                    <td width="180">用户材料展示:</td>
+                    <td>
+                        <foreach name="userdata" item="uservo">
+                            <label style="display: inline-block;margin-right: 10px;" for="Review{$key}">
+                                <input type="checkbox" name="userdata[{$key}]" id="Review{$key}"   value="{$userdata[$key]}"    {:checked($key, $review)} />{$userdata[$key]}</label>
+                        </foreach>
+                    </td>
+                </tr>
+                <tr>
+                    <td>排序：</td>
+                    <td><input type="text" class="input" name="listorder" value="{$loan.listorder}"></td>
+                </tr>
+				</tbody>
+			</table>
+          </div>
+          
+          
+        </div>
+      </div>
+      
+      	<div class="form-actions">
+            <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+          </div>
+           </fieldset>
+		</form>
+		
+	</div>
+	<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+    <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+
+    
+	<script>
+/////---------------------
+
+	 Wind.use('validate', 'ajaxForm', 'artDialog', function () {
+			//javascript
+	        var form = $('form.J_ajaxForms');
+	        //ie处理placeholder提交问题
+	        if ($.browser.msie) {
+	            form.find('[placeholder]').each(function () {
+	                var input = $(this);
+	                if (input.val() == input.attr('placeholder')) {
+	                    input.val('');
+	                }
+	            });
+	        }
+
+         var max={$Think.config.sys_loans_lowest_apr};
+         var min={$Think.config.sys_loans_highest_apr};
+         var deadline={$loan_cate.deadline};
+        var borrowing={$loan_cate.amount};
+
+
+//表单验证开始
+	        form.validate({
+				//是否在获取焦点时验证
+				onfocusout:false,
+				//是否在敲击键盘时验证
+				onkeyup:false,
+				//当鼠标掉级时验证
+				onclick: false,
+	            //验证错误
+	            showErrors: function (errorMap, errorArr) {
+					//errorMap {'name':'错误信息'}
+					//errorArr [{'message':'错误信息',element:({})}]
+					try{
+						$(errorArr[0].element).focus();
+						art.dialog({
+							id:'error',
+							icon: 'error',
+							lock: true,
+							fixed: true,
+							background:"#CCCCCC",
+							opacity:0,
+							content: errorArr[0].message,
+							cancelVal: '确定',
+							cancel: function(){
+								$(errorArr[0].element).focus();
+							}
+						});
+					}catch(err){
+					}
+	            },
+	            //验证规则
+	            rules: {'name':{required:1},'sub_name':{required:1},'rate':{required:true,range:[max,min]},'averagecCapital':{required:true},'borrow_amount':{required:true,max:borrowing},'deadline':{required:true,max:10},'min_loan_money':{required:true,digits:true}},
+	            //验证未通过提示消息
+	            messages: {'name':{required:'请输入借款标题！'},'sub_name':{required:'请输入一个简短的名称用于发送短信等提醒！'}},
+	            //给未通过验证的元素加效果,闪烁等
+	            highlight: false,
+	            //是否在获取焦点时验证
+	            onfocusout: false,
+	            //验证通过，提交表单
+	            submitHandler: function (forms) {
+	                $(forms).ajaxSubmit({
+	                    url: form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+	                    dataType: 'json',
+	                    beforeSubmit: function (arr, $form, options) {
+	                        
+	                    },
+	                    success: function (data, statusText, xhr, $form) {
+	                        if(data.status){
+								setCookie("refersh_time",1);
+								//添加成功
+								Wind.use("artDialog", function () {
+								    art.dialog({
+								        id: "succeed",
+								        icon: "succeed",
+								        fixed: true,
+								        lock: true,
+								        background: "#CCCCCC",
+								        opacity: 0,
+								        content: data.info,
+										button:[
+											{
+												name: '确定',
+												callback:function(){
+                                                    location.href = "{:U('Loan/Loanlistadmin/index')}";
+
+													return true;
+												},
+												focus: true
+											},{
+												name: '关闭',
+												callback:function(){
+                                                    location.href = "{:U('Loan/Loanlistadmin/index')}";
+													return true;
+												}
+											}
+										]
+								    });
+								});
+							}else{
+								alert(data.info);
+							}
+	                    }
+	                });
+	            }
+	        });
+	    });
+	////-------------------------
+	
+	
+	</script>
+</body>
+</html>

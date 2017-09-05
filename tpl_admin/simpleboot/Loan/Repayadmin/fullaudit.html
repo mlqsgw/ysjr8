@@ -1,0 +1,78 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="">满标审核</a></li>
+  </ul>
+    <div class="table_list">
+        <form class="J_ajaxForm" method="post" action="{:U('Loan/Fulladmin/fullaudit')}">
+          <table cellpadding="0" cellspacing="0" class="table_form" width="50%">
+              <tbody>
+              <tr>
+                  <td width="300">审核状态:</td>
+                  <td>
+                      <label class="radio inline" for="tongguo">
+                          <input type="radio" id="tongguo"  class="" name="deal_status" value="7"  />满标审核通过</label>
+                      <label class="radio inline" for="butonguo">
+                          <input type="radio" id="butonguo" class="" name="deal_status" value="6" checked/>满标审核不通过</label>
+                  </td>
+              </tr>
+              <tr id="">
+                  <td>  </td>
+                  <td>
+                    <strong style="color: red">注意：<br />审核通过后将扣除投标人的钱直接放款给该贷款用户<br/>审核失败后将直接将投标人的钱返还到自己的账户</strong>
+                  </td>
+              </tr>
+              <tr id="zhaobaioshijian" style="display: none">
+                  <td>确认时间:</td>
+                  <td>
+                      <input type="text" class="input length_2 J_datetime date" name="repay_start_time"/>
+
+                  </td>
+              </tr>
+              <tr id="zhuyi" style="display: none">
+                  <td>  </td>
+                  <td>
+                      <strong style="color: red"> 确认时间开始的起算，如 设置为 2014.1.1 即第一次还款日为：2014.2.1，确认时间不要设置为29,30,31号</strong>
+                  </td>
+              </tr>
+              <tr>
+                  <td>审核备注:</td>
+                  <td><textarea name="fullauditmark" rows="5" cols="57"></textarea></td>
+              </tr>
+              <input type="hidden" name="id" value="{$loan_id}"/>
+          </tbody>
+          </table>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">审核</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+
+    $(function(){
+        $("input[name=deal_status]").click(function(){
+            switch($("input[name=deal_status]:checked").val()){
+                case "7":
+                        $("#zhaobaioshijian").show();
+                        $("#tuijian").show();
+                        $("#zhuyi").show();
+                    break;
+                case "6":
+                    $("#zhaobaioshijian").hide();
+                    $("#tuijian").hide();
+                    $("#zhuyi").hide();
+                    break;
+
+            }
+
+        });
+    });
+
+
+</script>
+</body>
+</html>

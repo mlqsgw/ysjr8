@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> New Document </title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+</head>
+
+<body style="text-align: -moz-center;">
+<br/>
+<form action="{:U('User/Shangchuan/modified')}" method="post" enctype='multipart/form-data'>
+	<table border="1px" >
+	
+		<tr>
+			<td>图片名</td>
+			<td>{$data.images_name}</td>
+		</tr>
+		
+		<tr>
+			<td>图片内容</td>
+			<td><img src="__TMPL__../../tpl/simplebootx/Public/user_img_info/{$data.uid}/{$data.images_name}" width="100" height="100"/> <input type="file" name="img[]"/></td>
+		</tr>
+		<tr>
+			<input type="hidden" name="id" value="{$data.id}">
+			<input type="hidden" name="uid" value="{$data.uid}">
+			
+			<td><input type="submit" value="提交"></td>
+			
+			<td></td>
+		</tr>
+	
+	</table>
+</form>
+<br/>
+<a href="__URL__/img_lists/uid/{$data.uid}">[返回]</a>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<div id="uc_cate">
+    <div class="hdc c_hds c_hd0">个人中心</div>
+    <div class="c_body">
+        <ul class="menu">
+
+            <li class="<if condition='$con_name eq Center and ($act_name eq index)'>act</if>"><a class="uc_cate" href="{:U('User/Center/index')}" title="我的主页">我的主页</a></li>
+            <li class="<if condition='$con_name eq Myaccount and ($act_name eq index or $act_name eq account_setting or $act_name eq work)'>act</if>"> <a class="uc_cate" href="{:U('User/Myaccount/index')}" title="帐户设置">帐户设置</a></li>
+            <li class="<if condition='$con_name eq Myaccount and ($act_name eq paypassword or $act_name eq alterpassword )'>act</if>"> <a class="uc_cate" href="{:U('User/Myaccount/paypassword')}" title="安全设置">安全设置</a></li>
+            <li class="<eq name='curr' value='Auditindex'>act</eq>"> <a class="uc_cate" href="{:U('user/Audit/index')}" title="认证">认证中心</a></li>
+            <li class="<if condition='$con_name eq Money and ($act_name eq index)'>act</if>"><a class="uc_cate" href="{:U('User/Money/index')}" title="充值">充值提现</a></li>
+            <!--<li class="<if condition='$con_name eq Message '>act</if>"><a class="uc_cate" href="{:U('User/Message/index')}" title="消息管理">消息</a></li>-->
+        </ul>
+    </div>
+    <div class="hdc c_hds c_hd1">贷款管理</div>
+    <div class="c_body">
+        <ul class="menu">
+            <li class="<if condition='$con_name eq Deal and ($act_name eq index)'>act</if>"> <a class="uc_cate" href="{:U('User/Deal/index')}" title="偿还贷款">偿还贷款</a></li>
+            <li class="<if condition='$con_name eq Deal and ($act_name eq borrowed)'>act</if>"> <a class="uc_cate" href="{:U('User/Deal/borrowed')}" title="已发布的贷款">已发布的贷款</a></li>
+            <li class="<if condition='$con_name eq Deal and ($act_name eq borrow_stat)'>act</if>"> <a class="uc_cate" href="{:U('User/Deal/borrow_stat')}" title="贷款统计">贷款统计</a></li>
+        </ul>
+    </div>
+    <div class="hdc c_hds c_hd2">理财管理</div>
+    <div class="c_body">
+        <ul class="menu">
+            <li class="<if condition='$con_name eq Invest and ($act_name eq index)'>act</if>"> <a class="uc_cate" href="{:U('User/Invest/index')}" title="我的投资">我的投资</a></li>
+            <li class="<if condition='$con_name eq Transfer and ($act_name eq index)'>act</if>"> <a class="uc_cate" href="{:U('User/Transfer/index')}" title="债权转让">债权转让</a></li>
+            <li class="<if condition='$con_name eq Collect'>act</if>"> <a class="uc_cate" href="{:U('User/Collect/index')}" title="我关注的标">我关注的标</a></li>
+            <li class="<if condition='$con_name eq Earnings '>act</if>"> <a class="uc_cate" href="{:U('User/Earnings/index')}" title="理财统计">理财统计</a></li>        
+        </ul>
+    </div>
+    <!--<div class="hdc c_hds c_hd3">个人设置</div>
+    <div class="c_body">
+        <ul class="menu">
+            <li class="<if condition='$con_name eq Myaccount and ($act_name eq index or $act_name eq work)'>act</if>"> <a class="uc_cate" href="{:U('User/Myaccount/index')}" title="帐户设置">帐户设置</a></li>
+            <li class="<if condition='$con_name eq Myaccount and ($act_name eq paypassword)'>act</if>"> <a class="uc_cate" href="{:U('User/Myaccount/paypassword')}" title="支付密码">支付密码</a></li>
+            <li class="<eq name='curr' value='Auditindex'>act</eq>"> <a class="uc_cate" href="{:U('user/Audit/index')}" title="认证">认证中心</a></li>
+            <!--<li class=""> <a class="uc_cate" href="{:U('User/Audit/dataauth_list')}" title="认证">资料审核</a></li>
+          
+        </ul>
+    </div>-->
+	<!--
+    <div class="hdc c_hds c_hd4">推荐奖励</div>
+    <div class="c_body">
+        <ul class="menu">
+            <li class=""> <a class="uc_cate" href="/demo-p2p/index.php?ctl=uc_account" title="帐户设置">邀请奖励</a></li>
+           
+        </ul>
+    </div>
+	-->
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#uc_cate li.act").parent().parent().prev(".hdc").removeClass("c_hds");
+	$("#uc_cate li.act").parent().parent().prev(".hdc").addClass("c_hd");
+					   
+	/* 滑动/展开 */
+	$("#uc_cate .hdc").click(function(){
+		
+		$(this).next(".c_body").slideToggle();
+		
+	});
+	
+});
+</script>

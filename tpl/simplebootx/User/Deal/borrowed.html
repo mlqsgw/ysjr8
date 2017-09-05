@@ -1,0 +1,120 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+			<div class="cur"><a href="{:U('User/Deal/borrowed')}">已发布的贷款</a></div>
+	</div>
+	<div class="uc_r_bl_box clearfix">
+	<script type="text/javascript" src="__TMPL__Public/js/jscharts_cr.js"></script>
+<empty name="lists">
+    <div class="tc p15">暂无记录</div>
+<else/>
+<div class="i_deal_list clearfix pr15 pl15">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr border="0" style="background-color:#E47F2B; color:#fff; height:34px;">
+                <!--<th style="width:10%">ID</th>-->
+                <th style="width:12%">借款标题</th>
+                <th style="width:12%">金额</th>
+                <th style="width:10%">年利率</th>
+                <th style="width:10%">期限</th>
+                <th style="width:10%">完成度</th>
+                <th style="width:18%">发布日期</th>
+                <th style="width:12%">状态</th> 
+            </tr>
+            <volist name="lists" id="deal" key="key" mod="2">
+            <tr class="item <eq name="mod" value="1">item_1</eq>" >
+                <!--<td>
+                  {$deal.id}
+                </td>-->
+                <td>
+                    <a href="{$deal.url}">{$deal.name}</a>
+                </td>
+                <td>
+                    {$deal.borrow_amount_format}
+                </td>
+                <td>
+                    {$deal.rate|number_format}%
+                </td>
+                <td>
+                    {$deal.repay_time}个月
+                </td>
+                <td>
+                    <div class="graph-box">
+                        <p>
+                            {$deal.progress_point|round="2"}%
+                        </p>
+                        <div id="graph-{$deal.id}"></div>
+                    </div>
+                    <script type="text/javascript">
+                        var colors = ['#25ae90', '#e7e5e5'];
+                        var myData = new Array([' ', {$deal.progress_point}], [' ', 100-{$deal.progress_point}]);
+                        var myChart = new JSChart('graph-{$deal.id}', 'pie');
+                        myChart.setDataArray(myData);
+                        myChart.colorizePie(colors);
+                        myChart.setTitleColor('#8E8E8E');
+                        myChart.setTitleFontSize(0);
+                        myChart.setTextPaddingTop(280);
+                        myChart.setPieValuesDecimals(1);
+                        myChart.setPieUnitsFontSize(0);
+                        if($.browser.msie)
+                            myChart.setPieValuesFontSize(0);
+                        else
+                            myChart.setPieValuesFontSize(100000000);
+                        myChart.setPieValuesColor('#fff');
+                        myChart.setPieUnitsColor('#969696');
+                        myChart.setSize(46, 46);
+                        myChart.setPiePosition(0, 0);
+                        myChart.setPieRadius(23);
+                        myChart.setFlagColor('#1BB8E3');
+                        myChart.setFlagRadius(4);
+                        myChart.setTooltipOpacity(1);
+                        myChart.setTooltipBackground('#ddf');
+                        myChart.setTooltipPosition('ne');
+                        myChart.setTooltipOffset(2);
+                        myChart.draw();
+                    </script>
+                </td>
+                <td>
+                    <if condition="($deal.publis_wait eq 1) or ($deal.publis_wait eq 0)">
+                    <div class="tc">
+                        {$deal.create_time|date="Y-m-d",###}
+                    </div>
+                    <div class="tc">
+                        {$deal.create_time|date="H:i",###}
+                    </div>
+                    <else/>
+                    <div class="tc">
+
+                        {$deal.start_time|date="Y-m-d",###}
+                    </div>
+                    <div class="tc">
+
+                        {$deal.start_time|date="H:i",###}
+                    </div>
+                    </if>
+                </td>
+                <td>
+                    <span class="f_white">
+                      {$deal.deal_status|loan_state}
+                    </span>
+
+            </tr>
+            </volist>
+        </tbody>
+    </table>
+    <div class="pages">{$Page}</div>
+</div>
+</empty>
+<script type="text/javascript">
+$(function(){
+    var p_width=$(".i_deal_list p").width();
+    var box_width=$(".i_deal_list .graph-box").width();
+    var left_w=(box_width/2)-(p_width/2);
+    $(".i_deal_list p").css("left",left_w+"px");
+})  
+</script>
+	</div>
+   
+</block>
+

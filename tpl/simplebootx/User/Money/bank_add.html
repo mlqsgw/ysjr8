@@ -1,0 +1,177 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Money/menu" />
+	</div>
+    <div class="uc_r_bl_box p10">
+			<div class="clearfix">
+				<div class="t_name item_group">添加银行卡：</div>
+					<form name="incharge_form" id="incharge_form" action="{:U('User/Money/add')}" method="post" />
+						<div class="field">
+							<label>开户名：</label>
+							<span>
+								<input id="Jbank_real_name" class="f-input readonly" type="text" value="{$real_name}" style="width:100px;" name="real_name" readonly="readonly">
+							</span>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label> 帐户类型：</label>
+							<span>借记卡  <span class="f_red">(不支持信用卡)</span></span>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label><span class="f_red b">*</span>选择银行：</label>
+							<span>
+							<select id="Jbank_bank_id" name="bank_name">
+								<option value="">请选择</option>
+								<option value="中国工商银行">中国工商银行</option>
+								<option value="中国农业银行">中国农业银行</option>
+								<option value="中国建设银行">中国建设银行</option>
+								<option value="招商银行">招商银行</option>
+								<option value="中国光大银行">中国光大银行</option>
+								<option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
+								<option value="兴业银行">兴业银行</option>
+								<option value="中国银行">中国银行</option>
+								<option value="交通银行">交通银行</option>
+								<option value="中信银行">中信银行</option>
+								<option value="华夏银行">华夏银行</option>
+								<option value="上海浦东发展银行">上海浦东发展银行</option>
+								<option value="城市信用社">城市信用社</option>
+								<option value="恒丰银行">恒丰银行</option>
+								<option value="广东发展银行">广东发展银行</option>
+								<option value="深圳发展银行">深圳发展银行</option>
+								<option value="中国民生银行">中国民生银行</option>
+								<option value="中国农业发展银行">中国农业发展银行</option>
+								<option value="农村商业银行">农村商业银行</option>
+								<option value="农村信用社">农村信用社</option>
+								<option value="城市商业银行">城市商业银行</option>
+								<option value="农村合作银行">农村合作银行</option>
+								<option value="浙商银行">浙商银行</option>
+								<option value="上海农商银行">上海农商银行</option>
+								<option value="中国进出口银行">中国进出口银行</option>
+								<option value="渤海银行">渤海银行</option>
+								<option value="国家开发银行">国家开发银行</option>
+								<option value="村镇银行">村镇银行</option>
+								<option value="徽商银行股份有限公司">徽商银行股份有限公司</option>
+								<option value="南洋商业银行">南洋商业银行</option>
+								<option value="韩亚银行">韩亚银行</option>
+								<option value="花旗银行">花旗银行</option>
+								<option value="渣打银行">渣打银行</option>
+								<option value="华一银行">华一银行</option>
+								<option value="东亚银行">东亚银行</option>
+								<option value="苏格兰皇家银行">苏格兰皇家银行</option>
+							</select>
+							</span>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label><span class="f_red b">*</span>开户行所在地：</label>
+									<select class="input" id="s_province" name="s_province"></select>&nbsp;&nbsp;
+								    <select class="input" id="s_city" name="s_city" ></select>&nbsp;&nbsp;
+								    <select class="input" id="s_county" name="s_county"></select>
+								    <script src="__ROOT__/statics/js/area.js"></script>
+								    <script type="text/javascript">
+								    var natives = "{$work_city1}";
+								    if(natives){
+								    	var opt0 = ["{$work_city1}","{$work_city2}","{$work_city3}"];
+								    }
+								    _init_area();
+								    </script>
+							    
+						   		 <div id="show"></div>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label for="settings-bankzone">开户行网点：</label>
+							<span>
+							<input id="Jbank_bankzone" class="f-input" type="text" value="" style="width:270px;" name="bankzone">
+							</span>
+							<a target="_blank" href="http://www.cardbaobao.com/bank/index.asp">网点查询</a>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label><span class="f_red b">*</span>银行卡号：</label>
+							<span>
+							<input id="Jbank_bankcard" class="f-input" type="text" value="" style="width: 270px; font-weight: bolder; ime-mode: disabled; border-width: 1px; color: rgb(0, 0, 0);" name="bankcard" maxlength="25">
+							</span>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label><span class="f_red b">*</span>确认卡号：</label>
+							<span>
+							<input id="Jbank_rebankcard" class="f-input" type="text" value="" style="width: 270px; font-weight: bolder; ime-mode: disabled; border-width: 1px; color: rgb(0, 0, 0);" name="reBankcard" maxlength="25">
+							</span>
+						</div>
+						<div class="blank20"></div>
+						<div class="tc">
+							<input class="sub_btn" type="button" value="确认添加">
+						</div>
+						<div class="blank20"></div>
+				</form>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="blank"></div>	
+
+<script type="text/javascript">
+	jQuery(function(){
+
+		$(".sub_btn").live("click",function(){
+			
+			if($("#Jbank_real_name").val()==""){
+				$.showErr("请输入开户名",function(){
+					$("#Jbank_real_name").focus();
+				});
+				return false;
+			}
+			if($("#Jbank_bank_id").val()==""){
+				$.showErr(LANG.PLASE_ENTER_CARRY_BANK,function(){
+					$("#Jbank_bank_id").focus();
+				});
+				return false;
+			}
+			
+			if($("#s_county").val()=="" || $("#s_county").val()=="市、县级市"){
+				$.showErr("请选择开户行所在地",function(){
+					$("#Jbank_region_lv4").focus();
+				});
+				return false;
+			}
+			
+			if($("#Jbank_bankzone").val()==""){
+				$.showErr("请输入开户行网点",function(){
+					$("#Jbank_bankzone").focus();
+				});
+				return false;
+			}
+			
+			if($.trim($("#Jbank_bankcard").val())==""){
+				$.showErr(LANG.PLASE_ENTER_CARRY_BANK_CODE,function(){
+					$("#Jbank_bankcard").focus();
+				});
+				return false;
+			}
+			if($.trim($("#Jbank_rebankcard").val())==""){
+				$.showErr(LANG.PLASE_ENTER_CARRY_CFR_BANK_CODE,function(){
+					$("#Jbank_rebankcard").focus();
+				});
+				return false;
+			}
+			if($.trim($("#Jbank_bankcard").val())!=$.trim($("#Jbank_rebankcard").val())){
+				$.showErr(LANG.TWO_ENTER_CARRY_BANK_CODE_ERROR,function(){
+					$("#Jbank_rebankcard").focus();
+				});
+				return false;
+			}
+			$("form").submit();
+		});
+	});
+	
+
+</script></div>
+
+<div class="blank"></div>
+</block>
+

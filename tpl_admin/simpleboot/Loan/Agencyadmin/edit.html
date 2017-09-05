@@ -1,0 +1,164 @@
+<admintpl file="header"/>
+<script type="text/javascript">
+    var catid = "12";
+</script>
+<style type="text/css">
+.col-auto {
+	overflow: hidden;
+	_zoom: 1;
+	_float: left;
+	border: 1px solid #c2d1d8;
+}
+.col-right {
+	float: right;
+	width: 210px;
+	overflow: hidden;
+	margin-left: 6px;
+	border: 1px solid #c2d1d8;
+}
+
+body fieldset {
+	border: 1px solid #D8D8D8;
+	padding: 10px;
+	background-color: #FFF;
+}
+body fieldset legend {
+    background-color: #F9F9F9;
+    border: 1px solid #D8D8D8;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+#content{
+    height: 500px;
+}
+.list-dot{ padding-bottom:10px}
+.list-dot li,.list-dot-othors li{padding:5px 0; border-bottom:1px dotted #c6dde0; font-family:"宋体"; color:#bbb; position:relative;_height:22px}
+.list-dot li span,.list-dot-othors li span{color:#004499}
+.list-dot li a.close span,.list-dot-othors li a.close span{display:none}
+.list-dot li a.close,.list-dot-othors li a.close{ background: url("__ROOT__/statics/images/cross.png") no-repeat left 3px; display:block; width:16px; height:16px;position: absolute;outline:none;right:5px; bottom:5px}
+.list-dot li a.close:hover,.list-dot-othors li a.close:hover{background-position: left -46px}
+.list-dot-othors li{float:left;width:24%;overflow:hidden;}
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+   <li><a href="{:U('Agencyadmin/index')}">机构列表</a></li>
+     <li><a href="{:U('Agencyadmin/add',array('term'=>empty($term['term_id'])?'':$term['term_id']))}"  target="_self">添加机构</a></li>
+     <li class="active"><a href="#">{$term.name|default='机构编辑'}</a></li>
+  </ul>
+  <form name="myform" id="myform" action="{:u('Agencyadmin/edit')}" method="post" class="form-horizontal J_ajaxForms" enctype="multipart/form-data">
+
+  <div class="col-right">
+    <div class="table_full">
+      <table width="100%">
+         <tr>
+          <td><b>logo图片</b></td>
+        </tr>
+        <tr>
+          <td>
+          	<div  style="text-align: center;"><input type='hidden' name='logo' id='thumb' value='{$post.logo}'>
+			<a href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','','','');return false;">	
+				<if condition="empty($post['logo'])">
+					<img src="__ROOT__/statics/images/icon/upload-pic.png" id='thumb_preview' width='135' height='113' style='cursor:hand' />
+				<else/>
+					<img src="{:sp_get_asset_upload_path($post['logo'])}" id='thumb_preview' width='135' height='113' style='cursor:hand' />
+				</if>
+			</a>
+			<!-- <input type="button" class="btn" onclick="crop_cut_thumb($('#thumb').val());return false;" value="裁减图片">  -->
+            <input type="button"  class="btn" onclick="$('#thumb_preview').attr('src','__ROOT__/statics/images/icon/upload-pic.png');$('#thumb').val('');return false;" value="取消图片">
+            </div>
+			</td>
+        </tr>
+        <tr>
+          <td><b>排序</b></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="listorder" value="{$post.listorder}" class="input"></input></td>
+        </tr>
+        <tr>
+          <td><b>状态</b></td>
+        </tr>
+        <tr>
+          <td>
+          	<span class="switch_list cc">
+			<label><input type="radio" name="is_effect" value="1" <eq name="post.is_effect" value="1"> checked</eq>><span>启用</span></label>
+			<label><input type="radio" name="is_effect" value="0"  <eq name="post.is_effect" value="0"> checked</eq>><span>停用</span></label>
+		 	</span>
+		 </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-auto">
+    <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+
+          <tr>
+              <th width="80">机构名称 </th>
+              <td>
+                  <input type="text" style="width:400px;" name="name" id="title"  required value="{$post.name}" style="color:" class="input input_hd J_title_color" placeholder="请输入标题" onkeyup="strlen_verify(this, 'title_len', 160)" />
+                  <span class="must_red">*</span>
+              </td>
+          </tr>
+
+            <tr>
+              <th width="80">缩略名: </th>
+              <td>
+              	<input type="text" style="width:400px;" name="short_name" id="title"  required value="{$post.short_name}" style="color:" class="input input_hd J_title_color" placeholder="" onkeyup="strlen_verify(this, 'title_len', 160)" />
+              	<span class="must_red">*</span>
+              </td>
+            </tr>
+            <tr>
+              <th width="80">地址:</th>
+              <td><input type='text' name='address' id='keywords' value='{$post.address}' style='width:400px'   class='input' placeholder=''></td>
+            </tr>
+          <tr>
+              <th width="80">网址:</th>
+              <td><input type='text' name='site' id='keywords' value='{$post.site}' style='width:400px'   class='input' placeholder=''> </td>
+          </tr>
+            <tr>
+              <th width="80">担保方介绍: </th>
+              <td><textarea name='brief' id='description'  required style='width:98%;height:50px;' placeholder='担保方介绍'>{$post.brief}</textarea> </td>
+            </tr>
+            <tr>
+              <th width="80">内容</th>
+              <td><span class="must_red">*</span><div id='content_tip'></div>
+              <script type="text/plain" id="content" name="content">{$post.content}</script>
+                <script type="text/javascript">
+                //编辑器路径定义
+                var editorURL = GV.DIMAUB;
+                </script>
+                <script type="text/javascript"  src="__ROOT__/statics/js/ueditor/ueditor.config.js"></script>
+                <script type="text/javascript"  src="__ROOT__/statics/js/ueditor/ueditor.all.min.js"></script>
+				</td>
+            </tr>
+
+
+                        
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="form-actions">
+  		<input type="hidden" name="id" value="{$post.id}" />
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+  </div>
+ </form>
+</div>
+<script type="text/javascript" src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script type="text/javascript"> 
+$(function () {
+
+	/////---------------------
+    //编辑器
+    editorcontent = new baidu.editor.ui.Editor();
+    editorcontent.render( 'content' );
+    try{editorcontent.sync();}catch(err){};
+	////-------------------------
+});
+</script>
+</body>
+</html>

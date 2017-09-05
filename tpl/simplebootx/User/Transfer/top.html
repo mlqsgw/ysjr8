@@ -1,0 +1,44 @@
+<style type="text/css">
+	.user_tab1 a{display:inline; padding:0 5px 0}
+</style>
+<table class="user_tab1">
+    <thead>
+    <tr>
+        <td></td>
+        <td>债权统计</td>
+        <td>待收本金</td>
+        <td>待收利息</td>
+        <td>已收本息</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>可以转让</td>
+        <td><a href="{:UU('User/Transfer/index',array('status'=>1))}" id="can_change">{$statics.need_transfer}</a>笔</td>
+        <td>{$statics.need_transfer_benjin|format_price}</td>
+        <td>{$statics.need_transfer_lixi|format_price}</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>正在转让</td>
+        <td><a href="{:UU('User/Transfer/index',array('status'=>2))}" id="now_change">{$statics.in_transfer}</a>笔</td>
+        <td>{$statics.in_transfer_benjin|format_price}</td>
+        <td>{$statics.in_transfer_lixi|format_price}</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>回收中</td>
+        <td><a href="{:UU('User/Transfer/buys',array('status'=>1))}" id="recover_change">{$statics.inback_transfer}</a>笔</td>
+        <td>{$statics.inback_transfer_benjin|format_price}</td>
+        <td>{$statics.inback_transfer_lixi|format_price}</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>回收完</td>
+        <td><a href="{:UU('User/Transfer/buys',array('status'=>2))}" id="recover_yes_change">{$statics.hasback_transfer}</a>笔</td>
+        <td>-</td>
+        <td>-</td>
+        <td>{$statics.hasback_transfer_all|format_price}</td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,76 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Money/menu" />
+	</div>
+    <div class="uc_r_bl_box p10">
+			<div class="clearfix">
+				<div class="t_name item_group">银行卡信息：</div>
+				<foreach name="bank" item="vo">
+					<div class="item_bank">
+					<a href="{:U('User/Money/index',array('act'=>'carry','id'=>$vo['id']))}">
+						<div class="tip">
+							<h3>{$vo.bank_name}</h3>
+							<p>{$vo.real_name}</p>
+							<p>尾号：{:substr($vo['bankcard'],-4,4)}</p>
+						</div>
+					</a>
+						<div class="edit_card">
+							<a class="a_link J_deal_bank" dataid="{$vo.id}" href="javascript:void(0);">删除此银行卡</a>
+						</div>
+					</div>
+				</foreach>
+				<a href="{:U('User/Money/index',array('act'=>'bank_add'))}" class="a_link" style="display:block;">
+				<div class="item_bank add_bank">
+					<div class="tip">
+			         <img src="__TMPL__Public/images/add.jpg" alt="添加银行卡">
+					 <p>您的提现银行卡尚未添加</p>
+					 <p>请先设置银行卡号</p>
+					</div>
+					 <div class="edit_card">
+						添加银行卡
+					 </div>
+				</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="blank"></div>	
+<script type="text/javascript">
+	jQuery(function(){
+		$(".J_deal_bank").click(function(){
+			var obj = $(this);
+			var query = new Object();
+			query.id = $(this).attr("dataid");
+			if(confirm("确定要删除吗")){
+				$.ajax({
+					url:"{:U('User/Money/del')}",
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						if(result.status==1)
+						{
+							obj.parent().parent().fadeOut("fast",function(){
+								obj.parent().parent().remove();
+							});
+						}
+						else{
+							$.showErr(result.info);
+						}
+					},
+					error:function(){
+						$.showErr("发生错误");
+					}
+				});
+			}
+		});
+	});
+
+</script></div>
+
+<div class="blank"></div>
+</block>
+

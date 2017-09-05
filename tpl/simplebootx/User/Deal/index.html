@@ -1,0 +1,61 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Deal/menu" />
+	</div>
+	
+    <div class="uc_r_bl_box clearfix pl10 pr10 pt5 pb5">
+   <empty name="lists">
+       <div class="tc p10">暂无记录</div>
+       <else />
+       <foreach name="lists" item="deal">
+
+       <div class="bid_item clearfix">
+           <div class="bid_title">
+               {$deal.name}
+               <!--<span class="r_c"><a href="javascript:void(0);" onclick="javascript:window.showModalDialog('{url x="index" r="uc_deal#contract" p="id=$deal.id"}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">查看电子协议</a></span>-->
+           </div>
+           <div class="bid_detail">
+               <div class="info">
+                   借款金额：
+                   <span class="f_red">{$deal.borrow_amount_format}</span>
+               </div>
+               <div class="info">
+                   年利率：
+                   <span class="f_red">{$deal.rate|number_format}%</span>
+               </div>
+               <div class="info">
+                   期限：
+                   <span class="f_red">{$deal.repay_time}个月</span>
+               </div>
+               <div class="info">
+                  下一还款日:
+                <span class="f_red">
+						{$deal.next_repay_time|date="Y-m-d",###}
+				</span>
+               </div>
+               <div class="info">
+                  下一还款额：
+                   <span class="f_red">{$deal.true_month_repay_money_format}</span>
+               </div>
+               <div class="info">
+                   罚息：
+                   <span class="f_red">{$deal.impose_money_format}</span>
+               </div>
+               <div class="info" style="width: 115px; text-align: right;">
+                   <input class="refundBnt" type="button" onclick="window.location.href='{:UU("User/Deal/quickrefund",array('id'=>$deal['id']))}';">
+
+                  <!---- <input class="inrepayBtn" type="button" onclick="window.location.href='{:UU("User/Deal/inrepayrefund",array('id'=>$deal['id']))}';"> --->
+
+               </div>
+           </div>
+       </div>
+       </foreach>
+
+   </empty>
+
+	<div class="pages">{$Page}</div>
+</div>
+</block>
+

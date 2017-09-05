@@ -1,0 +1,54 @@
+<if condition="sp_is_user_login()">
+    <div class="clearfix">
+        <table class="data_table" id="refundTab" border="0" cellspacing="1" style="background:#e3e3e3; width:100%; margin:0 auto;">
+            <tr>
+                <th width="10%">编号</th>
+                <th width="12%">还款日期</th>
+                <th width="12%">已还本息</th>
+                <th width="12%">待还本息</th>
+                <th width="12%">已付罚息</th>
+                <th width="12%">待还罚息</th>
+                <th width="12%">状态</th>
+            </tr>
+            <?php $idx=1;?>
+            <foreach name="loan_repay_list" item="loan" key="key">
+                <tr>
+                    <td width="10%">
+                        <?php echo $idx;++$idx;?>
+                    </td>
+                    <td width="12%">{$loan.repay_day_format}</td>
+                    <td width="12%" style="color:red">{$loan.month_has_repay_money_all_format}</td>
+                    <td width="12%" style="color:red"><if condition="$loan.has_repay eq 0">{$loan.month_need_all_repay_money_format}<else/>0.0</if></td>
+                    <td width="12%" style="color:red"><if condition="$loan.has_repay eq 0">{$loan.impose_money_format}<else/>0.0</if></td>
+                    <td width="12%" style="color:red"><if condition="$loan.has_repay eq 0">{$loan.impose_money_format}<else/>0.0</if></td>
+                    <td width="12%">
+                        <if condition="$loan.has_repay eq 1">
+                            <if condition="$loan.status eq 0">
+                                <span style="color:#f7634f">未偿还</span>
+                                <elseif condition="$loan.status eq 1"/>
+                                <span style="color:#83a700">提前还款</span>
+                                <elseif condition="$loan.status eq 2"/>
+                                <span style="color:#00bef0">已偿还</span>
+                                <elseif condition="$loan.status eq 3"/>
+                                <span style="color:#ffaa00">逾期还款</span>
+                                <elseif condition="$loan.status eq 4"/>
+                                <span style="color:#c82e25">严重逾期</span>
+                            </if>
+                            <else/>
+                            <span style="color:#f7634f">未偿还</span>
+                        </if>
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+    </div>
+<else/>
+    <p align="center">只有<a href="{:UU('user/register/index')}">注册</a>用户才可以查看借入者信用信息！现在<a href="{:UU('user/login/index')}">登录</a></p>
+
+</if>
+
+
+
+
+
+

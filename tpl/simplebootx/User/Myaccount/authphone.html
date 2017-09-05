@@ -1,0 +1,224 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+   <div class="list">
+	<div class="list_title clearfix">
+		<div class="cur"><a href="{:U('User/Myaccount/authphone')}">手机认证</a></div>
+	</div>
+	<div class="uc_r_bl_box clearfix">
+	<div class="blank"></div>
+	<div class="inc wb">
+		<div class="inc_main">
+			<div class="tip-h clearfix">
+				<div class="lh22 f14" style="margin-bottom:20px;padding-left:107px;padding-top:50px;">
+						               
+					<eq name="cellphone_audit" value="0">
+						   <p>尚未申请手机认证</p>
+	              			<p>若您希望申请手机认证，请点击申请认证：</p>
+	                </eq>
+	                
+					<eq name="cellphone_audit" value="1">
+		                <p>已绑定手机号：{$cellphone}</p>
+		                <p>若您希望重新绑定其他手机号，请输入以下信息：</p>
+	                </eq>
+					<eq name="cellphone_audit" value="2">
+						   <p>手机认证正在审核中......</p>
+	                </eq>
+					<eq name="cellphone_audit" value="3">
+						   <p>手机认证审核失败</p>
+	              			<p>若您希望申请手机认证，请点击申请认证：</p>
+	                </eq>
+						            </div>
+				<if condition="$video_audit neq 2">
+				<form id="j_bind_mobile"method="post" name="bind_mobile" action="{:U('User/Myaccount/authphone')}">
+				<table width="470" border="0" style="padding:0;margin:0 auto;">
+	                <tbody>
+					<tr>
+						<td class="f14">手机号：</td>
+						<td><input type="text" id="J_Vpaypassword" name="paypassword" class="f-input"></td>
+						<td><input type="button" id="reveiveActiveCode" class="reveiveActiveCode" value="发送手机验证码"> <!--onclick="sendPhoneCode0(this,'#J_Vphone');"--></td>
+					</tr>
+	                <tr>
+	                    <td>
+	                        <div align="left" class="f14"> 验证码：</div>
+	                    </td>
+	                    <td>
+	                        <input name="validateCode" id="validateCode" class="f-input">
+	                    </td>
+	                    <td class="f_gray f14" style="padding-left:10px; width:200px">请输入您获取的手机验证码</td>
+	                </tr>
+	                <tr style="margin-top:20px;">
+	                    <td></td>
+	                    <td colspan="2">
+	                        <div style="font-weight:bold; margin-top:20px;padding-left:3px;">
+	                            <input type="submit" name="submit" value="提交" class="sub_btn">
+	                        </div>
+	                    </td>
+	                </tr>
+	            	</tbody>
+				</table>
+				</form>
+			</div>
+		</div>
+		<div class="inc_foot"></div>
+	</div>
+	</div>
+</div>
+<script type="text/javascript">
+		$("#reveiveActiveCode").click(function(){
+			var obj = $(this);
+			var query = new Object();
+			//query.id = $(this).attr("dataid");
+		
+				$.ajax({
+					url:"{:U('User/Myaccount/authma')}",
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						if(result.status==1)
+						{
+							settime(obj);
+						}else if(result.status==-1){
+							$.showErr(result.info);
+						}else if(result.status==-2){
+							$.showErr(result.info);
+						}
+					},
+					error:function(){
+						alert("发送成功,注意查收");
+					}
+				});
+		});
+		
+		var countdown=60;
+		function settime(val) {
+			if (countdown == 0) {
+				val.attr("disabled","");
+				val.val("免费获取验证码");
+				countdown=60;
+			} else {
+				val.attr("disabled","disabled");
+				val.val("(" + countdown + ")后重新发送");
+				countdown--;
+			}
+			if(val.val()!="免费获取验证码"){
+				setTimeout(function() {
+					settime(val)
+				},1000);
+			}
+		}
+		$("#j_bind_mobile").submit(function(){
+			if($.trim($("#J_Vpaypassword").val())==""){
+		 		$.showErr("请输入新手机号");
+				return false;
+			}
+		 	
+		 	if($.trim($("#validateCode").val())==""){
+		 		$.showErr("验证码不能为空！");
+		 		return false;
+		 	}
+		 	
+			
+		 });
+
+	/*$("#reveiveActiveCode").click(function(){
+			var obj = $(this);
+			var query = new Object();
+			//query.id = $(this).attr("dataid");
+
+				$.ajax({
+					url:"{:U('User/Myaccount/authma')}",
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						if(result.status==1)
+						{
+							settime(obj);
+						}else if(result.status==-1){
+							$.showErr(result.info);
+						}else if(result.status==-2){
+							$.showErr(result.info);
+						}
+					},
+					error:function(){
+						alert("发送成功,注意查收");
+					}
+				});
+		});*/
+	/*jQuery(function(){
+		//获取手机验证码
+		$("#reveiveActiveCode").attr("disabled","");//按钮变亮
+		$("#reveiveActiveCode").click(function(){
+			var obj = $(this);
+			var query = new Object();
+			//query.id = $(this).attr("dataid");
+
+				$.ajax({
+					url:"{:U('User/Myaccount/authma')}",
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						if(result.status==1)
+						{
+							settime(obj);
+						}else if(result.status==-1){
+							$.showErr(result.info);
+						}else if(result.status==-2){
+							$.showErr(result.info);
+						}
+					},
+					error:function(){
+						$.showErr("发送成功，注意接收");
+					}
+				});
+		});
+	jQuery(function(){
+		$("#j_bind_mobile").submit(function(){
+			if($.trim($("#J_Vpaypassword").val())==""){
+				$.showErr("请输入支付密码");
+				return false;
+			}
+			if($.trim($("#J_Vpaypassword").val())!=$.trim($("#J_Vrpaypassword").val())){
+				$.showErr("确认密码错误");
+				return false;
+			}
+			if($.trim($("#validateCode").val())==""){
+				$.showErr("请输入验证码");
+				return false;
+			}
+			var query = new Object();
+			query.ctl = 'ajax';
+			query.act = 'check_paypwd_verify_code';
+			query.paypassword = $("#J_Vpaypassword").val();
+			query.verify = $("#validateCode").val();
+			query.ajax = 1;
+			$.ajax({
+				url : APP_ROOT+"/index.php",
+				data:query,
+				type:"post",
+				dataType:"json",
+				success: function(obj){
+					if(obj.status)
+					{			
+						$.showSuccess(obj.info,function(){
+							window.location.href=window.location.href;
+						});
+					}
+					else
+						$.showErr(obj.info);
+				},
+				error:function(ajaxobj)
+				{
+					/*if(ajaxobj.responseText!='')
+					alert(ajaxobj.responseText);*/
+				/*}
+			});
+			return false;
+		});
+	});*/
+</script></div>
+
+<div class="blank"></div>
+</block>

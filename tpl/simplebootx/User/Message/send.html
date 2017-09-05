@@ -1,0 +1,77 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Message/menu" />
+       
+	</div>
+	<div class="inc_main uc_r_bl_box">
+		<div class="blank20"></div>
+		<div class="pm_form">
+			<div class="field">
+				<label for="settings-username">收件人</label>
+				<input type="text" size="30" class="f-input" name="user_name" />
+				<span class="f-input-tip"></span>
+			</div>
+			<div class="field" style="width:700px;">
+				<label>内容</label>
+				<textarea style="width:450px; height:100px; border:#ccc solid 1px;" cols="10" name="content"></textarea>
+			</div>
+			<div class="field">		
+				<label for="act"></label>		
+				<input type="button" value="发送" name="commit" id="settings-submit" class="formbutton" onclick="do_send_pm();" />
+			</div>
+		</div>
+		
+		<div class="blank"></div>
+				<div class="blank"></div>
+		<div class="pages"></div>
+		<div class="blank"></div>
+	</div>
+	<div class="inc_foot"></div>
+</div>
+
+</div>
+
+<div class="blank"></div>
+<script type="text/javascript">
+
+function do_send_pm() {
+	var uname = $("input[name='user_name']").val();
+	var content = $("textarea[name='content']").val();
+	if ($.trim(uname) == '') {
+		$.showErr("填写收信人");
+		return
+	}
+	if ($.trim(content) == '') {
+		$.showErr("发送内容不能为空");
+		return
+	}
+	if (content.length > 200) {
+		$.showErr("消息长度不能超过两百个字");
+		return
+	}
+	var query = new Object();
+	query.user_name = uname;
+	query.conent=content;
+	var ajaxurl = "{:U('User/Message/ToMess')}";
+	$.ajax({
+		url: ajaxurl,
+		dataType: "json",
+		type: "POST",
+		data: query,
+		success: function(ajaxobj) {
+			if (ajaxobj.status == 0) {
+				$.showErr(ajaxobj.info);
+			} else {
+				$.showSuccess("发送成功");
+			}
+		},
+		error: function(ajaxobj) {}
+	})
+}
+
+</script>
+
+</block>
+

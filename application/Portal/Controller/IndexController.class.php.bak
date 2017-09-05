@@ -1,0 +1,17 @@
+<?php
+namespace Portal\Controller;
+use Common\Controller\HomeBaseController; 
+/**
+ * 首页
+ */
+class IndexController extends HomeBaseController {
+	
+    //首页
+	public function index() {
+		echo '111111';
+    	$this->display(":index");
+    }   
+
+}
+
+?>

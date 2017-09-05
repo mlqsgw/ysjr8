@@ -1,0 +1,57 @@
+<tc_include file="inc/header"/>
+<div class="wrap">
+<div class="blank"></div>
+<div class="short wb f_l">
+	<div class="inc">
+	<div class="inc_main cf">
+		<div class="relate_help clearfix">
+			<dl class="bdd">
+					<dt style="height: 10px;">
+					</dt>
+                     <volist name="navlist" id="vo">
+						<if condition="$vo['term_id'] neq 17">
+                        	<dd <if condition="$vo['term_id'] eq $term_id"> class="act"</if> >
+								<a href="{:U('portal/list/index',array('id'=>$vo['term_id']))}">{$vo.name}</a>
+							</dd>
+						</if>
+                      </volist>							
+			</dl>
+		</div>
+	</div>	
+</div>
+</div>
+<style type="text/css">
+.alist{ line-height:40px; height:40px; border-bottom:1px solid #E5E5E5;}
+.alist a{ background: url("__TMPL__Public/images/zgiy.png") no-repeat left center; padding-left:20px;}
+.alist a:hover{  color:#FF0000; }
+.alist span{ display:block; float:right; margin-right:30px;}
+.page{ margin-top:50px; text-align:center;}
+</style>
+<div class="article_title f16 b tc pt10" style="width: 100px; height: 32px; text-align: center; position: relative; background-color: #FFF; top: 16px; font-size: 16px; line-height: 32px; float: left; left: 29px;">{$name} </div>
+<div class="long help_long wb f_r" style="width:938px;">
+	<div class="inc">
+
+	<div class="inc_main" style="padding:0 1px">
+		
+		<!--<div class="publish_time bbd clearfix pr">
+      
+        </div>-->
+		<div class="article_info">
+				
+				<volist name="article" id="vo">
+                	<div class="alist"><span> {$vo.post_modified}</span>	<a href="{:U('portal/article/index',array('id'=>$vo['tid'],'tid'=>$vo['term_id']))}">{$vo.post_title}</a></div>
+                </volist>
+ 				<div class="page">{$page}</div>
+ 		</div>
+	</div>
+	</div>
+</div>
+<div class="blank"></div>
+ 
+</div>
+</div>
+              
+
+
+<tc_include file="inc/footer" />
+

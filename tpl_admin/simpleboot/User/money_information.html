@@ -1,0 +1,75 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed" style="min-width:950px;">
+<div class="wrap J_check_wrap">
+	<ul class="nav nav-tabs">
+		 <li>
+			<a href="{:U('User/Indexadmin/basic_information',array('id'=>$uid))}">基本信息</a>
+		</li>
+		<li  class="active">
+			<a href="{:U('User/Indexadmin/money_information',array('id'=>$uid))}">财务信息</a>
+		</li>
+	</ul>
+  <div class="table_list">
+
+    <table width="100%" cellspacing="0" class="table table-hover">
+        <thead> 	 	
+        <tr>
+            <th width="5%" align='center'>ID</th>
+            <th width="8%">用户名</th>
+			<th width="10%">类型</th>
+			<th width="8%">操作金额 </th>
+			<th width="8%">总金额</th>
+			<th width="8%">可用金额 </th>
+            <th width="8%">冻结金额</th>
+			<th>备注</th>
+            <th width="5%">操作时间</th>
+        </tr>
+        </thead>
+        <style>
+            .audit{
+                background-image: url('__ROOT__/statics/images/icon/opa-icons-color16.png');
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 16px;
+                vertical-align: text-top;
+                width: 16px;
+            }
+            .audit0{
+                background-position: -192px -16px;
+            }
+            .audit1{
+                background-position: -208px -16px;
+            }
+            .view{
+                background-position: -192px -64px;
+            }
+        </style>
+        <tbody>
+
+        <foreach name="content" item="vo">
+            <tr>
+                <td  align='center'>{$vo.id}</td>
+                <td>{$vo.user_login}</td>
+                <td><if condition="$vo.type eq 1">充值<elseif condition="$vo.type eq 2"/>冻结
+				<elseif condition="$vo.type eq 3"/>支付<elseif condition="$vo.type eq 4"/>提现
+				<elseif condition="$vo.type eq 5"/>收款<elseif condition="$vo.type eq 6"/>系统放款
+				<elseif condition="$vo.type eq 7"/>手续费<else/>恢复冻结资金</if>
+				</td>
+                <td>￥{$vo.operation}</td>
+				<td>￥{$vo.total_money}</td>
+                <td>￥{$vo.available_funds}</td>
+                <td>￥{$vo.freeze_funds}</td>
+				<td>{$vo.actionname}</td>
+                <td>{:date("Y-m-d",$vo['time'])}</td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+
+      <div class="pagination">{$page}</div>
+  </div>
+
+</div>
+</body>
+</html>

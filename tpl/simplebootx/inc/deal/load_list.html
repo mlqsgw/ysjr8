@@ -1,0 +1,31 @@
+<div class="clearfix">
+	  <table class="data_table" id="refundTab" border="0" cellspacing="1" style="background:#e3e3e3; width:100%; margin:0 auto;">
+	    <tbody>
+	        <tr style="height: 30px;">
+	            <th width="20%">投标人</th>
+	            <th width="20%">投标金额</th>
+				<th width="10%">状态</th>
+	            <th width="20%">投标时间</th>
+	        </tr>
+
+			<foreach name="loan_load" item="load">
+			<tr>
+				<td class="wb tc" style="color:#E47F2B;">
+					{$load.user_login|utf_substr}
+				</td>
+				<td class="wb tc f_red">
+					{$load.money|format_price}
+				</td>
+				<td class="wb tc">
+					<if condition="$load.is_auto eq 1">自动<else/>手动</if>
+				</td>
+				<td class="wb tc">
+                    {$load.create_time|date="Y-m-d H:i",###}
+				</td>
+			</tr>
+			</foreach>
+	    </tbody>
+	</table>
+</div>
+
+

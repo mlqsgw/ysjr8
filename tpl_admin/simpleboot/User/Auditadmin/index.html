@@ -1,0 +1,109 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('User/Auditadmin/index')}">认证列表</a></li>
+     <li>
+      <form class="form-search" action="{:U('User/Auditadmin/index')}"  method="post">
+         <input type="text" class="input-medium search-query" name="so_name" placeholder="用户名" value="{$so_name}">
+         <button type="submit" class="btn">搜索</button>
+     </form>
+     </li>
+  </ul>
+  <div class="table_list">
+
+    <table width="100%" cellspacing="0" class="table table-hover">
+        <thead>
+        <tr>
+            <th align='center'>ID</th>
+            <th>用户名</th>
+            <th>实名认证</th>
+            <th>邮箱认证</th>
+            <th>手机认证</th>
+            <!--<th>视频认证</th>
+            <th>现场认证</th>-->
+            <th>查看</th>
+        </tr>
+        </thead>
+        <style>
+            .audit{
+                background-image: url('__ROOT__/statics/images/icon/opa-icons-color16.png');
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 16px;
+                vertical-align: text-top;
+                width: 16px;
+            }
+            .audit0{
+                background-position: -192px -16px;
+            }
+            .audit1{
+                background-position: -208px -16px;
+            }
+            .view{
+                background-position: -192px -64px;
+            }
+
+        </style>
+        <tbody>
+
+        <foreach name="lists" item="vo">
+            <tr>
+                <td align='center'>{$vo.id}</td>
+                <td>{$vo.user_login}</td>
+                <td>
+                    <eq name="vo.wechat_audit" value="2">
+                        待审核
+                        <else/>
+                        <span class="audit audit{$vo.wechat_audit}" title="实名认证"></span>
+                    </eq>
+
+                </td>
+                <td>
+                    <eq name="vo.email_audit" value="2">
+                        待审核
+                        <else/>
+                        <span class="audit audit{$vo.email_audit}" title="邮箱认证"></span>
+                    </eq>
+                </td>
+
+                <td>
+                    <eq name="vo.cellphone_audit" value="2">
+                        待审核
+                        <else/>
+                        <span class="audit audit{$vo.cellphone_audit}" title="手机认证"></span>
+                    </eq>
+                </td>
+               <!-- <td>
+
+                    <eq name="vo.video_audit" value="2">
+                        待审核
+                        <else/>
+                        <span class="audit audit{$vo.video_audit}" title="视频认证"></span>
+                    </eq>
+
+                </td>
+                <td>
+
+                    <eq name="vo.site_audit" value="2">
+                        待审核
+                        <else/>
+                        <span class="audit audit{$vo.site_audit}" title="现场认证"></span>
+                    </eq>
+
+                </td>-->
+                <td align='center'>
+                    <a href="javascript:open_iframe_dialog('{:U('User/indexadmin/basic_information',array('id'=>$vo['uid']))}','用户信息')"><span class="audit view" title="查看"></span></a>
+                </td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+
+      <div class="pagination">{$page}</div>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

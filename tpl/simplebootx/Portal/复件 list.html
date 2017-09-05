@@ -1,0 +1,57 @@
+<tc_include file="inc/header"/>
+<div class="wrap">
+<div class="blank"></div>
+<div class="short wb f_l">
+	<div class="inc">
+	<div class="inc_main cf">
+		<div class="relate_help clearfix">
+			<dl class="bdd" style="border-top:none">
+					<dt >资讯中心
+					</dt>
+                     <volist name="navlist" id="vo">
+						<if condition="$vo['term_id'] neq 17">
+                        	<dd <if condition="$vo['term_id'] eq $term_id"> class="act"</if> >
+								<a href="{:U('portal/list/index',array('id'=>$vo['term_id']))}">{$vo.name}</a>
+							</dd>
+						</if>
+                      </volist>							
+			</dl>
+		</div>
+	</div>	
+</div>
+</div>
+<style type="text/css">
+.alist{ line-height:30px; height:30px; border-bottom:1px solid #E5E5E5;}
+.alist span{ display:block; float:right; margin-right:30px;}
+.page{ margin-top:50px; text-align:center;}
+</style>
+
+<div class="long help_long wb f_r" style="width:878px;">
+	<div class="inc">
+	<div class="inc_main" style="padding:0 50px">
+		<div class="article_title f16 b tc pt10" style="text-align:left; font-size:16px;">{$name} </div>
+		<div class="publish_time bbd clearfix pr">
+      
+      
+      
+        </div>
+		<div class="article_info">
+				
+				<volist name="article" id="vo">
+                	<div class="alist"><span> {$vo.post_modified}</span>	<a href="{:U('portal/article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></div>
+                </volist>
+ 				<div class="page">{$page}</div>
+ 		</div>
+	</div>
+
+</div>
+</div>
+<div class="blank"></div>
+ 
+   
+   
+              
+
+
+<tc_include file="inc/footer" />
+

@@ -1,0 +1,128 @@
+<admintpl file="header" />
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li <eq name="status" value="1">class="active"</eq>><a href="{:U('Loan/Repayadmin/index',array('status'=>1))}">三人内需还的</a></li>
+     <li <eq name="status" value="2">class="active"</eq>><a href="{:U('Loan/Repayadmin/index',array('status'=>2))}"  target="_self">逾期未还的</a></li>
+  </ul>
+  <form class="well form-search" method="post" action="">
+    <div class="search_type cc mb10">
+      <div class="mb10"> 
+        <span class="mr20">分类：
+        <select class="select_2" name="cate_id" style="width:150px;">
+          	<option value='0' >全部</option>
+            <foreach name="loan_cate" item="catevo">
+                <option value='{$catevo.id}'  <eq name="cate_id" value="$catevo['id']">selected</eq> >{$catevo.cat_name}</option>
+            </foreach>
+        </select>
+        &nbsp;&nbsp;添加时间：
+        <input type="text" name="start_time" class="input length_2 J_date" value="{$start_time}" style="width:80px;" autocomplete="off">-<input type="text" class="input length_2 J_date" name="end_time" value="{$end_time}" style="width:80px;" autocomplete="off">
+
+               &nbsp; &nbsp;贷款名称：
+        <input type="text" class="input length_2" name="name" style="width:150px;" value="{$name}" placeholder="请输入关键字...">
+            贷款人帐号：
+        <input type="text" class="input length_2" name="user_login" style="width:150px;" value="{$user_login}" placeholder="请输入关键字...">
+        <input type="submit" class="btn" value="搜索"/>
+        </span>
+      </div>
+    </div>
+  </form>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="50">编号</th>
+	            <th width="200">贷款名称</th>
+                  <th width="50">借款人</th>
+	            <th width="70">投标类型</th>
+                <th width="70">借款金额</th>
+                  <th width="60">利率</th>
+                  <th width="70">借款期数</th>
+                  <th width="100">已还期数</th>
+                  <th width="100">还款方式</th>
+                  <th width="100">本期本/息</th>
+                <th width="100">本次还款日期</th>
+	            <th width="200">操作</th>
+	          </tr>
+        </thead>
+
+        	<foreach name="lists" item="vo">
+	        	<tr>
+		            <td><a>{$vo.id}</a></td>
+		            <td>
+		            	<a href="{:U('Loan/index/deal',array('id'=>$vo['id']))}" target="_blank">
+		            		<span>{$vo.name}</span>
+		            	</a>
+		            </td>
+                    <td>{$vo.user_login}</td>
+                    <td>{$vo.cat_name}</td>
+                    <td>{$vo.borrow_amount}</td>
+                    <td>{$vo.rate}</td>
+                    <td>{$vo.repay_nper}</td>
+                    <td>{$vo.repay_count}</td>
+                    <td>{$vo.repay_type_name}</td>
+                    <td>{$vo.benjin}/{$vo.lixi}</td>
+                    <td>{$vo.next_repay_time|date="y-m-d",###}</td>
+                    </td>
+		            <td>
+		            	<a target="_blank" href="{:U('Loan/index/deal',array('id'=>$vo['id']))}">查看</a> |
+		            	<a class="tixing" href="{:U('Loan/Repayadmin/tixing',array('uid'=>$vo['user_id'],'did'=>$vo['id']))}">提醒</a>|
+                        <a href="javascript:open_iframe_dialog('{:U('User/Deal/adminquickrefund',array('id'=>$vo['id']))}','垫付还款')">垫付</a> |
+                        <a href="javascript:open_iframe_dialog('{:U('Loan/Loanlistadmin/repaylist',array('loan_id'=>$vo['id']))}','还款记录')">还款记录</a>
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+
+
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+<script>
+    Wind.use('artDialog', function () {
+        $('.tixing').on('click', function (e) {
+            e.preventDefault();
+            var $_this = this,
+                    $this = $($_this),
+                    href = $this.prop('href'),
+                    msg = $this.data('msg');
+            art.dialog({
+                title: false,
+                icon: 'question',
+                content: '要发送提醒吗？',
+                follow: $_this,
+                close: function () {
+                    $_this.focus();; //关闭时让触发弹窗的元素获取焦点
+                    return true;
+                },
+                ok: function () {
+                    $.getJSON(href).done(function (data) {
+                        if (data.state === 'success') {
+                            if (data.referer) {
+                               // location.href = data.referer;
+                            } else {
+                               // reloadPage(window);
+                            }
+                        } else if (data.state === 'fail') {
+                            //art.dialog.alert(data.info);
+                            alert(data.info);//暂时处理方案
+                        }
+                    });
+                },
+                cancelVal: '关闭',
+                cancel: true
+            });
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

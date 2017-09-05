@@ -1,0 +1,51 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+    <tc_include file="User/Center/top" />
+    <div class="blank"></div>
+    <div class="uc_r_bl">
+        <div class="list_title clearfix" style="margin-bottom:0;">
+          	<tc_include file="User/Center/menu" />
+        </div>
+        <div class="uc_r_bl_box clearfix p10">
+            <notempty name="lists">
+            <div class="list_cont">
+                <div class="i_deal_list clearfix">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr border="0" style="background-color:#E47F2B; color:#fff; height:34px;">
+                           <!-- <th style="width:10%">id</th>-->
+                            <th style="width:20%">动作</th>
+                            <th style="width:15%">时间</th>
+                            <th style="width:15%">IP</th>
+                        </tr>
+                        <volist name="lists" id="item" >
+                            <tr class="item <eq name="mod" value="1">item_1</eq>" >
+
+                            <td>
+                                <div style="font-weight: bold">
+                                    {$item.id}
+                                </div>
+                            </td>
+                            <td>
+                            	{$item.actionname}
+                            </td>
+                            <td>
+                                {$item.time|date="Y-m-d H:i",###}
+                            </td>
+                            <td>
+                                {$item.ip}
+                            </td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                    <div class="pages">{$Page}</div>
+                </div>
+            </div>
+                <else/>
+
+            <div class="tc p15">暂无记录</div>
+            </notempty>
+        </div>
+    </div>
+</block>

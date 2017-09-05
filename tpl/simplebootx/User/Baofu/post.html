@@ -1,0 +1,54 @@
+<?php session_start(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>充值-提交信息处理</title>
+<?php
+$MemberID=$key;//商户号100000178
+$TransID=$id."ysjr".date("Ymdhis");//流水号
+$PayID="";//支付方式
+$TradeDate=date("Ymdhis");//交易时间
+$OrderMoney=$money*100;//订单金额
+$ProductName="";//产品名称
+$Amount=1;//商品数量
+$Username="";//支付用户名
+$AdditionalInfo="";//订单附加消息
+$PageUrl="http://www.ysjr8.com/index.php/user/baofu/merchant_url/";//通知商户页面端地址
+$ReturnUrl="http://www.ysjr8.com/index.php/loan/baofu/return_url/";//服务器底层通知地址
+$NoticeType=1;//通知类型	
+$Md5key=$partner;//md5密钥abcdefg
+$MARK = "|";
+//MD5签名格式
+$Signature=md5($MemberID.$MARK.$PayID.$MARK.$TradeDate.$MARK.$TransID.$MARK.$OrderMoney.$MARK.$PageUrl.$MARK.$ReturnUrl.$MARK.$NoticeType.$MARK.$Md5key);
+$payUrl="http://gw.baofoo.com/payindex";//借贷混合
+$TerminalID = $zd; //10000001
+$InterfaceVersion = "4.0";
+$KeyType = "1";
+
+$_SESSION['OrderMoney']=$OrderMoney; //设置提交金额的Session
+//此处加入判断，如果前面出错了跳转到其他地方而不要进行提交
+?>
+</head>
+
+<body onload="document.form1.submit()">
+<form id="form1" name="form1" method="post" action="<?php echo $payUrl; ?>">
+        <input type='hidden' name='MemberID' value="<?php echo $MemberID; ?>" />
+		<input type='hidden' name='TerminalID' value="<?php echo $TerminalID; ?>"/>
+		<input type='hidden' name='InterfaceVersion' value="<?php echo $InterfaceVersion; ?>"/>
+		<input type='hidden' name='KeyType' value="<?php echo $KeyType; ?>"/>
+        <input type='hidden' name='PayID' value="<?php echo $PayID; ?>" />
+        <input type='hidden' name='TradeDate' value="<?php echo $TradeDate; ?>" />
+        <input type='hidden' name='TransID' value="<?php echo $TransID; ?>" />
+        <input type='hidden' name='OrderMoney' value="<?php echo $OrderMoney; ?>" />
+        <input type='hidden' name='ProductName' value="<?php echo $ProductName; ?>" />
+        <input type='hidden' name='Amount' value="<?php echo $Amount; ?>" />
+        <input type='hidden' name='Username' value="<?php echo $Username; ?>" />
+        <input type='hidden' name='AdditionalInfo' value="<?php echo $AdditionalInfo; ?>" />
+        <input type='hidden' name='PageUrl' value="<?php echo $PageUrl; ?>" />
+        <input type='hidden' name='ReturnUrl' value="<?php echo $ReturnUrl; ?>" />
+        <input type='hidden' name='Signature' value="<?php echo $Signature; ?>" />
+		<input type='hidden' name='NoticeType' value="<?php echo $NoticeType; ?>" />
+</form>
+</body>
+</html>

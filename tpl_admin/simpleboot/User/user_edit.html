@@ -1,0 +1,36 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+ 	 <li><a href="{:U('User/Indexadmin/index')} ">本站用户</a></li>
+     <li class="active"><a>修改用户信息</a></li>
+  </ul>
+  <style type="text/css">
+   .userspanclass{width:200px;display:inline-block;text-align:right;margin:0 15px 0 0;}
+  </style>
+  <div class="table_list" style="padding:0 0 0 0;">
+      <form class="form-search" action="{:U('User/Indexadmin/user_edit')}"  method="post">
+         <span class="userspanclass">用户名：</span>{$user_login}<br/>
+		 <div style="margin:10px 0 0 0;"></div>
+         <span class="userspanclass">邮箱：</span>{$user_email}<br/>
+		 <div style="margin:10px 0 0 0;"></div>
+		 <span class="userspanclass">密码：</span>
+		 <input type="text" class="input-medium search-query" name="password" value=""> 不修改请为空<font color="#FF0000">*</font>
+		 <div style="margin:10px 0 0 0;"></div>
+		 <span class="userspanclass">确认密码：</span>
+		 <input type="text" class="input-medium search-query" name="repassword" value=""> 不修改请为空<font color="#FF0000">*</font>
+		 <div style="margin:10px 0 0 0;"></div>
+		 <span class="userspanclass">支付密码：</span>
+		 <input type="text" class="input-medium search-query" name="paypassword" value="">不修改请为空<font color="#FF0000">*</font>
+		 <div style="margin:10px 0 0 0;"></div>
+		 <span class="userspanclass">确认支付密码：</span>
+		 <input type="text" class="input-medium search-query" name="repaypassword" value="">不修改请为空<font color="#FF0000">*</font>
+		<div style="margin:25px 0 0 0;"></div>
+		 <input type="hidden" name="uid" value="{$id}" />
+         <span class="userspanclass"></span><button type="submit" class="btn">提交</button>
+     </form>
+  </div>
+</div>
+</body>
+</html>

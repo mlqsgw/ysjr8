@@ -1,0 +1,53 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('Log/adminlog')}">管理员日志</a></li>
+     <li style="margin:0 0 0 100px;">
+      <form class="form-search" action="{:U('Log/adminlog')}"  method="post">
+         <input type="text" class="input-medium search-query" name="so_name" placeholder="用户名" value="{$so_name}">
+               &nbsp;&nbsp; 操作时间
+               <input type="text" class="input-small J_date" name="so_start" placeholder="开始时间" value="{$so_start}">
+                到
+                <input type="text" class="input-small J_date" name="so_end" placeholder="结束时间" value="{$so_end}">
+         <button type="submit" class="btn">搜索</button>
+     </form>
+     </li>
+  </ul>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="16"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>
+				<th width="5%" align='center'>ID</th>
+				<th width="8%">用户名</th>
+				<th>备注</th>
+				<th width="5%">时间</th>
+				<th>操作</th>
+	          </tr>
+        </thead>
+        	<foreach name="comments" item="vo">
+	        	<tr>
+		            <td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
+		            <td>{$vo.id}</td>
+		            <td>{$vo.user_login}</td>
+					<td>{$vo.actionname}</td>
+					<td align='center'>{:date("Y-m-d",$vo['time'])}</td>
+		            <td>
+		            	<a href="{:U('Log/delete',array('id'=>$vo['id'],'name'=>'admin_log'))}" class="J_ajax_del" >删除</a>
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$page}</div>
+    </div>
+    <div class="form-actions">
+        <label class="checkbox inline" for="check_all"><input type="checkbox" class="J_check_all" data-direction="y" data-checklist="J_check_y" id="check_all">全选</label>            
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" data-action="{:u('Log/delete',array('name'=>'admin_log'))}" data-subcheck="true" data-msg="你确定删除吗？">删除</button>
+    </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

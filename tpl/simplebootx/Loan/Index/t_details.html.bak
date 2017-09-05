@@ -1,0 +1,350 @@
+<tc_include file="inc/header" />
+
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/transfer.css" />
+	<div id="deal-default" class="clearfix">
+		<div style="width:1100;">
+		<p class="pos">
+			<a href="__ROOT__">首页</a> > <a href="{:UU('loan/index/transfer')}">债权列表</a> > 债权详情
+		</p>
+		<div id="deal-intro" class="clearfix cf">
+			<div class="detail ">
+				<div class="cont clearfix">
+					<div class="cont_l f_l">
+						<div class="detail_title_bg">
+							<div class="detail_title">
+								{$deal.name}
+								<span class="f12" style="font-weight:normal;">&nbsp;&nbsp;转让者：<a href="{$transfer.user.url}">{$transfer.user_name}</a></span>
+							</div>
+						</div>
+						<div class="blank1"></div>
+						<div class="clearfix items items_big items_no">
+							<div class="item f_l">
+								<div class="lt">
+									剩余期限：
+								</div>
+								<div class="lb">
+									<b class="f_red f14">{$transfer.how_much_month}</b>期
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+									总还款期限：
+								</div>
+								<div class="lb">
+									<b class="f_red f14">{$transfer.repay_nper}</b>期
+								</div>
+							</div>
+							
+						</div>
+						<div class="clearfix items items_big">
+							<div class="item f_l">
+								<div class="lt">
+									下个还款日：
+								</div>
+								<div class="lb">
+									{$transfer.next_repay_time_format}
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+									转让金额：
+								</div>
+								<div class="lb">
+									<span class="f_red">
+										{$transfer.transfer_amount_format}
+									</span>
+								</div>
+							</div>
+							
+						</div>
+						<div class="clearfix items items_big">
+							<div class="item f_l">
+								<div class="lt">
+									剩余本金：
+								</div>
+								<div class="lb">
+									<span class="f_red">{$transfer.left_benjin_format}</span>
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+									剩余利息：
+								</div>
+								<div class="lb">
+									<span class="f_red">
+										{$transfer.left_lixi_format}
+									</span>
+								</div>
+							</div>
+							
+						</div>
+						<div class="cont_t clearfix">
+							原始标转让详情
+						</div>
+						<div class="clearfix items ">
+							<div class="f_l item">
+								<div class="lt">借款用户：</div>
+								<div class="lb">
+	                            	<a href="{$u_info.url}">{$deal.user_login}</a>
+								</div>
+							</div>
+                            <div class="f_l item">
+                            	<div class="lt">标的类型：</div>
+								<div class="lb">
+									{$deal.cat_name}
+								</div>
+                            </div>
+						</div>
+						<div class="clearfix items">
+							<div class="item f_l">
+								<div class="lt">
+									借款年利率：
+								</div>
+								<div class="lb">
+									<span class="f_red">{$deal.rate_foramt_w}</span>
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+									借款期限：
+								</div>
+								<div class="lb">
+									{$deal.repay_time}个月
+								</div>
+							</div>
+						</div>
+						<div class="clearfix items">
+							<div class="item f_l">
+								<div class="lt">
+									借款用途：
+								</div>
+								<div class="lb">
+									{$deal.t_name}
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+									风险等级：
+								</div>
+								<div class="lb">
+									<span class="f_green">
+										<if condition="$deal.rish_rank eq 0">
+										低
+										<elseif condition="$deal.rish_rank eq 1"/>
+										中
+										<elseif condition="$deal.rish_rank eq 2"/>
+										高
+									 	</if>
+									</span>
+								</div>
+							</div>
+							
+						</div>
+						<div class="items clearfix ">
+							<div class="item f_l">
+								<div class="lt">
+									担保范围：
+								</div>
+								<div class="lb">
+									 <if condition="$deal.warrant eq 1">本金<elseif  condition="$deal.warrant eq 2"/>本金及利息<else/>无</if>
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+									还款周期：
+								</div>
+								<div class="lb">
+									{$deal.repay_type_name}
+								</div>
+							</div>
+						</div>
+						<div class="items clearfix  pb5 ">
+							
+							<div class="item f_l">
+								<div class="lt">
+									提前还款费率：
+								</div>
+								<div class="lb">
+									<span class="f_red">{$Think.config.sys_advance_repay}%</span>
+								</div>
+							</div>
+							<div class="item f_l">
+								<div class="lt">
+                                    逾期情况：
+								</div>
+								<div class="lb">
+									<if condition="$deal.yq_count gt 0">逾期了{$deal.yq_count}次<else/><if condition="$transfer.remain_time lt 0">逾期还款<else/>未发生逾期</if></if>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cont_r f_r">
+						<div class="clearfir tr contact">
+							<a href="javascript:void(0);" class="f_blue" onclick="javascript:window.showModalDialog('{url x="index" r="tool#tcontact" p="win=1"}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')" >债权转让及收入协议（范本）</a>
+						</div>
+						<div class="clearfix">
+							<div class="f_l m_info">
+								<div class="clearfix pt15">
+									剩余本金：<span class="f_red">{$transfer.left_benjin_format}</span>
+								</div>
+								<div class="clearfix pt15 ">
+									剩余利息：<span class="f_red">{$transfer.left_lixi_format}</span>
+								</div>
+								<div class="clearfix pt15 ">
+									转让金额：<span class="f_red">{$transfer.transfer_amount_format}</span>
+								</div>
+								<div class="clearfix pt15 transmoney">
+									受让收益：<span class="f_red">{$transfer.transfer_income_format}</span>
+								</div>
+							</div>
+							<div class="u_money_info f_r">
+								<div class="clearfix">
+									账户余额 [<a href="{:UU('User/Money/index',array('act'=>'incharge'))}">充值</a>]
+								</div>
+								<div class="clearfix">
+									<span class="f_red">{$can_use_quota|format_price}</span>
+								</div>
+							</div>
+						</div>
+						<if condition="$transfer.t_user_id gt 0">
+                            <div class="clearifx tans_user pt15">
+                                承接人：<a href="{$transfer.tuser.url}">{$transfer.tuser}</a>
+                            </div>
+                            <div class="clearifx  pt15">
+                                承接时间：<span class="f_red">{$transfer.transfer_time_format}</span>
+                            </div>
+                            <else/>
+                                <notempty name="user_info">
+                                    <div class="clearifx tc pt15">
+                                        <input type="password" name="bidpaypassword" class="f-input f-input220" id="J_paypassword" placeholder="请输入支付密码" holder="请输入支付密码" <if condition="$transfer.status eq 0">disabled="true"</if> />
+                                    </div>
+                                    <div class="clearifx tc pt10">
+                                        <if condition="$transfer.status eq 0">
+                                        <span class="dtbuy_btn">已撤销转让</span>
+                                        <else/>
+                                        <a href="javascript:void(0);" id="J_transferBuy" class="tbuy_btn">购买</a>
+                                       </if>
+                                    </div>
+
+                               <else/>
+                                <p align="center " class="p10">
+                                    请先<a class="f_blue" href="{:UU('user/Login/index')}">登录</a>或<a href="{:UU('user/register/index')}" class="f_blue">注册</a>
+                                </p>
+                                </notempty>
+                          </if>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="blank"></div>
+		<div class="blank"></div>
+		<div class="desc_inf wrap clearfix">
+        <div class="list_title clearfix" id="J_deal_tab_select">
+            <ul>
+				<li class="list1 right_tab_select" style="cursor:pointer;" rel="1">借入者信用信息</li>
+				<if condition="$deal.deal_status egt 7">
+				<li class="list1 right_tab_unselect" style="cursor:pointer;" rel="2">还款详情</li>
+				<li class="list1 right_tab_unselect" style="cursor:pointer;" rel="3">债权人信息</li>
+				</if>
+            </ul>
+        </div>
+		<div class="cont cont2 p15 pl20 pr20 clearfix" id="J_deal_tab_box">
+			<div class="box_view box_view_1">
+				<tc_include file="inc/deal/user_credit_info"/>
+				<tc_include file="inc/deal/user_credit_passed_info"/>
+				<p class="b" style="margin-top:20px;">借款描述</p>
+				<div class="clearfix" style="border-bottom:1px solid #e3e3e3; padding:0 0 20px 90px;">
+					<span>{$deal.description}</span>
+				</div>
+			</div>
+            <if condition="$deal.deal_status egt 7">
+			<div class="box_view box_view_2 hide">
+				<tc_include file="inc/deal/loan_repay_list"/>
+			</div>
+			<div class="box_view box_view_3 hide">
+			   <tc_include file="inc/deal/load_repay_list" />
+			</div>
+			</if>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="blank"></div>
+<script type='text/javascript'>
+	jQuery(function(){
+		
+		$("#J_deal_tab_select li").click(function(){
+			$("#J_deal_tab_select li").removeClass("right_tab_select");
+			$("#J_deal_tab_select li").addClass("right_tab_unselect");
+			$(this).removeClass("right_tab_unselect");
+			$(this).addClass("right_tab_select");
+			$("#J_deal_tab_box .box_view").addClass("hide");
+			$("#J_deal_tab_box .box_view_"+$(this).attr("rel")).removeClass("hide");
+		});
+		
+		$("#J_transferBuy").click(function(){
+			var user_id = "{$transfer.user_id}";//转让的用户
+			var tuser_id = "{$user_info.id}"; //当前登录用户
+			var duser_id  = "{$deal.user_id}";//借款的用户
+			var user_money = "{$can_use_quota}";
+
+			var transfer_money = "{$transfer.transfer_amount}";
+
+		/*	if(user_id==tuser_id){
+				$.showErr("不能购买自己转让的债权");
+				return false;
+			}
+			if(duser_id==tuser_id){
+				$.showErr("不能购买自己的的借贷债权");
+				return false;
+			}
+		*/
+			if($.trim($("#J_paypassword").val()) ==""){
+				$.showErr("请输入支付密码",function(){
+					$("#J_paypassword").focus();
+				});
+				return false;
+			}
+            if(user_money<transfer_money){
+                $.showErr("帐户余额不足");
+                return false;
+            }
+			var J_paypassword = $("#J_paypassword").val();
+			var ajaxurl = "{:UU('loan/index/dotrans',array('id'=>$transfer['id']))}";
+			$.ajax({
+				url:ajaxurl,
+				data:"&paypassword="+J_paypassword,
+				type:"post",
+				dataType:"json",
+				success:function(result){
+					if(result.status==1){
+						$.showSuccess(result.info,function(){
+							if(result.referer!=""){
+								window.location.href=result.referer;
+							}
+							else{
+								window.location.reload();
+							}
+						});
+					}
+					else if(result.status==2){
+						window.location.href=result.jump;
+					}
+					else{
+                        if(result.referer!=""){
+                            window.location.href=result.referer;
+                        }else{
+                            $.showErr(result.info);
+                        }
+
+					}
+				},
+				error:function(){
+					$.showErr("通信失败");
+				}
+			});
+			return false;
+		});
+	});
+</script>
+<tc_include file="inc/footer" />

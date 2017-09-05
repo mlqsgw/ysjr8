@@ -1,0 +1,400 @@
+<?php
+/**
+ * 认证控制器
+ */
+
+namespace User\Controller;
+use Common\Controller\AdminbaseController;
+
+class AuditadminController extends AdminbaseController
+{
+	private function sopre($where=""){
+		if($where){
+			$where.=" and user_status=1";
+		}else{
+			$where='user_status=1';
+		}
+		$p=I("post.");
+		if(!empty($p['so_start'])){
+			$so_start=strtotime($p['so_start']);
+			$where.=" and unix_timestamp(create_time)>$so_start";
+			$this->assign('so_start',$p['so_start']);
+		}
+		if(!empty($p['so_end'])){
+			$so_end=strtotime($p['so_end']);
+			$where.=" and unix_timestamp(create_time)<$so_end";
+			$this->assign('so_end',$p['so_end']);
+		}
+		if(!empty($p['so_name'])){
+			$where.=" and user_login like '%{$p['so_name']}%'";
+			$this->assign('so_name',$p['so_name']);
+		}
+		return $where;
+	}
+	
+    //认证列表
+    public function index(){
+    	$where = $this->sopre();
+		$this->content($where);
+        $this->display();        
+    }
+    //实名认证
+    public function autonym(){
+    	
+    	$this->assign("modelname","实名认证");
+    	$this->assign('addname','搜索修改');
+    	if(I("get.typeid")==1){
+    		$wtype = "1";//通过认证
+    	}elseif(I("get.typeid")==3){
+    		$wtype = "3";//未通过认证
+    	}else{
+    		$wtype = "2";//待审核
+    	}
+    	$where = $this->sopre("wechat_audit=$wtype");//判断条件
+    	$this->content($where);//查询数据
+    	$this->assign('wtype',$wtype);
+		
+    	$this->assign('typename','wechat_audit');
+    	$this->display("autonym");
+    	
+    }
+    //视频认证
+    public function video(){
+        
+    	$this->assign("modelname","视频认证");
+    	$this->assign('addname','搜索修改');
+    	if(I("get.typeid")==1){
+    		$wtype = "1";
+    	}elseif(I("get.typeid")==3){
+    		$wtype = "3";
+    	}else{
+    		$wtype = "2";
+    	}
+    	$where = $this->sopre("video_audit=$wtype");
+    	$this->content($where);
+    	$this->assign('wtype',$wtype);
+    	$this->assign('typename','video_audit');
+    	$this->display("video");
+    	
+    }
+    //现场认证
+    public function scene(){
+        
+    	$this->assign("modelname","现场认证");
+    	$this->assign('addname','搜索修改');
+    	if(I("get.typeid")==1){
+    		$wtype = "1";
+    	}elseif(I("get.typeid")==3){
+    		$wtype = "3";
+    	}else{
+    		$wtype = "2";
+    	}
+    	$where = $this->sopre("site_audit=$wtype");
+    	$this->content($where);
+    	$this->assign('wtype',$wtype);
+    	$this->assign('typename','site_audit');
+    	$this->display("scene");
+    	
+    }
+    //手机认证
+    Public function phone(){
+        
+    	$this->assign("modelname","手机认证");
+    	$this->assign('addname','添加');
+    	if(I("get.typeid")==1){
+    		$wtype = "1";
+    	}elseif(I("get.typeid")==3){
+    		$wtype = "3";
+    	}else{
+    		$wtype = "2";
+    	}
+    	$where = $this->sopre("cellphone_audit=$wtype");
+    	$this->content($where);
+    	$this->assign('wtype',$wtype);//认证状态
+    	$this->assign('typename','cellphone_audit');//认证字段
+    	$this->display("phone");
+    	
+    }
+    //添加手机认证或搜索修改认证
+    public function add(){
+    	$arraytype = array('wechat_audit'=>'实名认证','site_audit'=>'现场认证','video_audit'=>'视频认证','cellphone_audit'=>'手机认证');
+    	$uid = I("get.uid");//认证列表传uid修改信息
+    	if(IS_POST ||$uid){
+    		$p=I("post.");
+    		$typename = I("get.typename");//认证字段
+    			$where  = array();
+    			$users = M('users as us');
+    			if($typename=="cellphone_audit"){//添加手机号认证
+    				if($p['user_login']&&$p['user_phone']&&$p['verify']){
+    					if($_SESSION['_verify_']['verify']!=strtolower($p['verify'])){
+    						$this->error("验证码错误！");
+    					}
+    					//正则判断手机号
+    					$search ='/^(1(([3578][0-9])|(47)|[8][0126789]))\d{8}$/';
+    					if(!preg_match($search, $p['user_phone'])) {
+    						$this->error("手机格式不正确！ ");
+    					}
+    					if($users->where("user_login='".$p['user_login']."'")->count()){
+    						$content['user_phone']=$p['user_phone'];
+    						$date = $users->where("user_login='".$p['user_login']."'")->save($content);
+    						if($date){
+    							$this->success("手机号认证添加成功！ ");
+    						}else{
+    							$this->error("手机号认证添加失败！ ");
+    						}
+    					}else{
+    						$this->error("该用户不存在！ ");
+    					}
+    					
+    				}else{
+    					$this->error("信息不能为空！ ");
+    				}
+    			}else{//搜索并修改认证信息
+    				if($p['user_login'])$where['us.user_login']=$p['user_login'];
+    				if($p['id'])$where['us.id']=$p['id'];
+    				if($p['user_email'])$where['us.user_email']=$p['user_email'];
+    				if($uid)$where['us.id']=$uid;
+    				if(empty($where)){
+    					$this->error("请正确填写查询信息！ ");
+    				}
+    				$info = $users->join("__USER_INFO__ as uf on uf.uid=us.id")->field("us.id,us.user_login,uf.name,uf.gender,uf.national,uf.born,uf.idcard,uf.idcard_img,uf.native_place")->where($where)->find();
+    				if($info['native_place']){
+    					$nap = explode(",", $info['native_place']);
+    					$info['native_place1'] = $nap[0];
+    					$info['native_place2'] = $nap[1];
+    					$info['native_place3'] = $nap[2];
+    				}
+    				if($info['idcard_img']){
+    					$nap = explode(",", $info['idcard_img']);
+    					$info['idcard_img1'] = $nap[0];
+    					$info['idcard_img2'] = $nap[1];
+    				}
+    				//var_dump($info);exit;
+    				if($info){
+    					$this->assign('info',$info);
+    					$this->assign('typename',$typename);
+    					$this->assign('modelname',$arraytype[$typename]);
+    					$this->display("addedit");
+    				}else{
+    					$this->error("该用户不存在！ ");
+    				}
+    				
+    			}
+
+    	}else{
+    		//认证action
+    		$aarray = array('email_audit'=>'2','wechat_audit'=>'autonym','site_audit'=>'scene','video_audit'=>'video','cellphone_audit'=>'phone');
+	    	$typename = I("get.typename");
+	    	$this->assign('modelname',$arraytype[$typename]);//认证名称
+	    	$this->assign('typename',$typename);//认证字段
+	    	$this->assign('aaction',$aarray[$typename]);//认证字段
+	    	
+	    	//断判是搜索还是添加
+	    	if($typename=="cellphone_audit"){//手机认证
+	    		$this->assign('addname','添加');
+	    	}else{
+	    		$this->assign('addname','搜索修改');
+	    	}
+	    	$this->display();
+    	}
+    }
+    //修改认证信息
+    public function addedit(){
+    	$p = I("post.");
+    	//判断数据是否为空
+    	if($p['s_province']=="省份"||$p['s_city']=="地级市"||$p['s_county']=="市、县级市"||empty($p['name'])||empty($p['gender'])||empty($p['born'])||empty($p['idcard'])||empty($p['national'])||empty($p['idcard1'])||empty($p['idcard2'])){
+    		$this->error("信息填写不全");
+    	}else{
+    		//正则姓名
+    		$regname="/^[\x{4e00}-\x{9fa5}]+$/u";
+    		if(!preg_match($regname, $p['name'])){
+    			$this->error("姓名填写不正确");
+    		}
+    		//身份证合法性
+    		if(!$this->idcard_checksum18($p['idcard'])){
+    			$this->error("身份证号不合法");
+    		}
+    		$userinfo = M("user_info");
+    		$date = array();
+    		$date['name']		 = $p['name'];
+    		$date['gender']		 = $p['gender'];
+    		$date['born']		 =$p['born'];
+    		$date['idcard']		 =$p['idcard'];
+    		$date['idcard_img']  =$p['idcard1'].",".$p['idcard2'];
+    		$date['native_place']  =$p['s_province'].",".$p['s_city'].",".$p['s_county'];
+    		$info = $userinfo->where("uid=".$p['id'])->save($date);
+    		
+    		if($info){
+    			$this->success("修改成功!");
+    		}else{
+    			$this->error('修改失败！');
+    		}
+    	}
+    }
+	public function showview()
+	{
+		$this->display();	
+	}
+    //认证审核
+    public function Review(){
+    	//认证action
+    	$aarray = array('email_audit'=>'2','wechat_audit'=>'autonym','site_audit'=>'scene','video_audit'=>'video','cellphone_audit'=>'phone');
+    	if(IS_POST){
+    		$p=I("post.");
+    		//认证标识字段
+    		$typename = $p['typename'];
+    		$userInfo = M('user_info');
+    		//用户信息
+    		$ures=$userInfo->field("uid,$typename")->where("uid=".$p['id'])->find();
+    		//用户名
+    		$username = M("users")->where('id='.$p['id'])->getField('user_login');
+    		if($ures[$typename]==$p['sys_state']){
+    			$this->error("没有更改任何状态");
+    		}
+    		
+    		//模块信息
+    		//$mres=M("data_model")->field("source,through,notthrough")->find($this->mid);
+
+    		$data[$typename]=$p['sys_state'];
+    		//更改状态
+    		if($userInfo->where("uid=".$p['id'])->save($data)){
+    			//通过审核后
+    			if($p['sys_state']==1){
+
+    					$this->xulie(2, $typename,$p['id'],$p['modelname']);
+    					//各认证对应积分id
+    					$arrayid = array('email_audit'=>'4','wechat_audit'=>'3','site_audit'=>'5','video_audit'=>'6','cellphone_audit'=>'2');
+    					//加积分
+    					integral($p['id'],$arrayid[$typename]);
+    					//提醒
+    					remind(1,$p['id'],array("user"=>$username,"modelname"=>$p['modelname']));
+    					//管理员日志
+    					adminLog("修改用户:".$username." ".$p['modelname']."认证通过");
+    					$this->success("认证成功");
+    		
+    			}elseif($p['sys_state']==3){
+    				//没有通过审核
+    				//提醒
+    				$this->xulie(1, $typename,$p['id'],$p['modelname']);
+    				remind(2,$p['id'],array("user"=>$username,"modelname"=>$p['modelname']));
+    				adminLog("修改用户:".$username." ".$p['modelname']."认证未通过");
+    				//$this->assign("jumpUrl",U("User/Auditadmin/".$aarray[$typename],array("typeid=".$p['state'])));
+    				$this->success("设置成功");
+    			}
+    			 
+    		}else{
+    			$this->error("状态更改失败");
+    		}
+    		
+    	}else{
+	    	$id=I("get.id");//会员uid
+	    	$tname=I("get.typename");//认证标识字段
+	    	$arraytype = array('wechat_audit'=>'实名认证','site_audit'=>'现场认证','video_audit'=>'视频认证','cellphone_audit'=>'手机认证');
+	    	$this->assign("modelname",$arraytype["$tname"]);
+	    	$typename = 'uf.'.$tname;
+	    	$user = M('users as us');
+	    	$res = $user->join("__USER_INFO__ as uf on uf.uid=us.id")->field("us.id,us.user_login,$typename")->where('us.id='.$id)->find();
+	    	//echo $user->getLastSql();exit;
+	    	if($res[$tname]==2){
+	    		$res['states']="待审核";
+	    	}elseif($res[$tname]==1){
+	    		$res['states']="已审核通过";
+	    	}elseif($res[$tname]==3){
+	    		$res['states']="未通过审核";
+	    	}
+	    	$this->assign('tname',$tname);
+	    	$this->assign('res',$res);
+	    	$this->assign('status',$res[$tname]);
+	    	$this->display();
+    	}
+    }
+    //数据查询列表
+    public function content($where){
+    	$Model = D("UsersView");
+    	$count=$Model->where($where)->count();
+    	$page = $this->page($count, 20);
+    	$lists = $Model
+    	->where($where)
+    	->order("id desc")
+    	->limit($page->firstRow . ',' . $page->listRows)
+    	->select();
+    	$this->assign('lists', $lists);
+    	$this->assign("page", $page->show('Admin'));
+    }
+    /***
+     * users表添加或删除认证序列化数据
+     * $type  1删除2添加
+     * $typename 认证标识字段
+     * $uid  会员id
+     * $modelname  认证名称
+     */
+    public function xulie($type,$typename,$uid,$modelname){
+    	//auditamark序列化时各认证键值
+    	$arraytype = array('email_audit'=>'2','wechat_audit'=>'3','site_audit'=>'5','video_audit'=>'4','cellphone_audit'=>'1');
+    	//给这个用户添加这个资料认证的标识
+    	$usermark=M("users")->where(array("id"=>$uid))->getField("auditamark");
+    	$datamark=unserialize($usermark);
+    	if(empty($datamark)){
+    		$datamark=array();
+    	}
+    	$k = $arraytype[$typename];
+    	$newmark=array($arraytype[$typename]=>$modelname);
+    	if($type==1){
+    		unset($datamark[$k]);
+    		$merge=serialize($datamark);
+    	}else{
+    		$merge=serialize($newmark+$datamark);
+    	}
+    	
+    	M("users")->where(array("id"=>$uid))->save(array("auditamark"=>$merge));//users表添加认证序列化数据
+    }
+    
+    //身份证验证
+    public function idcard_checksum18($idcard){
+		if (strlen($idcard) != 18){ return false; }
+		$aCity = array(11 => "北京",12=>"天津",13=>"河北",14=>"山西",15=>"内蒙古",
+		21=>"辽宁",22=>"吉林",23=>"黑龙江",
+		31=>"上海",32=>"江苏",33=>"浙江",34=>"安徽",35=>"福建",36=>"江西",37=>"山东",
+		41=>"河南",42=>"湖北",43=>"湖南",44=>"广东",45=>"广西",46=>"海南",
+		50=>"重庆",51=>"四川",52=>"贵州",53=>"云南",54=>"西藏",
+		61=>"陕西",62=>"甘肃",63=>"青海",64=>"宁夏",65=>"新疆",
+		71=>"台湾",81=>"香港",82=>"澳门",
+		91=>"国外");
+		//非法地区
+		if (!array_key_exists(substr($idcard,0,2),$aCity)) {
+			return false;
+		}
+		//验证生日
+		if (!checkdate(substr($idcard,10,2),substr($idcard,12,2),substr($idcard,6,4))) {
+			return false;
+		}
+		$idcard_base = substr($idcard, 0, 17);
+		if ($this->idcard_verify_number($idcard_base) != strtoupper(substr($idcard, 17, 1))){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	
+	// 计算身份证校验码，根据国家标准GB 11643-1999
+	public function idcard_verify_number($idcard_base){
+		if (strlen($idcard_base) != 17){ return false; }
+		// 加权因子
+		$factor = array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2);
+	
+		// 校验码对应值
+		$verify_number_list = array('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2');
+	
+		$checksum = 0;
+		for ($i = 0; $i < strlen($idcard_base); $i++){
+			$checksum += substr($idcard_base, $i, 1) * $factor[$i];
+		}
+	
+		$mod = strtoupper($checksum % 11);
+		$verify_number = $verify_number_list[$mod];
+	
+		return $verify_number;
+	}
+}
+
+?>

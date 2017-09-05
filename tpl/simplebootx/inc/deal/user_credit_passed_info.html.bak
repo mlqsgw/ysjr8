@@ -1,0 +1,88 @@
+
+<p class="b" style="margin-top:30px;">风险把空</p>
+<div class="clearfix" style="border-bottom:1px solid #e3e3e3; padding:30px 90px;">
+    <table class="data_table" border="0" cellspacing="1" style="background:#e3e3e3;width:100%;">
+        <tbody>
+            <tr style="background:#00bef0; color:#fff; height:40px;">
+                <th width="40%" class="tc">
+                	审核项目
+                </th>
+                <th width="40%" class="tc">
+    				状态
+                </th>
+                <th width="20%" class="tc">
+                    查看
+                </th>
+            </tr>
+            <php>
+                $userdata=unserialize($deal['userdata']);             
+            </php>
+            <if condition="$deal.agency_id gt 0">
+                <tr style="height: 40px;" class="wb">
+                    <td class="tc pl5 pr5">
+                        {$deal.agency_name}
+                    </td>
+                    <td class="tc pl5 pr5">
+                        <img src="__TMPL__Public/images/answer_success.jpg" alt="通过">
+                    </td>
+                    <td class="tc pl5 pr5">
+                        <a target="_blank" href="{:UU('portal/agency/index',array('id'=>$deal['agency_id']))}">点击查看</a>
+                    </td>
+                </tr>
+            </if>
+
+            <foreach name="userdata" item="userdatavo">
+                <tr style="height: 40px;" class="wb">
+                    <td class="tc pl5 pr5">
+                       {$userdata[$key]}
+                    </td>
+                    <td class="tc pl5 pr5">
+                        <img src="__TMPL__Public/images/answer_success.jpg" alt="通过">
+                    </td>
+                    <td class="tc pl5 pr5">
+                    <if condition="!sp_is_user_login()">
+                      登录后查看 
+                    <else />
+                       <a class="J_do_transfer" href="{:UU('user/Audit/seeauth',array('uid'=>$deal['user_id'],'mid'=>$key))}">点击查看</a>
+                    </if>
+                     
+                    </td>
+                </tr>
+            </foreach>
+
+
+
+        </tbody>
+    </table>
+    <div class="prompt" style="padding: 10px 0 10px 54px; text-align:left;">
+        <p style="line-height:30px;">
+            <i style="margin-top:13px;"></i>将以客观、公正的原则，最大程度地核实借入者信息的真实性。但{$Think.config.SITE_NAME} 不保证审核信息100%真实。
+        </p>
+        <p style="line-height:30px;">
+            <i style="margin-top:13px;"></i>借入者若长期逾期，其个人信息将被公布
+        </p>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $(".J_do_transfer").click(function(){
+            var url=$(this).attr("href");
+            $.ajax({
+                url:url,
+                data:'',
+                dataType:"text",
+                success:function(result){
+                    $.weeboxs.open(result, {boxid:"do-tras-box",contentType:'text',showButton:false, title:'详情',type:'wee',width:800});
+                },
+                error:function(){
+                    $.showErr("请求数据失败");
+                }
+            });
+
+            return false;
+        });
+    });
+
+
+</script>

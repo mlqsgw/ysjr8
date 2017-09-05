@@ -1,0 +1,160 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:600px;">
+<div class="wrap J_check_wrap">
+<if condition="$state eq 0">
+    <form class="J_ajaxForm" action="{:U('User/Account/review')}" method="post">
+        <div class="table_list">
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>用户名称:</th>
+                    <td>{$user_name}</td>
+                    <th>充值类型:</th>
+                    <td><if condition="$type eq 1">网上充值<elseif condition="$type eq 2" />线下充值<else/>手动充值</if></td>
+                </tr>
+                <tr>
+                    <th>交易号:</th>
+                    <td>{$account_id}</td>
+                    <th>支付方式:</th>
+                    <td>{$bank_name}</td>
+                </tr>
+                <tr>
+                    <th>充值金额:</th>
+                    <td>￥{$money}</td>
+                    <th>充值手续费:</th>
+                    <td>￥{$money_fee}</td>
+                </tr>
+                <tr>
+                    <th>实际到账金额:</th>
+                    <td>{$money_actual}</td>
+                    <th>备注:</th>
+                    <td>{$remarks}</td>
+                </tr>
+                <tr>
+                    <th>充值状态:</th>
+                    <td><if condition="$state eq 1">成功<elseif condition="$state eq 2" />失败<else/>审核中</if></td>
+                    <th>操作时间/操作IP:</th>
+                    <td>{$create_time}/{$create_ip}</td>
+                </tr>
+                <tr>
+                    <th>状态:</th>
+                    <td><select style="width:100px;" name="sys_state" >
+                        <option value="1" <eq name="status" value="1"> selected</eq> >充值成功</option>
+                        <option value="2" <eq name="status" value="2"> selected</eq> >充值失败</option>
+                    </select>
+                    </td>
+                    <th>到账金额:</th>
+                    <td><input style="width:100px;" readonly value="{$money_actual}"/></td>
+                </tr>
+                <tr>
+                    <th>审核备注:</th>
+                    <td>
+                    <textarea rows="4" style="width:100px;"  name="remarks">{$remarks}</textarea>
+                    </td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <input type="hidden" value="{$id}" name="id"/>
+
+            </table>
+
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary J_ajax_submit_btn"  type="submit" >提交</button>
+        </div>
+    </form>
+<else/>
+        <div class="table_list">
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>用户名称:</th>
+                    <td>{$user_name}</td>
+                    <th>充值类型:</th>
+                    <td><if condition="$type eq 1">网上充值<elseif condition="$type eq 2" />线下充值<else/>手动充值</if></td>
+                </tr>
+                <tr>
+                    <th>交易号:</th>
+                    <td>{$account_id}</td>
+                    <th>支付方式:</th>
+                    <td>{$bank_name}</td>
+                </tr>
+                <tr>
+                    <th>充值金额:</th>
+                    <td>￥{$money}</td>
+                    <th>充值手续费:</th>
+                    <td>￥{$money_fee}</td>
+                </tr>
+                <tr>
+                    <th>实际到账金额:</th>
+                    <td>{$money_actual}</td>
+                    <th>备注:</th>
+                    <td>{$remarks}</td>
+                </tr>
+                <tr>
+                    <th>充值状态:</th>
+                    <td><if condition="$state eq 1">成功<elseif condition="$state eq 2" />失败<else/>审核中</if></td>
+                    <th>操作时间/操作IP:</th>
+                    <td>{$create_time}/{$create_ip}</td>
+                </tr>
+                <tr>
+                    <th>审核人:</th>
+                    <td>{$admin_user}</td>
+                    <th>审核时间:</th>
+                    <td>{$time}</td>
+                </tr>
+                <tr>
+                    <th>审核备注:</th>
+                    <td>{$remarks}</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+
+            </table>
+
+        </div>
+</if>
+</div>
+<script>
+    if ($('a.J_ajax_del').length) {
+        Wind.use('artDialog', function () {
+            $('.J_ajax_del').on('click', function (e) {
+                e.preventDefault();
+                var $_this = this,
+                        $this = $($_this),
+                        href = $this.prop('href'),
+                        msg = $this.data('msg');
+                art.dialog({
+                    title: false,
+                    icon: 'question',
+                    content: '您确定要删除这个字段吗，删除后原来的所以资料内容都将不复存在？',
+                    follow: $_this,
+                    close: function () {
+                        $_this.focus();; //关闭时让触发弹窗的元素获取焦点
+                        return true;
+                    },
+                    ok: function () {
+
+                        $.getJSON(href).done(function (data) {
+                            if (data.state === 'success') {
+                                if (data.referer) {
+                                    location.href = data.referer;
+                                } else {
+                                    reloadPage(window);
+                                }
+                            } else if (data.state === 'fail') {
+                                //art.dialog.alert(data.info);
+                                alert(data.info); //暂时处理方案
+                            }
+                        });
+                    },
+                    cancelVal: '关闭',
+                    cancel: true
+                });
+            });
+
+        });
+    }
+
+</script>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

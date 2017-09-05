@@ -1,0 +1,77 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('admin/Param/index')}">系统参数设置</a></li>
+     <li class="active"><a href="{:U('admin/Param/add')}">添加参数</a></li>
+
+  </ul>
+        <form class="form-horizontal J_ajaxForm" action="{:U('admin/Param/add')}" method="post" id="myform">
+
+
+  <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <th width="180">分组</th>
+          <td>
+              <select name="cate_id" class="normal_select">
+                  <foreach name="cate" item="vo">
+                  <option value="{$vo.id}">{$vo.name}</option>
+                  </foreach>
+              </select>
+
+        </tr>
+          <tr>
+              <th width="180">说明</th>
+              <td><input type="text" name="remark" value="{$config.subname}" class="input" ></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th>类型</th>
+              <td>
+                  <label class="radio inline" for="active_true">
+                      <input type="radio" name="type" value="1" checked id="active_true"/>文本/数字
+                  </label>
+                  <label class="radio inline" for="active_false">
+                      <input type="radio" name="type" value="2" id="active_false">布尔（Y/N）
+                  </label>
+              </td>
+          </tr>
+          <tr>
+              <th width="180">变量名称：</th>
+              <td><input type="text" name="var_name" value="{$config.receiver}" class="input"></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th width="180">值：</th>
+              <td id="value"><input type="text" name="value" value="{$config.account}" class="input"></input><span class="must_red">*</span></td>
+          </tr>
+      </table>
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+    </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+    $(function(){
+        $(':radio[name="type"]').click(function(){
+             var zhi= $(this).val();
+            //说明是选择的布尔值
+            if(zhi==2){
+                var _radio=' <label class="radio inline" for="bl_true"> <input type="radio" name="value" id="bl_true" value="1" checked />是</label>\
+                <label class="radio inline" for="bl_false"><input type="radio" name="value" value="0" id="bl_false" >否 </label>';
+                $("#value").html(_radio);
+            }
+            if(zhi==1){
+                var _input='<input type="text" name="value" value="{$config.account}" class="input"></input><span class="must_red">*</span>';
+                $("#value").html(_input);
+            }
+          }
+        );
+
+    });
+</script>
+</body>
+</html>

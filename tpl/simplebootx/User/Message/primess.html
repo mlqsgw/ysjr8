@@ -1,0 +1,47 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Message/menu" />
+	</div>
+	<div class="uc_r_bl_box clearfix pt10">
+		
+		<div class="uc-table">
+		<table style="width:100%" cellspacing="0" cellpadding="0" border="0" class="uc-msg-table" >
+		<form name="pm_list">
+        <volist name="list" id="vo">
+						<tr style="cursor:pointer;" class="pm_row" onclick="window.location.href='{:U("User/Message/interflow",array("uid"=>$vo["uid"]))}'" >
+					<td width=15>					
+					<input type="checkbox" value="{$vo.uid}" name="pm_key[]" />					
+					</td>
+					<td width=50>
+					<a href='' style='text-align:center; display:inline-block;'><img src='{$vo.userimg}' width="80" height="80" /></a>																																	</td>
+				<td style="text-align:left;width:135px">
+					<div><if condition="$vo['mes_to'] neq ''"> 我对 {$vo.user_login}说<else />{$vo.user_login} 对我说  </if></div>
+					<div class="total"><if condition="$vo['mes_from'] neq ''"><font color="#FF0000">未读</font></if></div>
+					<div class="time">{$vo.post_time} </div>				
+				</td>
+				<td style="text-align:left;">
+					<div class="f_dgray">{$vo.mes_content}	</div>
+										[查看]
+				</td>
+			</tr>	
+            </volist>			
+					</form>
+		</table>
+				<div class="pt10">
+		全选 <input type="checkbox" name="checkall" /> <input type="button" value="删除" name="del_pm" class="remove_msg_btn" />
+		</div>	
+					
+		<div class="pages"> {$page}  </div>
+		</div><!--end uc-table-->
+	</div>
+	<div class="inc_foot"></div>
+</div>
+
+</div>
+
+<div class="blank"></div>
+
+</block>
+

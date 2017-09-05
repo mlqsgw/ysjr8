@@ -1,0 +1,87 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="#">线下银行设置</a></li>
+     <li ><a href="{:U("admin/pay/add")}">添加银行</a></li>
+  </ul>
+  <div class="table_list">
+
+    <table width="100%" cellspacing="0" class="table table-hover">
+      <thead>
+        <tr>
+          <th width="30">ID</th>
+          <th align="left" >名称</th>
+            <th width="200">配置</th>
+          <th width="200">管理操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <foreach name="list" item="vo">
+        <tr>
+          <td>{$vo.id}</td>
+          <td>{$vo.name}</td>
+            <td><a class="J_dialog" href="{:U('admin/pay/config',array('id'=>$vo['id']))}" >配置</a></td>
+          <td  class="text-c">
+              <if condition="($vo['state'] eq 0)">
+                  <a href="{:U('admin/pay/isok',array('id'=>$vo['id'],'state'=>1))}"  class="J_ajax_del"  >启用</a>
+                <else/>
+                  <a href="{:U('admin/pay/isok',array('id'=>$vo['id'],'state'=>0))}"  class="J_ajax_del" >停用</a>
+              </if>
+              <a href="{:U('admin/pay/edit',array('id'=>$vo['id']))}"   >编辑</a>
+
+          </td>
+        </tr>
+        </foreach>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+<script>
+    if ($('a.J_ajax_del').length) {
+        Wind.use('artDialog', function () {
+            $('.J_ajax_del').on('click', function (e) {
+                e.preventDefault();
+                var $_this = this,
+                        $this = $($_this),
+                        href = $this.prop('href'),
+                        msg = $this.data('msg');
+                art.dialog({
+                    title: false,
+                    icon: 'question',
+                    content: '您确定要改变支付方式状态吗？',
+                    follow: $_this,
+                    close: function () {
+                        $_this.focus();; //关闭时让触发弹窗的元素获取焦点
+                        return true;
+                    },
+                    ok: function () {
+
+                        $.getJSON(href).done(function (data) {
+                            if (data.state === 'success') {
+                                if (data.referer) {
+                                    location.href = data.referer;
+                                } else {
+                                    reloadPage(window);
+                                }
+                            } else if (data.state === 'fail') {
+                                //art.dialog.alert(data.info);
+                                alert(data.info);//暂时处理方案
+                            }
+                        });
+                    },
+                    cancelVal: '关闭',
+                    cancel: true
+                });
+            });
+
+        });
+    }
+
+</script>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+</body>
+</html>

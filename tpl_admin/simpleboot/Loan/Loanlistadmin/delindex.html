@@ -1,0 +1,155 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('Loan/Loanlistadmin/index')}">所有借款</a></li>
+     <li><a href="{:U('Loan/Loanlistadmin/add')}"  target="_self">添加借款</a></li>
+     <li><a href="{:U('Loan/Loanlistadmin/NewAdd')}" target="_self">添加新手借款</a></li>
+     <li class="active"><a href="{:U('Loan/Loanlistadmin/delindex')}">删除列表</a></li>
+  </ul>
+  <form class="well form-search" method="post" action="{:U('Loan/Loanlistadmin/index')}">
+    <div class="search_type cc mb10">
+      <div class="mb10"> 
+        <span class="mr20">分类：
+        <select class="select_2" name="cate_id" style="width:150px;">
+          	<option value='0' >全部</option>
+            <foreach name="loan_cate" item="catevo">
+                <option value='{$catevo.id}'  <eq name="cate_id" value="$catevo['id']">selected</eq> >{$catevo.cat_name}</option>
+            </foreach>
+        </select>
+        &nbsp;&nbsp;
+            贷款状态：
+        <select class="select_2" name="deal_status" style="width:150px;">
+            <option value='' >全部</option>
+            <option value='0' <eq name="deal_status" value="0">selected</eq> >待审核</option>
+            <option value='1' <eq name="deal_status" value="1">selected</eq> >进行中</option>
+            <option value='2' <eq name="deal_status" value="2">selected</eq>>审核失败</option>
+            <option value='3' <eq name="deal_status" value="3">selected</eq>>用户取消</option>
+            <option value='4' <eq name="deal_status" value="4">selected</eq>>流标</option>
+            <option value='5'<eq name="deal_status" value="5">selected</eq> >满标待审核</option>
+            <option value='6' <eq name="deal_status" value="6">selected</eq>>满标审核失败</option>
+            <option value='7'<eq name="deal_status" value="7">selected</eq>>还款中</option>
+            <option value='8' <eq name="deal_status" value="8">selected</eq>>逾期中</option>
+            <option value='9' <eq name="deal_status" value="9">selected</eq>>已完成</option>
+        </select>
+
+        <!-- 
+        <select class="select_2" name="searchtype" style="width:70px;">
+          <option value='0' >标题</option>
+        </select>
+         -->
+               &nbsp; &nbsp;贷款名称：
+        <input type="text" class="input length_2" name="name" style="width:150px;" value="{$name}" placeholder="请输入关键字...">
+            贷款人帐号：
+        <input type="text" class="input length_2" name="user_login" style="width:150px;" value="{$user_login}" placeholder="请输入关键字...">
+        <input type="submit" class="btn" value="搜索"/>
+        </span>
+      </div>
+    </div>
+  </form>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="16"><label><input type="checkbox" class="J_check_all" data-direction="x" data-checklist="J_check_x"></label></th>
+	            <th width="40">排序</th>
+	            <th width="50">编号ID</th>
+	            <th width="200">贷款名称</th>
+                  <th width="50">借款人</th>
+	            <th width="70">投标类型</th>
+                <th width="70">借款金额</th>
+                  <th width="60">利率</th>
+                  <th width="70">借款期限</th>
+                  <th width="100">还款方式</th>
+	            <th width="80">投标状态</th>
+	            <th width="240">操作</th>
+	          </tr>
+        </thead>
+
+        	<foreach name="lists" item="vo">
+	        	<tr>
+		            <td><input type="checkbox" class="J_check" data-yid="J_check_y" data-xid="J_check_x" name="ids[]" value="{$vo.id}" ></td>
+		            <td><input name='listorders[{$vo.id}]' class="input input-order"  type='text' size='3' value='{$vo.listorder}'></td>
+		            <td><a>{$vo.id}</a></td>
+		            <td>
+		            	<a href="{:U('loan/index/deal',array('id'=>$vo['id']))}" target="_blank">
+		            		<span>{$vo.name}</span>
+		            	</a>
+		            </td>
+                    <td>{$vo.user_login}</td>
+                    <td>{$vo.cat_name}</td>
+                    <td>{$vo.borrow_amount}</td>
+                    <td>{$vo.rate}</td>
+                    <td>{$vo.repay_time}</td>
+                    <td>{$vo.repay_type_name}</td>
+                    <td>{$vo.deal_status|loan_state}</td>
+
+		            <td>
+                        <a href='{:U("loan/loanlistadmin/restore",array("id"=>$vo["id"]))}'>还原</a>|
+						<a href='javascript:del({$vo["id"]})'>删除</a>
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+function del(i){
+	var mes=confirm("您确定要删除吗？");
+	var url='{:U("loan/loanlistadmin/del")}'+'/del/0/id/'+i;
+	if(mes){
+		window.location.href=url;
+	}
+}
+function refersh_window() {
+    var refersh_time = getCookie('refersh_time');
+    if (refersh_time == 1) {
+        window.location="{:u('AdminPost/index',$formget)}";
+    }
+}
+setInterval(function(){
+	refersh_window();
+}, 2000);
+$(function () {
+	setCookie("refersh_time",0);
+    Wind.use('ajaxForm','artDialog','iframeTools', function () {
+        //批量移动
+        $('#J_Content_remove').click(function (e) {
+            var str = 0;
+            var id = tag = '';
+            $("input[name='ids[]']").each(function () {
+                if ($(this).attr('checked')) {
+                    str = 1;
+                    id += tag + $(this).val();
+                    tag = ',';
+                }
+            });
+            if (str == 0) {
+				art.dialog.through({
+					id:'error',
+					icon: 'error',
+					content: '您没有勾选信息，无法进行操作！',
+					cancelVal: '关闭',
+					cancel: true
+				});
+                return false;
+            }
+            var $this = $(this);
+            art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids=" + id, {
+                title: "批量移动",
+                width:"80%"
+            });
+        });
+    });
+});
+
+
+</script>
+</body>
+</html>

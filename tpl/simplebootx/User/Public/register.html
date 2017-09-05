@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/weebox.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/user_login_reg.css" />
+
+
+<script type="text/javascript">
+var APP_ROOT = '{$APP_ROOT}';;
+var LOADER_IMG = '{$TMPL}/images/lazy_loading.gif';
+var ERROR_IMG = '{$TMPL}/images/image_err.gif';
+
+</script>
+    <script type="text/javascript" src="http://www.webtiro.com/demo-p2p/public/runtime/app/lang.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.bgiframe.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.weebox.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.pngfix.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/lazyload.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/script.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/op.js"></script>
+
+	<script type="text/javascript" src="__TMPL__Public/js/emailAutoComplete.js"></script> 
+
+
+
+<style type="text/css">
+	.user-lr-box-left .field .holder_tip{left: 180px;_left:-240px;top:0}
+	.register_box .user-lr-box-left .field .f-input-tip{ _position:absolute;_left:-287px;}
+	.logo a{ display:block;}
+	.hidden {display:none;}
+	.parentCls ul{ background:#CCC;}
+	.parentCls ul li{ cursor:pointer; color:}
+</style>
+
+<!-- 密码安全级别设置 -->
+    <STYLE type=text/css>
+    .pwd-strength-box,
+    .pwd-strength-box-low,
+    .pwd-strength-box-med,
+    .pwd-strength-box-hi
+    {
+    color: #464646;
+    text-align: center;
+    width: 33%;
+    }
+    .pwd-strength-box-low
+    {
+    color: #990000;
+    background-color: #FFECEC;
+    }
+    .pwd-strength-box-med
+    {
+    color: #000066;
+    background-color: #D2E9FF;
+    }
+    .pwd-strength-box-hi
+    {
+    color: #003300;
+    background-color: #DDFFDD;
+    }
+    </STYLE>
+
+
+<script type="text/javascript">
+ //密码安全等级验证
+        function checkPassword(pwd){
+            var objLow=document.getElementById("pwdLow");
+            var objMed=document.getElementById("pwdMed");
+            var objHi=document.getElementById("pwdHi");
+            objLow.className="pwd-strength-box";
+            objMed.className="pwd-strength-box";
+            objHi.className="pwd-strength-box";
+            if(pwd.length<6){
+            objLow.className="pwd-strength-box-low";
+            }else{
+            var p1= (pwd.search(/[a-zA-Z]/)!=-1) ? 1 : 0;
+            var p2= (pwd.search(/[0-9]/)!=-1) ? 1 : 0;
+            var p3= (pwd.search(/[^A-Za-z0-9_]/)!=-1) ? 1 : 0;
+            var pa=p1+p2+p3;
+            if(pa==1){
+            objLow.className="pwd-strength-box-low";
+            }else if(pa==2){
+            objMed.className="pwd-strength-box-med";
+            }else if(pa==3){
+            objHi.className="pwd-strength-box-hi";
+            }
+            }
+            }
+        
+
+
+
+
+
+
+
+//from表单验证
+function check_form(){
+    	a = true;
+    	//email
+    	var email = $("#signup-email-address").val();
+    	
+		if(email.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
+		{
+			a=true;
+			$("#email_error").text("");
+    	}else{
+    		$("#email_error").text("　邮箱格式不正确！");
+		}	
+	
+
+    	//账号
+    	var user_name = $("#signup-username").val();
+    	
+    	if(/^[a-zA-z0-9]\w{5,19}$/.test(user_name)){
+    		$("#user_name_error").text("")
+    	}else{
+    		a=false;
+    		$("#user_name_error").text("　账号格式错误");
+    	}
+		
+
+    	//密码&&重复密码
+    	var pasd_1 = $("#signup-password").val();
+    	var pasd_2 = $("#signup-password-confirm").val();
+    	if(!/^.{6,20}$/.test(pasd_1)){
+    		a=false;
+    		$("#pasd_1_error").text("　密码位数最少为6位数！");
+    	}else{
+    		$("#pasd_1_error").text("");
+    	}
+    	if(pasd_2 == ''  ){
+    		a=false;
+    		$("#pasd_2_error").text("　确认密码不能为空！");
+    	}else{
+    		$("#pasd_2_error").text("");
+    	}
+
+    	if(pasd_1 !==pasd_2){
+    		a=false;
+    		$("#pasd_2_error").text("　两次密码不一致！");
+    	}
+       
+
+    	//手机号
+    	var user_phone = $("#settings-mobile").val();
+    	if(user_phone == ''){
+    		a=false;
+    		$("#user_phone_error").text("　手机号不能为空！");
+    	}else{
+    		$("#user_phone_error").text("");
+    	}
+		
+    	//验证码
+    	var yzm = $("#mobile-yzm").val();
+    	if(yzm == ''){
+    		a=false;
+    		$("#yzm_error").text("　验证码不能为空！");
+    	}else{
+    		$("#yzm_error").text("");
+    	}
+
+    	return  a;
+
+}
+
+</script>
+
+</head>
+<body class="register_body">
+	<div class="head z100" id="j_head">
+		<div class="head_cont" style="background:#fff">
+			<div class="wrap constr clearfix">
+				<div class="logo f_l">
+					<a class="link" href="/">
+                        <img src="/4cdd501dc023b.png" alt="">
+					</a>
+				</div>
+				<!--<div class="f_yahei no-nav-text">注册</div>-->
+			</div>
+		</div>
+		<p class="head_bg"></p>
+	</div>
+	<div class="blank20"></div>
+	<div class="inc wb wrap register_box">
+        <div class="bdd" style="background-color:#fff">
+            <div class="inc_main clearfix">
+                <div class="user-lr-box-left f_l" style="width:620px">
+                    <!--注册表单-->
+                    <form action="{:U('User/register/doregister')}" method="post" id="signup-user-form"  onsubmit="return  check_form()">
+                       <div>
+                        <div class="field email pr">
+                            <label for="signup-email-address"><span class="f_red">*</span> Email</label>
+                            <!-- <span class="holder_tip ps">输入常用的邮箱</span> -->
+							 <span class="parentCls"> 
+	                            <input type="text" value="" class="f-input ipttxt" 
+								id="signup-email-address" name="email" size="30"   placeholder="输入常用的邮箱">
+								<span  id='email_error'  style="color:red;"> </span>
+                            </span>
+                            <span class="f-input-tip"></span>
+                            <span class="hint">登录及找回密码用，不会公开</span>
+                        </div>
+                        <div class="blank1"></div>
+                        <div class="field username pr">
+                            <label for="signup-username"><span class="f_red">*</span> 帐号</label>
+                            <!-- <span class="holder_tip ps">输入注册帐号</span> -->
+                            <input type="text" value="" class="f-input ipttxt" id="signup-username" name="username" size="30"  placeholder="输入注册帐号"  >
+							<span  id='user_name_error'  style="color:red;"> </span>
+
+
+                            <span class="f-input-tip"></span>
+                            <span class="hint">输入6-20英文或数字</span>
+                        </div>
+                        <div class="blank1"></div>
+                        <div class="field password pr">
+                            <label for="signup-password"><span class="f_red">*</span> 密码</label>
+                            <!-- <span class="holder_tip ps">输入密码</span> -->
+                            <input type="password" onkeyup=checkPassword(this.value); class="f-input ipttxt" name="password" id="signup-password" size="30"   placeholder="输入密码">
+                            <span  id='pasd_1_error'   style="color:red;"> </span>
+                            <span class="f-input-tip"></span>
+                            <span style="display: flex;" class="hint"> 
+                                <table style="width:290px;">
+                                		<tr>
+                                		<td style="width:60px;">输入6-20个字符</td>
+                                        <TD style="width:40px;">安全等级：</TD>
+                                        <TD style="width:70px;">
+                                        <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                        <TBODY>
+                                        <TR>
+                                        <TD class=pwd-strength-box id=pwdLow>低</TD>
+                                        <TD class=pwd-strength-box id=pwdMed>中</TD>
+                                        <TD class=pwd-strength-box id=pwdHi>高</TD></TR></TBODY></TABLE></TD>
+                                        </tr>
+                         </table>
+                             </span>
+                      </div>
+
+                        
+                    
+
+
+                      
+                        <div class="blank1"></div>
+                        <div class="field password pr">
+                            <label for="signup-password-confirm"><span class="f_red">*</span> 确认密码</label>
+                            <!-- <span class="holder_tip ps">再次输入密码</span> -->
+                            <input type="password" class="f-input ipttxt" name="repassword" id="signup-password-confirm" size="30"  placeholder="再次输入密码">
+                            <span  id='pasd_2_error'   style="color:red;"></span>
+                            <span class="f-input-tip"></span>
+                            <span class="hint">请再次填写密码</span>
+                        </div>
+                        <div class="blank1"></div>
+                        <div class="field mobile pr">
+                            <label for="signup-mobile"><span class="f_red">*</span> 手机号码</label>
+                           <!--  <span class="holder_tip ps">输入手机号码</span> -->
+                            <input type="text" value="" class="f-input ipttxt" id="settings-mobile" name="user_phone" size="30" placeholder="输入手机号码">
+                            <span  id='user_phone_error'  style="color:red;"> </span>
+                            <span class="f-input-tip"></span>
+                            <span class="hint"> 标信息将通过短信发到手机上</span>
+                        </div>
+                        <div class="blank1"></div>
+                        
+                        <div class="field weibo pr">
+                            <label for="signup-mobile"><span class="f_red">*</span> 验证码</label>
+                           <!--  <span class="holder_tip ps">输入手机验证码</span> -->
+                            <input type="text" value="" class="f-input ipttxt" id="mobile-yzm" name="phonema" size="30"  placeholder="输入手机验证码">
+
+							<input type="button" id="reveiveActiveCode" class="reveiveActiveCode" value="发送手机验证码"> 
+							<br/><span id='yzm_error'   style="color:red;"> </span>
+							<!--{:sp_verifycode_img('code_len=4&font_size=15&width=100&height=35&charset=1234567890')}-->
+                            <span class="f-input-tip"></span>
+                        </div>
+                        <div class="blank1"></div>
+
+                        <div class="blank1"></div>
+						<input name="terms" type="hidden" id="J_agreement" value="1" checked="checked">
+                       
+                        <div class="blank"></div>
+                        <div class="act">
+                            <input type="submit" class="reg-submit-btn" id="signup-submit" name="commit" value="注册">
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="user-lr-box-right f_r">
+                    <div class="has_account tc pb15 f14">已有帐号？<a href="{:U('User/login/index')}" class="f_blue">直接登录</a></div>
+                </div>
+            </div>
+            <div class="inc_foot"></div>
+        </div>
+	</div>
+	</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+//发送验证码倒计时
+var wait=60; 
+function time(o) { 
+	var b=document.getElementById("settings-mobile").value;
+	var b = $("#settings-mobile").val();
+   		 var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+
+	if(myreg.test(b) && b!="" ){
+	
+	if (wait == 0) { 
+		o.removeAttribute("disabled"); 
+		o.value="免费获取验证码"; 
+		wait = 60; 
+	}else{ 
+		o.setAttribute("disabled", true); 
+		o.value="重新发送(" + wait + ")"; 
+		wait--; 
+		setTimeout(function() {time(o) },1000) 
+	} 
+	}
+	
+
+} 
+//调用倒计时JS
+		document.getElementById("reveiveActiveCode").onclick=function(){time(this);} 
+
+
+
+
+
+
+
+$("#reveiveActiveCode").click(function(){
+
+		var p=document.getElementById("settings-mobile").value;
+		if(p=="")
+		{
+			$.showErr("手机号不能为空");
+			return false;
+		}
+//
+		 var p = $("#settings-mobile").val();
+   		 var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+
+
+//		 
+		if(!myreg.test(p))
+		{
+			$.showErr("手机号格式不正确");
+			return false;
+		}
+			var obj = $(this);
+			var query = new Object();
+			//query.id = $(this).attr("dataid");
+			var p=document.getElementById("settings-mobile").value;
+				$.ajax({
+					url:"__APP__/Loan/Reg/regma/phone/"+p,
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						if(result.status==1)
+						{
+							settime(obj);
+						}else if(result.status==-1){
+							$.showErr(result.info);
+						}else if(result.status==-2){
+							$.showErr(result.info);
+						}
+						
+					},
+					error:function(){
+						alert("操作错误");
+						
+					}
+
+
+
+
+
+
+
+				});
+			
+
+		});
+		
+
+
+
+
+
+
+		
+
+
+$(document).ready(function(){
+	var remenber_i=0;
+	$(".ui-select").click(function(){
+		remenber_i++;
+		if(remenber_i%2==1){
+			$("#J_agreement").attr("checked","");
+			$(this).css("backgroundPosition","0 0");
+		}
+		else{
+			remenber_i = 0;
+			$("#J_agreement").attr("checked","checked");
+			$(this).css("backgroundPosition","0 -33px");
+		}
+	})
+	$(".user-lr-box-left .holder_tip").click(function(){
+		$(this).hide();
+		$(this).parent().find(".f-input").focus();
+	});
+	$(".register_box .f-input").focus(function(){
+		$(this).parent().find(".holder_tip").hide();
+	});
+	$(".register_box .f-input").blur(function(){
+		if($(this).val()==""){
+			$(this).parent().find(".holder_tip").show();
+		}
+	});
+
+});
+
+</script>
+</div>
+	<tc_include file="inc/footer" />
+ 
+</body>
+</html>

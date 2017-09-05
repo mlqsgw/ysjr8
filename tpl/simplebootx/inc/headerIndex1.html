@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!--页面布局样式调整-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="Generator" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$site_seo_title} {$site_name}</title>
+<link rel="icon" href="/iocn.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="/iocn.ico" type="/image/x-icon" />
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/weebox.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+
+
+<!--2015.08.14banner轮播js end-->
+<style>
+
+.sddmlia a:hover{background: #49A3FF}
+
+.sddmdiv{ position: absolute; right:2px; top:55px;visibility: hidden;z-index:9999; width:100px;}
+.sddmdiva{position: relative; background:#E47F2B; display: block;color:#333;font: 12px arial; height:30px;line-height:30px;width: 96px;text-align: center;}
+.sddmdiv a:hover{background: #c15f0e;}
+</style>
+
+<!--2015.08.14新增样式-->
+<style>
+.main_image {width:100%;height:380px;margin:0 auto;position:relative; z-index:1;}
+.main_image ul {width:9999px;height:380px;overflow:hidden;position:absolute;top:0;left:0}
+.main_image li {float:left;width:100%;height:380px;}
+.main_image li span {display:block;width:100%;height:380px}
+.main_image li a {display:block;width:100%;height:380px}
+.main_image li .img_1 {
+	background: url(__TMPL__Public/images/banner2.png) center top no-repeat
+}
+.main_image li .img_2 {
+	background: url(__TMPL__Public/images/banner1.png)  center top no-repeat
+}
+.main_image li .img_3 {
+	background: url(__TMPL__Public/images/banner3.png) center top no-repeat
+}
+div.flicking_con {width:1100px;margin:0 auto;position:relative}
+div.flicking_con .flicking_inner {position:absolute;top:350px;left:45%;z-index:999;width:300px;height:21px} /* 121126 */
+div.flicking_con a {float:left;width:50px;height:4px;margin-right:8px;padding:0;background-color:#fff;border-radius:50px;display:block;
+	text-indent:-1000px}
+div.flicking_con a.on {background-color:#1dbbd4;border-radius:50px;}
+.login_xf{width:1100px;height:auto; margin:0 auto; position:relative; }
+.login_con{width:318px; height:300px; position:absolute; right:0px; top:35px;z-index:999;}
+.login_conbg{width:318px; height:300px;background-color:#666;filter:alpha(opacity=50);-moz-opacity:0.50; opacity:0.50;position:absolute; right:0px; top:0px;z-index:999;top:35px;}
+.main_adv_img{width:100%; height:380px; display:block; z-index:99;position:absolute; top:0px; left:0px;}
+.main_adv_ctl{position:relative;z-index:999;}
+.login_biaoti{width:310px;height:60px;border-bottom:1px dotted #fff;line-height:60px;margin:0 auto;color:#fff;}
+.login_biaoti b{font-size:20px;display:block; float:left;margin-left:10px;font-weight:normal;}
+.login_biaoti small{display:block; float:right !important;font-size:12px;margin-right:10px;}
+.logon-con {float: left;width: 280px;padding: 10px 0px 0px 20px;}
+.logon-con .logon-ipt {position: relative;background: #fff;height: 43px;line-height: 43px;border: 1px solid #dadada;border-top-color: #c0c0c0;font-family: Verdana,Tahoma,Arial;margin-bottom:12px;
+}
+.logon-con .logon-ipt input {float: left;width: 225px;
+height: 14px;line-height: 14px;padding: 12px 0 11px 0;
+margin-top: 1px;border: 0;font-family: "微软雅黑";
+color: #666;font-size: 14px;font-family: Verdana,Tahoma,Arial;
+}
+.logon-con .logon-ipt {position: relative;background: #fff;height: 38px;line-height: 38px;border: 1px solid #dadada;border-top-color: #c0c0c0;font-family: Verdana,Tahoma,Arial;}
+
+.login-btn {width: 280px;height: 40px;background-color:#ff7417;line-height: 40px;color: #fff;border: 0;text-shadow: 1px 1px 0 #e77614;text-align: center;
+cursor: pointer;font-family: "微软雅黑";font-size: 18px;
+overflow: hidden;
+}
+.user{display:block;width:22px; height:22px; background:url(__TMPL__Public/images/dl.jpg) no-repeat;float:left; margin:10px 0px 0px 10px;margin-right:5px;}
+.key{display:block;width:22px; height:22px; background:url(__TMPL__Public/images/mm.jpg) no-repeat; float:left;margin:10px 0px 0px 10px;margin-right:5px;}
+.yzm{display:block;width:22px; height:22px; background:url(__TMPL__Public/images/dl.jpg) no-repeat;float:left; margin:10px 0px 0px 10px;margin-right:5px;}
+.tixing{color:#fff;font-size:18px;line-height:30px; text-align:center;margin-top:10px;}
+</style>
+
+<!--2015.08.14新增样式end-->
+
+<script type="text/javascript">
+
+var APP_ROOT = '/';
+var LOADER_IMG = '';
+var ERROR_IMG = '';
+
+</script>
+
+<script type="text/javascript">
+<!--
+var timeout         = 100;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layerand show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+// -->
+</script>
+
+
+
+
+<!--[if lt IE 10]>
+<script type="text/javascript" src="__TMPL__Public/js/PIE.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body style="overflow:scroll;overflow-x:hidden">
+
+<script type="text/javascript" src="__TMPL__Public/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.bgiframe.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.weebox.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.pngfix.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/lazyload.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/script.js"></script>
+
+<script language="javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+
+<!--<div style="position:fixed;bottom:40px;right:40px;z-index:99999; width:110px;"><a ><img src="__ROOT__/down/images/appcode.jpg" /></a></div>-->
+
+
+
+
+<div class="header" id="header" style="position:relative;z-index:2">
+	<div class="constr">
+		<div class="wrap clearfix" style="overflow:visible;">
+			<div class="f_l">
+            <img src="__TMPL__Public/images/tel.png"/ style="float:left; margin-top:5px;">
+				<span>客服电话:</span><span style="font-style:italic;color:#CCC;">0371-63225933</span>
+				<!--<div class="sharemk">
+					<a  href="" target="_blank" title="新浪微博"; class="share xinlan"></a>
+					<a  href="" target="_blank" title="腾讯微博"; class="share tenxun"></a>
+					<a  href="" target="_blank" title="微信"; class="share weixin"></a>
+				</div>-->
+			</div>
+			<div class="f_r">
+				<span id="user_head_tip" class="pr">
+<!---/////------用户登了的开始-->
+
+	<if condition="sp_is_user_login()">
+	<span class="li li_no" id="J_account">
+	<span class="li"><a <?php if($Think.CONTROLLER_NAME == 'Xszy'){echo 'class="current"';}?> href="{:U('Loan/xszy/index')}" >新手指引</a></span>
+     <span class="li"> </span>
+		<span class="f14">您好，</span><!-- <a href="{:U('User/Center/index')}"> --><b style="color:#E47F2B;">{$user.user_login}</b><!-- </a> --> <a class="rrd-dimgray" href="{:u('user/index/logout')}">退出</a>
+		<ul class="ui-nav-dropdown ui-nav-dropdown-account">
+        	<li class="ui-nav-dropdown-angle"><span></span></li>
+		   	<!--<li class="ui-nav-dropdown-item">
+			   	<a href="{:u('user/Message/index')}" class="rrd-dimgray msg_count">
+			   	<span class="pm f_l mt5 {if $msg_count>0 || $user.videopassed neq 1 || $user.idcardpassed neq 1 || $user.creditpassed neq 1 || $user.workpassed neq 1 || $user.incomepassed neq 1}new_pm {/if}">
+				</span> 消息<if condition="$msg_count gt 0">{$msg_count}</if></a>
+		   	</li>
+			<li class="ui-nav-dropdown-separator"></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Money/index',array('act'=>'incharge'))}">充值</a></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Money/index',array('act'=>'bank'))}">提现</a></li>
+          	<li class="ui-nav-dropdown-separator"></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Money/index')}">资金管理</a></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Invest/index')}">理财管理</a></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Deal/index')}">借款管理</a></li>
+          	<li class="ui-nav-dropdown-separator"></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:u('user/index/logout')}">退出</a></li>-->
+			<!-- <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:u('user/center/index')}"> 个人中心 </a></li> -->
+        </ul>
+	</span>
+	<script type="text/javascript">
+	var acc_menu_hide = null;
+	var hide_menu = null;
+		$("#J_account").hover(function(){
+			clearTimeout(acc_menu_hide);
+			$(this).addClass("li_hover");
+		},function(){
+			var obj = $(this);
+			hide_menu = function(){
+				obj.removeClass("li_hover");
+			}
+			acc_menu_hide = setTimeout(hide_menu,200);
+		});
+
+	</script>
+	<else/>
+	<span class="li"><a <?php if($Think.CONTROLLER_NAME == 'Xszy'){echo 'class="current"';}?> href="{:U('Loan/xszy/index')}" >新手指引</a></span>
+     <span class="li">|</span>
+	<span class="li"><a href="__ROOT__/index.php/loan/Borrow/inapply">理财计算器</a></span>
+     <span class="li">|</span>
+	<span class="li"><a href="{:U('User/register/index')}">注册</a></span>
+    <span class="li">|</span>
+	<span class="li"><a href="{:U('User/Login/index')}">登录</a></span>
+</if>
+
+<!---//////////////////////------用户登了的结束------//////////////////////------->
+
+				
+
+				<!--<span class="li"><a href="{:U('Portal/Article/index',array('id'=>4))}">帮助</a></span>-->
+				</span>
+			</div>		
+		</div>
+	<!--end wrap-->
+		
+	</div>
+	<div class="main_bars"  >
+		<div class="main_bar wrap">	
+			<div class="logo mr15">
+				<a class="link f_l" href="__ROOT__/">
+                    <img src="__ROOT__/4cdd501dc023b.png" alt=""/>
+				</a>
+			</div>
+			<ul class="main_nav">
+
+                <li class="" rel=''>
+                    <a class="current" href="__ROOT__/" >首页</a>
+                </li>
+                <li class="" rel=''>
+                    <a href="{:U('Loan/index/lists')}"  onmouseover="mopen('m1')" onmouseout="mclosetime();">我要投资</a><img src="__TMPL__Public/images/jt1.png"/ style="padding-top:30px;padding-left:4px; float:right;" />				
+                    <p class="sddmdiv" id="m1"  onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                       <a style="color:#ffffff; font-size:15px;"  href="{:U('Loan/index/lists')}" class="sddmdiva" >投资列表</a>
+                       <a style="color:#ffffff;  font-size:15px;" href="{:U('Loan/index/transfer')}" class="sddmdiva">债权转让</a>
+                        
+                    </p>
+                    	
+                </li>
+              <li class="" rel=''>
+                	 <a href="{:U('Loan/borrow/index')}" onmouseover="mopen('m3')" onmouseout="mclosetime();" >我要融资</a><!-- <img src="__TMPL__Public/images/jt1.png"/ style="padding-top:30px;padding-left:4px; float:right;" />
+                     <p class="sddmdiv" id="m3"  onmouseover="mcancelclosetime()" onmouseout="mclosetime()"> 
+                       <a style="color:#ffffff; font-size:15px;"  href="{:U('Loan/index/lists')}" class="sddmdiva" >投资列表</a>
+                       <a style="color:#ffffff;  font-size:15px;" href="{:U('Loan/index/transfer')}" class="sddmdiva">债权转让</a>
+                    </p> -->           
+                  </li>
+                  
+
+                 <li class="" rel=''>
+                        <a href="{:U('Loan/jm/index')}">加入我们</a>
+                    </li> 
+                    
+                <li class="" rel=''>
+                        <a href="{:U('portal/list/index')}">资讯中心</a>
+                 </li>
+                  <li class="" rel=''>
+                        <a href="{:U('User/center/index')}"  onmouseover="mopen('m2')" onmouseout="mclosetime();"  ><img src="__TMPL__Public/images/tx.png"/ style="padding-top:15px; padding-right:10px; float:left;" >个人中心</a>
+                           <p style="z-index:100; font-size:15px;" class="sddmdiv" id="m2"  onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                     <!--  <a style="color:#ffffff; font-size:15px; width:125px; " href="{:U('User/center/index')}" class="sddmdiva">账户首页</a>-->
+                       <!--<a style="color:#ffffff; font-size:15px; width:125px;" href="{:U('user/Audit/index')}" class="sddmdiva">认证中心</a>-->
+                         <a style="color:#ffffff; font-size:15px; width:125px;" href="{:U('User/Invest/index')}" class="sddmdiva">我的投资</a>
+                       <a style="color:#ffffff; font-size:15px; width:125px;" href="{:U('User/Deal/borrow_stat')}" class="sddmdiva">贷款统计</a>
+                    </p>
+                 </li>
+			</ul>
+			<div><img style="padding-left: 25px; margin-top: 4px;" src="__TMPL__Public/images/cccc.png"/></div>
+		</div>
+	</div>
+	
+</div>
+<!---//////////////////////------首页广告位-------->
+<!--<php>
+$home_slides=sp_getslide("index");
+
+
+$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
+</php> -->
+<link href="__TMPL__Public/css/qqkfcss.css" type="text/css" rel="stylesheet" />
+<script>
+	function show() {
+	var floatContact = document.getElementById('float-contact');
+	var floatContactMini = document.getElementById('float-contact-mini');
+	if(floatContact.style.display=="none") {
+		floatContact.style.display="block";
+		floatContactMini.style.display="none";
+	}else {
+		floatContact.style.display="none";
+		floatContactMini.style.display="block";
+	}
+}
+</script>
+
+
+<div  class="float-contact" id="float-contact" style=" position: fixed;z-index:1000; right: 1px; display:none;">
+		<a title="点击收缩" href="javascript:void(0);" onclick="show()" class="close" id="float-contact-close"></a>
+	<div class="container">
+	<div class="qq" style="border:#6fba29 solid 3px;border-radius: 0px 0px 4px 4px;border-top:none; margin-top:-2px;">
+	
+        <ul class="btn1">
+        
+        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3238496694&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:3238496694:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3284612319&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:3284612319:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2030874377&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2030874377:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2644760349&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2644760349:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3238496694&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:3238496694:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+        
+        </ul>
+	</div>
+   
+</div>
+</div>
+    <div class="float-contact-mini" id="float-contact-mini" style="z-index:20; display:block; position: fixed; right: 1px;">
+    <a href="javascript:void(0);" onclick="show()" id="float-contact-mini" style="z-index:200;" ></a>
+    
+</div>
+<!--2015.08.14banner轮播js-->
+
+<script src="__TMPL__Public/js/jquery.event1.js"></script>
+<script src="__TMPL__Public/js/jquery.touchSlider.js"></script>
+<script>
+$(document).ready(function () {
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+		},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+		})
+	$dragBln = false;
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 300,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e) {
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	})
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	})
+	$(".main_image a").click(function() {
+		if($dragBln) {
+			return false;
+		}
+	})
+	timer = setInterval(function() { $("#btn_next").click();}, 1000);
+	$(".main_visual").hover(function() {
+		clearInterval(timer);
+	}, function() {
+		timer = setInterval(function() { $("#btn_next").click();},1000);
+	})
+	$(".main_image").bind("touchstart", function() {
+		clearInterval(timer);
+	}).bind("touchend", function() {
+		timer = setInterval(function() { $("#btn_next").click();},1000);
+	})
+});
+</script>
+
+<script src="__TMPL__Public/js/placeholder.js"></script>
+<!---//////////////////////------2015.08.14首页广告位-------->
+<div class="main_visual">
+     <!--登陆悬浮框-->
+	 <if condition="($_SESSION['user'] eq null)">
+    <div class="login_xf" style="z-index:9;height:auto; ">
+      <div class="login_conbg"></div>
+      <div class="login_con">
+         <div class="login_biaoti">
+         	<b>用户登陆</b>
+         	<small><a style="color:#CCCCCC;" href="{:U('User/Register/index')}">立即注册</a></small>
+         	<small>|</small>
+         	<small><a style="color:#CCCCCC;" href="{:U('User/Resetting/index')}">忘记密码</a></small>
+         	<div style="clear:both"></div>
+         </div> 
+         <ul class="logon-con">	
+         	<form id="form1" name="form1" method="post" action="{:U('User/Login/dologin')}">
+			<li id="username1" class="logon-ipt z-index10">
+				<em class="user"></em>
+				
+				<input type="text" id="username" name="username"  class="holder" placeholder="请输入用户名">
+				<div style="clear:both;"></div>
+			</li>
+			<li id="pwd" class="logon-ipt mgt20">
+				<em class="key"></em>
+				<input type="password" id="password" name="password"  class="holder"  placeholder="密码">
+				<div style="clear:both;"></div>
+			</li> 
+            <li id="pwd" class="logon-ipt mgt20" style=" position:relative;">
+            
+				<em class="yzm"></em>
+				
+				<input type="text" id="verify" name="verify" style="width:130px; border-right:#CCC 1px solid;"  class="holder"  placeholder="验证码">
+                
+                <span style=" position:absolute; right:0px; top:3px;">{:sp_verifycode_img('code_len=4&font_size=15&width=100&height=35&charset=1234567890')}</span>
+				<div style="clear:both;"></div>
+                
+			</li>        	 
+			<li>
+				<input class="login-btn" tabindex="4" name="submit" accesskey="l" value="登录" type="submit">
+                
+			</li>
+			<!--<li><div class="tixing">理财有风险，投资需谨慎!</div></li>	-->
+            </from>
+		</ul>
+      </div>
+    </div>
+	<else />
+	</if>
+    <!--登陆悬浮框 end-->
+     <div class="flicking_con" style="z-index:3;">
+            <div class="flicking_inner">
+            <a href="javascript:">1</a>
+            <a href="javascript:">2</a>
+            <a href="javascript:">3</a>
+         </div>
+    </div>
+    <div class="main_image">
+        <ul>	
+            <li><span class="img_1"></span></li>
+            <li><span class="img_2"></span></li>
+            <li><span class="img_3"></span></li>
+        </ul>
+    </div>
+ </div>
+<!---//////////////////////------2015.08.14首页广告位结束-------->
+
+<div class="wrap">
+
+

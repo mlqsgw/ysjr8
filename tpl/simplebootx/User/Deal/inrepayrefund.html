@@ -1,0 +1,105 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list_title clearfix">
+    <tc_include file="User/Deal/menu" />
+	<div class="cur"><a href="###">提前还清借款</a></div>
+</div>
+<div class="uc_r_bl_box clearfix pl10 pr10 pt5 pb5">
+	<div class="bid_item clearfix">
+        <div class="bid_title">
+        	{$deal.name} 还款中!
+            <span class="r_c"><a href="javascript:void(0);" onclick="javascript:window.showModalDialog('{url x="index" r="uc_deal#contract" p="id=$deal.id"}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">查看电子协议</a></span>
+        </div>
+        <div class="bid_detail">
+            <div class="info">
+            	 借款金额：
+                <span class="f_red">{$deal.borrow_amount_format}</span>
+            </div>
+            <div class="info">
+            	年利率：
+                <span class="f_red">{$deal.rate_foramt_w}</span>
+            </div>
+            <div class="info">
+            	期限：
+                <span class="f_red">{$deal.repay_time}个月</span>
+            </div>
+           	<div class="info">
+            	已还总额：
+                <span class="f_red">￥{$deal.repay_money|number_format="2"}</span>
+            </div>
+            <div class="info">
+            	当期借款管理费：
+                <span class="f_red">{$deal.month_manage_money_format}</span>
+            </div>
+            <div class="info">
+            	罚息：
+                <span class="f_red">￥{$impose_money|number_format="2"}</span>
+            </div>
+			<div class="info" style="width: 300px;">
+				应还本息（应还本金+当期利息）：
+                <span class="f_red" id="shouldPayPrincipal">￥{$total_repay_money|number_format="2"}</span>
+            </div>
+        </div>
+    </div>
+	
+	<div class="clearfix">
+		
+		<table class="refundTab">
+	        <tr>
+	            <td colspan="8">
+	                <div style="font-size: 16px; display: block;line-height: 50px;font-weight: bold;height: 50px;text-align:left;">
+	                    <span style="padding: 0 20px;width: 240px;display: block;float: left;">
+						总计还款：￥<span id="currCount">{$true_total_repay_money|number_format="2"}</span>
+						</span>
+	                </div>
+	            </td>
+	        </tr>
+	    </table>
+		<br>
+		<span style="padding: 15px 0 15px 20px;">
+            <input type="hidden" name="loanId" value="46420" id="loanId">
+            <input class="conf_refund" id="J_repay_borrow_money" type="button">
+        </span>
+		<span style="padding-top:20px; font-size: 14px;">
+            <input type="hidden" name="avaliablePoint" value="{$user_info.money}" id="avaliablePoint">
+            <span style="font-weight: bold;color: #565656;padding-left: 10px; ">我的可用余额:</span><span class="f_red">{$available_funds|format_price="2"}</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:UU('User/Money/index',array('act'=>'incharge'))}" style="color:#f85c4e">[ 我要充值 ]</a>
+            <span style="color: red;font-size: 14px;padding-left: 10px; display: none" id="payTip">还款中...</span>
+        </span>
+	</div>
+</div>
+<script type="text/javascript">
+	var is_repay_lock = false;
+	jQuery(function(){
+		$("#J_repay_borrow_money").click(function(){
+			if(confirm("您确定要还款吗？")){
+				if(is_repay_lock){
+					$.showErr("正在处理中，请稍后!");
+					return false;
+				}
+				$("#payTip").show();
+				is_repay_lock = true;
+				$.ajax({
+					url: "{:U('User/Deal/inrepay_repay_borrow_money',array('id'=>$deal['id']))}",
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						is_repay_lock = false;
+						$("#payTip").hide();
+						if(result.status==1){
+							$.showSuccess("还款成功！",function(){
+								window.location.href = '{url x="index" r="uc_deal#refund" p="status=1"}';
+							});
+						}
+						else{
+							$.showErr(result.info);
+						}
+					}
+				});
+			}
+		});
+	});
+	
+</script>
+
+</block>

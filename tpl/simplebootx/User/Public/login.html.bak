@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/weebox.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/user_login_reg.css" />
+<style>
+.to_regsiter f_yahei a:hover{color:#00C;}
+</style>
+<script type="text/javascript">
+var APP_ROOT = '{$APP_ROOT}';;
+var LOADER_IMG = '{$TMPL}/images/lazy_loading.gif';
+var ERROR_IMG = '{$TMPL}/images/image_err.gif';
+
+</script>
+    <script type="text/javascript" src="http://www.webtiro.com/demo-p2p/public/runtime/app/lang.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.bgiframe.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.weebox.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.pngfix.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/lazyload.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/script.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/op.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/op.js"></script>
+
+
+
+</head>
+<body class="login_body">
+	<div class="head z100" id="j_head">
+		<div class="head_cont" style="background:#fff">
+			<div class="wrap constr clearfix">
+				<div class="logo f_l">
+					<a class="link" href="/">
+                        <img src="/4cdd501dc023b.png" alt="">
+					</a>
+				</div>
+
+				<!--<div class="f_yahei no-nav-text">登录</div>-->
+
+			</div>
+		</div>
+		<p class="head_bg"></p>
+	</div>
+	<div class="wrap" id="J_wrap">
+		<div class="user_login_bar clearfix">
+			<div class="login_bar wrap">
+				<div class="xszlogin1" style="background: url(/tpl/simplebootx/Public/images/zx_login_l.png) no-repeat;"></div>
+                <div class="inc f_r" style="width:380px;">
+                    <div class="clearfix">
+                        <div class="user-lr-box-left">
+                            <div>
+                                <!--登录表单-->
+
+                                <form method="post" action="{:U('user/login/dologin')}" name="page_login_form" id="page_login_form">
+                                    <div class="field email pr">
+                                        <span class="holder_tip ps" style="display: block;">Email/帐号/手机</span>
+                                        <input id="myinput" type="text" value="" class="f-input ipttxt" id="login-email-address" name="username" size="30" tabindex="1">
+                                    </div>
+                                    <div class="field password pr">
+                                        <span class="holder_tip ps">密码</span>
+                                        <input type="password" value="" class="f-input ipttxt" id="login-password" name="password" size="30" tabindex="2">
+                                    </div>
+                                    <div class="field  pr" >
+                                        <span class="holder_tip ps" style="width: 120px;">验证码</span>
+                                        <input type="text" value="" class="f-input ipttxt" id="login-verify" style=" width:120px;margin-right:10px;" name="verify" size="20" tabindex="2">
+                                        {:sp_verifycode_img('code_len=4&font_size=15&width=100&height=35&charset=1234567890')}
+                                    </div>
+                                    <div class="act clearfix" style="margin:0px;padding:0">
+                                        <!--<input type="hidden" name="ajax" value="1">-->
+                                        <input type="submit" class="login-submit-btn" id="user-login-submit" name="commit" value="登录">
+                                    </div>
+                                    <div class="act cf" style="border-bottom:1px solid #dedede; margin:0px;padding:0;height:40px; text-align:center;">
+									<span class="to_regsiter f_yahei">
+										<a href="{:U('User/Resetting/index')}">忘记密码</a>
+										<a href="{:U('User/Register/index')}" style="margin-left:20px;">免费注册</a>
+									</span>
+                                    </div>
+                                </form>
+                                <!--登录表单-->
+                            </div>							<div class="blank10"></div>
+
+                        </div>
+                    </div>
+                    <div class="inc_foot"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<tc_include file="inc/footer" />
+<script language="JavaScript" type="text/javascript">  
+var is_lock_user_login = false;
+$(document).ready(function(){
+    var remenber_i=0;
+    $(".ui-select").click(function(){
+        remenber_i++;
+        if(remenber_i%2==1){
+            $(this).css("backgroundPosition","0 -33px");
+            $(this).css("backgroundPosition","0 0");
+        }
+        else{
+            remenber_i = 0;
+            $("#autologin").attr("checked","checked");
+            $("#autologin").attr("checked","");
+        }
+    });
+
+    $(".user_login_bar .holder_tip").click(function(){
+        $(this).hide();
+        $(this).parent().find(".f-input").focus();
+    });
+
+    $(".user_login_bar .f-input").focus(function(){
+        $(this).parent().find(".holder_tip").hide();
+    });
+    $(".user_login_bar .f-input").blur(function(){
+        if($(this).val()==""){
+            $(this).parent().find(".holder_tip").show();
+        }
+    });
+
+    $(".user_login_bar .f-input").each(function(){
+        if($(this).val()==""){
+            $(this).parent().find(".holder_tip").show();
+        }
+        else{
+            $(this).parent().find(".holder_tip").hide();
+        }
+    });
+
+    $("#user-login-submit").click(function(){
+        checkUserLogin();
+    });
+
+    $("#page_login_form input,#page_login_form select").keydown(function(e){
+        var curKey = e.which;
+        if(curKey == 13){
+            checkUserLogin();
+        }
+    });
+
+});
+
+</script> 

@@ -1,0 +1,71 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('commentadmin/index')}">贷款初审</a></li>
+  </ul>
+    <div class="table_list">
+        <form class="J_ajaxForm" method="post"   action="{:U('Loan/Fristadmin/fristaudit')}">
+          <table cellpadding="0" cellspacing="0" class="table_form" width="50%">
+              <tbody>
+              <tr>
+                  <td width="300">审核状态:</td>
+                  <td>
+                      <label class="radio inline" for="tongguo">
+                          <input type="radio" id="tongguo"  class="" name="deal_status" value="1"  />初审通过</label>
+                      <label class="radio inline" for="butonguo">
+                          <input type="radio" id="butonguo" class="" name="deal_status" value="2" checked/>初审不通过</label>
+                  </td>
+              </tr>
+              <tr id="zhaobaioshijian" style="display: none">
+                  <td>开始招标时间:</td>
+                  <td>
+                      <input type="text" class="input length_2 J_datetime date" name="start_time"/>
+                  </td>
+              </tr>
+              <tr>
+                  <td>审核备注:</td>
+                  <td><textarea name="firstauditmark" rows="5" cols="57"></textarea></td>
+              </tr>
+
+              <tr id="tuijian" style="display: none">
+                  <td>是否推荐:</td>
+                  <td>
+                      <label class="checkbox inline" for="check_all"><input type="checkbox" class="J_check_all" id="check_all" value="1" name="is_recommend">推荐</label>
+                  </td>
+              </tr>
+              <input type="hidden" name="id" value="{$loan_id}"/>
+          </tbody>
+          </table>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">审核</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+
+    $(function(){
+        $("input[name=deal_status]").click(function(){
+            switch($("input[name=deal_status]:checked").val()){
+                case "1":
+                        $("#zhaobaioshijian").show();
+                        $("#tuijian").show();
+                    break;
+                case "2":
+                    $("#zhaobaioshijian").hide();
+                    $("#tuijian").hide();
+                    break;
+
+            }
+
+        });
+    });
+
+
+</script>
+</body>
+</html>

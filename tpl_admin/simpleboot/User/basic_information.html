@@ -1,0 +1,117 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed" style="min-width:700px;">
+<div class="wrap J_check_wrap">
+	<ul class="nav nav-tabs">
+		 <li class="active">
+			<a href="{:U('User/Indexadmin/basic_information',array('id'=>$uid))}">基本信息</a>
+		</li>
+		<li>
+			<a href="{:U('User/Indexadmin/money_information',array('id'=>$uid))}">财务信息</a>
+		</li>
+	</ul>
+        <div class="table_list">
+			<h4>个人基本信息</h4>
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>用户名称:</th>
+                    <td>{$user.user_login}</td>
+                    <th>真实姓名:</th>
+                    <td>{$user.name}</td>
+                </tr>
+                <tr>
+                    <th>性别:</th>
+                    <td><if condition="$user.gender eq 1">男<else/>女</if></td>
+                    <th>生日:</th>
+                    <td>{$user.born}</td>
+                </tr>
+                <tr>
+                    <th>婚姻:</th>
+                    <td>{$user.marriage}</td>
+                    <th>最高学历:</th>
+                    <td>{$user.education}</td>
+                </tr>
+                <tr>
+                    <th>手机号:</th>
+                    <td><if condition="$user.cellphone neq ''">{$user.cellphone}<else/>{$user.user_phone}</if></td>
+                    <th>邮箱:</th>
+                    <td>{$user.user_email}</td>
+                </tr>
+                <tr>
+                    <th>籍贯:</th>
+                    <td>{$user.native_place}</td>
+                    <th>现居住地址:</th>
+                    <td>{$user.location}</td>
+                </tr>
+                <tr>
+                    <th>注册时间:</th>
+                    <td>{$user.create_time}</td>
+                    <th>最后登陆时间:</th>
+                    <td>{$user.last_login_time}</td>
+                </tr>
+            </table>
+            <h4><a href='{:U('User/Shangchuan/index',array('uid'=>$uid))}'>上传图片</a></h4>
+            <h4><a href='{:U('User/Shangchuan/img_lists',array('uid'=>$uid))}'>用户图片列表</a></h4>
+			<!-- <foreach name="list" item="vo">
+			<img src="/chuangcai11/Uploads/Public/Uploads/{$vo.uid}/{$vo.images_name}"/>
+			</foreach> -->
+			<h4>工作信息</h4>
+			<if condition="$work eq 1">
+				<h5 style="margin:0 0 0 100px;">会员未填写工作信息</h5>
+			<else/>
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>单位名称:</th>
+                    <td>{$office}</td>
+                    <th>职业状态:</th>
+                    <td>{$jobtype}</td>
+                </tr>
+                <tr>
+                    <th>工作城市:</th>
+                    <td>{$work_city}</td>
+                    <th>公司类别:</th>
+                    <td>{$officetype}</td>
+                </tr>
+                <tr>
+                    <th>公司行业:</th>
+                    <td>{$officedomain}</td>
+                    <th>公司规模:</th>
+                    <td>{$officecale}</td>
+                </tr>
+                <tr>
+                    <th>职位:</th>
+                    <td>{$position}</td>
+                    <th>月收入:</th>
+                    <td>{$salary}</td>
+                </tr>
+                <tr>
+                    <th>工作年限:</th>
+                    <td>{$workyears}</td>
+                    <th>公司电话:</th>
+                    <td>{$workphone}</td>
+                </tr>
+                <tr>
+                    <th>工作邮箱:</th>
+                    <td>{$workemail}</td>
+                    <th>公司地址:</th>
+                    <td>{$officeaddress}</td>
+                </tr>
+                <tr>
+                    <th>直系亲属:</th>
+                    <td>{$urgentrelation}/{$urgentcontact}</td>
+                    <th>手机:</th>
+                    <td>{$urgentmobile}</td>
+                </tr>
+                <tr>
+                    <th>其他联系人:</th>
+                    <td>{$urgentrelation2}/{$urgentcontact2}</td>
+                    <th>手机:</th>
+                    <td>{$urgentmobile2}</td>
+                </tr>
+            </table>
+			</if>
+        </div>
+
+</div>
+</body>
+</html>

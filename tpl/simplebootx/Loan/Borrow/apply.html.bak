@@ -1,0 +1,706 @@
+<tc_include file="inc/header"/>
+<!----------------------头部结束--------------------------------->
+<!------------这里定义自己的CSS样式------>
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/loan.css" />
+<style type="text/css">
+/*TAB样式开始啰*/
+#tabs2 {
+	text-align:left;
+	width:1000px;
+	position:relative;
+	margin-top:30px;
+}
+
+.main1box {
+	clear:both;
+	height:auto;
+	width:1000px;
+	
+}
+#main1 ul {
+	display: none;
+	text-align:left;
+}
+#main1 ul.block {
+	display: block;
+}
+input#Button1 {
+width: 116px;
+background-color: #E47F2B;
+}
+/*TAB样式结束啰*/
+/*文本样式开始啰*/
+ 
+	.zou {
+    width: 476px;
+float: left;
+padding-left: 21px;
+margin-top: 22px;
+margin-left: 33px;
+font-weight: bolder;
+font-size: 14px;
+background-color: rgb(227, 253, 255);
+}
+
+.you {
+    width: 440px;
+    float: left;
+	padding-top:20px;
+}
+.diyi {
+   width: 438px;
+font-weight: bolder;
+color: rgb(111, 133, 197);
+}
+.dier {
+    width: 438px;
+}
+.you p{ padding-left:25px; padding-top:7px; font-family:"微软雅黑";}
+.disan{
+    margin-top: 69px;
+	width: 438px;
+}
+.disi{ margin-top: 89px; width: 438px;}
+/*文本样式结束啰*/
+/*新增样式输入框开始*/
+.rt_bform {
+    width: 457px;
+    float: right;
+    padding: 30px 60px 40px 50px;
+    border-radius: 5px;
+    background:#EEFFFC;
+}
+.clearfix {
+    display: block;
+}
+.rtdt, .ladt {
+    width: 90px;
+    font-size: 14px;
+    display: block;
+    color: #333;
+    float: left;
+    height: 35px;
+    text-align: right;
+    line-height: 34px;
+    margin-bottom: 33px;
+}
+.rtdt span {
+    color: #ee0000;
+    font-size: 16px;
+    font-family: Verdana;
+}
+.rtdd {
+    width: 310px;
+    display: block;
+    position: relative;
+    float: right;
+    height: 34px;
+    border: 1px #A29B9B solid;
+    line-height: 34px;
+    margin-bottom: 33px;
+}
+.rtddc {
+    width: 310px;
+    display: block;
+    position: relative;
+    float: right;
+    margin-bottom: 33px;
+}
+.rtdd .in, .ladd .in {
+    height: 34px;
+    padding: 0px 5px;
+    border: 0px;
+    line-height: 34px;
+    font-size: 14px;
+    width: 300px;
+}
+.tag {
+    position: absolute;
+    display: none;
+    bottom: -25px;
+    line-height: 22px;
+}
+.wrong i {
+    background: url(//www.xiaoyoucai.com/source/images/login/formi.png) 0px -37px no-repeat;
+    height: 16px;
+    margin-right: 3px;
+    width: 16px;
+    display: block;
+    margin-top: 3px;
+    float: left;
+}
+.rtdd .choa {
+    display: block;
+    height: 34px;
+    width: 100%;
+}
+.rtdd .rticon, .ladd .rticon, .coulf .rticon {
+    border-color: transparent;
+    border-style: solid;
+    position: absolute;
+    right: 10px;
+    display: block;
+    height: 0px;
+    width: 0px;
+    border-width: 6px;
+    border-bottom: 0px;
+    top: 14px;
+    border-top-color: #333;
+}
+.rtdd .cl {
+    color: #c4c4c4;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.rtdd .dtxt {
+    line-height: 34px;
+    padding-left: 5px;
+    color: #333;
+}
+.rtdd .choul, .borlf_l .choul {
+    width: 269px;
+    background: #fff;
+    position: absolute;
+    border: 1px #ececec solid;
+    top: 35px;
+    z-index: 5;
+}
+.DN, .dn {
+    display: none;
+}
+.rtdd .choul li, .borlf_l .choul li {
+    border-bottom: 1px #ececec solid;
+    line-height: 32px;
+}
+.borlf_l .choul li a {
+    display: block;
+    height: 32px;
+    padding: 0px 20px;
+}
+.rtdd textarea {
+    border: 1px #ececec solid;
+    width: 300px;
+    height: 50px;
+    line-height: 25px;
+    padding-left: 5px;
+}
+.rtdd .rttxt {
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    text-align: right;
+    line-height: 34px;
+}
+.ma01 {
+    margin: 0px 20px;
+}
+
+
+dl.rtdl.clearfix {
+    width: 447px;
+}
+.rtdd .choul li a:hover, .borlf_l .choul li a:hover {
+    display: block;
+    height: 32px;
+    background: #ffc4aa;
+    color: #333;
+}
+a{color:#666; text-decoration:none;}
+a:hover{color:#000; text-decoration:none;}
+textarea#loanDesc {
+    width: 303px;
+    height: 115px;
+}
+/*新增样式输入框结束*/
+.biaoge tr{ line-height:18px;} 
+.biaoge input{ border:1px solid #999999; font-size:15px;}
+tr.xiala {
+    height: 60px;
+}
+textarea#loanDesc {
+    border: 1px solid #939898;
+}
+table.biaoge {
+padding-top: 21px;
+padding-bottom: 20px;
+}
+.c{
+	color:green;
+	padding:5px;
+	height:8px;
+	line-height:8px;
+}
+.formbtn{
+background: #B2621F;
+display: block;
+border-radius: 5px;
+text-align: center;
+font-size: 18px;
+color: #fff;
+line-height: 45px;
+height: 45px;
+clear: both;
+font-weight: bolder;
+text-decoration:none;
+margin-top:20px;
+width: 235px;
+margin-left:60px;
+}
+.zong {
+width: 1000px;
+height: 699px;
+padding-bottom:100px;
+}
+.bmod {
+width: 914px;
+float: right;
+padding-top: 30px;
+padding-right: 50px;
+}
+
+
+
+.borbtn:hover {
+background: #ff9600;
+}
+
+.borbtn:hover {
+color: #fff;
+background: #ff824b;
+}
+.formbtn:hover{ color:#000000;}
+.ddd{ color:#FF0000;}
+.kkkk {
+width: 60px;
+float: left;
+margin-top: 20px;
+margin-left: 10px;
+}
+.kkka {
+width: 60px;
+float: left;
+margin-top: 11px;
+margin-left: 10px;
+}
+.kkka {
+width: 60px;
+float: left;
+margin-top: 11px;
+margin-left: 10px;
+}
+.lll {
+width: 110px;
+float: left;
+height: 40px;
+background-color:#B2621F;
+text-align:center;
+font-size:16px;
+}
+
+</style>
+<body onLoad="createCode()">
+<div class="blank"></div>
+<div class="tupian" style=" width:100%;"><img src="__TMPL__Public/images/yindao_bann.jpg" width="100%"  > </div>
+<div class="clearfix">
+  <div id="tabs2">
+    <div class="main1box">
+      <div class="main" id="main1">
+        <ul class="block">
+          <div id="tabcontent1" style="display: block;">
+            <div class="he" style="margin:0 auto; width:997px; background-color:#FFFFFF;  border-top:2px solid #B2621F; border-bottom:1px solid #B2621F; border-left:1px solid #B2621F; border-right:1px solid #B2621F; margin-bottom:1px;">
+              <div class="zong" style=" ">
+                <div class="you">
+                  <div class="diyi">
+                    <p style="line-height:28px; text-indent:2em;">煜商金融平台的借款功能指在帮助借款用户以低成本获得借款用户在需要资金时，可以将自己以有的房产或车产作为抵押物，煜商金融在线下审核通过后，根据抵押物的价值来融资！</p>
+                  </div>
+                  <div class="dier" style="margin-top:30px;">
+                    <p><span style="font-size:19px; font-weight:bolder;">1</span>借款速度快，审核通过后7个自然日之内</p>
+                    <p><span style="font-size:19px; font-weight:bolder;">2</span>借款息费低，借款息费年化10%-20%</p>
+                    <p><span style="font-size:19px; font-weight:bolder;">3</span>借款期限短，借款时间1-6个月</p>
+                  </div>
+                  <div class="disan">
+                    <h2 style="margin-left:22px; border-bottom:3px solid #B2621F; height:40px; line-height:40px;  color:#FFFFFF;">
+                      <div class="lll">申请条件</div>
+                    </h2>
+                    <p class="t1" ><img src="__TMPL__Public/images/1.png" style="margin-right:10px;">年满18周岁以上的公民</p>
+                    <p class="t2"><img src="__TMPL__Public/images/2.png" style="margin-right:10px;">需有房产或车产抵押</p>
+                    <p class="t3"><img src="__TMPL__Public/images/3.png" style="margin-right:10px;">个人或企业银行征信记录良好</p>
+                    <p class="t4"><img src="__TMPL__Public/images/4.png" style="margin-right:10px;">无现有诉讼记录</p>
+                  </div>
+                  <div class="disi">
+                    <h2 style="margin-left:22px; border-bottom:3px solid #B2621F; height:40px; line-height:40px; color:#FFFFFF;">
+                      <div class="lll">提交资料</div>
+                    </h2>
+                    <p class="p1"><img src="__TMPL__Public/images/5.png" style="margin-right:10px;">身份证</p>
+                    <p class="p2"><img src="__TMPL__Public/images/6.png" style="margin-right:10px;">申请资料</p>
+                    <p class="p3"><img src="__TMPL__Public/images/7.png" style="margin-right:10px;">其他</p>
+                  </div>
+                </div>
+                <div class="zou">
+                  <form action="__APP__/Borrow/apply" method="post"  onSubmit="return checkAll();">
+
+                    <table class="biaoge">
+                      <tr>
+                        <td><span class="ddd"> *</span>借款标题：</td>
+                        <td><input style="width:240px; height:25px; line-height:25px;" type="text" onChange="checkUsername();" name="name"/></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div id="sUsername" style="color:#BEBEC2;">由2-30个汉子组成</div></td>
+                      </tr>
+                      <tr class="xiala">
+                        <td><span class="ddd"> *</span>借款用途：</td>
+                        <td>
+                        <!-- <select style="width:240px; height:30px; line-height:30px;" name="type_id">
+                            <option value="短期周转" name="type_id">短期周转</option>
+                            <option value="购房借款" name="type_id">购房借款</option>
+                            <option value="装修借款" name="type_id">装修借款</option>
+                            <option value="个人消费" name="type_id">个人消费</option>
+                            <option value="婚礼筹备" name="type_id">婚礼筹备</option>
+                            <option value="教育培训" name="type_id">教育培训</option>
+                            <option value="汽车消费" name="type_id">汽车消费</option>
+                            <option value="投资创业" name="type_id">投资创业</option>
+                            <option value="医疗支出" name="type_id">医疗支出</option>
+                            <option value="其他借款" name="type_id">其他借款</option>
+                          </select> -->
+                          <select id="systemimgpath" name="type_id" style="width:240px; height:30px; line-height:30px;" >
+                              <foreach name="loantype" item="vo">
+                                <option value="{$vo.id}">{$vo.t_name}</option>
+                              </foreach>
+                          </select>
+                        </td>
+                      </tr>
+                     
+                      <tr>
+                        <td><span class="ddd"> *</span>借款金额：</td>
+                        <td><input style="width:240px; height:25px; line-height:25px;" type="text" onChange="checkjine();"  name="borrow_amount"/>
+                          万元</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div id="jPass" style="color:#BEBEC2;">（请填写为{$Think.config.sys_tenderMultiplicand}的倍数,最大额度为{$amount}元） </div></td>
+                      </tr>
+                      <tr>
+                        <td><span class="ddd"> *</span>年利率：</td>
+                        <td><input style="width:120px; height:25px; line-height:25px;" type="text" onChange="nian();"  name="rate"/>
+                          %（在{$Think.config.sys_loans_lowest_apr}%到{$Think.config.sys_loans_highest_apr}%之间）</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div id="jnian" style="color:#BEBEC2;">请输入数字</div></td>
+                      </tr>
+                      <tr class="xiala">
+                        <td><span class="ddd"> *</span>借款期限：</td>
+                        <td><select style="width:240px; height:30px; line-height:30px;" name="repay_time">
+                            <option value="6" name="repay_time">6个月</option>
+                            <option value="10" name="repay_time">10个月</option>
+                            <option value="12" name="repay_time">12个月</option>
+							
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>还款周期：</td>
+                        <td><div  style="width:215px; height:25px ; line-height:25px; border:1px solid #999999; margin:0; background-color:#FFFFFF; padding-left:20px;">按月还款</div></td>
+                      </tr>
+                      <tr class="xiala">
+                        <td><span class="ddd"> *</span>还款方式：</td>
+                        <td><select name="loantype" id="loantype" class="normal_select"  style="width:240px; height:28px; line-height:28px;" >
+                                 <php>
+                                     $payback=unserialize($payback);
+                                 </php>
+                                <foreach name="payback" item="paybackvo">
+                                    <option value="{$key}" >{$payback[$key]}</option>
+                                 </foreach>
+
+                            </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span class="ddd"> *</span>筹标期限：</td>
+                        <td><input style="height:25px; line-height:25px;" type="text" onChange="checkqixian();" name="deadline"/>
+                          （1到10天）</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div id="sqixian" style="color:#BEBEC2;">请输入1到10之间的纯数字</div></td>
+                      </tr>
+                      <tr>
+                        <td><span class="ddd"> *</span>最高投标金额：</td>
+                        <td><input style=" width:73px; height:25px; line-height:25px;" type="text" onChange="checkgao();" name="max_loan_money"/>
+                         元(0为不限制，请填写{$Think.config.sys_tenderMultiplicand}的倍数)</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div id="sgao" style="color:#BEBEC2;">请输入50倍数的纯数字</div></td>
+                      </tr>
+                      <tr>
+                        <td><span class="ddd"> *</span>最低投标金额：</td>
+                        <td><input style="width:73px; height:25px; line-height:25px;" type="text" onChange="checkxiao();" name="min_loan_money"/>
+                     元   (最少投资{$Think.config.sys_tenderMultiplicand}，请填写{$Think.config.sys_tenderMultiplicand}的倍数)</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><div id="xiao" style="color:#BEBEC2;">请输入50倍数的纯数字</div></td>
+                      </tr>
+                      <tr>
+                      <tr>
+                        <td>借款描述：</td>
+                        <td><textarea  class="wu" style=" width:240px; height:85px;" id="loanDesc" rows="2" placeholder="50个字以内" maximum="50" onChange="checkmiaoshu();" name="description"></textarea>
+                        </td>
+                      </tr>
+                      <!-- <tr>
+                        <td></td>
+                        <td><div id="miaoshu" style="color:#BEBEC2;">请输入50字以内</div></td>
+                      </tr> -->
+                      <!-- <tr>
+                        <input type="hidden" value="{$leixing}" name="borrowType">
+                      </tr> -->
+                       <tr>
+                        <input name="cate_id" type="hidden" value="{$id}" />
+                        <input name="user_id" type="hidden" value="{$uid}" />
+                      </tr>
+
+                      <tr>
+                        <td colspan="3" align="center">
+                       
+                        <!-- <a class="formbtn ma01" id="submit" href="javascript:void(0)">提交申请</a> -->
+                        <input class="formbtn ma01" id="submit" type="submit" value="提交申请"> </td></td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="bo"></div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="liuchen" style="width:998px; margin-top:10px; background-color:rgb(248, 246, 244); padding-top:20px;">
+    <h2 style="text-align:center; font-size:27px; font-weight:bolder;">煜商金融申请流程</h2>
+    <img src="__TMPL__Public/images/11.png" style="margin-top:30px;"></div>
+</div>
+<div class="blank"></div>
+<!--表单验证开始-->
+<script type="text/javascript">
+//-------------借款标题
+function checkUsername(){
+	//1、得到username中输入的值
+	var v=document.getElementsByName("name")[0].value;
+	//2、进行合法性验证，使用正则表达式
+	//3、在sUsername中，显示验证的结果
+  if (v==""){
+      document.getElementById("sUsername").innerHTML="借款标题不能为空！";
+      document.getElementById("sUsername").style.color='red';
+      return false;
+  }
+	if(/^([\u4e00-\u9fa5]){2,29}$/.test(v)){
+		//sUsername中输出：正确
+		document.getElementById("sUsername").innerHTML="正确";
+		//设置字的颜色
+		document.getElementById("sUsername").style.color="green";
+		//document.getElementById("sUsername").style.border="1px solid orange";
+		//document.getElementById("sUsername").style.padding="5px";
+		//document.getElementById("sUsername").style.backgroundColor="#abcdef";
+		document.getElementById("sUsername").className='c';
+		return true;
+	}else{  
+    document.getElementById("sUsername").innerHTML="格式不正确,请输入2~30个汉字";
+    document.getElementById("sUsername").style.color='red';
+    return false;
+  }
+	
+}
+//--------------借款金额
+function checkjine(){
+  //1、得到username中输入的值
+  var v=document.getElementsByName("borrow_amount")[0].value;
+  //2、进行合法性验证，使用正则表达式
+  //3、在sUsername中，显示验证的结果
+  if(v==""){
+    document.getElementById("jPass").innerHTML="借款金额不能为空！";
+    document.getElementById("jPass").style.color='red';
+    return false;
+  }
+  if(v%50==0 & v<=5000000 & v!=0){
+    //sUsername中输出：正确
+    document.getElementById("jPass").innerHTML="正确";
+    //设置字的颜色
+    document.getElementById("jPass").style.color="green";
+    //document.getElementById("sUsername").style.border="1px solid orange";
+    //document.getElementById("sUsername").style.padding="5px";
+    //document.getElementById("sUsername").style.backgroundColor="#abcdef";
+    document.getElementById("jPass").className='c';
+    return true;
+  }else{
+    //sUsername中输出：用户名格式错误
+    document.getElementById("jPass").innerHTML="请填写为50的倍数,最大额度为5000000.00元";
+    document.getElementById("jPass").style.color='red';
+    return false;
+  }
+  
+}
+//----------年利率
+function nian(){
+	//1、得到username中输入的值
+	var v=document.getElementsByName("rate")[0].value;
+	//2、进行合法性验证，使用正则表达式
+	//3、在sUsername中，显示验证的结果
+  if(v==""){
+    document.getElementById("jnian").innerHTML="年利率不能为空！";
+    document.getElementById("jnian").style.color='red';
+    return false;
+  }
+	if(v>=10 & v<=20){
+		//sUsername中输出：正确
+		document.getElementById("jnian").innerHTML="正确";
+		//设置字的颜色
+		document.getElementById("jnian").style.color="green";
+		
+		document.getElementById("jnian").className='c';
+		return true;
+	}else{
+		//sUsername中输出：用户名格式错误
+		document.getElementById("jnian").innerHTML="利率格式错误";
+		document.getElementById("jnian").style.color='red';
+		return false;
+	}
+	
+}
+//--------筹标期限
+function checkqixian(){
+	//1、得到username中输入的值
+	var v=document.getElementsByName("deadline")[0].value;
+	//2、进行合法性验证，使用正则表达式
+	//3、在sUsername中，显示验证的结果
+  if(v==""){
+    document.getElementById("sqixian").innerHTML="筹标期限不能为空！";
+    document.getElementById("sqixian").style.color='red';
+    return false;
+  }
+	if(v>=1&v<=10){
+		//sUsername中输出：正确
+		document.getElementById("sqixian").innerHTML="正确";
+		//设置字的颜色
+		document.getElementById("sqixian").style.color="green";
+		document.getElementById("sqixian").className='c';
+		return true;
+	}else{
+		//sUsername中输出：用户名格式错误
+		document.getElementById("sqixian").innerHTML="格式错误,请输入数字";
+		document.getElementById("sqixian").style.color='red';
+		return false;
+	}
+	
+}
+
+
+//----------最高投标金额
+function checkgao(){
+	//1、得到username中输入的值
+	var v=document.getElementsByName("max_loan_money")[0].value;
+	//2、进行合法性验证，使用正则表达式
+	//3、在sUsername中，显示验证的结果
+  if(v==""){
+    document.getElementById("sgao").innerHTML="最高投标金额不能为空！";
+    document.getElementById("sgao").style.color='red';
+    return false;
+  }
+	if(v%50==0 & v<=5000000){
+		//sUsername中输出：正确
+		document.getElementById("sgao").innerHTML="正确";
+		//设置字的颜色
+		document.getElementById("sgao").style.color="green";
+		document.getElementById("sgao").className='c';
+		return true;
+	}else{
+		//sUsername中输出：用户名格式错误
+		document.getElementById("sgao").innerHTML="输50倍数的纯数字且小于500万";
+		document.getElementById("sgao").style.color='red';
+		return false;
+	}
+	
+}
+//----------最低投标金额
+function checkxiao(){
+  //1、得到username中输入的值
+  var b=document.getElementsByName("max_loan_money")[0].value;
+  var v=document.getElementsByName("min_loan_money")[0].value;
+  //2、进行合法性验证，使用正则表达式
+  //3、在sUsername中，显示验证的结果
+  if(v==""){
+    document.getElementById("xiao").innerHTML="最低投标金额不能为空！";
+    document.getElementById("xiao").style.color='red';
+    return false;
+  }
+
+  if(b==0 & v<=5000000 & v%50==0 &v!=0){
+     document.getElementById("xiao").innerHTML="正确";
+    //设置字的颜色
+    document.getElementById("xiao").style.color="green";
+    document.getElementById("xiao").className='c';
+    return true;
+  }else{
+    if(v%50==0 &v!=0 &v<=5000000 & v<b){
+    //sUsername中输出：正确
+    document.getElementById("xiao").innerHTML="正确";
+    //设置字的颜色
+    document.getElementById("xiao").style.color="green";
+    document.getElementById("xiao").className='c';
+    return true;
+  }else{
+    //sUsername中输出：用户名格式错误
+    document.getElementById("xiao").innerHTML="请输入50倍数且不能大于最高投标金额且小于500万";
+    document.getElementById("xiao").style.color='red';
+    return false;
+  }
+  
+  }
+  
+}
+// //-------借款描述：
+// function checkmiaoshu(){
+//   //1、得到username中输入的值
+//   var v=document.getElementsByName("description")[0].value;
+//   //2、进行合法性验证，使用正则表达式
+//   //3、在sUsername中，显示验证的结果
+//   if(v==""){
+//     document.getElementById("miaoshu").innerHTML="借款描述不能为空!";
+//     document.getElementById("miaoshu").style.color='red';
+//     return false;
+//   }else{
+//      document.getElementById("miaoshu").innerHTML="正确";
+//     //设置字的颜色
+//     document.getElementById("miaoshu").style.color="green";
+//     document.getElementById("miaoshu").className='c';
+//     return true;
+//   }
+  
+// }
+function checkAll(){
+	
+	var re1=checkUsername();
+	var re2=checkjine();
+  var re3=nian();
+  var re4=checkqixian();
+  var re5=checkxiao();
+  var re6=checkgao();
+
+	if(re1 && re2 && re3 && re4 && re5 && re6){
+		return true;
+	}else{
+    return false;
+		return false;//其中任意一个不合法
+	}
+}
+</script>
+<!--表单验证结束-->
+<!----------------------尾部开始--------------------------------->
+</div>
+<div class="blank"></div>
+<tc_include file="inc/footer" />
+</body>

@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$site_seo_title} {$site_name}</title>
+<link rel="icon" href="favicon.ico" type="/image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}" />
+
+
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/weebox.css" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+
+
+
+<script type="text/javascript">
+
+var APP_ROOT = '/';
+var LOADER_IMG = '';
+var ERROR_IMG = '';
+
+</script>
+
+
+
+
+
+<!--[if lt IE 10]>
+<script type="text/javascript" src="__TMPL__Public/js/PIE.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="__TMPL__Public/js/jquery.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.bgiframe.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.weebox.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.pngfix.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/lazyload.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/script.js"></script>
+
+<script language="javascript">
+$(function() {
+    if (window.PIE) {
+        $('.rounded').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+
+<div style="position:fixed;bottom:40px;right:40px;z-index:1000; width:110px;"><a><img src="__ROOT__/down/images/appcode.jpg" /></a></div>
+
+
+
+<div class="header" id="header">
+	<div class="constr">
+		<div class="wrap clearfix" style="overflow:visible;">
+			<div class="f_l">
+				<span>客服电话:0371-56000066</span>
+				<div class="sharemk">
+					<a  href="" target="_blank" title="新浪微博"; class="share xinlan"></a>
+					<a  href="" target="_blank" title="腾讯微博"; class="share tenxun"></a>
+					<a  href="" target="_blank" title="微信"; class="share weixin"></a>
+				</div>
+			</div>
+			<div class="f_r">
+				<span id="user_head_tip" class="pr">
+<!---//////////////////////------用户登了的开始------//////////////////////------->
+
+	<if condition="sp_is_user_login()">
+	<span class="li li_no" id="J_account">
+		<span class="f14">您好，</span><a href="{:U('User/Center/index')}">{$user.user_login}</a>
+		<ul class="ui-nav-dropdown ui-nav-dropdown-account">
+        	<li class="ui-nav-dropdown-angle"><span></span></li>
+		   	<li class="ui-nav-dropdown-item">
+			   	<a href="{:u('user/Message/index')}" class="rrd-dimgray msg_count">
+			   	<span class="pm f_l mt5 {if $msg_count>0 || $user.videopassed neq 1 || $user.idcardpassed neq 1 || $user.creditpassed neq 1 || $user.workpassed neq 1 || $user.incomepassed neq 1}new_pm {/if}">
+				</span> 消息<if condition="$msg_count gt 0">{$msg_count}</if></a>
+		   	</li>
+			<li class="ui-nav-dropdown-separator"></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Money/index',array('act'=>'incharge'))}">充值</a></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Money/index',array('act'=>'bank'))}">提现</a></li>
+          	<li class="ui-nav-dropdown-separator"></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Money/index')}">资金管理</a></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Invest/index')}">理财管理</a></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:U('User/Deal/index')}">借款管理</a></li>
+          	<li class="ui-nav-dropdown-separator"></li>
+          	<li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="{:u('user/index/logout')}">退出</a></li>
+        </ul>
+	</span>
+	<script type="text/javascript">
+	var acc_menu_hide = null;
+	var hide_menu = null;
+		$("#J_account").hover(function(){
+			clearTimeout(acc_menu_hide);
+			$(this).addClass("li_hover");
+		},function(){
+			var obj = $(this);
+			hide_menu = function(){
+				obj.removeClass("li_hover");
+			}
+			acc_menu_hide = setTimeout(hide_menu,100);
+		});
+
+	</script>
+	<else/>
+	<span class="li li_no">游客</span>
+	<span class="li"><a href="{:U('User/register/index')}">免费注册</a></span>
+	<span class="li"><a href="{:U('User/Login/index')}">登录</a></span>
+</if>
+
+<!---//////////////////////------用户登了的结束------//////////////////////------->
+
+				
+
+				<span class="li"><a href="{:U('Portal/Article/index',array('id'=>4))}">帮助</a></span>
+				</span>
+			</div>		
+		</div>
+	<!--end wrap-->
+		
+	</div>
+	<div class="main_bars">
+		<div class="main_bar wrap">	
+			<div class="logo mr15">
+				<a class="link f_l" href="{$APP_ROOT}">
+                    <img src="__ROOT__/4cdd501dc023b.png" alt=""/>
+				</a>
+			</div>
+			<ul class="main_nav">
+
+                <li class="n_0 <if condition="menuPostion('Loan','Index','index')"> current  </if>  mr5" rel=''>
+                    <a href="__ROOT__/" >首页</a>
+                </li>
+                <li class="n_0  mr5  <if condition="menuPostion('Loan','Index','lists')"> current  </if> " rel=''>
+                    <a href="{:U('Loan/index/lists')}">我要理财</a>
+                </li>
+                <li class="n_0  mr5  <if condition="menuPostion('Loan','Borrow','')"> current  </if>  " rel=''>                    <a href="{:U('Loan/borrow/index')}"  >我要贷款</a>
+                   				   <!--<if condition="$Think.config.sys_loans_lowest_apr eq 1">
+                  		<a href="{:U('Loan/borrow/index')}"  >我要贷款</a>
+                   <else/>
+                   		<a href="{:U('Loan/borrow/inapply')}" >我要贷款</a>
+                   </if>-->
+                    
+                </li>
+                
+            <!--     <li class="n_0  mr5 <if condition="menuPostion('User','center','')"> current  </if> " rel=''>
+                    <a href="{:U('user/center/index')}"   >加盟客户</a>
+                </li> -->
+                
+				 <li class="n_0  mr5 <if condition="menuPostion('Portal','','')"> current  </if> " rel=''>
+                    <a href="{:U('portal/list/index')}"   >资讯中心</a>
+                </li>
+
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<!---//////////////////////------首页广告位------//////////////////////------->
+<php>
+$home_slides=sp_getslide("index");
+
+
+$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
+</php>
+
+<div id="main_adv_box" class="main_adv_box f_l">
+    <div id="main_adv_img" class="main_adv_img">
+    
+    <foreach name="home_slides" item="vo">
+	<span rel="{$key+1}">
+    <a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
+		</span>
+
+	</foreach>
+    
+    
+    </div>
+    <div id="main_adv_ctl" class="main_adv_ctl">
+        <ul>
+          <foreach name="home_slides" item="vo">
+	<li  rel="{$key+1}">
+   {$key+1}
+		</li>
+
+	</foreach>
+        
+          
+        </ul>
+    </div>
+    <script type="text/javascript" >
+    	var timer;
+var c_idx = 1;
+var total = 0;
+var is_has_show = false;
+$(document).ready(function(){
+	$("#main_adv_box").find("span").each(function(){
+		if($.trim($(this).html())!=""){
+			if (!is_has_show) {
+				$(this).show();
+				is_has_show = true;
+			}
+			total ++;
+		}
+
+	});
+	if (total > 1) {
+		$("#main_adv_ctl li").hide();
+		init_main_adv();
+		for(i=1;i<=total;i++){
+			$("#main_adv_ctl li[rel='"+i+"']").show();
+		}
+		$("#main_adv_ctl ul").css({"width":35*total+"px"});
+	}
+	else {
+		if(total==0)
+			$("#main_adv_box").hide();
+                else{
+                    $("img","#main_adv_img ").each(function(){
+                        var img_str = $(this).attr("src");
+                        $(this).hide();
+
+                        $(this).parent().css({"background":"url("+img_str+") no-repeat center 0","width":"100%","height":"100%"});
+                     });
+                }
+		$("#main_adv_ctl").hide();
+	}	
+});
+
+function init_main_adv()
+{
+	$("#main_adv_box").find("span[rel='1']").show();
+	$("#main_adv_box").find("li[rel='1']").addClass("act");
+	$("img","#main_adv_img ").each(function(){
+           var img_str = $(this).attr("src");
+           $(this).hide();
+           
+           $(this).parent().css({"background":"url("+img_str+") no-repeat center 0","width":"100%","height":"100%"});
+        });
+	timer = window.setInterval("auto_play()", 5000);
+	$("#main_adv_box").find("li").hover(function(){
+		show_current_adv($(this).attr("rel"));		
+	});
+	
+	$("#main_adv_box").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = window.setInterval("auto_play()", 5000);
+	});
+	init_success_play();
+}
+
+function auto_play()
+{	
+	if(c_idx == total)
+	{
+		c_idx = 1;
+	}
+	else
+	{
+		c_idx++;
+	}
+	show_current_adv(c_idx);
+}
+
+function show_current_adv(idx)
+{	
+	$("#main_adv_box").find("span[rel!='"+idx+"']").hide();
+	$("#main_adv_box").find("li").removeClass("act");
+	$("#main_adv_box").find("li").find("div div div div").css("background-color","#fff");
+	if($("#main_adv_box").find("span[rel='"+idx+"']").css("display")=='none')
+	$("#main_adv_box").find("span[rel='"+idx+"']").fadeIn();
+	$("#main_adv_box").find("li[rel='"+idx+"']").addClass("act");
+	$("#main_adv_box").find("li[rel='"+idx+"']").find("div div div div").css("background-color","#f60");
+	c_idx = idx;
+	
+	
+}
+
+function init_success_play(){
+	var a = function() {
+		this.h = 50,
+		this.speed = 50,
+		this.ul = $("#examIndex ul"),
+		this.timer = null,
+		this.isPasue = !1,
+		this.isLoop = !0,
+		this.play = function() {
+			if (this.ul[0] == undefined || this.ul.find("li").length <= 5) return;
+			var a = this.ul.find("li:first"),
+			b = this.ul.find("li:last"),
+			c = document.createElement("li");
+			c.style.height = "0px",
+			a.before(c);
+			var d = b.html(),
+			e = 0,
+			f = this.h,
+			g = this;
+			g.timer = setInterval(function() {
+				if (g.isPasue) return ! 1;
+				c.style.height = e + "px",
+				e += 4,
+				e >= f && (clearInterval(g.timer), b.remove(), $(c).css("opacity", 0), $(c).html(d).animate({
+					opacity: 1
+				}), g.isLoop && setTimeout(function() {
+					g.play()
+				},
+				3e3))
+			},
+			this.speed)
+		},
+		this.pause = function() {
+			this.isPasue = !0
+		},
+		this.replay = function() {
+			this.isPasue = !1
+		}
+	},
+	b = new a;
+	b.play(),
+	$("#examIndex ul").hover(function() {
+		b.pause()
+	},
+	function() {
+		b.replay()
+	})
+}
+    
+    
+    
+    </script>
+</div>
+<p class="touy"></p>
+
+<!---//////////////////////------广告为结束------//////////////////////------->
+<div class="wrap">

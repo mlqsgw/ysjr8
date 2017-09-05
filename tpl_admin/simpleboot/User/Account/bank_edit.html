@@ -1,0 +1,96 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:600px;">
+<div class="wrap J_check_wrap">
+    <form class="J_ajaxForm" action="{:U('User/Account/bank_edit')}" method="post">
+        <div class="table_list">
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>用户名称:</th>
+                    <td>{$user_name}</td>
+                </tr>
+                <tr>
+                    <th>真实姓名:</th>
+                    <td>{$real_name}</td>
+                </tr>
+                <tr>
+                    <th>所在地:</th>
+                    <td>
+						<select  id="s_province" name="s_province"></select><br/>
+						<select  id="s_city" name="s_city" ></select><br/>
+						<select  id="s_county" name="s_county"></select>
+						<script src="__ROOT__/statics/js/area.js"></script>
+						<script type="text/javascript">
+							var opt0 = ["{$region_lv2}","{$region_lv3}","{$region_lv4}"];
+							 _init_area();
+						 </script>
+						<div id="show"></div>
+					</td>
+                </tr>
+                <tr>
+                    <th>所属银行:</th>
+                    <td>
+							<select id="Jbank_bank_id" name="bank_name">
+								<option value="中国工商银行" <eq name="bank_name" value="中国工商银行">selected="selected"</eq>>中国工商银行</option>
+								<option value="中国农业银行" <eq name="bank_name" value="中国农业银行">selected="selected"</eq>>中国农业银行</option>
+								<option value="中国建设银行" <eq name="bank_name" value="中国建设银行">selected="selected"</eq>>中国建设银行</option>
+								<option value="招商银行" <eq name="bank_name" value="招商银行">selected="selected"</eq>>招商银行</option>
+								<option value="中国光大银行" <eq name="bank_name" value="中国光大银行">selected="selected"</eq>>中国光大银行</option>
+								<option value="中国邮政储蓄银行" <eq name="bank_name" value="中国邮政储蓄银行">selected="selected"</eq>>中国邮政储蓄银行</option>
+								<option value="兴业银行" <eq name="bank_name" value="兴业银行">selected="selected"</eq>>兴业银行</option>
+								<option value="中国银行" <eq name="bank_name" value="中国银行">selected="selected"</eq>>中国银行</option>
+								<option value="交通银行" <eq name="bank_name" value="交通银行">selected="selected"</eq>>交通银行</option>
+								<option value="中信银行" <eq name="bank_name" value="中信银行">selected="selected"</eq>>中信银行</option>
+								<option value="华夏银行" <eq name="bank_name" value="华夏银行">selected="selected"</eq>>华夏银行</option>
+								<option value="上海浦东发展银行" <eq name="bank_name" value="上海浦东发展银行">selected="selected"</eq>>上海浦东发展银行</option>
+								<option value="城市信用社" <eq name="bank_name" value="城市信用社">selected="selected"</eq>>城市信用社</option>
+								<option value="恒丰银行" <eq name="bank_name" value="恒丰银行">selected="selected"</eq>>恒丰银行</option>
+								<option value="广东发展银行" <eq name="bank_name" value="广东发展银行">selected="selected"</eq>>广东发展银行</option>
+								<option value="深圳发展银行" <eq name="bank_name" value="深圳发展银行">selected="selected"</eq>>深圳发展银行</option>
+								<option value="中国民生银行" <eq name="bank_name" value="中国民生银行">selected="selected"</eq>>中国民生银行</option>
+								<option value="中国农业发展银行" <eq name="bank_name" value="中国农业发展银行">selected="selected"</eq>>中国农业发展银行</option>
+								<option value="农村商业银行" <eq name="bank_name" value="农村商业银行">selected="selected"</eq>>农村商业银行</option>
+								<option value="农村信用社" <eq name="bank_name" value="农村信用社">selected="selected"</eq>>农村信用社</option>
+								<option value="城市商业银行" <eq name="bank_name" value="城市商业银行">selected="selected"</eq>>城市商业银行</option>
+								<option value="农村合作银行" <eq name="bank_name" value="中国工商银行">selected="selected"</eq>>农村合作银行</option>
+								<option value="浙商银行" <eq name="bank_name" value="浙商银行">selected="selected"</eq>>浙商银行</option>
+								<option value="上海农商银行" <eq name="bank_name" value="上海农商银行">selected="selected"</eq>>上海农商银行</option>
+								<option value="中国进出口银行" <eq name="bank_name" value="中国进出口银行">selected="selected"</eq>>中国进出口银行</option>
+								<option value="渤海银行" <eq name="bank_name" value="渤海银行">selected="selected"</eq>>渤海银行</option>
+								<option value="国家开发银行" <eq name="bank_name" value="国家开发银行">selected="selected"</eq>>国家开发银行</option>
+								<option value="村镇银行" <eq name="bank_name" value="村镇银行">selected="selected"</eq>>村镇银行</option>
+								<option value="徽商银行股份有限公司" <eq name="bank_name" value="徽商银行股份有限公司">selected="selected"</eq>>徽商银行股份有限公司</option>
+								<option value="南洋商业银行" <eq name="bank_name" value="南洋商业银行">selected="selected"</eq>>南洋商业银行</option>
+								<option value="韩亚银行" <eq name="bank_name" value="韩亚银行">selected="selected"</eq>>韩亚银行</option>
+								<option value="花旗银行" <eq name="bank_name" value="花旗银行">selected="selected"</eq>>花旗银行</option>
+								<option value="渣打银行" <eq name="bank_name" value="渣打银行">selected="selected"</eq>>渣打银行</option>
+								<option value="华一银行" <eq name="bank_name" value="华一银行">selected="selected"</eq>>华一银行</option>
+								<option value="东亚银行" <eq name="bank_name" value="东亚银行">selected="selected"</eq>>东亚银行</option>
+								<option value="苏格兰皇家银行" <eq name="bank_name" value="苏格兰皇家银行">selected="selected"</eq>>苏格兰皇家银行</option>
+							</select>
+					</td>
+                </tr>
+                <tr>
+                    <th>开户网点:</th>
+                    <td>
+					<input style="width:250px;" type="text" name="bankzone" value="{$bankzone}"/>
+                    <a target="_blank" href="http://www.cardbaobao.com/bank/index.asp">网点查询</a>
+					</td>
+                </tr>
+				<tr>
+				    <th>到账金额:</th>
+                    <td>
+					<input style="width:250px;" type="text" name="bankcard" value="{$bankcard}"/>
+					</td>
+				</tr>
+                <input type="hidden" value="{$id}" name="id"/>
+            </table>
+
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary J_ajax_submit_btn"  type="submit" >修改</button>
+        </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

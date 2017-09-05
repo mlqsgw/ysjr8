@@ -1,0 +1,88 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li <eq name="state_id" value="">class="active"</eq>><a href="{:U('User/Account/account_recharge')}">全部充值</a></li>
+     <li <eq name="state_id" value="0">class="active"</eq>><a href="{:U('User/Account/account_recharge',array('state_id'=>0))}">审核中</a></li>
+     <li <eq name="state_id" value="1">class="active"</eq>><a href="{:U('User/Account/account_recharge',array('state_id'=>1))}">充值成功</a></li>
+     <li <eq name="state_id" value="2">class="active"</eq>><a href="{:U('User/Account/account_recharge',array('state_id'=>2))}">充值失败</a></li>
+  </ul>
+    <div class="row">
+        <div class="span12">
+            <form class="form-inline" method="post" action="{:U('User/Account/account_recharge',array('typeid'=>$wtype))}" >
+                            用户名
+                <input type="text" class="input-small" name="so_name" placeholder="用户登录名" value="{$so_name}">
+           类型
+                <select style="width:100px;" name="type">
+                	<option value="0">不限</option>
+                	<option <eq name="type" value="1"> selected="selected" </eq> value="1">网上充值</option>
+                	<option <eq name="type" value="2"> selected="selected" </eq> value="2">线下充值</option>
+                </select>
+           状态
+                <select style="width:100px;" name="state">
+                	<option value="3">全部</option>
+                	<option <eq name="state" value="0"> selected="selected" </eq> value="0">审核</option>
+                	<option <eq name="state" value="1"> selected="selected" </eq> value="1">成功</option>
+                	<option <eq name="state" value="2"> selected="selected" </eq> value="2">失败</option>
+                </select>
+                用户注册时间从
+                <input type="text" class="input-small J_date" name="so_start" placeholder="开始时间" value="{$so_start}">
+                到
+                <input type="text" class="input-small J_date" name="so_end" placeholder="结束时间" value="{$so_end}">
+                <button type="submit" class="btn" >搜索</button>
+            </form>
+        </div>
+    </div>
+
+  <div class="table_list">
+
+
+    <table width="100%" cellspacing="0" class="table table-hover">
+      <thead>
+        <tr>
+          <th width="20">ID</th>
+          <th align="left" >用户名</th>
+          <th align="left" >交易号</th>
+          <th align="left" >类型</th>
+          <th align="left" >充值银行</th>
+          <th align="left" >充值金额 </th>
+          <th align="left" >充值手续费 </th>
+          <th align="left" >实际到账金额</th>
+          <th align="left" >状态</th>
+          <th align="left" >操作时间 </th>
+          <th align="left" >操作IP</th>
+          <th width="30">管理</th>
+        </tr>
+      </thead>
+      <tbody>
+        <foreach name="content" item="vo">
+        <tr>
+          <td>{$vo.id}</td>
+          <td>{$vo.user_name}</td>
+          <td>{$vo.account_id}</td>
+          <td><if condition="$vo.type eq 1">网上充值<elseif condition="$vo.type eq 2" />线下充值<else/>手动充值</if></td>
+          <td>{$vo.bank_name}</td>
+          <td>{$vo.money}</td>
+          <td>{$vo.money_fee}</td>
+          <td>{$vo.money_actual}</td>
+          <td><if condition="$vo.state eq 1">成功<elseif condition="$vo.state eq 2" />失败<else/>审核中</if></td>
+          <td>{$vo.create_time}</td>
+          <td>{$vo.create_ip}</td>
+          <td  class="text-c">
+          <if condition="$vo.state neq 0">
+          		<a href="{:U('User/Account/Review',array('id'=>$vo['id']))}" class="J_dialog">查看</a>
+          <else />
+          		<a href="{:U('User/Account/Review',array('id'=>$vo['id']))}" class="J_dialog" >审核</a>
+          </if>
+          </td>
+        </tr>
+        </foreach>
+      </tbody>
+    </table>
+      <div class="pagination">{$page}</div>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="{:U('User/Account/account_recharge_new')}">添加充值</a></li>
+  </ul>
+  <div class="table_list" style="padding:0 0 0 250px;">
+      <form class="form-search" action="{:U('User/Account/account_recharge_new')}"  method="post">
+         用户名：<input type="text" class="input-medium search-query" name="user_name" value="">
+		 <div style="margin:10px 0 0 0;"></div>
+         &nbsp;&nbsp;类型：&nbsp;线下充值
+		 <div style="margin:10px 0 0 0;"></div>
+		 &nbsp;&nbsp;金额：<input type="text" class="input-medium search-query" name="money" value="">
+		 <div style="margin:10px 0 0 0;"></div>
+		&nbsp;&nbsp;备注：<input type="text" class="input-medium search-query" name="remarks" value="">
+		<div style="margin:25px 0 0 0;"></div>
+         <button type="submit" class="btn">确认充值</button>
+     </form>
+  </div>
+</div>
+</body>
+</html>

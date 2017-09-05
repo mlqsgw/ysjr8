@@ -1,0 +1,254 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Money/menu" />
+	</div>
+    <div class="u_incharge uc_r_bl_box clearfix pt10">
+		<div class="prompt">
+		<p><i></i>请输入您要提现的金额，以及正确无误的银行帐号信息。</p>
+		<p><i></i>我们将在3个工作日（双休日和法定节假日除外）之内，将钱转入您指定的银行帐号 。</p>
+		<p><i></i>在双休日和法定节假日期间，用户可申请取现，但p2p信贷暂不处理，需要等恢复正常上班之后才进行处理。不便之处，请多多谅解！
+		</p>
+		<p class="f_red"><i></i>
+重要！！推荐银行（即下拉菜单中可直接选择的银行）不需要填写开户行支行信息，不在此列的其他银行则需要您填写开户行支行信息。如果您填写的开户行支行不正确，提现交易将无法成功，提现费用不予返还。如果您不确定开户行支行名称，可以打电话到当地所在银行的营业网点询问或者上网查询。
+		</p>
+		</div>
+		<div class="total clearfix">
+			<div class="t_name f_l">累计提现金额：</div>
+			<div class="f_l pl10"> {$carry} 元 （备注：不含手续费，为实际到帐金额。）</div>
+		</div>
+		<div class="blank20"></div>
+		<div class="m_number clearfix" style="">
+			<div class="t_name f_l">请输入你的提款金额：</div>
+				<style type="text/css">
+					.uc_r_bl_box .field label{color:#666; width:180px;}
+					.cashdraw_tips {position:absolute; z-index:99999;}
+					.cashdraw_tips .cashdraw_tip_header { background: url("__TMPL__Public/images/reg_tip_header_t.gif") no-repeat scroll 0 17px transparent; float: left; height: 47px; position: relative; width: 6px; z-index: 1000; }
+					.cashdraw_tips .cashdraw_tip_body_container { background: url("__TMPL__Public/images/reg_tip_bg_bottom.gif") repeat-x scroll center bottom transparent; float: left; margin-left: -1px; padding-bottom: 2px; position: relative; }
+					.cashdraw_tips .cashdraw_tip_body {background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #BBBBBB; float: left;}
+					.cashdraw_tips .cashdraw_tip_body .cashdraw_tip_content {color: #666666; display: block; padding: 5px 9px 4px; width:291px; line-height:20px;}
+					.tiptable {background:#ccc}
+					.tiptable tr.bg td{background:#fff; padding: 0 5px;text-align:center;}
+				</style>
+				<form id="Jcarry_From" method="post" action="{:U('User/Money/savecarry')}" name="Jcarry_From">
+					<div class="uc_r_bl_box clearfix" style="position:relative;">
+						<div class="field">
+							<label>可用资金：</label>
+							<span>{$money.available_funds} 元</span>
+							<span>
+								<input id="Jcarry_totalAmount" type="hidden" value="68899.9985">
+							</span>
+						</div>
+						<div class="field">
+							<label><span class="f_red b">*</span>提取金额：</label>
+							<span>
+								<input id="Jcarry_amount" class="f-input" type="text" name="amount" autocomplete="off">元
+							</span>
+							<span id="Jcarry_balance" class="f_red lh28"></span>
+						</div>
+						<div class="field">
+							<label>提现费用：</label>
+							<span id="Jcarry_fee">0.00 元</span>
+							<img id="imgtips" onmouseover="tips(this,'第三方收取提现手续费:</br><table width=\'100%\' class=\'tiptable\' cellspacing=\'1\' border=\'0\' ><tr style=\'background:#eff5fe;text-align:center\'><td height=\'22\'>2万以下</td><td height=\'22\'>2万元(含)-5万元</td><td height=\'22\'>5万元(含)-100万元</td></tr><tr class=\'bg\'><td>￥1.00</td><td>￥3.00</td><td>￥5.00</td></tr></table>',70,253)" style="position:relative;top:3px;left:15px;z-index:999; cursor:pointer;" src="__TMPL__Public/images/tips_wh.jpg">
+							<br>
+						</div>
+						<div class="field">
+							<label>实付金额：</label><span id="Jcarry_realAmount">0.00 元</span><br>
+						</div>
+						<div class="field">
+							<label>提现后账户可用余额：</label><span id="Jcarry_acount_balance">0.00 元</span><br>
+						</div>
+						<div class="blank10"></div>
+						<div class="field">
+							<label> 开户行：</label>
+							<span>{$bank.bank_name}    
+								<a href="{:U('User/money/index',array('act'=>'bank'))}">我想重新选择</a>
+							</span>
+						</div>
+						<div class="field">
+							<label>开户名：</label><span>{$bank.real_name}</span>
+						</div>
+						<div class="field">
+							<label>卡号：</label><span>{:substr($bank['bankcard'],0,4)}  {:substr($bank['bankcard'],4,4)}****</span>
+						</div>
+						<div class="field">
+							<label> </label>
+							<span id="Jcarry_bankSuggestNote" class="f_gray">提现时间约为3个工作日。</span>
+						</div>
+						<div class="blank10"></div>
+						<if condition="$sys_withdrawalSMSvalidation eq 1">
+						<div class="field">
+							<label>短信验证码：</label>
+							<span>
+								<input id="J_PAYPASSWORD" class="f-input" type="password" name="phone_paypassword" autocomplete="off">
+							</span>
+							<span>
+	<input type="button" id="reveiveActiveCode"  class="reveiveActiveCode" value="免费获取验证码" >
+	                        </span>
+							
+						</div>
+						</if>
+						<div class="blank10"></div>
+						<div class="field">
+							<label>支付密码：</label>
+							<span>
+								<input id="J_PAYPASSWORD" class="f-input" type="password" name="paypassword" autocomplete="off">
+							</span>
+						</div>
+					</div>
+						<input type="hidden" value="{$bank.id}" name="bank_id">
+						<input id="fee_money" type="hidden" value="0" name="fee_money">
+				</form>
+		</div>
+		<div class="f_red tc" style="font-size:14px;">	警告：禁止信用卡套现、虚假交易等行为，一经确认，将终止该账户的使用。
+		</div>
+		<div class="blank20"></div>
+		<div class="tc">
+			<input class="sub_btn" type="submit" value="申请提现">
+		</div>
+	</div>
+</div>
+
+<div class="blank"></div>	
+<script type="text/javascript">
+	jQuery(function(){
+		//获取手机验证码
+		$("#reveiveActiveCode").attr("disabled","");//按钮变亮
+		$("#reveiveActiveCode").click(function(){
+			var obj = $(this);
+			var query = new Object();
+			//query.id = $(this).attr("dataid");
+
+				$.ajax({
+					url:"{:U('User/Myaccount/authma')}",
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						if(result.status==1)
+						{
+							settime(obj);
+						}else if(result.status==-1){
+							$.showErr(result.info);
+						}else if(result.status==-2){
+							$.showErr(result.info);
+						}
+					},
+					error:function(){
+						alert("发送成功,注意查收");
+					}
+				});
+		});
+
+		var countdown=60;
+		function settime(val) {
+			if (countdown == 0) {
+				val.attr("disabled","");
+				val.val("免费获取验证码");
+				countdown=60;
+			} else {
+				val.attr("disabled","disabled");
+				val.val("(" + countdown + ")后重新发送");
+				countdown--;
+			}
+			if(val.val()!="免费获取验证码"){
+				setTimeout(function() {
+					settime(val)
+				},1000);
+			}
+		}
+		
+		
+		$("#Jcarry_amount").keyup(function(){
+			carry();
+		});
+		
+		$(".sub_btn").live("click",function(){
+			carry();
+			if($("input[name='paypassword']").val()==""){
+				$.showErr("请输入支付密码",function(){
+					$("input[name='paypassword']").focus();
+				});
+				return false;
+			}
+			$("form").submit();
+		});
+		
+	});
+	function carry(){
+		var obj = $("#Jcarry_amount");
+		var money = {$money.available_funds};//可用金额
+		var y_fee = {$money.withdrawalfrees};//已用免费额度
+		var m_fee = {$m_fee};//免费额度
+		var s_fee = {$s_fee};//上线
+		var x_fee = {$x_fee};//下线
+		var l_fee = {$l_fee};//费率
+		var fee = {$fee};//是否收费
+		var t_money = obj.val();//提现金额
+		
+		if(!($("input[name='amount']").val()!=''&&!isNaN($("input[name='amount']").val())&&$("input[name='amount']").val()>0))			
+		{
+			$.showErr("请输入正确的充值金额",function(){
+				$("input[name='amount']").val("");
+				$("input[name='amount']").focus();
+			});
+			return false;
+		}
+		
+		//收费
+		if(fee){
+			//提现费用
+			var feiyong = 0;
+			if(Number(y_fee)+Number(t_money) > Number(m_fee)){
+				 feiyong = (Number(y_fee)+Number(t_money)-Number(m_fee))*(Number(l_fee)/100);
+				if(feiyong<1){
+					 feiyong = 1;
+				}else if(feiyong>50){
+					 feiyong = 50;
+				}
+			}
+			//alert(feiyong);
+			//实付金额
+			var shi_money = Number(t_money) + Number(feiyong);
+			//alert(shi_money);
+			//提现后账户可用余额
+			var k_money = Number(money)-Number(shi_money);
+			
+			
+			if(shi_money>money){
+				alear(shi_money+"www"+money);
+				$.showErr("您可用资金不足",function(){
+					$("input[name='amount']").val("");
+					$("input[name='amount']").focus();
+				});
+				return false;
+			}
+		
+			$("#Jcarry_fee").text(Number(feiyong).toFixed(2)+"元");
+			$("#fee_money").val(Number(feiyong).toFixed(2));
+			$("#Jcarry_realAmount").text(Number(shi_money).toFixed(2)+"元");
+			$("#Jcarry_acount_balance").text(Number(k_money).toFixed(2)+"元");
+		}else{
+			if(t_money>money){
+				alear(shi_money+"www"+money);
+				$.showErr("您可用资金不足",function(){
+					$("input[name='amount']").val("");
+					$("input[name='amount']").focus();
+				});
+				return false;
+			}
+			
+			//提现后账户可用余额
+			var k_money = money - t_money;
+			$("#Jcarry_realAmount").text(Number(t_money).toFixed(2)+"元");
+			$("#Jcarry_acount_balance").text(Number(k_money).toFixed(2)+"元");
+		}
+	}
+
+</script>
+</div>
+
+<div class="blank"></div>
+</block>
+

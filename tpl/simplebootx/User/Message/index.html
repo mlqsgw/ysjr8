@@ -1,0 +1,66 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Message/menu" />
+	</div>
+	<div class="uc_r_bl_box clearfix pt10">
+		
+			<div class="uc-table">
+            <style type="text/css">
+				td { background:none;}
+				.overhide{ height:50px; overflow:hidden;  text-overflow:ellipsis; }
+            </style>
+		<table style="width:100%" cellspacing="0" cellpadding="0" border="0" class="uc-msg-table" >
+        		
+                <volist name="list" id="vo">
+				<tr style="cursor:pointer; " class="pm_row "  onclick="window.location.href='{:U("User/Message/detail",array("id"=>$vo["id"]))}'">
+				<td width=50 >
+					<span class="pm_pic pm_pic_0"></span>	
+                 </td>
+				<td style="text-align:left;width:135px">
+					<div>系统消息	</div>
+					<div class="total"><if condition="$vo['mes_status'] eq 2"><font color="#FF0000">未读</font></if></div>
+					<div class="time">{$vo.post_time}</div>				
+				</td>
+				<td style="text-align:left;">
+					<div style="font-weight:bolder;">{$vo.mes_title}</div>
+                    <div class="f_dgray overhide">{$vo.mes_content}</div>
+					<div class="f_r">[查看]</div>	
+				</td>
+			</tr>
+            </volist>				
+			</table>
+					
+		<div class="pages"> {$page}          </div>
+		</div><!--end uc-table-->
+
+	</div>
+	<div class="inc_foot"></div>
+</div>
+
+</div>
+
+<div class="blank"></div>
+
+<script type="text/javascript">
+	/*$(function(){
+		$(".f_r").click(function(){
+				var conent=$(this).prev();
+				if(conent.hasClass("overhide"))
+				{
+					conent.removeClass("overhide");
+					$(this).html("关闭");	
+				}else{
+					conent.addClass("overhide");
+					$(this).html("展开");	
+				}
+		});
+		
+	});*/
+
+
+</script>
+
+</block>
+

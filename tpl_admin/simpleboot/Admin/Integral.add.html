@@ -1,0 +1,38 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('admin/Integral/index')}">系统参数设置</a></li>
+     <li class="active"><a href="{:U('admin/Integral/add')}">添加参数</a></li>
+
+  </ul>
+        <form class="form-horizontal J_ajaxForm" action="{:U('admin/Integral/add')}" method="post" id="myform">
+
+
+  <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+          <tr>
+              <th width="180">说明</th>
+              <td><input type="text" name="remark" value="" class="input" ></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th width="180">值：</th>
+              <td><input type="text" name="value" value="" class="input"></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th width="180"></th>
+              <td class="must_red">值只能使用数字</td>
+          </tr>
+      </table>
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+    </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body,ul,li{ margin:0px; padding:0px;}
+body{ font-size:14px; font-family:"Microsoft Yahei"; color:#666;/*background:-webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fab9c8));background:-moz-linear-gradient(top, #fff, #fab9c8);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff,endColorstr=#fab9c8,grandientType=0);*/ }
+.clear{ clear:both;}
+h1{ font-size:16px; padding-left:10px;}
+h2{ text-align:center;}
+p{ padding:0px 10px;}
+ul{list-style:none; margin:5px 0px;}
+a{ text-decoration:none; color:#666;}
+.main{ padding-bottom:45px;}
+.back{ display:block; width:25px; height:25px;padding:5px 5px; margin-left:5px; border-right:#b81b33 1px solid; position:absolute; left:0; top:0;}
+.daohang{ display:block; width:25px; height:25px; padding:5px 5px; border-left:solid 1px #fb6d76; position:absolute; right:0; top:0; margin-right:5px;}
+
+
+.contain{ width:100%; height:100%; min-height:320px; max-height:960px; margin:0px auto;}
+.tittop{ width:100%; background:#a40000; text-align:center; height:35px; color:#fff; line-height:35px; font-size:16px; position:relative;}
+.titletil{ background:#d86881; height:40px; text-align:center; color:#fff; line-height:40px; font-size:16px;}
+.con01{ width:90%; margin:10px auto; }
+
+.con01 .left img{ width:100px; height:100px;float:left; margin-right:20px;}
+
+.con01 .right span{ display:block; height:36px; line-height:18px;}
+.con01 .right .blod{ font-size:16px; font-weight:bold;}
+.con02,.con03,.con04{width:90%; margin:0px auto;}
+.con02 .tit01{ height:30px; border-bottom:#6C3 2px solid;}
+.con02 .tit01 span{ float:left;padding:0px 20px;line-height:28px;font-weight:bold;color:#3c3b3b; font-size:14px; border-bottom:#6C3 4px solid;}
+.con03 .tit02{ height:30px; border-bottom:#689cfc 2px solid;}
+.con03 .tit02 span{ float:left;padding:0px 20px;line-height:28px;font-weight:bold;color:#3c3b3b; font-size:14px; border-bottom:#689cfc 4px solid;}
+.con03 ul li{ height:30px; font-size:14px; padding-left:12px; float:none; display:block;}
+#phone img,#and img,#ios img{ width:30px; height:30px; vertical-align:middle; margin-right:20px;}
+.con04 .tit03{ height:30px; border-bottom:#ee9922 2px solid;}
+.con04 .tit03 span{ float:left;padding:0px 20px;line-height:28px;font-weight:bold;color:#3c3b3b; font-size:14px; border-bottom:#ee9922 4px solid;}
+.con04 .img{ width:150px; height:150px; border:#000000 1px solid; margin:10px auto;}
+.con04 .img img{ width:100%;}

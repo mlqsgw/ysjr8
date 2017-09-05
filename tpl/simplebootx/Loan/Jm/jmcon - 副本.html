@@ -1,0 +1,33 @@
+<tc_include file="inc/header"/>
+<link href="__TMPL__Public/css/jiameng.css" rel="stylesheet" type="text/css" />
+
+<div class="kehu_wrap" style="margin-top:10px;">
+ <div class="kehu_contact">
+   <div class="kehu_biaoti">
+     <span>联系我们</span>
+   </div>
+   <div class="contact_con">
+     <P>公司电话：{$jm.jm_phone}</P>
+     <P>公司传真：{$jm.jm_cz}</P>
+     <P>公司信箱： {$jm.jm_email}</P>
+     <P>公司地址： {$jm.jm_dz}</P>
+   </div>
+ </div>
+ <div class="kehu_con">
+   <div class="con_biaoti">
+     公司简介
+   </div>
+   <div class="con_info">
+    {$jm.jm_small}
+   </div>
+   <div class="con_biaoti">
+     业务介绍
+   </div>
+   <div class="con_info">
+   {$jm.jm_con}
+   </div>
+ </div>
+ <div class="clear"></div>
+</div>
+
+<tc_include file="inc/footer" />

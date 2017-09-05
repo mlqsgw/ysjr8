@@ -1,0 +1,254 @@
+<tc_include file="inc/header"/>
+
+
+<!----------------------头部结束--------------------------------->
+    <!------------这里定义自己的CSS样式------>
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/loan.css" />
+<div class="blank"></div>
+<div class="wrap clearfix">
+
+           <div class="sidebar-panels">
+               <div class="condition-head"> <span class="info">申请条件</span> </div>
+               <ul class="loan-condition">
+                 <li>1. 具有中国国籍（不含港澳台居民）</li>
+                 <li>2. 21~55周岁</li>
+                 <li>3. 税后收入3000元以上</li>
+               </ul>
+           </div>
+
+               <div class="calculator-head"> <span class="info">借款计算器</span> </div>
+               <div class="calculator-body">
+                   <form class="form-horizontal">
+                       <div class="control-group">
+                           <label class="control-label" for="calculator_loan_amount">借款金额：</label>
+                           <div class="controls"> 
+                               <span class="input-wrap">
+                                   <input class="f-input f-input90" id="calculator_loan_amount" value="" type="text">
+                               </span> 
+                               <span class="unit">万元</span> 
+                           </div>
+                       </div>
+                       <div class="control-group">
+                           <label class="control-label">标类型：</label>
+                           <div class="controls">
+                               <select id="types">
+								<foreach name="content" item="vo">
+                                   <option value="{$vo.id}">{$vo.cat_name}</option>
+								</foreach>
+                               </select>
+                           </div>
+                       </div>
+					   
+                       <div class="control-group">
+                           <label class="control-label">借款期数：</label>
+                           <div class="controls">
+							<foreach name="content" item="vo" key="k">
+                               <select id="loantime{$vo.id}" class="loantime" style="<if condition='$k neq 0'>display:none; </if>">
+								<for start="$vo['borrowing_time_shortest']" end="$vo['borrowing_time_longest']+1" step="1" name="borrowing_time" >
+									<option value="{$borrowing_time}"> {$borrowing_time}个月</option>
+								</for>
+                               </select>
+							</foreach>
+                           </div>
+                       </div>
+					   
+                       <div class="control-group">
+                           <label class="control-label">还款方式：</label>
+                           <div class="controls">
+							<foreach name="content" item="vo" key="k">
+								<php>
+									  $payback=unserialize($vo['payback']);
+								</php>
+                               <select id="loantype{$vo.id}" class="loantype" style="<if condition='$k neq 0'>display:none; </if>">
+									<foreach name="payback" item="paybackvo">
+										  <option value="{$key}" >{$payback[$key]}</option>
+									</foreach>
+                               </select>
+							</foreach>
+                           </div>
+                       </div>
+                       <div class="control-group">
+                           <label class="control-label" for="calculator_loan_amount">年利率：</label>
+                           <div class="controls"> 
+                               <span class="input-wrap">
+                                   <input class="f-input f-input60" value="" name="rate" id="apr" type="text">&nbsp;%
+                               </span> 
+                               <p class="unit">（年利率请在{$Think.config.sys_loans_lowest_apr}%到{$Think.config.sys_loans_highest_apr}%之间） </p> 
+                           </div>
+                       </div>
+                       <div class="control-group">
+                           <label class="control-label"></label>
+                           <div class="controls"> 
+                               <a href="#;" class="btns btn-info" id="calculateBtn">开始计算</a>                         
+                           </div>
+                       </div> 
+				</select>
+                   </form>
+                   <div class="calculator-result">
+                       <h2>计算结果<span>（仅供参考）</span></h2>
+                       <p>还款总额：<span class="amount" id="totalRepayAmount">￥0.00</span>元</p>
+                       <p>还款利息：<span class="amount" id="monthlyRepayAmount">￥0.00</span>元</p>
+                   </div>
+               </div>
+
+
+</div>
+
+<script type="text/javascript">
+	$("#types").change(function(){
+		var types = $("#types").val();
+		$(".loantype").css("display","none");
+		$("#loantype"+types).css("display","block");
+		$(".loantime").css("display","none");
+		$("#loantime"+types).css("display","block");
+	});
+	$("#calculateBtn").click(function(){
+			var re = /^[1-9][0-9]*$/;  
+			var line = $.trim($("#calculator_loan_amount").val());
+			if(line=="" || !re.test(line)){
+				alert("请正确输入借款金额！");
+				return false;
+			}
+			var min_rate = "{$Think.config.sys_loans_lowest_apr}";//最小借率
+			var max_rate = "{$Think.config.sys_loans_highest_apr}";//最大借率
+			if($.trim($('#apr').val())=="" || !re.test($('#apr').val()) || parseInt($('#apr').val()) > max_rate || parseInt($('#apr').val()) < min_rate){
+				alert("请正确输入年利率！");
+				return false;
+			}
+			var query = new Object();
+			var typeid = $("#types").val();//标类型
+			query.loantype = $("#loantype"+typeid).val();//还款方式
+			query.apr = $("#apr").val();//年利率
+			var borrowamount = $("#calculator_loan_amount").val();//借款金额
+			query.borrowamount = borrowamount*10000;
+			query.repaytime = $("#loantime"+typeid).val();//借款时间
+
+			$.ajax({
+				url:"{:U('Loan/Borrow/countRate')}",
+				data:query,
+				type:"post",
+				dataType:"json",
+				success:function(result){
+					if(result.status==1)
+					{
+						var count = result.info + query.borrowamount;
+						$("#monthlyRepayAmount").html(" ￥"+result.info);
+						$("#totalRepayAmount").html(" ￥"+count);
+					}
+
+				},
+				error:function(){
+					alert("发生错误");
+				}
+			});
+	});
+	
+		$("#J_save_deal_form").submit(function(){
+			if(!checkSaveDealForm()){
+				return false;
+			}else{
+				return true;
+			}
+		});
+
+
+	function checkSaveDealForm(){
+
+        var re = /^[1-9][0-9]*$/;  
+		var line = $.trim($("#loanAmount").val());
+		if(line=="" || !re.test(line) || parseInt(line)<1 || parseInt(line)>30){
+			$.showErr("请正确输入借款金额",function(){
+				$("#J_save_deal_form #loanAmount").focus();
+			});
+			return false;
+		}
+		
+		if($.trim($("#J_save_deal_form #name").val())==""){
+			$.showErr("请输入真实姓名",function(){
+				$("#J_save_deal_form #name").focus();
+			});
+			return false;
+		}
+		
+        var res = /^(1(([35][0-9])|(47)|[8][0126789]))\d{8}$/;  
+		var phone = $.trim($("#phone").val());
+		if(phone=="" || !res.test(phone)){
+			$.showErr("请正确输入手机号码",function(){
+				$("#J_save_deal_form #phone").focus();
+			});
+			return false;
+		}
+		
+        var res = /^[_.0-9a-z-]+@([0-9a-z][0-9a-z-]+.)+[a-z]{2,3}$/;  
+		var email = $.trim($("#email").val());
+		if(email=="" || !res.test(email)){
+			$.showErr("请正确输入电子邮箱",function(){
+				$("#J_save_deal_form #email").focus();
+			});
+			return false;
+		}
+		var re = /^[0-9]{17}[0-9|x|X]$/; 
+		var certId = $.trim($("#certId").val());
+		if(certId=="" || !re.test(certId)){
+			$.showErr("请正确输入身份证号",function(){
+				$("#J_save_deal_form #certId").focus();
+			});
+			return false;
+		}
+		
+		var s_province = $.trim($("#s_province").val());
+		var s_city = $.trim($("#s_city").val());
+		var s_county = $.trim($("#s_county").val());
+		if((s_province="台湾省" && s_city=="地级市")||(s_province !="台湾省" && s_county=="市、县级市")){
+			$.showErr("请正确输入居住城市");
+			return false;
+		}
+		
+
+		if($.trim($("#J_save_deal_form #cityBeginDate").val())==""){
+			$.showErr("请输入城市起始居住时间",function(){
+				$("#J_save_deal_form #cityBeginDate").focus();
+			});
+			return false;
+		}
+		if($.trim($("#J_save_deal_form #cityBeginDates").val())==""){
+			$.showErr("请输入住宅起始居住时间",function(){
+				$("#J_save_deal_form #cityBeginDates").focus();
+			});
+			return false;
+		}
+		if($.trim($("#J_save_deal_form #cityBeginDatess").val())==""){
+			$.showErr("请输入工作起始时间",function(){
+				$("#J_save_deal_form #cityBeginDatess").focus();
+			});
+			return false;
+		}
+        var re = /^[1-9][0-9]*$/;  
+		var debitIncome = $.trim($("#debitIncome").val());
+		if(debitIncome=="" || !re.test(debitIncome)){
+			$.showErr("请正确输入每月税后银行卡收入",function(){
+				$("#J_save_deal_form #debitIncome").focus();
+			});
+			return false;
+		}
+        var re = /^[1-9][0-9]*$/;  
+		var cashIncome = $.trim($("#cashIncome").val());
+		if(cashIncome=="" || !re.test(cashIncome)){
+			$.showErr("请正确输入每月税后现金收入",function(){
+				$("#J_save_deal_form #cashIncome").focus();
+			});
+			return false;
+		}
+
+		return true;
+	}
+	
+	
+</script>
+
+<!----------------------尾部开始--------------------------------->
+              
+	</div>
+	 <div class="blank"></div>
+
+<tc_include file="inc/footer" />

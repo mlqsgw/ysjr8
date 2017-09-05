@@ -1,0 +1,61 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('User/Reviewadmin/index',array('mid'=>$mid))}">返回{$modelname}列表</a></li>
+     <li class="active"><a href="">添加资料</a></li>
+  </ul>
+  
+  <div class="table_full">
+  		 <form class="form-horizontal J_ajaxForm" action="{:U('User/Reviewadmin/add',array('mid'=>$mid,'act'=>'search'))}" method="post" id="myform">
+         <table width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <th width="180">用户名称/用户id</th>
+          <td>
+         		<input type="text" name="userInfo" value="" placeholder="请输入用户名称活id" >
+                <input type="submit" value="搜索" >
+                
+          </td>
+        </tr>
+        <if condition="$searchInfo neq '' and $userlist eq ''">
+        <tr>
+        	<td colspan="2" align="center">没有搜到<font color="#FF0000">{$searchInfo}</font>相关用户信息</td>
+        </tr>
+        </if>
+      </table>
+  		</form>
+  
+  </div>
+  
+  <if condition="$userlist neq ''">
+  <form class="form-horizontal J_ajaxForm" action="{:U('User/Reviewadmin/add',array('mid'=>$mid,'act'=>'insert'))}" method="post" id="myform">
+  <div class="table_full">
+  	
+      <table width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <th width="180">用户名称</th>
+          <td>
+          		<select name="u_id">
+          			<volist name="userlist" id="vo">
+                    	<option value="{$vo.id}">{$vo.user_login}</option>
+                    </volist>	
+                    
+                </select>
+          </td>
+        </tr>
+      </table>
+      {$addtemp}
+      
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+    </div>
+    </form>
+</div>
+</if>
+<script src="__ROOT__/statics/js/common.js"></script>
+  <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+</body>
+</html>

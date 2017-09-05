@@ -1,0 +1,108 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('Loan/Indexadmin/index')}"">贷款类型列表</a></li>
+     <li ><a href="{:U('Loan/Indexadmin/add')}">添加新类型</a></li>
+      <li class="active"><a href="#">编辑类型</a></li>
+  </ul>
+
+        <form class="form-horizontal J_ajaxForm" action="{:U('Loan/Indexadmin/edit',array('id'=>$res['id']))}" method="post" id="myform">
+
+
+  <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+        <tr>
+          <th width="180">贷款类型名称:</th>
+          <td><input type="text" name="cat_name" value="{$res.cat_name}" class="input" ></input><span class="must_red">*</span></td>
+        </tr>
+          <tr>
+              <th width="180">简短说明:</th>
+              <td> <textarea name="introduction">{$res.introduction}</textarea></td>
+          </tr>
+          <tr>
+              <th width="180">贷款说明文章:</th>
+              <td>
+                  <select name="terms_id" >
+                      <option value="0">请选择文章</option>
+                      <foreach name="article" item="arvo">
+                          <option value="{$arvo.id}" <eq name="arvo.id" value="$res['terms_id']">selected</eq>  >{$arvo.post_title}</option>
+                      </foreach>
+                  </select>
+                  <span class="must_red">*</span>
+              </td>
+          </tr>
+          <tr>
+              <th width="180">成交服务费:</th>
+              <td><input type="text" name="borrow_success_fee" value="{$res.borrow_success_fee}" class="input" ></input><span class="must_red">* (% 0为没有)</span></td>
+          </tr>
+          <tr>
+              <th width="180">借款最长日期:</th>
+              <td><input type="text" name="borrowing_time_longest" value="{$res.borrowing_time_longest}" class="input" ></input><span class="must_red">* (月)</span></td>
+         </tr>
+          <tr>
+              <th width="180">借款最短日期:</th>
+              <td><input type="text" name="borrowing_time_shortest" value="{$res.borrowing_time_shortest}" class="input" ></input><span class="must_red">* (月)</span></td>
+          </tr>
+          <tr>
+              <th width="180">筹标期限:</th>
+              <td><input type="text" name="deadline" value="{$res.deadline}" class="input" ></input><span class="must_red">* (天)</span></td>
+          </tr>
+
+          <tr>
+              <th width="180">借款金额上限:</th>
+              <td><input type="text" name="amount" value="{$res.amount}" class="input" ></input><span class="must_red">* (元)</span></td>
+          </tr>
+          <php>
+
+              $audit=unserialize($res['audit']);
+              $review=unserialize($res['review']);
+              $paybacked=unserialize($res['payback']);
+
+          </php>
+          <tr>
+              <th width="180">还款方式:</th>
+              <td>
+                  <foreach name="payback" item="paybackvo">
+                      <label style="display: inline-block;margin-right: 10px;" for="paybackvo{$paybackvo.id}"><input type="checkbox" {:checked($paybackvo['value'], $paybacked)} id="paybackvo{$paybackvo.id}" name="payback[{$paybackvo.value}]" value="{$paybackvo.name}"/>{$paybackvo.name}</label>
+                  </foreach>
+
+              </td>
+          </tr>
+          <tr>
+              <th width="180">认证状态</th>
+              <td>
+                  <label style="display: inline-block;margin-right: 10px;" for="audit1"><input type="checkbox" id="audit1" name="audit[]" value="1"  {:checked(1, $audit)}  />手机认证</label>
+                  <label style="display: inline-block;margin-right: 10px;" for="audit2"><input type="checkbox" id="audit2"  name="audit[]" value="2"  {:checked(2, $audit)}  />邮箱认证</label>
+                  <label style="display: inline-block;margin-right: 10px;" for="audit3"><input type="checkbox"  id="audit3" name="audit[]" value="3"  {:checked(3, $audit)}  />实名认证</label>
+                  <!--<label style="display: inline-block;margin-right: 10px;" for="audit4"><input type="checkbox" id="audit4"  name="audit[]" value="4"  {:checked(4, $audit)}  />视频认证</label>
+                  <label style="display: inline-block;margin-right: 10px;" for="audit5"><input type="checkbox" id="audit5"  name="audit[]" value="5"  {:checked(5, $audit)} />现场认证</label>-->
+               </td>
+          </tr>
+          <tr>
+              <th width="180">必要申请资料:</th>
+              <td>
+                  <foreach name="Review" item="revo">
+                   <label style="display: inline-block;margin-right: 10px;" for="Review{$revo.id}">
+                       <input type="checkbox" name="review[]" id="Review{$revo.id}"   value="{$revo.id}"    {:checked($revo['id'], $review)} />{$revo.name}</label>
+                      <input type="hidden" name="review_name[{$revo.id}]" value="{$revo.name}"/>
+                  </foreach>
+              </td>
+          </tr>
+          <tr>
+              <th width="180">排序:</th>
+              <td><input type="text" name="listorder" value="{$res.listorder}" class="input" ></input><span class="must_red"></span></td>
+          </tr>
+      </table>
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="{:U("Loan/Indexadmin/index")}">返回</a>
+    </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+
+</body>
+</html>

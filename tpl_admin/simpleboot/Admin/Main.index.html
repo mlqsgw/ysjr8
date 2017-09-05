@@ -1,0 +1,50 @@
+<admintpl file="header"/>
+<style>
+.home_info li em {
+float: left;
+width: 100px;
+font-style: normal;
+}
+li {
+list-style: none;
+}
+.menu{
+   display: inline-block;
+   width: 120px;
+margin-bottom: 10px;
+}
+.xinqin {
+     margin-right: 10px;
+    }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div id="home_toptip"></div>
+  <h4 class="well">待办事务</h4>
+  <div class="home_info">
+    <ul  id="thinkcmf_notices tixin">
+        <li><span class="menu"> 借款初审</span> <span class="xinqin"><a href="javascript:open_iframe_dialog('{:U('Loan/Fristadmin/index',array('deal_status'=>0))}','借款初审');">{$frist}</a></span> <span class="menu">满标待审</span> <span  class="xinqin"><a  href="javascript:open_iframe_dialog('{:U('Loan/Fulladmin/index',array('deal_status'=>5))}','满标待审');">{$full}</a></span></li>
+        <li><span class="menu">  三人内需换 </span>  <span  class="xinqin"><a href="javascript:open_iframe_dialog('{:U('Loan/Repayadmin/index',array('status'=>1))}','三人内需换');">{$nextrepay}</a></span><span class="menu"> 预期未还借款</span>  <span  class="xinqin"><a  href="javascript:open_iframe_dialog('{:U('Loan/Repayadmin/index',array('status'=>2))}','预期未还借款');">{$yuqi}</a></span></li>
+        <li><span class="menu">  提现申请 </span>  <span  class="xinqin"><a href="javascript:open_iframe_dialog('{:U('User/Account/account_cash',array('state_id'=>0))}','提现申请');">{$user_carry}</a></span><span class="menu"> 充值待处理</span>  <span  class="xinqin"><a  href="javascript:open_iframe_dialog('{:U('User/Account/account_recharge',array('state_id'=>0))}',' 充值待处理');">{$account}</a></span></li>
+        <li><span class="menu"> 认证待审核</span>  <span  class="xinqin"><a href="javascript:open_iframe_dialog('{:U('User/Auditadmin/index')}','认证待审核');">{$audit}</a></span> 
+		<!--<span class="menu">资料待审核</span>  <span  class="xinqin"><a  href="javascript:open_iframe_dialog('{:U('User/auditadmin/autonym',array('typeid'=>2))}','资料待审核');">{$auditdate}</a></span>--></li>
+    </ul>
+  </div>
+  <h4 class="well">系统信息</h4>
+  <div class="home_info">
+    <ul>
+      <volist name="server_info" id="vo">
+        <li> <em>{$key}</em> <span>{$vo}</span> </li>
+      </volist>
+    </ul>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script> 
+<script>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+  <div class="list">
+	<div class="list_title clearfix">
+			<div <eq name='act_name' value='index'>class="cur"</eq>   ><a href="{:U('User/Myaccount/index')}">账户设置</a></div>
+			<div <eq name='act_name' value='work'>class="cur"</eq>  ><a href="{:U('User/Myaccount/work')}">工作认证</a></div>
+	</div>
+	<div class="uc_r_bl_box clearfix">
+	<div class="blank"></div>
+	<div class="tips mr10 ml10">
+		<span class="f_red b">*</span> 为必填项，所有资料均会严格保密。
+	</div>
+	<style>
+		.field{width:520px}
+	</style>
+	<div class="blank"></div>
+	<form method="post" action="{:U('User/Myaccount/work')}" name="modify">
+	<div class="inc wb">
+		<div class="inc_main">
+				<div class="t_name item_group" style="width:840px">工作信息</div>
+				<table width="840px" class="user_info_table">
+					<tr>
+						<td class="pt10">
+							
+							<div class="field office">
+								<label for="settings-office"><span class="red">*</span>单位名称</label>
+								<input type="text" value="{$office}" class="f-input" id="settings-office" name="office" size="30">
+							</div>
+							<div class="blank10"></div>
+							<div class="field jobtype">
+								<label for="settings-jobtype"><span class="red">*</span>职业状态</label>
+								<select name="jobtype" id="settings-jobtype">
+									<option value="">请选择</option>
+									<option value="工薪阶层" <eq name="jobtype" value="工薪阶层">selected="selected"</eq>>工薪阶层</option>
+									<option value="私营企业主" <eq name="jobtype" value="私营企业主">selected="selected"</eq>>私营企业主</option>
+									<option value="网络商家" <eq name="jobtype" value="网络商家">selected="selected"</eq>>网络商家</option>
+									<option value="其他" <eq name="jobtype" value="其他">selected="selected"</eq>>其他</option>
+								</select>
+							</div>	
+							<div class="blank10"></div>									
+							<div class="field">								
+								<label for="settings-region"><span class="red">*</span>工作城市</label>
+									<select class="input" id="s_province" name="s_province"></select>&nbsp;&nbsp;
+								    <select class="input" id="s_city" name="s_city" ></select>&nbsp;&nbsp;
+								    <select class="input" id="s_county" name="s_county"></select>
+								    <script src="__ROOT__/statics/js/area.js"></script>
+								    <script type="text/javascript">
+								    var natives = "{$work_city1}";
+								    if(natives){
+								    	var opt0 = ["{$work_city1}","{$work_city2}","{$work_city3}"];
+								    }
+								    _init_area();
+								    </script>
+							    
+						   		 <div id="show"></div>
+							</div>
+							<div class="blank10"></div>
+							<div class="field officetype">
+								<label for="settings-officetype"><span class="red">*</span>公司类别</label>
+								<select name="officetype" id="settings-officetype">
+									<option value="">请选择</option>
+									<option value="国家机关" <eq name="officetype" value="国家机关">selected="selected"</eq>>国家机关</option>
+									<option value="事业单位" <eq name="officetype" value="事业单位">selected="selected"</eq>>事业单位</option>
+									<option value="央企（包括下级单位）" <eq name="officetype" value="央企（包括下级单位）">selected="selected"</eq>>央企（包括下级单位）</option>
+									<option value="地方国资委直属企业" <eq name="officetype" value="地方国资委直属企业">selected="selected"</eq>>地方国资委直属企业</option>
+									<option value="世界500强（包括合资企业及下级单位）" <eq name="officetype" value="世界500强（包括合资企业及下级单位）">selected="selected"</eq>>世界500强（包括合资企业及下级单位）</option>
+									<option value="外资企业（包括合资企业）" <eq name="officetype" value="外资企业（包括合资企业）">selected="selected"</eq>>外资企业（包括合资企业）</option>
+									<option value="一般上市公司（包括国外上市）" <eq name="officetype" value="一般上市公司（包括国外上市）">selected="selected"</eq>>一般上市公司（包括国外上市）</option>
+									<option value="一般民营企业" <eq name="officetype" value="一般民营企业">selected="selected"</eq>>一般民营企业</option>
+								</select>
+							</div>
+							<div class="blank10"></div>
+							<div class="field officedomain">
+								<label for="settings-officedomain"><span class="red">*</span>公司行业</label>
+								<select name="officedomain" id="settings-officedomain">
+									<option value="">请选择</option>
+									<option value="制造业" <eq name="officedomain" value="制造业">selected="selected"</eq>>制造业</option>
+									<option value="IT" <eq name="officedomain" value="IT">selected="selected"</eq>>IT</option>
+									<option value="政府机关" <eq name="officedomain" value="政府机关">selected="selected"</eq>>政府机关</option>
+									<option value="媒体/广告" <eq name="officedomain" value="媒体/广告">selected="selected"</eq>>媒体/广告</option>
+									<option value="零售/批发" <eq name="officedomain" value="零售/批发">selected="selected"</eq>>零售/批发</option>
+									<option value="教育/培训" <eq name="officedomain" value="教育/培训">selected="selected"</eq>>教育/培训</option>
+									<option value="公共事业" <eq name="officedomain" value="公共事业">selected="selected"</eq>>公共事业</option>
+									<option value="交通运输业" <eq name="officedomain" value="交通运输业">selected="selected"</eq>>交通运输业</option>
+									<option value="房地产业" <eq name="officedomain" value="房地产业">selected="selected"</eq>>房地产业</option>
+									<option value="能源业" <eq name="officedomain" value="能源业">selected="selected"</eq>>能源业</option>
+									<option value="金融/法律" <eq name="officedomain" value="金融/法律">selected="selected"</eq>>金融/法律</option>
+									<option value="餐饮/旅馆业" <eq name="officedomain" value="餐饮/旅馆业">selected="selected"</eq>>餐饮/旅馆业</option>
+									<option value="医疗/卫生/保健" <eq name="officedomain" value="医疗/卫生/保健">selected="selected"</eq>>医疗/卫生/保健</option>
+									<option value="建筑工程" <eq name="officedomain" value="建筑工程">selected="selected"</eq>>建筑工程</option>
+									<option value="农业" <eq name="officedomain" value="农业">selected="selected"</eq>>农业</option>
+									<option value="娱乐服务业" <eq name="officedomain" value="娱乐服务业">selected="selected"</eq>>娱乐服务业</option>
+									<option value="体育/艺术" <eq name="officedomain" value="体育/艺术">selected="selected"</eq>>体育/艺术</option>
+									<option value="公益组织" <eq name="officedomain" value="公益组织">selected="selected"</eq>>公益组织</option>
+									<option value="其它" <eq name="officedomain" value="其它">selected="selected"</eq>>其它</option>
+								</select>
+							</div>
+							<div class="blank10"></div>
+							<div class="field officecale">
+								<label for="settings-officecale"><span class="red">*</span>公司规模</label>
+								<select name="officecale" id="settings-officecale">
+									<option value="">请选择</option>
+									<option value="10人以下" <eq name="officecale" value="10人以下">selected="selected"</eq>>10人以下</option>
+									<option value="10-100人" <eq name="officecale" value="10-100人">selected="selected"</eq>>10-100人</option>
+									<option value="100-500人" <eq name="officecale" value="100-500人">selected="selected"</eq>>100-500人</option>
+									<option value="500人以上" <eq name="officecale" value="500人以上">selected="selected"</eq>>500人以上</option>
+								</select>
+							</div>
+							<div class="blank10"></div>
+							<div class="field position">
+								<label for="settings-position"><span class="red">*</span>职位</label>
+								<input value="{$position}" class="f-input" name="position" id="settings-position">
+							</div>
+							<div class="blank10"></div>
+							<div class="field salary">
+								<label for="settings-salary"><span class="red">*</span>月收入</label>
+								<select name="salary" id="settings-salary">
+									<option value="">请选择</option>
+									<option value="1000元以下" <eq name="salary" value="1000元以下">selected="selected"</eq>>1000元以下</option>
+									<option value="1001-2000元" <eq name="salary" value="1001-2000元">selected="selected"</eq>>1001-2000元</option>
+									<option value="2000-5000元" <eq name="salary" value="2000-5000元">selected="selected"</eq>>2000-5000元</option>
+									<option value="5000-10000元" <eq name="salary" value="5000-10000元">selected="selected"</eq>>5000-10000元</option>
+									<option value="10000-20000元" <eq name="salary" value="10000-20000元">selected="selected"</eq>>10000-20000元</option>
+									<option value="20000-50000元" <eq name="salary" value="20000-50000元">selected="selected"</eq>>20000-50000元</option>
+									<option value="50000元以上" <eq name="salary" value="50000元以上">selected="selected"</eq>>50000元以上</option>
+								</select>
+							</div>
+							<div class="blank10"></div>
+							<div class="field workyears">
+								<label for="settings-workyears"><span class="red">*</span>现单位工作年限</label>
+								<select name="workyears" id="settings-workyears">
+									<option value="">请选择</option>
+									<option value="1年（含）以下" <eq name="workyears" value="1年（含）以下">selected="selected"</eq>>1年（含）以下</option>
+									<option value="1-3年（含）" <eq name="workyears" value="1-3年（含）">selected="selected"</eq>>1-3年（含）</option>
+									<option value="3-5年（含）" <eq name="workyears" value="3-5年（含）">selected="selected"</eq>>3-5年（含）</option>
+									<option value="5年以上" <eq name="workyears" value="5年以上">selected="selected"</eq>>5年以上</option>
+								</select>
+							</div>
+							<div class="blank10"></div>
+							<div class="field workphone">
+								<label for="settings-workphone"><span class="red">*</span>公司电话</label>
+								<input type="text" value="{$workphone1}" class="f-input f_l f-input60" id="frphone" onkeyup="setPhone();" onblur="setPhone();">
+								<span class="f_l">&nbsp;-&nbsp;</span>
+								<input type="text" value="{$workphone2}" class="f-input f_l" id="numphone" onkeyup="setPhone();" onblur="setPhone();">
+								<input type="hidden" value="{$workphone}" name="workphone" id="workphone">
+							</div>
+							<div class="blank10"></div>
+							<div class="field workemail">
+								<label for="settings-workemail"><span class="red">*</span>工作邮箱</label>
+								<input type="text" class="f-input" value="{$workemail}" name="workemail" id="settings-workemail">
+							</div>
+							<div class="blank10"></div>
+							<div class="field officeaddress">
+								<label for="settings-officeaddress"><span class="red">*</span>公司地址</label>
+								<input type="text" class="f-input f-input220" value="{$officeaddress}" name="officeaddress" id="settings-officeaddress">
+							</div>
+							<div class="blank10"></div>
+						</td>
+					</tr>
+					
+				</table>
+				<div class="blank10"></div>
+				<div class="t_name item_group" style="width:840px">直系亲属联系人<span style="font-weight:normal">（在您贷款成功后，我们会通过电话核实您的紧急联系人信息）</span></div>
+				<table width="840px" class="user_info_table">
+					<tr>
+						<td class="pt10">
+							<div class="field urgentcontact">
+								<label for="settings-urgentcontact"><span class="red">*</span>姓名</label>
+								<input type="text" class="f-input" value="{$urgentcontact}" name="urgentcontact" id="settings-urgentcontact">
+							</div>
+							<div class="blank10"></div>
+							<div class="field urgentrelation">
+								<label for="settings-urgentrelation"><span class="red">*</span>关系</label>
+								<input type="text" class="f-input" value="{$urgentrelation}" name="urgentrelation" id="settings-urgentrelation">
+							</div>
+							<div class="blank10"></div>
+							<div class="field urgentmobile">
+								<label for="settings-urgentmobile"><span class="red">*</span>手机</label>
+								<input type="text" class="f-input" value="{$urgentmobile}" name="urgentmobile" id="settings-urgentmobile">
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div class="blank10"></div>
+				<div class="t_name item_group" style="width:840px">其他联系人</div>
+				<table width="840px" class="user_info_table">
+					<tr>
+						<td class="pt10">
+							<div class="field urgentcontact2">
+								<label for="settings-urgentcontact2"><span class="red">*</span>姓名</label>
+								<input type="text" class="f-input" value="{$urgentcontact2}" name="urgentcontact2" id="settings-urgentcontact2">
+							</div>
+							<div class="blank10"></div>
+							<div class="field urgentrelation2">
+								<label for="settings-urgentrelation2"><span class="red">*</span>关系</label>
+								<input type="text" class="f-input" value="{$urgentrelation2}" name="urgentrelation2" id="settings-urgentrelation2">
+							</div>
+							<div class="blank10"></div>
+							<div class="field urgentmobile2">
+								<label for="settings-urgentmobile2"><span class="red">*</span>手机</label>
+								<input type="text" class="f-input" value="{$urgentmobile2}" name="urgentmobile2" id="settings-urgentmobile2">
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div class="blank"></div>
+				<div class="clearfix b" style="padding: 10px 90px">请确保您填写的资料真实有效，所有资料将会严格保密。一旦被发现所填资料有虚假，将会影响您在p2p信贷的信用，对以后借款造成影响。</div>
+					
+				<div class="blank"></div>
+				<div class="act mt10 mb10 tc">
+						<input type="hidden" value="{$uid}" name="uid" />
+						<input type="submit" class="sub_btn" id="settings-submit" name="commit" value="保存">
+				</div>
+				<div class="blank"></div>
+		</div>
+		<div class="inc_foot"></div>
+	</div>
+	</form>
+	</div>
+</div>
+
+</div>
+<script type="text/javascript">
+function setPhone(){
+	var frphone = $.trim($("#frphone").val());
+	var numphone = $.trim($("#numphone").val());
+	if(frphone!=""&&numphone!=""){
+		$("#workphone").val(frphone+"-"+numphone);
+	}
+	else{
+		$("#workphone").val("");
+	}
+} 
+</script>
+<div class="blank"></div>
+</block>

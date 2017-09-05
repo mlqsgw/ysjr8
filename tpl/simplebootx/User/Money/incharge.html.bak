@@ -1,0 +1,156 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Money/menu" />
+	</div>
+	<div class="u_incharge uc_r_bl_box clearfix pt10">
+			<div class="prompt">
+				<p><i></i>即时充值所产生的转账费用，以100元为上限，按转账金额0.5%，通过第三方平台收取。</p>
+				<p><i></i>请注意您的银行卡充值限制，以免造成不便。 <br> <i></i>如果充值金额没有及时到账，请和客服联系。</p>
+			</div>
+			<div class="blank1"></div>
+			<div  class="uc-table">
+					<div class="sect cf">			
+						<div class="bdl clearfix">
+							<div class="way clearfix">
+								<div class="t_name f_l w90">充值方式：</div>
+								<label class="f_l">
+									<input class="f-check" id="xiansh" type="radio" name="check_ol_bl_pay" value="0" onclick="SelectPayTypes(0);" checked="checked">
+									线上支付
+								</label>
+								<!--<label class="f_l">
+									<input class="f-check" id="xianx" type="radio" name="check_ol_bl_pay" value="1" onclick="SelectPayTypes(1);">
+									线下支付
+								</label>-->
+							</div>
+							<div id="shangx">
+								<form name="incharge_form" id="incharge_form" action="{:U('User/Guofubao/post')}" method="post" target="_blank" />
+									<div class="m_number clearfix">				        	        	
+							        	<div class="t_name f_l w70" style="float:left;">充值金额：</div>
+										<input type="text" class="f-input f_l" style="padding-left:10px;" id="money" name="money" />元
+									</div>
+									<div class="J_online">
+										<div  class="t_name f_l w80">支付方式：</div>
+											<div  id="J_online_pay" class="clearfix" style="text-align: right; padding-left:81px ">
+						                             <foreach name="config" item="payvo">
+						                                 <div style="float:left;"><input type="radio" name="payment" value="{$payvo.id}">&nbsp;{$payvo.name}</div>
+
+						                                 <div style="float:left;"><input type="radio" name="payment" value="国付宝">&nbsp;国付宝</div>
+						                             </foreach>
+											</div>
+									</div>
+									<div class="pay_btn">
+										<input type="submit" id="incharge_done" value="确定充值" class="sub_btn">
+									</div>
+								</form>	
+							</div>
+							<div id="xiax" style="display:none;">
+								<form name="incharge_form" id="incharge_form" action="{:U('User/Money/index',array('act'=>'incharge'))}" method="post" />
+									<div class="m_number clearfix">				        	        	
+							        	<div class="t_name f_l w70" style="float:left;">充值金额：</div>
+										<input type="text" class="f-input f_l" id="money" name="money" />元
+									</div>
+									<div class="m_number clearfix">				        	        	
+							        	<div class="t_name f_l w80" style="float:left;">银行流水号：</div>
+										<input type="text" class="f-input f_l" id="money" value="" name="memo" />
+									</div>
+									
+										<div class="J_online clearfix">
+											<div class="t_name f_l w80" style="float:left;">充值银行：</div>
+											<div class="f_l">
+												<foreach name="pay" item="paytype">
+													<div class="clearfix">
+														<label class="f_l w140">
+															<input type="radio" value="{$paytype.id}" name="payment">{$paytype.name}
+														</label>
+														<div class="f_l obitem">收款人：{$paytype.config.receiver}  |  收款帐号：{$paytype.config.account}  |  开户行：{$paytype.config.subname}</div>
+													</div>
+												</foreach>
+												<div class="blank"></div>
+											</div>
+										</div>
+										
+										<div class="m_number clearfix">				        	        	
+								        	<div class="t_name f_l w70" style="float:left;">验证码：</div>
+											<input type="text" class="f-input f_l" id="money" value="" name="verify" />
+											{:sp_verifycode_img('code_len=4&font_size=15&width=100&height=35&charset=1234567890')}
+										</div>
+										<div class="pay_btn">
+											<input type="submit" id="incharge_done" value="确定充值" class="sub_btn">
+										</div>	
+									</form>
+								</div>
+								<script type="text/javascript">
+									/*function set_bank(bank_id){$("input[name='bank_id']").val(bank_id);}*/
+									
+								</script>
+								<div class="blank"></div>
+					</div>
+					<!--end sect-->
+				
+			</div>				
+		</div>
+
+	</div>
+	<div class="inc_foot"></div>
+</div>
+<script type="text/javascript">
+		SelectPayTypes(0);
+		function SelectPayTypes(id){
+			if(id){
+				$("#shangx").css("display","none");
+				$("#xiax").css("display","block");
+				$("#xianx").attr("checked", true);
+			}else{
+				$("#shangx").css("display","block");
+				$("#xiax").css("display","none");
+				$("#xiansh").attr("checked", true);
+			}
+		}
+		
+
+		$("#incharge_done").click(function(){
+			if($("input[name='check_ol_bl_pay']:checked").val()==0)
+			{
+				if(!($("input[name='money']").val()!=''&&!isNaN($("input[name='money']").val())&&$("input[name='money']").val()>0))			
+				{
+					$.showErr("请输入正确的充值金额",function(){
+						$("input[name='money']").focus();
+					});
+					return false;
+				}
+			}else{
+				if(!($("input[name='money']").val()!=''&&!isNaN($("input[name='money']").val())&&$("input[name='money']").val()>0))			
+				{
+					$.showErr("请输入正确的充值金额",function(){
+						$("input[name='money']").focus();
+					});
+					return false;
+				}
+				if($("input[name='memo']").val()==''){
+					$.showErr("请输入正确的银行流水号",function(){
+						$("input[name='memo']").focus();
+					});
+					return false;
+				}
+				if($("input[name='verify']").val()==''){
+					$.showErr("请输入正确的验证码",function(){
+						$("input[name='verify']").focus();
+					});
+					return false;
+				}
+			}
+			
+			if(!$("input[name='payment']:checked").val())
+			{
+				$.showErr("请选择支付方式");
+				return false;
+			}
+		});
+</script></div>
+
+<div class="blank"></div>
+
+</block>
+

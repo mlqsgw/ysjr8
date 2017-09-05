@@ -1,0 +1,98 @@
+<admintpl file="header"/>
+ <link rel="stylesheet" href="__ROOT__/down/bjq/themes/default/default.css" />
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+  <ul class="nav nav-tabs">
+    <li class="active"><a>添加客户</a></li>
+  </ul>
+  <div class="common-form">
+
+    <form action="__URL__/upload" method="post" id="myform" name="myform" enctype="multipart/form-data">
+      <div class="table_list">
+        <table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+          <tbody>
+            <tr>
+              <td width="180">客户名称:</td>
+              <td><input type="text" class="input" name="jm_title" value="{$jm.jm_title}"></td>
+            </tr>
+            <tr>
+              <td width="180">电话:</td>
+              <td><input type="text" class="input" name="jm_phone" value="{$jm.jm_phone}"></td>
+            </tr>
+            <tr>
+              <td width="180">传真:</td>
+              <td><input type="text" class="input" name="jm_cz" value="{$jm.jm_cz}"></td>
+            </tr>
+            <tr>
+              <td width="180">邮箱:</td>
+              <td><input type="text" class="input" name="jm_email" value="{$jm.jm_email}"></td>
+            </tr>
+            <tr>
+              <td width="180">地址:</td>
+              <td><input type="text" class="input" name="jm_dz" value="{$jm.jm_dz}"></td>
+            </tr>
+            <tr>
+              <td width="180">图片:</td>
+              <td><input type="file" class="input" name="jm_img" ></td>
+            </tr>
+            <tr>
+              <td >简介:</td>
+              <td><textarea name="jm_small" id="textarea" cols="45" rows="5">{$jm.jm_small}</textarea></td>
+            </tr>
+            <tr><input type="hidden" name="id" value="{$jm.jm_id}">
+            	<input type="hidden" name="isedit" value="1">
+              <td width="180">内容:</td>
+              <td><script charset="utf-8" src="__ROOT__/down/bjq/kindeditor-min.js"></script>
+		<script charset="utf-8" src="__ROOT__/down/bjq/lang/zh_CN.js"></script>
+		<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="jm_con"]', {
+					allowFileManager : true
+				});
+				K('input[name=getHtml]').click(function(e) {
+					alert(editor.html());
+				});
+				K('input[name=isEmpty]').click(function(e) {
+					alert(editor.isEmpty());
+				});
+				K('input[name=getText]').click(function(e) {
+					alert(editor.text());
+				});
+				K('input[name=selectedHtml]').click(function(e) {
+					alert(editor.selectedHtml());
+				});
+				K('input[name=setHtml]').click(function(e) {
+					editor.html('<h3>Hello KindEditor</h3>');
+				});
+				K('input[name=setText]').click(function(e) {
+					editor.text('<h3>Hello KindEditor</h3>');
+				});
+				K('input[name=insertHtml]').click(function(e) {
+					editor.insertHtml('<strong>插入HTML</strong>');
+				});
+				K('input[name=appendHtml]').click(function(e) {
+					editor.appendHtml('<strong>添加HTML</strong>');
+				});
+				K('input[name=clear]').click(function(e) {
+					editor.html('');
+				});
+			});
+		</script>
+        <textarea name="jm_con" style="width:300px;height:300px;visibility:hidden;">{$jm.jm_con}</textarea></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="form-actions">
+      <input type="submit" name="sub"value="提交">
+      
+            
+      </div>
+    </form>
+  </div>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

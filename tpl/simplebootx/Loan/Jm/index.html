@@ -1,0 +1,54 @@
+
+<tc_include file="inc/header"/>
+
+<link href="__TMPL__Public/css/jiameng.css" rel="stylesheet" type="text/css" />
+
+<div class="jiamengwrap" style="margin-top:20px; z-index:1;" >
+  
+  
+    
+        <div class="inc" style=" width:232px; float:left">
+        <div class="inc_main cf">
+            <div class="relate_help clearfix">
+                <dl class="bdd" >
+                        <dt >加入帮助
+                        </dt>
+                        
+                         <volist name="bz" id="vo">
+                                <dd><a href="{:U('portal/article/index',array('id'=>$vo['tid'],'tid'=>10))}">{$vo.post_title}</a></dd>
+                          </volist>							
+                </dl>
+            </div>
+        </div>	
+        </div>
+
+   
+  
+  <div class="jiamengkehu" >
+    
+     <volist name='jm' id='jm'>
+         <div class="kehu_info" style="border-right:1px solid #f0f0f0;">
+            <div class="kehu_logo">
+             <span><img src="__ROOT__/Uploads{$jm.jm_img}" /></span>
+            </div>
+            <div class="kehu_jianjie">
+              <h4>{$jm.jm_title}</h4>
+              <p><?php echo mb_substr($jm['jm_small'],0,40,'utf-8'); if(mb_strlen($jm['jm_small'],'utf-8')>30){ echo "..."; } ?></p>
+              <a href="__URL__/jmcon/id/{$jm.jm_id}">查看详情 </a>
+            </div>
+            <div class="clear"></div>
+         </div>
+     
+     </volist>
+      <div style="position:absolute; bottom:0px; left:50%; ">
+      <ul class="pagination">
+         {$page}
+      </ul>
+      </div>
+     <div class="clear"></div>
+  </div>
+  
+  
+</div>
+</div>
+<tc_include file="inc/footer" />

@@ -1,0 +1,126 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('user/Reviewtypeadmin/field',array('mid'=>$mid))}">字段列表</a></li>
+     <li  class="active"><a href="{:U('user/Reviewtypeadmin/addfield',array('mid'=>$mid))}">添加字段</a></li>
+  </ul>
+  <form class="J_ajaxForm" action="{:U('user/Reviewtypeadmin/addfield')}" method="post">
+    <div class="table_list">
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="A">
+                <table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+                    <tbody>
+                    <tr>
+                        <td width="180">字段：</td>
+                        <td>
+                            <input type="text" class="input" name="field" value=""><span class="must_red">*&nbsp;&nbsp; 小写字母(a-z),数字(0-9) 推荐使用字母,不能以数字开头</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>字段名称：</td>
+                        <td><input type="text" class="input" name="name" value="{$site_host}"><span class="must_red">* &nbsp;&nbsp;建议使用使用中文</span></td>
+                    </tr>
+                    <tr>
+                        <td>提示信息：</td>
+                        <td><input type="text" class="input" name="prompt" value="{$site_root}"><span class="must_red"><span></td>
+                    </tr>
+                    <tr>
+                        <td>字段属性：</td>
+                        <td>
+                            <select name="attribute" onchange="dtype(this.value)">
+                                <option value="varchar">字符(varchar)</option>
+                                <option value="int">整数(int)</option>
+                                <option value="float">小数(float)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="length">
+                        <td>长度</td>
+                        <td><input type="text" id="lengthval" class="input" name="length" ></td>
+                    </tr>
+                    <tr>
+                        <td>字段类型：</td>
+                        <td>
+                            <select name="type" onchange="dhtml(this.value)">
+                                <option value="text" selected="">单行文本(text)</option>
+                                <option value="textarea">多行文本(textarea)</option>
+                                <option value="select">下拉框(select)</option>
+                                <option value="radio">单选框(radio)</option>
+                                <option value="checkbox">多选框(checkbox)</option>
+                                <option value="date">日期选择</option>
+                                <option value="thumb">图片上传</option>
+
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>默认值：</td>
+                        <td><textarea name="option_value" rows="2" cols="57">{$site_tongji}</textarea></td>
+                    </tr>
+                    <tr style="display: none" id="optval">
+                        <td>选项值：</td>
+                        <td id="defa"><textarea name="default" rows="5" id="default" cols="57" disabled="true">选项值A|选项名A*
+选项值B|选项名B*
+选项值C|选项名C*</textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="must_red">一行一个 选项值|选项名称* 注意*为结尾标志符<span></td>
+                    </tr>
+
+                    <tr>
+                        <td>显示权限设置：</td>
+                        <td>
+                            <select name="level" class="normal_select" >
+                                <option value="0" >不限制</option>
+                                <foreach name="permis" item="pvo">
+                                    <option value="{$pvo.id}" >{$pvo.name}以上可查看</option>
+                                </foreach>
+                            </select>
+                        </td>
+                    </tr>
+                    <input type="hidden" name="m_id" value="{$Think.get.mid}"/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="form-actions">
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" >提交</button>
+     </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+
+    function dhtml(v){
+        if(v=="select" || v=="radio" || v=="checkbox" ){
+            $("#default").attr("disabled",false);
+            $("#optval").show();
+        }else{
+            $("#default").attr("disabled",true);
+            $("#optval").hide();
+        }
+    }
+
+
+    function dtype(v){
+        if(v=='float'){
+            $("#lengthval").val('9,2');
+           $("#length").hide();
+
+        }else{
+            $("#lengthval").val('');
+            $("#length").show();
+        }
+    }
+</script>
+</body>
+</html>

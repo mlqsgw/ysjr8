@@ -1,0 +1,39 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a href="#">{$res.name}配置</a></li>
+  </ul>
+  <form class="J_ajaxForm" action="{:U('admin/pay/config_updata',array('id'=>$res['id']))}" method="post">
+    <div class="table_list">
+      <table width="50%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th>名称</th>
+	            <th>值</th>
+                <th>说明</th>
+	          </tr>
+        </thead>
+          <php>
+              $config=unserialize($res['config']);
+              $param=unserialize($res['param']);
+          </php>
+        	<foreach name="param" item="vo" key="key">
+	        	<tr>
+                    <td>{$key}</td>
+		            <td><input type="text" value="{$config[$key]}" name="{$key}"/></td>
+                    <td>{$vo}</td>
+	          	</tr>
+          </foreach>
+
+          </table>
+     
+    </div>
+    <div class="form-actions">
+        <button class="btn btn-primary J_ajax_submit_btn" type="submit" >提交</button>
+     </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

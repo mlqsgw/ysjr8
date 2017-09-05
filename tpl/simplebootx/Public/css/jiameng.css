@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0 auto; padding:0}
+.clear{clear:both;margin:0px;padding:0px;}
+#all{width:100%; height:auto; overflow:hidden; background-color:#fafafa; margin-left:auto; margin-right:auto;}
+.jiamengwrap{width:1099px; height:1010px; }
+.jiamengkehu{width:854px; height:1000px; float:right;border:1px solid #d9d9d9;background-color:#fff; position:relative;}
+.kehu_info{width:440px; height:134px; margin-top:30px;float:left; overflow:hidden; }
+.kehu_logo{width:132px;height:94px;line-height:94px;text-align:center; -moz-box-shadow: 2px 2px 5px #afafaf;
+    -webkit-box-shadow: 2px 2px 5px #afafaf;
+    box-shadow: 2px 2px 5px #afafaf;display:table; 
+ float:left;margin-left:30px; border:1px solid #cecece;}
+ .kehu_logo span{ 
+display:table-cell; 
+vertical-align:middle; 
+} 
+.kehu_logo img{max-width:137px; max-height:100px; } 
+
+
+.kehu_jianjie{width:250px; height:100px;padding-left:15px; float:left; }
+.kehu_jianjie h4{font-size:14px;margin-bottom:5px; display:block;}
+.kehu_jianjie p{font-size:12px; color:#666666;line-height:20px;display:block;}
+.kehu_jianjie a{font-size:12px; color:#ff6600; display:block;width:60px; height:20px; border:1px solid #ff6600; text-align:center;line-height:20px;margin-top:8px;}
+.kehu_jianjie a:hover{border:1px solid #ff3000; color:#ff3000;}
+/*翻页*/
+.fanye{width:550px; height:auto;margin:40px auto;}
+.fanye ul.pagination{width:500px;height:auto;margin:0 auto;}
+.fanye ul.pagination li{ display:block; float:left;border:1px solid #dbdbdb; margin-right:8px; }
+.fanye ul.pagination li a{ display:block;color:#5e5e5e;padding:5px 10px; }
+.fanye ul.pagination li a:hover{ background-color:#25ae90;color:#fff;}
+.fanye ul.pagination li a.current{ background-color:#25ae90;color:#fff;}
+/*翻页end*/
+
+/*加盟内容页*/
+.kehu_wrap{width:1100px; height:auto; margin:0 auto;}
+.kehu_contact{width:324px; height:360px; border:1px solid #d9d9d9;  float:left; background:#fff url(../images/pic4.png) no-repeat right bottom; overflow:hidden;}
+.kehu_biaoti{width:324px; height:49px; border-bottom:1px solid #d9d9d9; background:url(../images/pic2.png) no-repeat center top;color:#fff; font-size:18px; font-family:"微软雅黑";line-height:49px;}
+.kehu_biaoti span{margin-left:10px;}
+.contact_con{width:300px; height:auto; margin:0 auto;line-height:28px;margin-top:15px;}
+.kehu_con{width:763px; height:auto; border:1px solid #d9d9d9;min-height:600px; float:right; background:#fff url(../images/pic5.png) no-repeat right bottom;}
+.con_biaoti{width:755px;padding-left:10px; height:49px;line-height:49px; color:#fff;font-size:18px; font-family:"微软雅黑"; background:#dbd9da url(../images/pic3.png) no-repeat center left;}
+.con_info{width:740px; height:auto;min-height:100px;line-height:28px; margin:0 auto;padding-top:15px;padding-bottom:15px;}
+.con_info p{ text-indent:2em;}

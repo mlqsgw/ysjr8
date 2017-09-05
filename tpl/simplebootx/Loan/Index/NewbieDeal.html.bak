@@ -1,0 +1,216 @@
+<tc_include file="inc/header" />
+<script type="text/javascript" src="__TMPL__Public/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="__TMPL__Public/js/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/pcmain.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/deal.css" />
+	<div id="deal-default" class="clearfix">
+		<div id="deal-intro" style="border:none;">
+			<p class="pos">
+				<a href="__ROOT__/">首页</a> > <a href="{:UU('loan/index/lists')}">投资列表</a> > 借款详情
+			</p>
+		</div>
+		<div id="deal-intro" class="clearfix cf">
+			<div class="tl">
+				<div class="lf">
+					<img src="__TMPL__Public/images/<eq name="$deal.warrant" value="0">dan0.png<else/>dan1.png</eq>" width="24" height="24" />
+					<span>{$deal.cat_name}</span>
+					<!--<a href="{$deal.url}">{$deal.name}</a>-->
+				</div>
+				<!--<div class="rt detail_number"><a href="{:UU('Portal/Article/index',array('id'=>24))}" class="f_blue" onclick="javascript:window.showModalDialog('{url x="index" r="tool#contact" p="win=1"}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')" >借款协议(范本)</a></div>-->
+			</div>
+			<div class="bd">
+				<div class="bd_lf">
+					<table class="bd_1" width="100%" border="0" cellpadding="18" cellspacing="1">
+						<tbody>
+							<tr>
+								<th>借款金额(元)</th>
+								<th>年利率</th>
+								<th>还款期限(月)</th>
+								<th>风险等级</th>
+							</tr>
+							<tr>
+								<td>{$deal.borrow_amount_format}</td>
+								<td>{$deal.rate_foramt_w}</td>
+								<td>{$deal.repay_time}个月</td>
+								<td><if condition="$deal.risk_rank eq 0">低<elseif condition="$deal.rish_rank eq 1" />中<elseif condition="$deal.rish_rank eq 2"/>高</if></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bd_2">
+						<div class="lf">
+							<ul class="bd_2_lf">
+								<li>还款方式：<span>{$deal.repay_type_name}</span></li>
+								<li>剩余时间：<span>{$deal.remain_time_format}</span></li>
+								<li>
+
+                                    到期利息：<span class="f_red">{$deal.rate_money_format}</span>
+
+								</li>
+							</ul>
+							<ul class="bd_2_rt">
+								<li>借款用途：<span>{$deal.t_name}</li>
+								<li>担保范围：<span><if condition="$deal.warrant eq 1">本金<elseif condition="$deal.warrant eq 2" />本金及利息<else/>无</if></span></li>
+								<li>
+
+										到期需还本金：<span class="f_red">{$deal.borrow_amount_format}</span>
+
+
+								</li>
+							</ul>
+						</div>
+						<div class="rt">
+							<div class="f_l" style="width:183px;">
+                                <if condition="$deal.deal_status eq 0">
+                                    <img src=" __TMPL__Public/images/not_publish.png" alt="" width="134px" height="128px">
+                                    <elseif condition="($deal.deal_status eq 1) and ($deal.is_wait eq 1)"/>
+                                    <img src="__TMPL__Public/images/wait_load.png" alt="" width="113px" height="34px">
+                                <elseif condition="$deal.deal_status eq 1"/>
+                                    <img src="__TMPL__Public/images/load.png" alt="" style="cursor: pointer" onclick="javascript:window.location.href='{:UU("Loan/index/NewbieBid",array('loan_id'=>$deal['id']))}'" width="183px" height="66px">
+                                    <elseif condition="($deal.deal_status eq 3)or($deal.deal_status eq 2)or($deal.deal_status eq 6)"/>
+                                    <img src="__TMPL__Public/images/loan_writeM.png" alt="" width="134px" height="128px">
+                                    <elseif condition="($deal.deal_status eq 4)"/>
+                                    <img src="__TMPL__Public/images/load_fail.png" alt="" width="134px" height="128px">
+                                <elseif condition="$deal.deal_status eq 5"/>
+                                    <img src="__TMPL__Public/images/load_full.png" alt="" width="134px" height="128px">
+                                 <elseif condition="($deal.deal_status eq 7)or($deal.deal_status eq 8)"/>
+                                    <img src="__TMPL__Public/images/load_in_progress.png" alt="" width="134px" height="128px">
+                                <elseif condition="$deal.deal_status eq 9"/>
+                                    <img src="__TMPL__Public/images/load_done.png" alt="" width="134px" height="128px">
+                                </if>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bd_rt">
+					<div class="u_hd tc">
+						借款人档案
+					</div>
+					<!--<div class="user_face tc clearfix" style="display:block;height:80px;">
+                        <empty name="$dusers.avatar">
+                            <img src="__TMPL__Public/images/noavatar_middle.gif" alt=""/>
+                            <else/>
+                            <img src="{:sp_get_user_avatar_url($dusers['avatar'])}" alt=""/>
+                        </empty>
+					</div>-->
+					<div class="u_name tc clearfix" style="display:block;height:20px">
+						<a href="">  {$dusers.user_login}   </a>
+                        
+					</div>
+
+					<div class="row addr"><span style="padding-right: 0;">所 在 地：</span>{$dusers.location}</div>
+					<div class="row addr"><span style="padding-right: 0;">借款笔数：</span>{$user_statics.deal_count}</div>
+                    <div class="row addr"><span style="padding-right: 0;">借款笔数：</span>{$user_statics.repay_deal_count}</div>
+                    <div class="row addr"><span style="padding-right: 0;">逾期次数：</span>{$user_statics.yuqi_count}</div>
+                    <div class="row addr"><span style="padding-right: 0;">职业状态：</span>{$dusers.jobtype}</div>
+					<!--<div class="row level" title="{$u_info.point_level}"><span>信用等级：</span><a href=""><img alt="等级" src="{$dusers.score|get_user_level}" width="16" height="16"></a></div>-->
+
+					<div class="attent">
+						<ul>
+
+							<!-- <li class="u_icons reportGuy J_reportGuy" id="J_reportGuy_{$deal.user_id}" dataid="{$deal.user_id}">
+								<a href="###">举报此人</a> 
+							</li> -->
+							<!--<li class="u_icons send_msg J_send_msg" dataid="{$deal.user_id}">
+								<a href="###">发送信息</a>
+							</li>-->
+						</ul>
+					</div>
+
+				</div>
+				<div class="bd_bottom">
+
+                    <if condition="$deal.deal_status eq 9" >
+                        <span class="f_l">还款进度：</span>
+                        <div class="blueProgressBar progressBar f_l" style="border:1px solid #D13030; background:#FFC4C5">
+                            <div class="p">
+                                <div class="c" style="width: 100%;background:url('__TMPL__Public/images/progressBarBg2.png') repeat-x"></div>
+                            </div>
+                        </div>
+                    <elseif condition="$deal.deal_status gt 5"/>
+                        <span class="f_l">还款进度：</span>
+                        <div class="blueProgressBar progressBar f_l" style="border:1px solid #FDECC7; background:#FFF6E5">
+                            <div class="p">
+                                <div class="c" style="width: {$deal.repay_progress_point|round="3"}%;background:url('__TMPL__Public/images/progressBarBg2.png') repeat-x"></div>
+                            </div>
+                        </div>
+
+                        <div class="f_l" style="width: 170px; padding-left:30px">
+                            已还本息：<span class="f_red">{$deal.repay_money|format_price}元</span>
+                        </div>
+                        <div class="f_l" style="width: 160px; ">
+                            待还本息：<span class="f_red">{$deal.need_remain_repay_money|format_price}元</span>
+                        </div>
+                    <else/>
+                        <span style="float:left">投标进度：</span>
+                        <div class="blueProgressBar progressBar f_l">
+                            <div class="p">
+                                <div class="c" style="width:{$deal.progress_point}%;"></div>
+                            </div>
+                        </div>
+                        <div class="f_l">
+                        <span class="f_red">&nbsp;&nbsp;
+                        	{$deal.progress_point|round="2"}%
+                       	</span>
+                            <span class="f_red">{$deal.buy_count}</span>投标，还需 <span class="f_red">{$deal.need_money}</span>
+                        </div>
+                    </if>
+
+
+                        <div class="item f_r" style="width:auto" id="addFav">
+                            <if condition="$is_faved">
+                            已关注
+                            <else/>
+                            <a href="{:U('user/favorite/do_favorite')}" class="J_favorite_btn f_red" id="addFavLink"  data-title="{$deal.name}" data-url="{$deal.url}" data-key="{:sp_get_favorite_key('loan',$deal['id'])}">关注此标</a>
+                            </if>
+                        </div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="blank"></div>
+		<div class="blank"></div>
+		<div class="desc_inf wrap clearfix">
+	        <div class="list_title clearfix" id="J_deal_tab_select">
+	            <ul>
+	                <!--<li class="list1 right_tab_select" style="cursor:pointer;" rel="1">借入者信用信息</li>-->
+
+                    <if condition="$deal.deal_status egt 7">
+
+					<li class="list1" style="cursor:pointer;" rel="2">还款详情</li>
+					<li class="list1" style="cursor:pointer;" rel="3">债权人信息</li>
+
+                    </if>
+					<!--<li class="list1" style="cursor:pointer;" rel="4">投标记录</li>-->
+					<li  style="color: #000;height: 45px;line-height: 40px;text-align: left;font-size: 16px;font-weight: bold;float: left;padding-left:30px;">投标记录</li>
+	            </ul>
+	        </div>
+			<div class="cont clearfix" id="J_deal_tab_box">
+			
+				<if condition="$deal.deal_status  egt 7">
+                    <div class="box_view box_view_2 hide">
+                    <tc_include file="inc/deal/loan_repay_list"/>
+                    </div>
+                    <div class="box_view box_view_3 hide">
+                    <tc_include file="inc/deal/load_repay_list" />
+                    </div>
+                </if>
+				 <!--<div class="box_view box_view_4 hide">-->
+				 <div>
+	               <tc_include file="inc/deal/load_list"/>
+		        </div>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+<tc_include file="inc/footer" />
+
+
+
+								

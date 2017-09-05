@@ -1,0 +1,77 @@
+﻿<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Invest/menu" />
+	</div>
+	<div class="list_cont">
+		<div class="i_deal_list clearfix">
+		 <notempty name="lists">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr  border="0" style="background-color:#E47F2B; color:#fff; height:34px;">
+						<!--<th style="width:10%">招标ID</th>-->
+						<th style="width:15%">标题/借款人/所在地</th>
+						<th style="width:10%">我的投标金额</th>
+						<th style="width:15%">期限/利率</th>
+						<th style="width:10%">信用等级</th>
+						<th style="width:15%">进度/剩余时间</th>
+					</tr>
+					<volist name="lists" id="item" mod="2">
+					<tr class='item <eq name="mod" value="1">{$vo.name}</eq>' >
+						<!--<td>
+							<a href="{:UU('Loan/index/deal',array('id'=>$item['id']))}" target="_blank">
+	                       		{$item.id}
+	                   	 	</a>
+						</td>-->
+						<td>
+							<p style="font-weight: bold"><a target="_blank" href="{:UU('loan/index/deal',array('id'=>$item['id']))}">{$item.name}</a></p>
+	                    	<p><a href="">{$item.user_login}</a></p>
+						</td>
+						<td>
+							{$item.u_load_money|format_price}
+						</td>
+						<td>
+							{$item.repay_time}个月/
+	                        {$item.rate|number_format}%
+						</td>
+						<td>
+							<img src="{$item.score_img}" width="40" align="absmiddle" alt="{$item.point_level}" title="{$item.point_level}">
+						</td>
+						<td>
+							<div class="greenProcessBar progressBar w100" style="border:1px solid #FDECC7; background:#FFF6E5">
+		                        <div class="p"><div class="c" style="width:{$item.progress_point}%;<if condition="($item.deal_status eq 7) or ( $item.deal_status eq 8)">background:url('__TMPL__Public/images/progressBarBg2.png') repeat-x</if>"></div></div>
+		                    </div>
+							<div class="f_dgray" style="font-size:12px">
+								<if condition="$item.has_transfer gt 0">
+                                    <if condition="($item.deal_status eq 7) or ($item.deal_status eq 8)">
+                                     <p>还款： {$item.progress_point|round}%</p>
+                                    </if>
+								已转让
+                                <else/>
+                                    <if condition="($item.deal_status eq 7 )or ($item.deal_status eq 8) or ($item.deal_status eq 9)">
+                                     <p>还款： {$item.progress_point|round}%</p>
+                                     <a href="{:UU('User/Invest/refdetail',array('id'=>$item['id']))}" class="f_red">详情</a>
+                                        <else/>
+                                     <p>投标：{$item.progress_point|round}%</p>
+                                    </if>
+                                </if>
+							</div>
+						</td>
+					</tr>
+                    </volist>
+				</tbody>
+			</table>
+			<div class="pages">{$Page}</div>
+			<else />	
+			<div align="center" style="padding:20px 0">暂无记录</div>
+			</notempty>
+        	
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="blank"></div>
+</block>
+

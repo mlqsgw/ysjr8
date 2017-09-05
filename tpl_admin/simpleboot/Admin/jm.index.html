@@ -1,0 +1,49 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed" style="min-width:800px;">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active"><a >加盟客户</a></li>
+     <li><a href="__URL__/add" >添加客户</a></li>
+  </ul>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            
+	            <th width="50">ID</th>
+	            <th>企业名称</th>
+	            <th>企业LOGO</th>
+	            <th>电话</th>
+	            <th>地址</th>
+	           
+	            <th width="120">操作</th>
+	          </tr>
+        </thead>
+        	
+        	<foreach name="comments" item="vo">
+	        	<tr>
+		            
+		            <td valign="middle">{$vo.jm_id}</td>
+	              <td valign="middle"><a href="__ROOT__/index.php/Loan/jm/jmcon/id/{$vo.jm_id}" target="_blank">{$vo.jm_title}</a></td>
+	              <td valign="middle"><img src="__ROOT__/Uploads{$vo.jm_img}" /></td>
+	              <td valign="middle">{$vo.jm_phone}</td>
+	             <td valign="middle">{$vo.jm_dz}</td>
+		             <td>
+ 	                    <a href="__URL__/edit/id/{$vo.jm_id}">修改</a>
+                       	<a href="__URL__/del/id/{$vo.jm_id}" class="J_ajax_del" >删除</a>
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+    <div class="form-actions">
+      
+    </div>
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>

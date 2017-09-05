@@ -1,0 +1,82 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li><a href="{:U('admin/Level/index')}">等级配置</a></li>
+     <li class="active"><a href="{:U('admin/Level/add')}">编辑</a></li>
+
+  </ul>
+
+        <form class="form-horizontal J_ajaxForm" action="{:U('admin/Level/edit',array('id'=>$id))}" method="post" id="myform">
+
+  <div class="table_full">
+      <table width="100%" cellpadding="2" cellspacing="2">
+          <tr>
+              <th width="180">等级名称</th>
+              <td><input type="text" name="name" value="{$res.name}" class="input" ></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th>图片</th>
+              <td id="Levelimg">
+                  <img src="{$res.img}" alt=""/>
+                  <input type="hidden" name="img" value="{$res.img}"/>
+                  <input type="file" onchange="avatar_upload(this)" id="avatar_uploder" name="file">
+              </td>
+          </tr>
+          <tr>
+              <th width="180">最小值：</th>
+              <td><input type="text" name="min" value="{$res.min}" class="input"></input><span class="must_red">*</span></td>
+          </tr>
+          <tr>
+              <th width="180">最大值：</th>
+              <td><input type="text" name="max" value="{$res.max}" class="input"></input><span class="must_red">*</span></td>
+          </tr>
+      </table>
+  </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">提交</button>
+        <a class="btn" href="__URL__">返回</a>
+    </div>
+    </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>
+<script>
+    function avatar_upload(obj){
+        var $fileinput=$(obj);
+        Wind.css("jcrop");
+        Wind.use("ajaxfileupload","jcrop","noty",function(){
+            $.ajaxFileUpload({
+                url:"/index.php?g=Admin&m=Level&a=upimg",
+                secureuri:false,
+                fileElementId:"avatar_uploder",
+                dataType: 'json',
+                data:{},
+                success: function (data, status){
+                    if(data.status==1){
+                        $("#avatar_uploder").hide();
+                        var $uploaded_area=$("#Levelimg");
+                        $uploaded_area.find("img").remove();
+                        var $img=$("<img/>").attr("src","/data/upload//Level/"+data.data.file);
+                        var $input='<input type="hidden" name="img" value="'+"/data/upload/Level/"+data.data.file+'"/>';
+                        $uploaded_area.html($input);
+                        $img.prependTo($uploaded_area);
+                    }else{
+                        noty({text: data.info,
+                            type:'error',
+                            layout:'center'
+                        });
+                    }
+
+                },
+                error: function (data, status, e){}
+            });
+        });
+        return false;
+    }
+
+</script>
+
+</body>
+</html>

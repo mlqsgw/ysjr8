@@ -1,0 +1,2806 @@
+[ 2015-12-15T08:18:50+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:20:57+08:00 ] 182.118.20.164 /index.php/loan/index/deal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T08:25:09+08:00 ] 182.118.20.168 /index.php/loan/index/deal/id/109
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T08:25:10+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:26:55+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:41:02+08:00 ] 182.118.22.218 /index.php/Loan/index/deal/id/100
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T08:41:27+08:00 ] 66.249.66.50 /index.php/portal/article/index/id/135
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:44:37+08:00 ] 66.249.66.34 /index.php/portal/Article/index/id/97
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:50:37+08:00 ] 66.249.66.37 /index.php/portal/article/index/id/63
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:53:28+08:00 ] 123.160.158.38 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:53:48+08:00 ] 66.249.66.53 /index.php/portal/article/index/id/116
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:53:56+08:00 ] 101.226.166.239 /index.php/Loan/index/deal/id/114
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T08:54:22+08:00 ] 123.149.232.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:56:38+08:00 ] 123.160.158.38 /index.php/portal/article/index/id/76
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:56:39+08:00 ] 123.160.158.38 /index.php/portal/article/index/id/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:56:48+08:00 ] 123.149.232.139 /index.php/portal/article/index/id/78/tid/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:57:36+08:00 ] 123.149.232.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:57:39+08:00 ] 123.149.232.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T08:57:55+08:00 ] 123.149.232.139 /index.php/portal/article/index/id/63
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:58:00+08:00 ] 123.149.232.139 /index.php/portal/article/index/id/64
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T08:58:15+08:00 ] 123.160.158.38 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:01:18+08:00 ] 182.118.26.172 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:08:08+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:13:30+08:00 ] 192.166.218.190 /index.php/portal/article/index/id/16
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:13:34+08:00 ] 192.166.218.190 /index.php/portal/article/index/id/17
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:13:37+08:00 ] 192.166.218.190 /index.php/portal/article/index/id/18
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:13:41+08:00 ] 192.166.218.190 /index.php/portal/article/index/id/27
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:20:53+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:21:48+08:00 ] 66.249.66.37 /index.php/loan/index/t_details/id/12
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ac_load_repay`
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ac_load_repay` WHERE ( `deal_id` = '89' ) AND ( `status` > 2 ) LIMIT 1  
+
+[ 2015-12-15T09:26:50+08:00 ] 182.118.25.204 /index.php/portal/article/index/id/166
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:27:09+08:00 ] 180.76.15.156 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:27:17+08:00 ] 180.76.15.6 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:33:32+08:00 ] 101.226.168.221 /index.php/portal/article/index/id/90
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:33:33+08:00 ] 42.156.136.80 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:35:33+08:00 ] 101.226.166.248 /index.php/portal/article/index/id/171
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:38:12+08:00 ] 101.226.169.211 /index.php/portal/article/index/id/188
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:43:11+08:00 ] 101.226.168.223 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T09:43:25+08:00 ] 101.226.168.233 /index.php/loan/index/deal/id/58
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T09:46:37+08:00 ] 66.249.66.40 /index.php/portal/Article/index/id/83
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:51:09+08:00 ] 101.226.169.222 /index.php/portal/article/index/id/194
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:54:18+08:00 ] 101.226.167.220 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T09:55:50+08:00 ] 101.226.168.252 /index.php/loan/index/deal/id/79
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T09:57:33+08:00 ] 182.118.25.217 /index.php/portal/article/index/id/168
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T09:58:07+08:00 ] 182.118.21.214 /index.php/portal/article/index/id/152
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:00:21+08:00 ] 182.118.26.242 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:01:31+08:00 ] 182.118.26.136 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:08:17+08:00 ] 66.249.66.37 /index.php/portal/article/index/id/191
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:13:56+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:16:51+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:17:37+08:00 ] 66.249.66.40 /index.php/portal/Article/index/id/94
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:23:48+08:00 ] 66.249.66.34 /index.php/portal/Article/index/id/67
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:23:50+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:29:57+08:00 ] 101.226.167.202 /index.php/Loan/index/deal/id/107
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T10:30:49+08:00 ] 180.76.15.5 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:30:51+08:00 ] 180.76.15.145 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T10:31:17+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/116
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:31:22+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/135
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:31:26+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/19
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:31:30+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/26
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:31:34+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/52
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:31:38+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/66
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:31:43+08:00 ] 62.210.143.245 /index.php/portal/article/index/id/69
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:38:30+08:00 ] 182.118.20.236 /index.php/portal/article/index/id/92
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:39:07+08:00 ] 66.249.66.40 /index.php/portal/Article/index/id/73
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:42:08+08:00 ] 66.249.66.34 /index.php/portal/article/index/id/177
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:46:44+08:00 ] 220.181.108.155 /index.php/portal/article/index/id/140
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:48:17+08:00 ] 66.249.66.40 /index.php/portal/article/index/id/186
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:51:27+08:00 ] 66.249.66.37 /index.php/portal/article/index/id/189
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T10:54:27+08:00 ] 66.249.66.40 /index.php/loan/index/t_details/id/8
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ac_load_repay`
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ac_load_repay` WHERE ( `deal_id` = '79' ) AND ( `status` > 2 ) LIMIT 1  
+
+[ 2015-12-15T10:56:30+08:00 ] 123.14.103.139 /index.php/user/indexadmin/basic_information/id/145
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T10:56:34+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/112
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T10:56:34+08:00 ] 101.226.33.216 /index.php/loan/index/deal/id/112
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:00:37+08:00 ] 66.249.66.37 /index.php/portal/article/index/id/188
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T11:01:51+08:00 ] 182.118.26.208 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:06:29+08:00 ] 123.125.71.71 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:06:46+08:00 ] 220.181.108.103 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:08:49+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:08:52+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:08:55+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:08:56+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:08:57+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:08:58+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:08:59+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:00+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:01+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:02+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:03+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:04+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:05+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:06+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:07+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:08+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:09+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:10+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:11+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:12+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:14+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:15+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:16+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:17+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:18+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:19+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:20+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:21+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:22+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:23+08:00 ] 123.14.103.139 /index.php/loan/loanlistadmin/check_loan
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_user_info` WHERE ( uid= ) LIMIT 1  
+
+[ 2015-12-15T11:09:33+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/112
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:11:09+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:11:16+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:11:34+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:11:59+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:12:08+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:12:23+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:12:28+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:12:47+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:12:52+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:13:05+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:13:10+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:13:12+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:13:12+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:13:16+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:13:40+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:13:45+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:13:47+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:13:47+08:00 ] 112.64.235.251 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:14:10+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:14:19+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:14:21+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:14:25+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:14:41+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:14:54+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:15:16+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:15:19+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:15:37+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:15:48+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:15:58+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:16:00+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:16:02+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:16:04+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:16:10+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:16:18+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:16:21+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:16:28+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:16:56+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:17:02+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:17:02+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/113
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:17:31+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:20:20+08:00 ] 38.100.21.61 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:20:24+08:00 ] 38.100.21.61 /index.php/loan/index/deal/id/100
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:20:26+08:00 ] 38.100.21.61 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:20:27+08:00 ] 38.100.21.61 /index.php/portal/article/index/id/9
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T11:20:28+08:00 ] 38.100.21.61 /index.php/loan/index/deal/id/56
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:20:30+08:00 ] 38.100.21.61 /index.php/portal/Article/index/id/83
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T11:20:31+08:00 ] 38.100.21.61 /index.php/loan/index/deal/id/89
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:20:41+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:20:47+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:22:18+08:00 ] 66.249.66.34 /index.php/portal/article/index/id/192
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T11:29:15+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:31:05+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:31:14+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/112
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:32:22+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:32:26+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:34:37+08:00 ] 180.76.15.13 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:34:50+08:00 ] 180.76.15.26 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:38:02+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:38:43+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:41:20+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:41:30+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/119
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:42:08+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:42:16+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:42:27+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:42:30+08:00 ] 123.14.103.139 /index.php/admin_post/index
+ERR: 无法加载控制器:AdminPost
+
+[ 2015-12-15T11:42:30+08:00 ] 61.151.218.119 /index.php/admin_post/index
+ERR: 无法加载控制器:AdminPost
+
+[ 2015-12-15T11:42:32+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/119
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:42:38+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:42:42+08:00 ] 125.43.86.235 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:42:47+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/119
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:42:52+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:42:56+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:43:05+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:43:24+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:43:24+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:43:44+08:00 ] 125.43.86.235 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:43:52+08:00 ] 1.192.99.119 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:45:34+08:00 ] 110.85.5.77 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:45:36+08:00 ] 110.85.5.77 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:45:37+08:00 ] 183.61.171.152 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:49:41+08:00 ] 1.192.99.119 /index.php/portal/article/index/id/199
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T11:49:51+08:00 ] 1.192.99.119 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:50:08+08:00 ] 66.249.66.40 /index.php/portal/article/index/id/183
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T11:51:06+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:51:17+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:53:27+08:00 ] 1.192.99.119 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:54:42+08:00 ] 1.192.99.119 /index.php/loan/index/deal/id/100
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:55:25+08:00 ] 220.181.108.90 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T11:55:56+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:56:03+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T11:59:27+08:00 ] 66.249.66.40 /index.php/portal/article/index/id/184
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T12:01:17+08:00 ] 182.118.26.200 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:01:58+08:00 ] 182.118.26.211 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:08:37+08:00 ] 66.249.66.34 /index.php/portal/article/index/id/185
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T12:11:36+08:00 ] 66.249.66.37 /index.php/portal/article/index/id/187
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T12:28:36+08:00 ] 180.76.15.14 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:28:42+08:00 ] 180.76.15.8 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:28:45+08:00 ] 123.125.71.116 /index.php/portal/article/index/id/198
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T12:30:17+08:00 ] 66.249.66.34 /index.php/portal/article/index/id/190
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T12:36:27+08:00 ] 66.249.66.37 /index.php/loan/index/deal/id/56
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T12:45:37+08:00 ] 66.249.66.37 /index.php/loan/index/deal/id/79
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T12:50:40+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:56:17+08:00 ] 182.119.246.45 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:57:08+08:00 ] 182.119.246.45 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T12:57:08+08:00 ] 180.153.214.152 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T12:58:23+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T12:59:30+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:01:12+08:00 ] 182.118.26.120 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:01:20+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:01:22+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:02:02+08:00 ] 182.118.26.227 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:02:05+08:00 ] 123.125.71.17 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:16+08:00 ] 123.125.71.72 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:16+08:00 ] 123.125.71.70 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:16+08:00 ] 123.125.71.110 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:17+08:00 ] 123.125.71.113 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:17+08:00 ] 123.125.71.89 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:19+08:00 ] 123.125.71.81 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:19+08:00 ] 123.125.71.81 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:02:19+08:00 ] 123.125.71.76 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:03:20+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:03:36+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:04:50+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:06:07+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:06:09+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:06:18+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:06:23+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:06:23+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:07:18+08:00 ] 123.125.71.74 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:07:36+08:00 ] 220.181.108.111 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:07:42+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:07:54+08:00 ] 123.125.71.23 /index.php/Loan/index/deal/id/113
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:08:11+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:09:40+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:10:10+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:11:06+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:12:14+08:00 ] 182.119.246.45 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:12:21+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:12:22+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:12:24+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:13:27+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:13:29+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:13:31+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:13:34+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:14:13+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:14:59+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:15:32+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:16:09+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:16:11+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:16:35+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:16:55+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:17:03+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:17:34+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:17:42+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:19:03+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:19:13+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:19:30+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:19:39+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:20:11+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:21:39+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:21:49+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:22:00+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:22:19+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:22:28+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:22:55+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:23:09+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:23:35+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:23:46+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:24:19+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:24:32+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:24:58+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:25:02+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:25:39+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:25:40+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:25:42+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:25:48+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:26:23+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:26:44+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:26:45+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:26:56+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:27:06+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:27:32+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:27:46+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:28:09+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:28:40+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:28:49+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:29:31+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:29:37+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:29:58+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:30:27+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:30:31+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:30:52+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:31:06+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:31:19+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:31:22+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:32:07+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:32:32+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:32:51+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:33:03+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:33:16+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:33:36+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:33:57+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:34:17+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:34:27+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:34:40+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:34:54+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:35:25+08:00 ] 123.125.71.92 /index.php/portal/article/index/id/199
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `ac_terms` WHERE ( term_id= ) LIMIT 1  
+
+[ 2015-12-15T13:35:29+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:35:30+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:37:10+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:37:29+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:37:37+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:37:39+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:04+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:05+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:06+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:08+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:16+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:57+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:38:59+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:39:10+08:00 ] 123.14.103.139 /index.php/user/indexadmin/basic_information/id/222
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:39:23+08:00 ] 123.14.103.139 /index.php/user/indexadmin/basic_information/id/231
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:39:37+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:39:42+08:00 ] 123.14.103.139 /index.php/user/indexadmin/basic_information/id/224
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:39:43+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:39:54+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:40:15+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:40:20+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:40:27+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:40:55+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:40:58+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:41:35+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:41:41+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:17+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:19+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:30+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:31+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:43+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:49+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:42:56+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:43:07+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:43:39+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:43:40+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:43:57+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:44:08+08:00 ] 66.249.66.53 /index.php
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:44:14+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:44:42+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:04+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:08+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:13+08:00 ] 182.119.246.45 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:17+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:37+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:39+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:45:52+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:46:02+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:46:13+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:46:17+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:47:23+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:47:50+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:47:55+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:48:01+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:48:03+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:48:45+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:49:09+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:49:10+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:49:11+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:49:57+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:50:07+08:00 ] 66.249.66.53 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:50:13+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:50:17+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:50:29+08:00 ] 123.14.103.139 /index.php/user/account/index/menuid/615
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:50:33+08:00 ] 123.14.103.139 /index.php/user/account/index/menuid/615/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:50:46+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/171
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:50:54+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:50:58+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:00+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/171
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:01+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:51:03+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:06+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:11+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/173
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:15+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:51:20+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:22+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/173
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:24+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:28+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:32+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/174
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:38+08:00 ] 66.249.66.53 /index.php/loan/index/deal/id/119
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:51:39+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:41+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/174
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:43+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:51:44+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:46+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:50+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:51:50+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/175
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:51:58+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:00+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/175
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:02+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:06+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:12+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/177
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:19+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:21+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/177
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:24+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:52:26+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:29+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:33+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/180
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:37+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:52:40+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:42+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/180
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:44+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:46+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:50+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:52:54+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/191
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:01+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:04+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/191
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:06+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:11+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:14+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:16+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:53:18+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:53:19+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/192
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:27+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:29+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/192
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:31+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:35+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:39+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:53:50+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:54:15+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:54:39+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:54:45+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:55:03+08:00 ] 182.119.246.45 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:55:07+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/193
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:16+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:17+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:55:18+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/193
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:20+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:20+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:55:24+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:25+08:00 ] 66.249.66.56 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T13:55:27+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:31+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/194
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:32+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:55:32+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:55:39+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:42+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/194
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:44+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:50+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:55:53+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:02+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:56:07+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/195
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:16+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:18+08:00 ] 66.249.66.40 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:56:19+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/195
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:22+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:25+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:29+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:33+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/196
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:36+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:56:41+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:43+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/196
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:45+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:49+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:53+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:56:56+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/197
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:05+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:07+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/197
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:10+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:14+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:18+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:22+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/198
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:22+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:57:31+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:33+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/198
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:34+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:57:35+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:41+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:44+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:48+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/199
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:57:57+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:00+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/199
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:07+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:11+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:14+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:16+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:58:18+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:58:19+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/200
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:27+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:30+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/200
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T13:58:59+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T13:59:50+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:00:04+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:00:08+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:00:11+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:00:43+08:00 ] 182.118.26.121 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:01:10+08:00 ] 182.118.26.122 /index.php/loan/index/deal/id/119
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:01:20+08:00 ] 182.118.26.244 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:02:15+08:00 ] 182.118.26.204 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:04:27+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:04:45+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:06:28+08:00 ] 123.125.71.70 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:07:25+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/201
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:35+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:37+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/201
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:39+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:42+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:44+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:48+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/202
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:07:58+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:00+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/202
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:04+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:08+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:11+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:14+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/203
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:23+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:25+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/203
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:27+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:31+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:34+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:39+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/204
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:08:45+08:00 ] 123.125.71.13 /index.php/loan/index/deal/id/119
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:09:42+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:10:13+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:15+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/204
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:18+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:22+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:25+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:28+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/205
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:33+08:00 ] 182.118.26.121 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:10:50+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:52+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/205
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:10:54+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:06+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:09+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:12+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/206
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:23+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:25+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/206
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:27+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:31+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:33+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:11:33+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:36+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/207
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:11:49+08:00 ] 123.14.103.139 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:12:03+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:12:07+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/207
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:12:31+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:12:38+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:12:41+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:12:50+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:12:53+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/120
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:12:57+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:13:03+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:13:23+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:26+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/207
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:27+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/207
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:30+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:34+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:39+08:00 ] 123.14.103.139 /index.php/user/account/index/p/7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:44+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:47+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/208
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:55+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:13:57+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/208
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:00+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:04+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:07+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:11+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/209
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:19+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:21+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/209
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:23+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:27+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:30+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:33+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/210
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:41+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:43+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/210
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:45+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:48+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:51+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:14:52+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:14:54+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/211
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:02+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:05+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/211
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:07+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:11+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:15+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:18+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/212
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:26+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:28+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/212
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:31+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:34+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:39+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:44+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/213
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:51+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:53+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/213
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:55+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:15:59+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:02+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:06+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/214
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:13+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:16+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/214
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:17+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/214
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:19+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:23+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:25+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:30+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/215
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:37+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:39+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/215
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:42+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:46+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:46+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:16:49+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:16:53+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/216
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:00+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:03+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/216
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:05+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:08+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:13+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:16+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/217
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:23+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:17:27+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/217
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:18:04+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:19:03+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:06+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/217
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:07+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/217
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:09+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:11+08:00 ] 123.14.103.139 /index.php/loan/index/t_details/id/12
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ac_load_repay`
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ac_load_repay` WHERE ( `deal_id` = '89' ) AND ( `status` > 2 ) LIMIT 1  
+
+[ 2015-12-15T14:19:13+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:16+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:20+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/218
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:19:34+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:19:48+08:00 ] 182.119.246.45 /index.php/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:20:04+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:20:08+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/218
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:20:31+08:00 ] 182.118.26.173 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:20:32+08:00 ] 123.14.103.139 /index.php/loan/index/t_details/id/11
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ac_load_repay`
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ac_load_repay` WHERE ( `deal_id` = '89' ) AND ( `status` > 2 ) LIMIT 1  
+
+[ 2015-12-15T14:20:43+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:20:47+08:00 ] 123.14.103.139 /index.php/user/account/index/p/2
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:20:50+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:20:54+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:20:59+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/219
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:06+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:10+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/219
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:11+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/219
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:13+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:23+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:26+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:29+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/220
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:39+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:21:39+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:43+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/220
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:44+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/220
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:46+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:54+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:21:54+08:00 ] 123.14.103.139 /index.php/loan/index/t_details/id/12
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ac_load_repay`
+ERR: 1146:Table 'ptop.ac_load_repay' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ac_load_repay` WHERE ( `deal_id` = '89' ) AND ( `status` > 2 ) LIMIT 1  
+
+[ 2015-12-15T14:22:03+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:22:11+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:22:17+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:22:24+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:22:55+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:22:59+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/221
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:18+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:20+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/221
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:22+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:25+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:29+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:32+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:23:33+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/222
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:40+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:23:43+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:47+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:23:48+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/222
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:23:55+08:00 ] 123.14.103.139 /index.php/loan/index/deal/id/110
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:24:42+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:24:43+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:26:19+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:26:23+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:26:27+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:26:31+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:26:33+08:00 ] 182.119.246.45 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:26:44+08:00 ] 123.14.103.139 /index.php/loan/index/newbiedeal/id/115
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as u' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_users as u
+
+[ 2015-12-15T14:27:04+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:07+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/222
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:09+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/222
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:11+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:14+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:17+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:21+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/223
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:26+08:00 ] 123.14.103.139 /
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as ld' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_loan_load as ld
+
+[ 2015-12-15T14:27:41+08:00 ] 123.14.103.139 /index.php/user/account/account_edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:43+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/223
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:46+08:00 ] 123.14.103.139 /index.php/user/account/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:49+08:00 ] 123.14.103.139 /index.php/user/account/index/p/6
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:52+08:00 ] 123.14.103.139 /index.php/user/account/index/p/8
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:27:56+08:00 ] 123.14.103.139 /index.php/user/account/account_edit/uid/224
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM ac_money as m
+
+[ 2015-12-15T14:41:41+08:00 ] 127.0.0.1 /chuangcai17/
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2015-12-15T14:42:03+08:00 ] 127.0.0.1 /chuangcai17/
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+

@@ -1,0 +1,136 @@
+.wrap{ width:1051px; overflow:hidden;}
+.user_login_bar{ background: #fff}
+.head{ position:relative; z-index:100; }
+.head .head_cont{ height:75px; line-height:75px; }
+.head .head_cont .constr{ position:relative; height:75px; }
+.logo{ height:70px; width:190px; }
+.logo a{ height:70px; width:190px; display:block; }
+.header .logo span{ background-size:100%; }
+.header .head_bg {
+display:block;
+background: url(../images/head_bg.png) repeat-x;
+height: 4px;
+width: 100%;
+}
+.no-nav-text {
+line-height: 40px;
+height: 40px;
+font-size: 25px;
+border-left: 1px solid #CCC;
+padding-left: 20px;
+margin-top: 17px;
+color: #aaa;
+position: absolute;
+left: 200px;
+}
+.head .head_bg {
+background: url(../images/head_bg.png) repeat-x;
+height: 4px;
+width: 100%;
+}
+.xszlogin1{ background: url(../images/zx_login_l.png) no-repeat;
+height: 390px;
+overflow: hidden;
+width: 600px;
+float: left; }
+.user_login_bar .user-lr-box-left .field { padding:0; width:287px; margin:0 auto 20px; }
+.ui-select {
+display: inline-block;
+_display: inline;
+_zoom: 1;
+padding: 4px;
+cursor: pointer;
+margin-top: 2px;
+vertical-align: middle;
+background: url(../images/ui-select.png) no-repeat;
+}
+.ui-select input{ visibility:hidden; }
+.user-lr-box-left span.to_regsiter{line-height:40px; }
+
+
+.header{ background-color:#555; height:75px; line-height:75px; margin-bottom:10px;}
+.header .logo span{ background-size:75% auto; }
+.header .constr{ height:75px; }
+.header .constr .hd-tel{ top:45px; color:#5B5B5B; font-size:14px;}
+.header .constr .hd-tel span{ color:#227299; font-size:16px; font-family:Arial;}
+.user_login_bar .user_inc_top{ font-size:14px; color:#333; font-weight:bolder;  border:none; width:280px}
+.user_login_bar .user-lr-box-left{ width:287px; padding:0; margin:0 auto; margin-top:50px; }
+
+.user_login_bar .user-lr-box-left .field .holder_tip{ position:absolute;left:44px; top:0; height:44px; line-height:44px; width:234px;width:254px; padding:0 10px; color:#8596B0; font-size:14px;}
+.suser_login_bar .user-lr-box-left .field input.ipttxt{ margin:0; border:none; height:29px; line-height:29px; background:url(../images/input-bg-all.png) no-repeat 0 0; width:234px;color:#8596B0; font-size:14px; font-weight:normal;}
+
+.user_login_bar .user-lr-box-left .autologin{margin-left: 0px; padding:0px; height:auto;}
+.user_login_bar .user-lr-box-left .verify input.ipttxt,
+.register_box  .user-lr-box-left .verify input.ipttxt
+{ margin:0; width:70px;padding: 10px 5px; background:#fff; text-align:center;}
+
+.user-lr-box-left .field input.ipttxt {
+    border: 1px solid #C5C5C5;
+    border-radius: 2px;
+    background: #FFF url("../images/input-bg-all.png") no-repeat scroll 0% 0%;
+    color: #3B3636;
+    height: 22px;
+    line-height: 22px;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+    width: 230px;
+    padding: 10px 5px 10px 50px;
+}
+.user-lr-box-left .email input.ipttxt{ background-position:0 -245px; }
+.user-lr-box-left .password input.ipttxt{ background-position:0 -94px; }
+.user-lr-box-left .mobile input.ipttxt{ background-position:0 -175px; }
+.user-lr-box-left .weibo input.ipttxt{ background:#fff; padding-left:10px; width:270px }
+.user_login_bar .user-lr-box-left .email input.ipttxt{ background-position:0 0; }
+
+.user-lr-box-left .login-submit-btn {
+background:none;
+text-indent:0;
+color: #fff;
+font: 18px "Microsoft YaHei";
+border-radius: 2px;
+overflow: hidden;
+float: left;
+border: none;
+cursor: pointer;
+height: 40px;
+line-height: 40px;
+width: 165px;
+background-color:#E47F2B;
+}
+.user-lr-box-left .app_login_box a{ progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter:grayscale(100%);}
+.user-lr-box-left .app_login_box a:hover{ progid:DXImageTransform.Microsoft.BasicImage(grayscale=0); -webkit-filter:grayscale(0%); }
+
+
+.user_login_bar .user-lr-box-left .app_login_box{ padding:0px;float:right;}
+.user_login_bar .user-lr-box-left .app_login_box h3{ display:inline-block; float:left; font-size:12px; color:#afafaf; font-weight:normal; padding-right:8px}
+.user_login_bar .user-lr-box-left .app_login_box span{ padding-right:10px}
+
+.register_box .hd_tip{background: url(../images/reg_hd.jpg) no-repeat 0 0; height:37px ; line-height:37px; color:#fff; font-size:14px; padding-left:15px}
+.register_box .user_inc_top{  color:#00bef0; padding-left:0; border:0}
+.register_box .user-lr-box-left{ padding: 50px 0 30px 30px;}
+.register_box .user_inc_tip{ color:#989898; line-height:26px;}
+.register_box { background:url(../images/register_bg.jpg) repeat-y 0 0}
+.register_box .user-lr-box-left  .field{ overflow:visible;}
+.register_box .user-lr-box-left  .field label{ color:#666; width:120px;padding-right:10px; height:44px; line-height:44px}
+.register_box .user-lr-box-left .field .hint{padding-left:130px;height:26px;line-height:26px;margin-top:10px;}
+.Dregister_box .user-lr-box-left .field input.ipttxt{background:url(../images/reg_ipt.jpg) repeat-y 0 0; padding:4px 10px; width:310px; border:none}
+.register_box .user-lr-box-left .field .f-input-tip{ height:26px;width:300px; top:52px; position:absolute;left:139px; margin:0}
+.register_box .user-lr-box-left .field .f-input-tip span{ float:left;}
+.register_box .user-lr-box-left .act{ margin-left:130px}
+.register_box .user-lr-box-right{width:285px; padding-right:30px;margin-top:50px;}
+.register_box .user-lr-box-right a:hover{color:#00bef0;}
+.user-lr-box-left .field .holder_tip{
+	position: absolute;
+	left: 50px;
+	top: 0;
+	height: 44px;
+	line-height: 44px;
+	width: 234px;
+	width: 254px;
+	padding: 0 10px;
+	color: #ababab;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+.agreement a:hover{ color:#00bef0 }
+

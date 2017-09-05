@@ -1,0 +1,5 @@
+
+<div <eq name='act' value=''>class="cur"</eq> ><a href="{:U('User/Money/index')}">账户日志</a></div>
+<div <eq name='act' value='incharge'>class="cur"</eq> ><a href="{:U('User/Money/index',array('act'=>'incharge'))}">会员充值</a></div>
+<div <eq name='act' value='incharge_log'>class="cur"</eq> ><a href="{:U('User/Money/index',array('act'=>'incharge_log'))}">充值日志</a></div>
+<div <if condition="($act eq 'bank') or ($act eq 'bank_add') or ($act eq 'carry')"> class="cur"</if> ><a href="{:U('User/Money/index',array('act'=>'bank'))}">会员提现</a></div>

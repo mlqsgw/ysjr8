@@ -1,0 +1,129 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="uc_r_bl">
+	<div class="inc_main">
+		<div class="list_title clearfix">
+			<div class="cur"><a href="/ptp/index.php?ctl=uc_autobid">自动投标</a></div>
+		</div>
+		<div class="u_incharge uc_r_bl_box clearfix pt10">
+				<div class="autobid clearfix">
+					<form id="autoBidSaveForm" name="autoBidSaveForm" action="/ptp/index.php?ctl=uc_autobid&act=save" method="post" style="position:relative;">
+						<div class="t_name f_l">设置我的自动投标工具：</div>
+						<table style="margin-left:140px; color:#666;">
+			                <tbody>
+			                	<tr style="line-height: 2.5">
+			                    	<th>自动投标状态：</th>
+			                    	<td style="color:#00bef0">开启状态</td>
+			                    	<td style="color:#f85c4e"></td>
+			                	</tr>
+				                <tr style="line-height: 2.5">
+				                    <th>您的账户余额：</th>
+				                    <td style="">68,900.00 元</td>
+				                    <td style="color: red">（大于等于1000元才可开启自动投标工具）</td>
+				                </tr>
+				                <tr style="line-height: 2.5">
+				                    <th>每次投标金额：</th>
+				                    <td>
+				                        <input class="f-input f-input60" type="text" value="1100" id="ten_value" name="fixedamount">&nbsp;&nbsp;元
+				                        <span class="bdd f14 ml10" style="cursor: pointer; padding: 0px 2px; vertical-align: middle;-moz-user-select: none;" onclick="jiajian('jia')" unselectable="on" onselectstart="return false;">＋</span>
+										<span class="bdd f14 ml10" style="cursor: pointer; padding: 0px 2px; vertical-align: middle; -moz-user-select: none;" onclick="jiajian('jian')" unselectable="on" onselectstart="return false;">－</span></td>
+				                    <td style="color: red">（该数值须不小于200元，且为50的倍数）</td>
+				                </tr>
+				                <tr style="line-height: 2.5">
+				                    <th>利息范围：</th>
+				                    <td><input class="f-input f-input60" type="text" value="15" id="ten_min_lixi" name="min_rate">&nbsp;&nbsp;%
+									－ <input class="f-input f-input60" type="text" value="25" id="ten_max_lixi" name="max_rate">&nbsp;&nbsp;%</td>
+				                    <td style="color: red">（10%-24%为有效利率范围）</td>
+				                </tr>
+				                <tr style="line-height: 2.5">
+				                    <th>借款期限：</th>
+				                    <td>
+				                    	<select class="f_select" id="ten_min_date" name="min_period">
+				                            <option value="3" selected="selected">3</option>
+				                            <option value="6" >6</option>
+				                            <option value="9" >9</option>
+				                            <option value="12" >12</option>
+				                            <option value="18" >18</option>
+				                            <option value="24" >24</option>
+				                            <option value="36" >36</option>
+				                        </select>&nbsp;&nbsp;月 － <select class="f_select" id="ten_max_date" name="max_period">
+				                            <option value="36" selected="selected">36</option>
+				                            <option value="24" >24</option>
+				                            <option value="18" >18</option>
+				                            <option value="12" >12</option>
+				                            <option value="9" >9</option>
+				                            <option value="6" >6</option>
+				                            <option value="3" >3</option>
+				                        </select>&nbsp;&nbsp;月</td>
+				                    <td></td>
+				                </tr>
+				                <tr style="line-height: 2.5">
+				                    <th>信用等级范围：</th>
+				                    <td>
+				                    	<select class="f_select" id="ten_min_rank" name="min_level">
+				                    					                            <option value="1" >HR</option>
+														                            <option value="2" >E</option>
+														                            <option value="3" >D</option>
+														                            <option value="4" >C</option>
+														                            <option value="5" selected="selected">B</option>
+														                            <option value="6" >A</option>
+														                            <option value="7" >AA</option>
+														                        </select>
+										<span style="margin: 0 6px;">－</span>
+										<select class="f_select" id="ten_max_rank" name="max_level">
+				                           				                            <option value="7" selected="selected">AA</option>
+															                            <option value="6" >A</option>
+															                            <option value="5" >B</option>
+															                            <option value="4" >C</option>
+															                            <option value="3" >D</option>
+															                            <option value="2" >E</option>
+															                            <option value="1" >HR</option>
+															                        </select>
+									</td>
+				                    <td></td>
+				                </tr>
+				                <tr style="line-height: 2.5">
+				                    <th>账户保留金额：</th>
+				                    <td><input class="f-input" type="text" value="0" id="ten_remain" name="retain_amount">&nbsp;&nbsp;元</td>
+				                    <td style="color: red">（您可填写一个金额，这部分钱不会加入自动投标）</td>
+				                </tr>
+			            	</tbody>
+						</table>
+						<div class="blank20"></div>
+						<div class="btn">
+							<input type="hidden" name="is_effect" value="0" />
+							<span> 
+														<button class="reset_btn open" id="J_autoBidEnable" type="button">关闭自动投标</button>
+											            </span>
+							<span>
+				                <input class="sub_btn" type="submit" value="保存设置" />
+				            </span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="blank"></div>
+		<div class="bdd p10" style="border:0; border-top:1px dashed #e3e3e3; padding-left:60px">
+            <div class="t_name">自动投标工具说明</div>
+            <div class="t_cont lh24">
+                1、贷款进入招标中三十分钟后，才会启动自动投标。<br>
+                2、投标进度达到95%时停止自动投标。若投标后投标进度超过95%，则按照投标进度达到95%的金额向下取50的倍数投标。<br>
+                3、单笔投标金额若超过该标贷款总额的20%，则按照20%比例的金额向下取50的倍数投标。<br>
+                4、满足自动投标规则的金额小于设定的每次投标金额，也会进行自动投标。<br>
+                5、贷款用户在获得贷款时会自动关闭自动投标，以避免借款被用作自动投标资金。<br>
+                6、投标排序规则如下：<br>
+                <div class="pl20">
+                    a）投标序列按照开启自动投标的时间先后进行排序。<br>
+                    b）每个用户每个标仅自动投标一次，投标后，排到队尾。<br>
+                    c）轮到用户投标时没有符合用户条件的标，也视为投标一次，重新排队。<br>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+</div>
+
+<div class="blank"></div>
+</block>
+

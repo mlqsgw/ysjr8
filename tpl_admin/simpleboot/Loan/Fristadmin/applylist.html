@@ -1,0 +1,86 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+     <li class="active" ><a href="{:U('Loan/Fristadmin/applylist')}">申请贷款列表</a></li>
+  </ul>
+  <form class="well form-search" method="post" action="{:U('Loan/Fristadmin/applylist')}">
+    <div class="search_type cc mb10">
+      <div class="mb10"> 
+        <span class="mr20">
+		&nbsp;&nbsp;状态：
+		<select name="status" style="width:100px;">
+			<option value="">选择状态</option>
+			<option <eq name="status" value="0">selected="selected"</eq> value="0">未查看</option>
+			<option <eq name="status" value="1">selected="selected"</eq> value="1">已查看</option>
+			<option <eq name="status" value="2">selected="selected"</eq> value="2">已处理</option>
+		</select>
+		
+        &nbsp;&nbsp;添加时间：
+        <input type="text" name="so_start" class="input length_2 J_date" value="{$so_start}" style="width:80px;" autocomplete="off">-<input type="text" class="input length_2 J_date" name="so_end" value="{$so_end}" style="width:80px;" autocomplete="off">
+
+        &nbsp; &nbsp;会员名称：
+        <input type="text" class="input length_2" name="name" style="width:120px;" value="{$name}" placeholder="请输入关键字...">
+          真实姓名：
+        <input type="text" class="input length_2" name="user_login" style="width:120px;" value="{$user_login}" placeholder="请输入关键字...">
+        <input type="submit" class="btn" value="搜索"/>
+        </span>
+      </div>
+    </div>
+  </form>
+  <form class="J_ajaxForm" action="" method="post">
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	            <th width="50">编号ID</th>
+	            <th width="50">会员名称</th>
+                <th width="70">真实姓名</th>
+	            <th width="50">借款金额</th>
+                <th width="70">手机号码</th>
+                <th width="150">居住城市</th>
+	            <th width="100">添加时间</th>
+	            <th width="150">操作</th>
+	          </tr>
+        </thead>
+
+        	<foreach name="lists" item="vo">
+	        	<tr>
+		            <td><a>{$vo.id}</a></td>
+		            <td>{$vo.user_name}</td>
+                    <td>{$vo.real_name}</td>
+                    <td>{$vo.money}万</td>
+                    <td>{$vo.phone}</td>
+                    <td>{$vo.native_place}</td>
+                    <td>{$vo.time}</td>
+                    </td>
+		            <td>
+						<if condition="$vo['status'] neq '2'">
+                        <a class="J_dialog" href="{:U('Loan/Fristadmin/review',array('id'=>$vo['id']))}">审核</a> |
+						<else/>
+                        <a class="J_dialog" href="{:U('Loan/Fristadmin/review',array('id'=>$vo['id']))}">查看信息</a> |
+						</if>
+                        <a class="J_ajax_del" href="{:U('Loan/Fristadmin/delete',array('id'=>$vo['id']))}" >删除</a>
+
+
+					</td>
+	          	</tr>
+          </foreach>
+          </table>
+          <div class="pagination">{$page}</div>
+     
+    </div>
+
+
+  </form>
+</div>
+<script src="__ROOT__/statics/js/common.js"></script>
+<script>
+
+
+
+
+</script>
+</body>
+</html>

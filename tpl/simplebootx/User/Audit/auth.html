@@ -1,0 +1,57 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+
+<block name="leftpage">
+   <div class="list">
+	<div class="list_title clearfix">
+		<div class="cur"><a href="{:U('User/Myaccount/authphone')}">{$modeName}认证</a></div>
+	</div>
+	<div class="uc_r_bl_box clearfix">
+		<div class="blank"></div>
+		<div class="inc wb">
+		<div class="inc_main">
+			<div class="tip-h clearfix" style="height:auto">
+			
+				
+				<form method="post" name="bind_mobile" action="{:U('User/Audit/DataAuth',array('mid'=>$mid))}">
+                {$addtemp}
+				<table width="470" border="0" style="padding:0;margin:0 auto;">
+	                <tbody>
+				
+	                <tr style="margin-top:20px;">
+	                    <td></td>
+	                    <td colspan="2">
+	                        <div style="font-weight:bold; margin-top:20px;padding-left:3px;">
+	                            <input type="submit" name="submit" value="提交" class="sub_btn">
+	                        </div>
+	                    </td>
+	                </tr>
+	            	</tbody>
+				</table>
+				</form>
+			
+		</div>
+		
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="blank"></div>
+  <link href="__ROOT__/statics/js/artDialog/skins/default.css" rel="stylesheet" />
+<script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "__ROOT__/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+</script>
+<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="__ROOT__/statics/js/jquery.js"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <script src="__ROOT__/tpl/simplebootx/Public/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+    <script src="__ROOT__/statics/js/frontend.js"></script>
+    <script type="text/javascript" src="__ROOT__/statics/js/content_addtop.js"></script>  
+</block>

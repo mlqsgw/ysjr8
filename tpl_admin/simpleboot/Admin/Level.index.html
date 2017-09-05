@@ -1,0 +1,54 @@
+<admintpl file="header"/>
+<head/>
+<body>
+<div class="wrap J_check_wrap">
+  <ul class="nav nav-tabs">
+          <li class="active"><a href="{:U('admin/Level/index',array('cate_id'=>$vo['id']))}">等级配置</a></li>
+          <li ><a href="{:U('admin/Level/add')}">添加等级</a></li>
+
+
+  </ul>
+  <div class="table_list">
+   <form class="form-horizontal J_ajaxForm" method="post" action="{:U('admin/Level/updata')}">
+    <table width="100%" cellspacing="0" class="table table-hover">
+      <thead>
+        <tr>
+          <th width="30">ID</th>
+          <th align="left" >等级名称</th>
+          <th >图片</th>
+          <th>分值</th>
+          <th >管理操作</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <foreach name="list" item="vo">
+        <tr>
+          <td>{$vo.id}</td>
+          <td>{$vo.name}</td>
+            <td><img src="{$vo.img}" alt=""/></td>
+          <td>{$vo.min}-{$vo.max}</td>   
+          <td  class="text-c">
+              <a href="{:U('admin/Level/edit',array('id'=>$vo['id']))}"   >编辑</a>              
+          </td>
+
+        </tr>
+        </foreach>
+
+
+
+      </tbody>
+    </table>
+      <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn_submit  J_ajax_submit_btn">更新</button>
+      </div>
+      </form>
+  </div>
+</div>
+
+
+<script src="__ROOT__/statics/js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="Generator" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$site_seo_title} {$site_name}</title>
+    <link rel="icon" href="favicon.ico" type="/image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="/image/x-icon" />
+    <meta name="keywords" content="{$site_seo_keywords}" />
+    <meta name="description" content="{$site_seo_description}" />
+
+
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/weebox.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/css/main.css" />
+
+
+    <script type="text/javascript">
+
+        var APP_ROOT = '/';
+        var LOADER_IMG = 'http://www.webtiro.com/demo-p2p/app/Tpl/blue/images/lazy_loading.gif';
+        var ERROR_IMG = 'http://www.webtiro.com/demo-p2p/app/Tpl/blue/images/image_err.gif';
+
+    </script>
+
+
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.bgiframe.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.weebox.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/jquery.pngfix.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/lazyload.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/script.js"></script>
+    <script type="text/javascript" src="__TMPL__Public/js/op.js"></script>
+    <!-----<script type="text/javascript" src="__TMPL__Public/js/msg_sender.js"></script>--->
+
+
+
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="__TMPL__Public/js/PIE.js"></script>
+    <![endif]-->
+    <script language="javascript">
+        $(function() {
+            if (window.PIE) {
+                $('.rounded').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+<div class="wrap">
+
+<style type="text/css">
+    .i_deal_list table td{ font-size:14px}
+</style>
+<div class="blank"></div>
+
+<div class="list_title clearfix">
+	<div class="cur"><a href="###">还款详情</a></div>
+</div>
+<div class="uc_r_bl_box clearfix pl10 pr10 pt5 pb5">
+	<div class="bid_item clearfix">
+        <div class="bid_title">
+        	{$deal.name} 还款中!
+            <span class="r_c"><a href="javascript:void(0);" onclick="javascript:window.showModalDialog('{url x="index" r="uc_deal#contract" p="id=$deal.id"}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">查看电子协议</a></span>
+        </div>
+        <div class="bid_detail">
+            <div class="info">
+            	 借款金额：
+                <span class="f_red">{$deal.borrow_amount_format}</span>
+            </div>
+            <div class="info">
+            	年利率：
+                <span class="f_red">{$deal.rate|number_format}%</span>
+            </div>
+            <div class="info">
+            	期限：
+                <span class="f_red">{$deal.repay_time}个月</span>
+            </div>
+            <div class="info">
+            	已还总额：
+                <span class="f_red">{$deal.repay_money|format_price}</span>
+            </div>
+            <div class="info">
+            	待还余额：
+                <span class="f_red">{$deal.need_remain_repay_money|format_price}</span>
+            </div>
+        </div>
+    </div>
+	
+	<div class="t_name" style="padding:20px 0 10px 10px;">
+                还款记录
+   	</div>
+	<div class="clearfix" style="width:860px; margin:0 auto;">
+		<table class="data_table" id="refundTab" cellspacing="1">
+            <tr>
+                <th width="10%">选择还款</th>
+                <th width="12%">还款日</th>
+                <th width="12%">已还金额</th>
+                <th width="12%">待还金额</th>
+                <th width="12%">待还本息</th>
+                <th width="10%">借款管理费</th>
+                <th width="12%">逾期费用</th>
+                <th width="12%">状态</th>
+            </tr>
+			<?php $idx=0;?>
+			<foreach name="loan_list" item="loan" key="key">
+          	<tr <?php if($idx==0 && $loan['has_repay'] != 1):?>class="highlight"<?php endif;?>>
+                <td width="10%">
+                	<if condition="($loan.has_repay eq 1 ) or ( $loan.month_need_all_repay_money eq 0)">
+						&nbsp;
+						<if condition="$loan.month_need_all_repay_money eq 0">
+						<input type="checkbox" name="periodNumberNo" checked="checked" value="{$key}" style="display:none;" />
+						</if>
+					<else/>
+					<?php ++$idx;?>
+					<input type="checkbox" name="periodNumber" <?php if($idx==1):?>checked="checked"<?php endif;?> <?php if($idx>2):?>disabled="disabled"<?php endif;?> idx="<?php echo $idx;?>" value="{$key}" onclick="changeRefundAmount(this);">
+					</if>
+					<input type="hidden" class="unrepaidInput" id="{$deal_id}-{$key}" value="{$loan.month_need_all_repay_money|round='2'}">
+				</td>
+                <td width="12%">{$loan.repay_day_format}</td>
+                <td width="12%">{$loan.month_has_repay_money_all_format}</td>
+                <td width="12%" style="color:red">{$loan.month_need_all_repay_money_format}</td>
+                <td width="12%">{$loan.month_repay_money_format}</td>
+                <td width="10%">{$loan.month_manage_money_format}</td>
+                <td width="12%" style="color:red"><eq name="loan.has_repay" value="0">{$loan.impose_money_format}<else/>￥0.00</eq></td>
+                <td width="12%" class="f_green">
+                	<if condition="$loan.status eq 0">
+					待还
+                    <elseif condition="$loan.status eq 1 "/>
+					提前还款
+                    <elseif condition="$loan.status eq 2"/>
+					准时还款
+                    <elseif condition="$loan.status eq 3"/>
+					逾期还款
+                    <elseif condition="$loan.status eq 4"/>
+					严重逾期
+                    </if>
+				</td>
+            </tr>
+            </foreach>
+        </table>
+		
+		<table class="refundTab">
+	        <tr>
+	            <td colspan="8">
+	                <div style="font-size: 16px; display: block;line-height: 50px;font-weight: bold;height: 50px;text-align: left;">
+	                    <span style="padding: 0 20px;width: 240px;display: block;float: left;">
+						总计还款：￥<span id="currCount">0.00</span>
+						</span>
+	                </div>
+	            </td>
+	        </tr>
+	    </table>
+		<br>
+		<span style="padding: 15px 0 15px 20px;">
+            <input type="hidden" name="loanId" value="46420" id="loanId">
+            <input class="conf_refund" id="J_repay_borrow_money" type="button">
+        </span>
+
+	</div>
+</div>
+<script type="text/javascript">
+	var is_repay_lock = false;
+	jQuery(function(){
+		$("#refundTab tr").hover(function(){
+			if(!$(this).hasClass('highlight')){
+				$(this).addClass("cur");
+			}
+		},function(){
+			$(this).removeClass("cur");
+		});
+		getMustPaymoneyTotal();
+		
+		$("#J_repay_borrow_money").click(function(){
+			if($("#refundTab input[name='periodNumber']:checked").length == 0){
+				$.showErr("还款失败,请顺序还款!");
+				return false;
+			}
+			if(confirm("您确定要还款吗？")){
+				if(is_repay_lock){
+					$.showErr("正在处理中，请稍后!");
+					return false;
+				}
+				$("#payTip").show();
+				is_repay_lock = true;
+				var query = new Object();
+				query.ids = "";
+				<if condition="$deal.loantype eq 2">
+				$("#refundTab input[name='periodNumberNo']:checked").each(function(){
+					query.ids += $(this).val()+",";
+				});
+				</if>
+				$("#refundTab input[name='periodNumber']:checked").each(function(){
+					query.ids += $(this).val()+",";
+				});
+				query.ids = query.ids.substr(0,query.ids.length - 1);
+				$.ajax({
+					url:"{:UU('User/Deal/admin_repay_borrow_money',array('id'=>$deal['id']))}",
+					data:query,
+					type:"post",
+					dataType:"json",
+					success:function(result){
+						is_repay_lock = false;
+						$("#payTip").hide();
+						if(result.status==1){
+							$.showSuccess("还款成功！",function(){
+                                location.reload();
+							});
+						}
+						else{
+							$.showErr(result.info);
+						}
+					}
+				});
+			}
+		});
+	});
+	function changeRefundAmount(o){
+		
+		if($("#refundTab input[name='periodNumber']:eq(0)").attr("checked")==false){
+			$("#refundTab input[name='periodNumber']:gt(0)").attr("checked",false);
+			$("#refundTab input[name='periodNumber']:gt(0)").attr("disabled",true);
+		}
+		else{
+			var idx = parseInt($(o).attr("idx"));
+			if($(o).attr("checked")==false){
+				if(idx > 0){
+					$("#refundTab input[name='periodNumber']:gt("+(idx-1)+")").attr("checked",false);
+					$("#refundTab input[name='periodNumber']:gt("+(idx-1)+")").attr("disabled",true);
+				}
+				else{
+					$("#refundTab input[name='periodNumber']:gt("+(idx)+")").attr("checked",false);
+					$("#refundTab input[name='periodNumber']:gt("+(idx)+")").attr("disabled",true);
+				}
+			}
+			else{
+				if(idx > 0){
+					$("#refundTab input[name='periodNumber']:eq("+(idx)+")").attr("checked",false);
+					$("#refundTab input[name='periodNumber']:eq("+(idx)+")").attr("disabled",false);
+					$("#refundTab input[name='periodNumber']:gt("+(idx+1)+")").attr("disabled",true);
+				}
+				else{
+					$("#refundTab input[name='periodNumber']:eq("+(idx+1)+")").attr("checked",false);
+					$("#refundTab input[name='periodNumber']:eq("+(idx+1)+")").attr("disabled",false);
+					$("#refundTab input[name='periodNumber']:gt("+(idx+2)+")").attr("disabled",true);
+				}
+			}
+		}
+		
+		getMustPaymoneyTotal();
+	}
+	function getMustPaymoneyTotal(){
+		var mustPay = 0;
+		$("#refundTab input[name='periodNumber']:checked").each(function(){
+			mustPay += parseFloat($(this).parent().find(".unrepaidInput").val());
+		});
+		$("#currCount").html(foramtmoney(mustPay,2));
+	}
+</script>
+
+<div class="blank"></div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<table width="500" cellpadding="2" cellspacing="2">
+<?php 
+if($usergreat>=0)
+   { 
+	foreach($result as $key=>$val)
+    {  
+    	if($val["level"]!=0&& $val["level"]>$usergreat)
+        {
+        	continue;
+      	}
+ ?>
+                 <tr>
+  					<th width="180"><?=$val["name"];?></th>
+ 					<td>
+                    <?php 
+                    	if($val["type"]=="thumb")
+                        {
+                        	echo "<img src='".$arr[$val['field']]."' width='150' height='150' />";
+                        }elseif($val["type"]=="select")
+                        {		
+                            echo $val["default"][$arr[$val['field']]];
+                         }elseif($val["type"]=="radio")
+                         {
+                         	 echo $val["default"][$arr[$val['field']]];
+                         }elseif($val["type"]=="checkbox")
+                         {
+                         			$str="";
+                      				$v=$arr[$val['field']];
+                                    if(strstr($v,","))
+                                    {
+                                        $va=explode(",",$v);
+                                    }else{
+                                        $va[]=$v;
+                                    }
+                    
+                                    foreach($val["default"] as $k=>$v)
+                                    {
+                                        if(in_array($k,$va))
+                                        {
+											$str.=$v." ";	   
+                                       }
+                                    }	
+                                	echo $str;
+                                
+                               
+                        }else
+                        {
+                 			echo $arr[$val["field"]];
+                         
+                         }
+                        ?>
+                    </td>
+   					 <td align="left"></td>
+ 				 </tr>
+ <?php } } ?>
+</table>

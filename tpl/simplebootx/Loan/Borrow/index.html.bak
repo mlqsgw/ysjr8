@@ -1,0 +1,330 @@
+<tc_include file="inc/header" />
+</div>
+<style>
+
+body {
+	background-color:#fff !important;
+}
+*{
+margin:0;padding:0;
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+
+
+}
+.containerr{
+margin:0 auto;
+width:998px;
+
+
+}
+
+
+ #tabnav li{
+ border-bottom:1px solid rgb(193, 113, 47);
+height:110px;
+line-height:110px;
+list-style:none;
+text-align:center;
+width:209px;
+font-size:18px;
+
+
+}
+ul#tabnav {
+width: 208px;
+background-color: rgb(250, 248, 248);
+border-left:1px solid lightgrey;
+}
+#tabnav li a{ text-decoration:none;color:#000;
+    font-weight: bolder;}
+
+li:last-child{
+/*border-bottom:1px solid lightgrey;*/
+}
+li.active {
+
+border-right:1px solid white;background:#FBE8C3; color:#CCCCCC;;
+
+}
+li.normal {
+
+border-right:1px solid white;background:red;
+
+}
+#tab_content{
+
+float:right;
+width:788px;
+background:white;
+height:441px;
+overflow:hidden;
+border-top:1px solid lightgrey;
+border-right:1px solid lightgrey;
+border-bottom:1px solid lightgrey;
+border-left:1px solid lightgrey;
+}
+#tab_content .content{
+padding-top:15px;
+padding-bottom:15px;
+padding-left:15px;
+padding-right:15px;
+height:440px;
+    
+
+}
+.jinrong_xc {
+width: 998px;
+background-color: #FFF;
+overflow: hidden;
+margin: 0 auto;
+border-top: 2px solid #E47F2B;
+height: 144px;
+background-color: rgb(242, 242, 242);
+height: 211px;
+padding-top: 47px;
+}
+.article_info {
+padding-top:20px;
+padding-left:0px;
+}
+.xbc {
+    width: 787px; 
+    padding-left: 19px;
+    padding-right: 19px;
+    height:315px;
+}
+.bormtit {
+    font-size: 18px;
+    color: #000;
+    line-height: 40px;
+}
+.bormtit span {
+    font-size: 22px;
+    padding-right: 5px;
+}
+.lh26 {
+    line-height:41px;
+	color:#333333;
+}
+.h40 {
+    height: 48px;
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 79%;
+    font-weight: bolder;
+    position: relative;
+}
+.wid140 {
+    width: 124px;
+    text-decoration: none;
+}
+.wid140:hover{ color:#FFFFFF;}
+.formbtn, .borbtn {
+    background: #F1B840;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    color:#000000;
+    line-height: 45px;
+    height: 45px;
+    clear: both;
+    font-weight: bolder;
+}
+.ft18_b {
+    color: #000;
+    font-size: 18px;
+    margin-top: 0px;
+    font-weight: bolder;
+}
+.lh45 {
+    line-height: 45px;
+}
+</style>
+<div class="yindao_wrap">
+<link rel="stylesheet" type="text/css" href="__TMPL__Public/css/loan.css" />
+<div class="yindao_wrap clearfix">
+  <div class="yindao_bann" style="margin-bottom:30px;"> </div>
+  
+  <div class="caijian" style="margin: 0 auto;">
+  <div class="jinrong_xc" style="font-family:'微软雅黑';">
+    <!--<div class="jinrong_xc_top" >
+	  <b>煜商金融</b>
+	  
+	  <span>稳定收益类理财，百元起投，收益灵活，安全可靠，收益稳健，最高年化收益率<small>18%</small>，安全无忧，稳赚不赔！</span>
+	  <div style="clear:both"></div>
+	</div>-->
+    <div class="jinrong_xc_con"> <img src="__TMPL__Public/images/cccccc.png"> </div>
+  </div>
+  <div class='containerr' >
+    <div id="tab_content">
+      <div id="a" class="content"> <div >
+                <div class="xbc">
+                  <p class="bormtit"><span style="font-weight:bolder;">个人抵押贷款 </span></p>
+                  <p class="lh26">
+                  
+(一)个人抵押贷款申请条件
+1、具有中华人民共和国国籍和完全民事行为能力的自然人;
+2、持有有效的身份证明文件
+3、具有稳定、合法的收入来源;
+4、抵押房产有房地产证，产权明晰，可上市流通;
+5、银行规定的其他条件!<br />
+(二)申请个人抵押贷款资料
+借款人应提供:本人配偶身份证、户口簿、收入证明、个人消费用途的相应合同、婚姻状况证明
+抵押人应提供:（房贷）房屋所有权证，权属人及配偶身份证、户口簿、婚姻状况证明，工作收入证明（夫妻双方），个人资产或财力证明。
+（车贷）车辆登记证，行驶证，购置附加税证（本），购车发票，保险单，进口车辆相关税证明。
+</p>
+                                    
+                </div>
+        
+              </div>
+        <div>
+                <p class="h40" style=" margin-top:53px;"><a class="borbtn wid140 fr" href="{:U('Borrow/apply',array('id'=>'13'))}">申请借款</a></p>
+                </div>
+              </div>
+
+      <div id="b" class="content"> <div class="xbc">
+                <div>
+                  <p class="bormtit"><span style="font-weight:bolder;">个人信用贷款</span></p>
+                  <p class="lh26">一、个人信用贷款申请条件
+1、在中国境内有固定住所、有当地城镇常住户口、具有完全民事行为能力的中国公民；
+2、有正当且有稳定经济收入的良好职业，具有按期偿还贷款本息的能力；
+3、遵纪守法，自身没有违法行为及不良信用记录
+<br />
+
+二、申请个人信用贷款资料
+1、提供个人身份证明，可以是身份证，居住证，户口本，结婚证等信息；首先你必须拥有有效地身份证件，提供户口薄并且具有完全的民事行为能力；
+2、提供稳定的住址证明，房屋租赁合同，水电缴纳单，物业管理等相关证明；
+3、提供稳定的收入来源证明，银行流水单，劳动合同等。
+4、提供贷款用途证明。
+</p>
+                  
+  
+                  
+                </div>
+
+               
+              </div>
+  <div>
+                <p class="h40" style=" margin-top:53px;"><a class="borbtn wid140 fr" href="{:U('Borrow/apply',array('id'=>'14'))}">申请借款</a></p>
+                </div>
+              </div>
+      <div id="c" class="content"> <div class="xbc">
+                <div>
+                  <p class="bormtit"><span style="font-weight:bolder;">企业抵押贷款</span></p>
+                  <p class="lh26">一、基本要求：
+    1、有营业执照、税务登记证、代码证等
+
+    2、公司注册与营运1年以上，最近一年年营业额是贷款额的3倍以上。<br />
+二、申请材料
+1.企业基本资料
+（1）营业执照、组织机构代码证书、税务登记证、开户许可证、机构信用代码证、法人身份证、公司章程 、验资报告
+（2）企业经营资格/资质证书（没有不需提供）
+2.企业财务资料
+（1）纳税证明
+（2）企业财务报表
+3.企业经营资料
+（1）近半年银行对账单
+（2）企业近半年中的几张主要发票
+4抵押资料
+（1）抵押保证：房地产权证 个人需要：户口本，结婚证
+（2）原来的银行抵押借款合同（没有的不需提供，有按揭的安排垫资解押）
+（3）信用查询授权书.
+
+
+
+</p>
+                  
+                  
+            
+                 
+                </div>
+          
+              </div>
+
+                     <div>
+                <p class="h40" style=" margin-top:53px;"><a class="borbtn wid140 fr" href="{:U('Borrow/apply',array('id'=>'15'))}">申请借款</a></p>
+                </div> </div>
+      <div id="d" class="content"> <div class="xbc">
+                <div>
+                  <p class="bormtit"><span style="font-weight:bolder;">企业信用贷款</span></p>
+                  <p class="lh26">一、企业信用贷款申请条件
+1.企业成立时间一定要满3年;
+2.企业近半年开票额：150万左右
+3.开票(增值税发票)，两年的年报表，最近一个月的月报表，近6个月的发票情况，
+4.申请人近三个月的个人贷款不能逾期，企业负债率不能超过60~70%<br />
+二、企业信用贷款申请资料
+1.企业营销执照、税务登记证、组织机构代码证、最近验资报告、近六个月增值税或所得税缴税证明、近一年财务报表、企业近六个月的银行对账单等
+2.企业主要成员与拥有超过15%企业股份的持股人员身份证或护照。
+</p>
+                  
+                  
+                 
+                </div>
+
+              </div>
+   <div>
+               
+                </div><div>
+                <p class="h40" style=" margin-top:53px;"><a class="borbtn wid140 fr" href="{:U('Borrow/apply',array('id'=>'20'))}">申请借款</a></p>
+                </div>
+
+               </div>
+
+    </div>
+    <div >
+      <ul id='tabnav'>
+        <li class='active' style="border-top:1px solid lightgrey;">
+       <a href="#a" style="display:block; width:209px; height:110px;" > <img  src="__TMPL__Public/images/ico0.png" style="float:left; margin-top:39px; margin-left:10px;">个人抵押贷款</a>
+        </li>
+        <li class="aaaa" ><a href="#b" style="display:block; width:209px; height:110px;"  ><img src="__TMPL__Public/images/ico3.png" style="float:left; margin-top:30px; margin-left:17px;">个人信用贷款</a></li>
+        <li class="aaaa"><a href="#c" style="display:block; width:209px; height:110px;"  ><img src="__TMPL__Public/images/ico02.png" style="float:left; margin-top:28px; margin-left:10px;">企业抵押贷款</a></li>
+        <li class="aaaa"><a href="#d" style="display:block; width:209px; height:110px;"  ><img src="__TMPL__Public/images/ico04.png" style="float:left; margin-top:28px; margin-left:10px;">企业信用贷款</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sssss" style="width:998px; margin:0 auto;  height:200px; ">
+    <div class="inc">
+      <div class="inc_main" style="padding:0 px">
+	 
+        <div class="article_info">
+         <img src="__TMPL__Public/images/11.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+</div>
+<script type="text/javascript">
+function changeStyle(){
+ this.onclick=function(){
+   var list=this.parentNode.childNodes;
+   for(var i=0;i<list.length;i++){
+        if(1==list[i].nodeType &&  'active'==list[i].className) {
+                list[i].className="";
+        }
+   }
+ this.className='active';
+ }
+
+
+}
+
+ var tabs=document.getElementById('tabnav').childNodes;
+ for(var i=0;i<tabs.length;i++){
+    if(1==tabs[i].nodeType){
+       changeStyle.call(tabs[i]);
+    }
+}
+
+
+
+</script>
+<tc_include file="inc/footer" />
+

@@ -1,0 +1,144 @@
+<extend name="./tpl/simplebootx/User/Public/uc.html" />
+<block name="leftpage">
+<div class="list">
+	<div class="list_title clearfix">
+		<tc_include file="User/Message/menu" />
+        <div class="cur" ><a>聊天详情</a></div>
+	</div>
+	<div class="uc_r_bl_box clearfix pt10">
+		
+		<div class="uc-table">
+		<table style="width:100%" cellspacing="0" cellpadding="0" border="0" class="uc-msg-table" >
+		<form name="pm_list">
+        <volist name="list" id="vo">
+						<tr style="cursor:pointer;" class="pm_row" >
+					<td width=15>					
+					<input type="checkbox" value="{$vo.id}" name="id[]" />					
+					</td>
+					<td width=50>
+					<a href='' style='text-align:center; display:inline-block;'><img src='{$vo.userimg}' width="80" height="80" /></a>																																	</td>
+				<td style="text-align:left;width:135px">
+					<div><if condition="$vo['myid'] eq $vo['mes_from']"> 我对 {$vo.user_login}说<else />{$vo.user_login} 对我说  </if></div>
+					<div class="total"></div>
+					<div class="time">{$vo.post_time} </div>				
+				</td>
+				<td style="text-align:left;">
+					<div class="f_dgray">{$vo.mes_content}	</div>
+										
+				</td>
+			</tr>	
+            </volist>			
+					</form>
+		</table>
+				<div class="pt10">
+		全选 <input type="checkbox" name="checkall" /> <input type="button" value="删除" name="del_pm" class="remove_msg_btn" />
+		</div>	
+					
+		<div class="pages"> {$page}          </div>
+		</div><!--end uc-table-->
+	</div>
+    
+    
+    
+    
+    
+    		<input type="hidden" value="{$uid}" name="user_name" />
+			<div class="field" style="width:700px;">
+				<label>内容</label>
+				<textarea style="width:450px; height:100px; border:#ccc solid 1px;" cols="10" name="content"></textarea>
+			</div>
+			<div class="field" style="width:700px;">		
+				<label></label>	
+				<input type="button" value="发送" name="commit" id="settings-submit" class="sub_btn" onclick="do_send_pm();" />
+			</div>
+		
+		<div class="blank"></div>	
+    
+    
+	<div class="inc_foot"></div>
+</div>
+
+</div>
+
+<div class="blank"></div>
+<script type="text/javascript">
+
+function do_send_pm() {
+	var uname = $("input[name='user_name']").val();
+	var content = $("textarea[name='content']").val();
+	if ($.trim(uname) == '') {
+		$.showErr("填写收信人");
+		return
+	}
+	if ($.trim(content) == '') {
+		$.showErr("发送内容不能为空");
+		return
+	}
+	if (content.length > 200) {
+		$.showErr("消息长度不能超过两百个字");
+		return
+	}
+	var query = new Object();
+	query.user_name = uname;
+	query.conent=content;
+	var ajaxurl = "/ptop/index.php?g=User&m=Message&a=ToMess";
+	$.ajax({
+		url: ajaxurl,
+		dataType: "json",
+		type: "POST",
+		data: query,
+		success: function(ajaxobj) {
+			if (ajaxobj.status == 0) {
+				$.showErr(ajaxobj.info);
+			} else {
+				$.showSuccess("发送成功",function() {location.reload();});
+				
+			}
+		},
+		error: function(ajaxobj) {}
+	})
+}
+
+$(document).ready(function() {
+	$("input[name='checkall']").bind("click", function() {
+		$("input[name='id[]']").attr("checked", $("input[name='checkall']").attr("checked"))
+	});
+	$("input[name='del_pm']").bind("click", function() {
+		drop_pm_item()
+	})
+});
+
+
+function drop_pm_item() {
+	var cbos = $("input[name='id[]']:checked");
+	if (cbos.length == 0) {
+		$.showErr("请选择要删除的信件")
+	} else {
+		if (confirm("确认要删除所有选中的记录吗")) {
+			var query = $("form[name='pm_list']").serialize();
+			var ajaxurl = "{:U('User/message/delLog')}";
+			$.ajax({
+				url: ajaxurl,
+				dataType: "json",
+				type: "POST",
+				data: query,
+				success: function(ajaxobj) {
+					if (ajaxobj.status == 1) {
+						$("input[type='checkbox']").attr("checked", false);
+						$.showSuccess(ajaxobj.info, function() {
+							location.reload()
+						})
+					} else {
+						$.showErr(ajaxobj.info)
+					}
+				},
+				error: function(ajaxobj) {}
+			})
+		}
+	}
+}
+
+</script>
+
+</block>
+

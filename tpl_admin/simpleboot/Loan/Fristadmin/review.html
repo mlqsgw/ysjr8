@@ -1,0 +1,231 @@
+<admintpl file="header"/>
+<head/>
+<body class="J_scroll_fixed" style="min-width:600px;">
+<div class="wrap J_check_wrap">
+<if condition="$status neq 2">
+    <form class="J_ajaxForm" action="{:U('Loan/Fristadmin/review')}" method="post">
+        <div class="table_list">
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>会员名称:</th>
+                    <td><if condition="$user_name neq ''">{$user_name}<else/>--</if></td>
+                    <th>真实姓名:</th>
+                    <td>{$real_name}</td>
+                </tr>
+                <tr>
+                    <th>借款金额:</th>
+                    <td>￥{$money}万</td>
+                    <th>家属告知:</th>
+                    <td><if condition="$Inform eq 1">家人知道您借款<else/> 家人不知道您借款</if></td>
+                </tr>
+                <tr>
+                    <th>手机号码:</th>
+                    <td>{$phone}</td>
+                    <th>电子邮箱:</th>
+                    <td>{$email}</td>
+                </tr>
+                <tr>
+                    <th>身份证号:</th>
+                    <td>{$Idcard}</td>
+                    <th>最高学历:</th>
+                    <td>{$education}</td>
+                </tr>
+                <tr>
+                    <th>婚姻情况:</th>
+                    <td>{$marriage}</td>
+                    <th>有无可使用的信用卡:</th>
+                    <td><if condition="$credit eq 1">有<else/> 没有</if></td>
+                </tr>
+				
+                <tr>
+                    <th>有无成功银行贷款:</th>
+                    <td><if condition="$loan eq 1">有<else/> 没有</if></td>
+                    <th>房产情况:</th>
+                    <td><if condition="$house_property eq 1"> 有房产<else/> 没有房产</if></td>
+                </tr>
+                <tr>
+                    <th>房屋贷款:</th>
+                    <td><if condition="$house_loan eq 1"> 有房屋贷款<else/> 无房屋贷款</if></td>
+                    <th>住城市:</th>
+                    <td>{$native_place}</td>
+                </tr>
+                <tr>
+                    <th>城市起始居住时间:</th>
+                    <td>{$city_time}</td>
+                    <th>居住类型:</th>
+                    <td>{$place_type}</td>
+                </tr>
+                <tr>
+                    <th>住宅起始居住时间:</th>
+                    <td>{$place_time}</td>
+                    <th>工作类型:</th>
+                    <td><if condition="$work_type eq 1"> 上班族<else/> 私营业主</if></td>
+                </tr>
+                <tr>
+                    <th>工作起始时间:</th>
+                    <td>{$work_time}</td>
+                    <th>收入类型:</th>
+                    <td>{$income_type}</td>
+                </tr>
+                <tr>
+                    <th>每月税后银行卡收入:</th>
+                    <td>￥{$card_income}元</td>
+                    <th>每月税后现金收入:</th>
+                    <td>￥{$montyly_income}元</td>
+                </tr>
+
+                <tr>
+                    <th>状态:</th>
+                    <td><select style="width:100px;" name="status" >
+                        <option value="0" <eq name="status" value="0"> selected</eq> >未查看</option>
+                        <option value="1" <eq name="status" value="1"> selected</eq> >已查看</option>
+                        <option value="2" <eq name="status" value="2"> selected</eq> >已处理</option>
+                    </select>
+                    </td>
+                    <th>审核备注:</th>
+                    <td>
+                    <textarea rows="4" style="width:100px;"  name="remarks">{$remarks}</textarea>
+                    </td>
+                </tr>
+                <input type="hidden" value="{$id}" name="id"/>
+
+            </table>
+
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary J_ajax_submit_btn"  type="submit" >审核</button>
+        </div>
+    </form>
+<else/>
+      <div class="table_list">
+            <table width="100%" class="table table-hover">
+                <tr>
+                    <th>会员名称:</th>
+                    <td><if condition="$user_name neq ''">{$user_name}<else/>--</if></td>
+                    <th>真实姓名:</th>
+                    <td>{$real_name}</td>
+                </tr>
+                <tr>
+                    <th>借款金额:</th>
+                    <td>￥{$money}万</td>
+                    <th>家属告知:</th>
+                    <td><if condition="$Inform eq 1">家人知道您借款<else/> 家人不知道您借款</if></td>
+                </tr>
+                <tr>
+                    <th>手机号码:</th>
+                    <td>{$phone}</td>
+                    <th>电子邮箱:</th>
+                    <td>{$email}</td>
+                </tr>
+                <tr>
+                    <th>身份证号:</th>
+                    <td>{$Idcard}</td>
+                    <th>最高学历:</th>
+                    <td>{$education}</td>
+                </tr>
+                <tr>
+                    <th>婚姻情况:</th>
+                    <td>{$marriage}</td>
+                    <th>有无可使用的信用卡:</th>
+                    <td><if condition="$credit eq 1">有<else/> 没有</if></td>
+                </tr>
+				
+                <tr>
+                    <th>有无成功银行贷款:</th>
+                    <td><if condition="$loan eq 1">有<else/> 没有</if></td>
+                    <th>房产情况:</th>
+                    <td><if condition="$house_property eq 1"> 有房产<else/> 没有房产</if></td>
+                </tr>
+                <tr>
+                    <th>房屋贷款:</th>
+                    <td><if condition="$house_loan eq 1"> 有房屋贷款<else/> 无房屋贷款</if></td>
+                    <th>住城市:</th>
+                    <td>{$native_place}</td>
+                </tr>
+                <tr>
+                    <th>城市起始居住时间:</th>
+                    <td>{$city_time}</td>
+                    <th>居住类型:</th>
+                    <td>{$place_type}</td>
+                </tr>
+                <tr>
+                    <th>住宅起始居住时间:</th>
+                    <td>{$place_time}</td>
+                    <th>工作类型:</th>
+                    <td><if condition="$work_type eq 1"> 上班族<else/> 私营业主</if></td>
+                </tr>
+                <tr>
+                    <th>工作起始时间:</th>
+                    <td>{$work_time}</td>
+                    <th>收入类型:</th>
+                    <td>{$income_type}</td>
+                </tr>
+                <tr>
+                    <th>每月税后银行卡收入:</th>
+                    <td>￥{$card_income}元</td>
+                    <th>每月税后现金收入:</th>
+                    <td>￥{$montyly_income}元</td>
+                </tr>
+
+                <tr>
+                    <th>状态:</th>
+                    <td>已处理</td>
+                    <th>审核备注:</th>
+                    <td>{$remarks}</td>
+                </tr>
+                <tr>
+                    <th>处理人:</th>
+                    <td>{$admin_name}</td>
+                    <th>处理时间:</th>
+                    <td>{$handle_time}</td>
+                </tr>
+            </table>
+
+        </div>
+</if>
+</div>
+<script>
+    if ($('a.J_ajax_del').length) {
+        Wind.use('artDialog', function () {
+            $('.J_ajax_del').on('click', function (e) {
+                e.preventDefault();
+                var $_this = this,
+                        $this = $($_this),
+                        href = $this.prop('href'),
+                        msg = $this.data('msg');
+                art.dialog({
+                    title: false,
+                    icon: 'question',
+                    content: '您确定要删除这个字段吗，删除后原来的所以资料内容都将不复存在？',
+                    follow: $_this,
+                    close: function () {
+                        $_this.focus();; //关闭时让触发弹窗的元素获取焦点
+                        return true;
+                    },
+                    ok: function () {
+
+                        $.getJSON(href).done(function (data) {
+                            if (data.state === 'success') {
+                                if (data.referer) {
+                                    location.href = data.referer;
+                                } else {
+                                    reloadPage(window);
+                                }
+                            } else if (data.state === 'fail') {
+                                //art.dialog.alert(data.info);
+                                alert(data.info); //暂时处理方案
+                            }
+                        });
+                    },
+                    cancelVal: '关闭',
+                    cancel: true
+                });
+            });
+
+        });
+    }
+
+</script>
+<script src="__ROOT__/statics/js/common.js"></script>
+</body>
+</html>
